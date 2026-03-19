@@ -4,8 +4,8 @@ import allCourses from '~/data/courses'
 import { isPublishedCourse } from '~/types/course'
 
 useSeo({
-  title: 'Skill-Wanderer Dojo — Free Open Learning Platform',
-  description: 'Skill-Wanderer Dojo is a free, open-access learning management system. Browse courses, track progress, and master new skills — no paywall, no barriers.',
+  title: 'Chánh Đạo Học Tập — Nền tảng học tập mở',
+  description: 'Nền tảng học tập mở, miễn phí. Khám phá khóa học, theo dõi tiến độ và nâng cao kỹ năng mỗi ngày.',
 })
 
 const learningPaths = [
@@ -20,38 +20,38 @@ const learningPaths = [
 const features = [
   {
     icon: 'mdi:lock-open-variant-outline',
-    title: 'Free & Open',
-    description: 'Every course is free and accessible. No paywalls, no premium gates — just learning.',
+    title: 'Miễn phí và mở',
+    description: 'Mọi khóa học đều có thể truy cập miễn phí, không có paywall.',
   },
   {
     icon: 'mdi:school-outline',
-    title: 'Structured Paths',
-    description: 'Follow curated learning paths from beginner to advanced, step by step.',
+    title: 'Lộ trình rõ ràng',
+    description: 'Theo các lộ trình được sắp xếp từ cơ bản đến nâng cao.',
   },
   {
     icon: 'mdi:chart-timeline-variant-shimmer',
-    title: 'Track Progress',
-    description: 'Mark lessons complete and see your progress across all enrolled courses.',
+    title: 'Theo dõi tiến độ',
+    description: 'Đánh dấu bài học đã xong và theo dõi tiến độ trên từng khóa học.',
   },
   {
     icon: 'mdi:code-tags',
-    title: 'Hands-On Projects',
-    description: 'Learn by doing. Every course includes practical exercises and real projects.',
+    title: 'Học qua thực hành',
+    description: 'Tập trung vào bài tập và tình huống áp dụng thực tế.',
   },
   {
     icon: 'mdi:earth',
-    title: 'Open Source',
-    description: 'This platform is open source. Contribute, suggest, or fork — it belongs to everyone.',
+    title: 'Mã nguồn mở',
+    description: 'Dự án mã nguồn mở để cộng đồng đóng góp và phát triển.',
   },
   {
     icon: 'mdi:devices',
-    title: 'Learn Anywhere',
-    description: 'Responsive design works on desktop, tablet, and mobile. Learn on your terms.',
+    title: 'Học mọi nơi',
+    description: 'Giao diện tương thích desktop, tablet và điện thoại.',
   },
   {
     icon: 'mdi:robot-outline',
-    title: 'AI-Powered Development',
-    description: 'With AI, building courses as code is faster than any drag-and-drop LMS. We\'re developers — we play to our strengths.',
+    title: 'Hỗ trợ bởi AI',
+    description: 'AI hỗ trợ biên soạn và nâng cấp nội dung nhanh, dễ dàng duy trì.',
   },
 ]
 
@@ -62,26 +62,25 @@ const publishedCourseCount = allCourses.filter(isPublishedCourse).length
   <div>
     <!-- Hero -->
     <TheHero
-      title="Master Skills. No Barriers."
-      subtitle="Welcome to Skill-Wanderer Dojo"
-      description="A free, open-access learning platform replacing traditional LMS. Browse courses, track your progress, and level up — without paying a cent."
-      :cta-primary="{ label: 'Browse Courses', to: '/courses' }"
-      :cta-tertiary="{ label: 'Browse Learning Paths', to: '/paths' }"
-      :cta-secondary="{ label: 'Why Custom LMS?', href: 'https://wanderings.skill-wanderer.com/blog/wanderers-log-4-goodbye-moodle-hello-custom-lms/' }"
+      title="Học thật vững. Không giới hạn."
+      subtitle="Chào mừng đến với Chánh Đạo Học Tập"
+      description="Nền tảng học tập mở, để bạn tự do khám phá khóa học và lộ trình theo nhịp độ riêng."
+      :cta-primary="{ label: 'Xem khóa học', to: '/courses' }"
+      :cta-tertiary="{ label: 'Xem lộ trình học', to: '/paths' }"
       :stats="[
-        { value: String(allPaths.length), label: 'Paths' },
-        { value: String(publishedCourseCount), label: 'Courses' },
-        { value: '100%', label: 'Free' },
-        { value: 'Open', label: 'Source' },
+        { value: String(allPaths.length), label: 'Lộ trình' },
+        { value: String(publishedCourseCount), label: 'Khóa học' },
+        { value: '100%', label: 'Miễn phí' },
+        { value: 'Mở', label: 'Cộng đồng' },
       ]"
     />
 
     <!-- Features Section -->
     <section class="section section-glow">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Why the Dojo?</h2>
+        <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Vì sao chọn nền tảng này?</h2>
         <p class="text-gray-400 max-w-xl mx-auto leading-relaxed">
-          Built to replace traditional LMS with a modern, fast, open learning experience.
+          Trải nghiệm học tập hiện đại, dễ tiếp cận và dễ duy trì lâu dài.
         </p>
       </div>
 
@@ -98,11 +97,11 @@ const publishedCourseCount = allCourses.filter(isPublishedCourse).length
     <section class="section">
       <div class="flex items-center justify-between mb-8 flex-wrap gap-4">
         <div>
-          <h2 class="text-3xl font-bold gradient-text mb-2">Learning Paths</h2>
-          <p class="text-gray-400">Choose a path and start your journey</p>
+          <h2 class="text-3xl font-bold gradient-text mb-2">Lộ trình học</h2>
+          <p class="text-gray-400">Chọn lộ trình và bắt đầu ngay hôm nay</p>
         </div>
         <NuxtLink to="/paths" class="btn btn-outline btn-sm">
-          View All Paths <Icon name="mdi:arrow-right" />
+          Xem tất cả lộ trình <Icon name="mdi:arrow-right" />
         </NuxtLink>
       </div>
 
@@ -124,13 +123,13 @@ const publishedCourseCount = allCourses.filter(isPublishedCourse).length
     <section class="section section-narrow text-center">
       <div class="glass-card p-10 md:p-14">
         <Icon name="mdi:rocket-launch-outline" class="text-brand-orange text-4xl mb-4" />
-        <h2 class="text-2xl md:text-3xl font-bold gradient-text mb-4">Ready to Start Learning?</h2>
+        <h2 class="text-2xl md:text-3xl font-bold gradient-text mb-4">Sẵn sàng bắt đầu học?</h2>
         <p class="text-gray-400 mb-6 leading-relaxed">
-          Jump into any course — no sign-up required for browsing. Create a free account to track your progress.
+          Bạn có thể xem khóa học ngay. Tạo tài khoản miễn phí để lưu và theo dõi tiến độ.
         </p>
         <div class="flex gap-4 justify-center flex-wrap">
           <NuxtLink to="/courses" class="btn btn-primary">
-            Explore Courses <Icon name="mdi:arrow-right" />
+            Khám phá khóa học <Icon name="mdi:arrow-right" />
           </NuxtLink>
         </div>
       </div>

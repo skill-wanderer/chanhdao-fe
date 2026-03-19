@@ -23,9 +23,9 @@ const isRevealing = ref(false)
 let revealTimer: ReturnType<typeof setTimeout> | null = null
 
 const suggestions = [
-  'What courses are available?',
-  'How do I track my progress?',
-  'Tell me about learning paths',
+  'Có những khóa học nào?',
+  'Theo dõi tiến độ học như thế nào?',
+  'Giới thiệu cho tôi về lộ trình học',
 ]
 
 function toggle() {
@@ -112,7 +112,7 @@ onBeforeUnmount(() => stopReveal())
     <button
       v-if="!isOpen"
       class="lyra-fab"
-      aria-label="Open Lyra the Archivist"
+      aria-label="Mo Lyra"
       @click="toggle"
     >
       <span class="lyra-fab-ring" />
@@ -144,13 +144,13 @@ onBeforeUnmount(() => stopReveal())
           </svg>
           <div>
             <div class="lyra-title-text">Lyra</div>
-            <div class="lyra-subtitle">THE ARCHIVIST</div>
+            <div class="lyra-subtitle">TRỢ LÝ HỌC TẬP</div>
           </div>
         </div>
         <div class="flex items-center gap-1">
           <button
             class="lyra-header-btn"
-            title="Clear the reading desk"
+            title="Đặt lại hội thoại"
             @click="handleReset"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -160,7 +160,7 @@ onBeforeUnmount(() => stopReveal())
           </button>
           <button
             class="lyra-header-btn"
-            title="Close"
+            title="Đóng"
             @click="toggle"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -184,10 +184,10 @@ onBeforeUnmount(() => stopReveal())
             <path d="M16 12h2" />
           </svg>
           <p class="text-sm font-semibold mt-3 mb-1">
-            Welcome to the Archives!
+            Chào mừng bạn đến kho tri thức!
           </p>
           <p class="text-xs opacity-60 leading-relaxed mb-3">
-            Browse the shelves of the Dojo's knowledge. Ask Lyra anything about courses, lessons, and learning paths.
+            Hãy đặt câu hỏi về khóa học, bài học và lộ trình học. Lyra sẽ giúp bạn tìm thông tin liên quan.
           </p>
           <div class="lyra-suggestions">
             <button
@@ -247,7 +247,7 @@ onBeforeUnmount(() => stopReveal())
 
         <!-- Sources -->
         <div v-if="sources.length > 0 && !loading" class="lyra-sources">
-          <div class="lyra-sources-label">Referenced Volumes</div>
+          <div class="lyra-sources-label">Nguồn tham chiếu</div>
           <a
             v-for="(src, si) in sources"
             :key="si"
@@ -271,7 +271,7 @@ onBeforeUnmount(() => stopReveal())
               <polyline points="23 4 23 10 17 10" />
               <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
             </svg>
-            Clear the reading desk
+            Đặt lại hội thoại
           </button>
         </div>
       </div>
@@ -287,7 +287,7 @@ onBeforeUnmount(() => stopReveal())
           v-model="input"
           class="lyra-input"
           type="text"
-          placeholder="What knowledge do you seek…"
+          placeholder="Bạn đang tìm kiến thức nào..."
           maxlength="2000"
           :disabled="loading"
         >
@@ -295,7 +295,7 @@ onBeforeUnmount(() => stopReveal())
           class="lyra-send-btn"
           type="submit"
           :disabled="loading || !input.trim()"
-          title="Send"
+          title="Gui"
         >
           <!-- Quill/feather icon -->
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

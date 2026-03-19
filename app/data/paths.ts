@@ -10,9 +10,9 @@ export interface PathData {
 
 const paths: PathData[] = [
   {
-    title: 'Phat hoc can ban',
+    title: 'Phật học cơ bản',
     slug: 'phat-hoc-can-ban',
-    description: 'Lo trinh nhap mon voi placeholder cho khoa hoc Phat hoc pho thong quyen 1.',
+    description: 'Lộ trình nhập môn với placeholder cho khóa học Phật học phổ thông quyển 1.',
     difficulty: 'beginner',
     icon: 'mdi:book-open-variant',
     courseCount: 1,

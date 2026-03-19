@@ -17,9 +17,9 @@ function handleSubscribe() {
 
     <div class="max-w-[600px] mx-auto relative z-[1]">
       <Icon name="mdi:bell-ring-outline" class="text-[2.5rem] text-brand-orange mb-4" />
-      <h2 class="gradient-text text-[clamp(1.8rem,4vw,2.5rem)] font-extrabold mb-3">Stay Curious</h2>
+      <h2 class="gradient-text text-[clamp(1.8rem,4vw,2.5rem)] font-extrabold mb-3">Đăng ký cập nhật</h2>
       <p class="text-[rgba(224,224,224,0.7)] text-base leading-[1.7] mb-7 sm:text-[1.05rem]">
-        Get notified when new courses drop. Free forever — no spam, just knowledge.
+        Nhận thông báo khi có bài học mới. Miễn phí và không gửi thư rác.
       </p>
 
       <Transition name="fade" mode="out-in">
@@ -27,18 +27,18 @@ function handleSubscribe() {
           <input
             v-model="email"
             type="email"
-            placeholder="your@email.com"
+            placeholder="ban@email.com"
             required
             class="flex-1 py-3.5 px-5 rounded-pill border border-brand-orange/25 bg-surface-card text-[#e0e0e0] text-base outline-none transition-colors duration-300 focus:border-brand-orange placeholder:text-[rgba(224,224,224,0.35)]"
-            aria-label="Email address"
+            aria-label="Địa chỉ email"
           />
           <button type="submit" class="btn btn-primary btn-sm">
-            <Icon name="mdi:send" /> Subscribe
+            <Icon name="mdi:send" /> Đăng ký
           </button>
         </form>
         <div v-else class="flex items-center justify-center gap-2.5 text-lg text-semantic-success">
           <Icon name="mdi:check-circle" class="text-semantic-success text-2xl" />
-          <span>You're in! We'll keep you posted.</span>
+          <span>Đăng ký thành công. Chúng tôi sẽ cập nhật cho bạn.</span>
         </div>
       </Transition>
     </div>

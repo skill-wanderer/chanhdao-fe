@@ -17,10 +17,19 @@ const difficultyClass = computed(() => {
     default: return 'badge-beginner'
   }
 })
+
+const difficultyLabel = computed(() => {
+  switch (props.course.difficulty) {
+    case 'beginner': return 'Cơ bản'
+    case 'intermediate': return 'Trung cấp'
+    case 'advanced': return 'Nâng cao'
+    default: return props.course.difficulty
+  }
+})
 </script>
 
 <template>
-  <NuxtLink :to="`/courses/${course.slug}`" class="group glass-card flex flex-col overflow-hidden no-underline text-[#e0e0e0]" :aria-label="`View course: ${course.title}`">
+  <NuxtLink :to="`/courses/${course.slug}`" class="group glass-card flex flex-col overflow-hidden no-underline text-[#e0e0e0]" :aria-label="`Xem khóa học: ${course.title}`">
     <div class="relative aspect-video overflow-hidden bg-white/[0.02]">
       <NuxtImg
         v-if="course.thumbnail"
@@ -34,12 +43,12 @@ const difficultyClass = computed(() => {
       <div v-else class="w-full h-full flex items-center justify-center text-brand-orange/30 bg-brand-orange/5">
         <Icon name="mdi:school-outline" size="48" />
       </div>
-      <span class="badge badge-free absolute top-3 right-3">Free</span>
+      <span class="badge badge-free absolute top-3 right-3">Miễn phí</span>
     </div>
 
     <div class="p-5 flex-1 flex flex-col">
       <div class="flex items-center gap-3 mb-3">
-        <span :class="['badge', difficultyClass]">{{ course.difficulty }}</span>
+        <span :class="['badge', difficultyClass]">{{ difficultyLabel }}</span>
       </div>
 
       <h3 class="text-[1.15rem] font-bold mb-2 leading-tight">{{ course.title }}</h3>
@@ -49,7 +58,7 @@ const difficultyClass = computed(() => {
         <div class="flex items-center gap-4">
           <div class="flex items-center gap-1.5 text-sm text-[rgba(224,224,224,0.5)]">
             <Icon name="mdi:play-circle-outline" size="16" />
-            {{ course.lessonCount }} lessons
+            {{ course.lessonCount }} bài học
           </div>
           <div v-if="totalDuration" class="flex items-center gap-1.5 text-sm text-[rgba(224,224,224,0.5)]">
             <Icon name="mdi:clock-outline" size="16" />

@@ -2,8 +2,8 @@
 const { courses, searchCourses, getCoursesByDifficulty } = useCourses()
 
 useSeo({
-  title: 'All Courses — Skill-Wanderer Dojo',
-  description: 'Browse all free courses on Skill-Wanderer Dojo. Learn web development, programming, DevOps, and more — completely free and open.',
+  title: 'Tất cả khóa học',
+  description: 'Tổng hợp các khóa học mở và miễn phí để bạn học theo lộ trình phù hợp.',
 })
 
 const searchQuery = ref('')
@@ -24,6 +24,12 @@ const filteredCourses = computed(() => {
 })
 
 const difficulties = ['all', 'beginner', 'intermediate', 'advanced']
+const difficultyLabels: Record<string, string> = {
+  all: 'Tất cả cấp độ',
+  beginner: 'Cơ bản',
+  intermediate: 'Trung cấp',
+  advanced: 'Nâng cao',
+}
 </script>
 
 <template>
@@ -31,9 +37,9 @@ const difficulties = ['all', 'beginner', 'intermediate', 'advanced']
     <!-- Hero -->
     <section class="pt-[170px] pb-[60px] px-5 text-center">
       <div class="max-w-[700px] mx-auto">
-        <h1 class="gradient-text text-[clamp(2rem,5vw,3.5rem)] font-black mb-3">All Courses</h1>
+        <h1 class="gradient-text text-[clamp(2rem,5vw,3.5rem)] font-black mb-3">Tất cả khóa học</h1>
         <p class="text-[rgba(224,224,224,0.7)] text-[1.1rem] leading-relaxed mb-7">
-          Free, open-access courses on web development, programming, cloud, and more.
+          Khóa học mở và miễn phí với nội dung đa dạng, để bạn học theo nhu cầu.
         </p>
 
         <!-- Search -->
@@ -56,13 +62,13 @@ const difficulties = ['all', 'beginner', 'intermediate', 'advanced']
             : 'bg-transparent border-brand-orange/20 text-[#e0e0e0] hover:border-brand-orange hover:text-brand-orange'"
           @click="selectedDifficulty = diff"
         >
-          {{ diff === 'all' ? 'All Levels' : diff }}
+          {{ difficultyLabels[diff] || diff }}
         </button>
       </div>
 
       <!-- Results Count -->
       <p class="text-sm text-[rgba(224,224,224,0.5)] mb-6">
-        {{ filteredCourses.length }} course{{ filteredCourses.length !== 1 ? 's' : '' }} found
+        Tìm thấy {{ filteredCourses.length }} khóa học
       </p>
 
       <!-- Course Grid -->
@@ -73,8 +79,8 @@ const difficulties = ['all', 'beginner', 'intermediate', 'advanced']
       <!-- Empty State -->
       <div v-else class="text-center py-[60px] px-5">
         <Icon name="mdi:magnify-close" class="text-gray-600 text-5xl mb-4" />
-        <h3 class="text-xl font-semibold mb-2">No courses found</h3>
-        <p class="text-gray-500">Try a different search term or filter.</p>
+          <h3 class="text-xl font-semibold mb-2">Không tìm thấy khóa học</h3>
+          <p class="text-gray-500">Thử từ khóa khác hoặc điều chỉnh bộ lọc.</p>
       </div>
     </section>
   </div>

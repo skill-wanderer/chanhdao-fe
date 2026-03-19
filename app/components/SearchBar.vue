@@ -21,10 +21,10 @@ function handleSearch() {
     <input
       v-model="query"
       type="search"
-      placeholder="Search courses, learning paths, skills…"
+      placeholder="Tìm khóa học, lộ trình học, kỹ năng..."
       class="flex-1 bg-transparent border-none text-[#e0e0e0] text-base outline-none placeholder:text-[rgba(224,224,224,0.35)] min-w-0 max-[500px]:w-full max-[500px]:text-[0.95rem]"
-      aria-label="Search courses and learning paths"
+      aria-label="Tìm khóa học và lộ trình học"
     />
-    <button type="submit" class="btn btn-primary btn-sm max-[500px]:w-full max-[500px]:justify-center">Search</button>
+    <button type="submit" class="btn btn-primary btn-sm max-[500px]:w-full max-[500px]:justify-center">Tìm kiếm</button>
   </form>
 </template>

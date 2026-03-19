@@ -6,8 +6,8 @@ const router = useRouter()
 const route = useRoute()
 
 useSeo({
-  title: 'Search — Skill-Wanderer Dojo',
-  description: 'Search free courses and learning paths on Skill-Wanderer Dojo. Find courses on web development, programming, DevOps, and more.',
+  title: 'Tìm kiếm',
+  description: 'Tìm khóa học và lộ trình học theo tên, chủ đề hoặc kỹ năng.',
 })
 
 const { searchCourses, formatDuration, getCourseDuration, getCourseBySlug } = useCourses()
@@ -58,6 +58,15 @@ const difficultyClass = (d: string) => {
   }
 }
 
+const difficultyLabel = (d: string) => {
+  switch (d) {
+    case 'beginner': return 'Cơ bản'
+    case 'intermediate': return 'Trung cấp'
+    case 'advanced': return 'Nâng cao'
+    default: return d
+  }
+}
+
 // Sync with URL on mount
 watch(() => route.query.q, (newQ) => {
   if (typeof newQ === 'string') {
@@ -70,7 +79,7 @@ watch(() => route.query.q, (newQ) => {
   <div>
     <section class="pt-[170px] px-5 pb-10 text-center max-md:pt-[150px] max-md:px-4 max-md:pb-8 max-sm:pt-[140px] max-sm:px-3 max-sm:pb-6">
       <div class="max-w-[600px] mx-auto">
-        <h1 class="gradient-text text-3xl md:text-4xl font-bold mb-6">Search</h1>
+        <h1 class="gradient-text text-3xl md:text-4xl font-bold mb-6">Tìm kiếm</h1>
         <SearchBar @search="handleSearch" />
       </div>
     </section>
@@ -78,7 +87,7 @@ watch(() => route.query.q, (newQ) => {
     <section class="section">
       <template v-if="query.trim()">
         <p class="text-[0.95rem] text-[rgba(224,224,224,0.6)] mb-4">
-          {{ totalResults }} result{{ totalResults !== 1 ? 's' : '' }} for
+          Tìm thấy {{ totalResults }} kết quả cho
           <strong class="text-brand-orange">"{{ query }}"</strong>
         </p>
 
@@ -86,9 +95,9 @@ watch(() => route.query.q, (newQ) => {
         <div class="flex gap-2 mb-8 flex-wrap">
           <button
             v-for="tab in [
-              { key: 'all', label: `All (${totalResults})` },
-              { key: 'courses', label: `Courses (${courseResults.length})` },
-              { key: 'paths', label: `Learning Paths (${pathResults.length})` },
+              { key: 'all', label: `Tất cả (${totalResults})` },
+              { key: 'courses', label: `Khóa học (${courseResults.length})` },
+              { key: 'paths', label: `Lộ trình (${pathResults.length})` },
             ]"
             :key="tab.key"
             :class="[
@@ -106,7 +115,7 @@ watch(() => route.query.q, (newQ) => {
         <!-- Courses section -->
         <div v-if="(activeTab === 'all' || activeTab === 'courses') && courseResults.length" class="mb-12">
           <h2 v-if="activeTab === 'all'" class="flex items-center gap-2 text-xl font-bold mb-5 text-[#e0e0e0]">
-            <Icon name="mdi:school-outline" class="text-brand-orange" /> Courses
+            <Icon name="mdi:school-outline" class="text-brand-orange" /> Khóa học
           </h2>
           <div class="card-grid">
             <CourseCard v-for="course in courseResults" :key="course.id" :course="course" />
@@ -116,7 +125,7 @@ watch(() => route.query.q, (newQ) => {
         <!-- Paths section -->
         <div v-if="(activeTab === 'all' || activeTab === 'paths') && pathResults.length" class="mb-12">
           <h2 v-if="activeTab === 'all'" class="flex items-center gap-2 text-xl font-bold mb-5 text-[#e0e0e0]">
-            <Icon name="mdi:map-marker-path" class="text-brand-orange" /> Learning Paths
+            <Icon name="mdi:map-marker-path" class="text-brand-orange" /> Lộ trình học
           </h2>
           <div class="flex flex-col gap-6">
             <div v-for="path in pathResults" :key="path.slug" class="glass-card p-7 max-md:p-5 max-sm:p-4">
@@ -125,12 +134,12 @@ watch(() => route.query.q, (newQ) => {
                 <div>
                   <div class="flex items-center gap-2 mb-1">
                     <h3 class="text-xl font-bold">{{ path.title }}</h3>
-                    <span :class="['badge', difficultyClass(path.difficulty)]">{{ path.difficulty }}</span>
+                    <span :class="['badge', difficultyClass(path.difficulty)]">{{ difficultyLabel(path.difficulty) }}</span>
                   </div>
                   <p class="text-gray-400 text-sm">{{ path.description }}</p>
                   <div class="flex items-center gap-4 mt-2">
                     <span class="text-xs text-gray-500">
-                      <Icon name="mdi:book-open-outline" class="inline" /> {{ path.courseCount }} courses
+                      <Icon name="mdi:book-open-outline" class="inline" /> {{ path.courseCount }} khóa học
                     </span>
                     <span v-if="getPathDuration(path)" class="text-xs text-gray-500">
                       <Icon name="mdi:clock-outline" class="inline" /> {{ formatDuration(getPathDuration(path)) }}
@@ -157,14 +166,14 @@ watch(() => route.query.q, (newQ) => {
                   <span v-else class="text-[rgba(224,224,224,0.72)] text-[0.95rem] font-medium">
                     {{ course.title }}
                   </span>
-                  <span v-if="!isCourseAvailable(course.slug)" class="ml-auto text-[0.72rem] uppercase tracking-wider text-brand-orange/80">Planned</span>
+                  <span v-if="!isCourseAvailable(course.slug)" class="ml-auto text-[0.72rem] uppercase tracking-wider text-brand-orange/80">Sắp mở</span>
                 </div>
               </div>
 
               <!-- Coming soon -->
               <div v-else class="flex items-center gap-2.5 py-3 px-4 rounded-lg bg-brand-orange/5 border border-dashed border-brand-orange/20">
                 <Icon name="mdi:hammer-wrench" class="text-brand-orange text-lg" />
-                <span class="text-sm text-gray-400">Courses for this path are being developed. Stay tuned!</span>
+                <span class="text-sm text-gray-400">Nội dung đang được cập nhật. Vui lòng quay lại sau.</span>
               </div>
             </div>
           </div>
@@ -173,17 +182,17 @@ watch(() => route.query.q, (newQ) => {
         <!-- No results -->
         <div v-if="totalResults === 0" class="text-center py-[60px] px-5 max-sm:py-10 max-sm:px-3">
           <Icon name="mdi:magnify-close" class="text-gray-600 text-5xl mb-4" />
-          <h3 class="text-xl font-semibold mb-2">No results found</h3>
-          <p class="text-gray-500 mb-4">Try searching for "JavaScript", "QA", or "DevOps".</p>
-          <NuxtLink to="/courses" class="btn btn-outline btn-sm">Browse All Courses</NuxtLink>
+          <h3 class="text-xl font-semibold mb-2">Không tìm thấy kết quả</h3>
+          <p class="text-gray-500 mb-4">Thử tìm với từ khóa khác.</p>
+          <NuxtLink to="/courses" class="btn btn-outline btn-sm">Xem tất cả khóa học</NuxtLink>
         </div>
       </template>
 
       <template v-else>
         <div class="text-center py-[60px] px-5 max-sm:py-10 max-sm:px-3">
           <Icon name="mdi:magnify" class="text-gray-600 text-5xl mb-4" />
-          <h3 class="text-xl font-semibold mb-2">What do you want to learn?</h3>
-          <p class="text-gray-500">Search for courses and learning paths by name, topic, or skill.</p>
+          <h3 class="text-xl font-semibold mb-2">Bạn muốn học gì hôm nay?</h3>
+          <p class="text-gray-500">Hãy tìm khóa học và lộ trình theo tên, chủ đề hoặc kỹ năng.</p>
         </div>
       </template>
     </section>
