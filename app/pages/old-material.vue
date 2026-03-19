@@ -1,17 +1,7 @@
 <script setup lang="ts">
-const route = useRoute()
-
-const legacyUrl = computed(() => {
-  const from = route.query.from as string | undefined
-  if (from) {
-    return `https://legacy-dojo.skill-wanderer.com${from}`
-  }
-  return 'https://legacy-dojo.skill-wanderer.com'
-})
-
 useSeo({
-  title: 'Old Material — Skill-Wanderer Dojo',
-  description: 'The page you tried to access belongs to the old Dojo. Welcome to the new Skill-Wanderer Dojo!',
+  title: 'Noi dung da duoc di chuyen',
+  description: 'Duong dan ban vua truy cap khong con hop le hoac da duoc cap nhat.',
   noIndex: true,
 })
 </script>
@@ -22,39 +12,27 @@ useSeo({
       <Icon name="mdi:archive-clock-outline" class="text-brand-orange text-[5rem] mb-4" />
 
       <h1 class="text-[clamp(1.4rem,4vw,2rem)] font-bold mb-4">
-        Old Dojo Material
+        Noi dung da duoc cap nhat
       </h1>
 
       <p class="text-[rgba(224,224,224,0.8)] text-lg leading-relaxed mb-6">
-        It seems the URL you tried to access is an old material from the
-        <strong class="text-brand-orange">old Dojo</strong>.
+        Duong dan ban vua mo co the da cu, da thay doi, hoac khong con ton tai.
       </p>
 
       <p class="text-[rgba(224,224,224,0.65)] text-base leading-relaxed mb-6">
-        We're really sorry, but to make things progressive we needed to build a
-        brand-new, customised LMS — which is exactly what you're seeing here!
-        Please look around and ask
-        <strong class="text-brand-yellow">Lyra</strong>
-        (THE ARCHIVIST) for similar material.
+        Ban co the quay ve trang chu, tim khoa hoc, hoac su dung Lyra de tim noi dung tuong tu.
       </p>
 
       <p class="text-[rgba(224,224,224,0.65)] text-base leading-relaxed mb-8">
-        In the meantime, the old material is still available at
-        <a
-          :href="legacyUrl"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-brand-orange font-semibold underline underline-offset-2 hover:text-brand-yellow"
-        >legacy-dojo.skill-wanderer.com</a>
-        while we migrate everything over.
+        Neu ban khong tim thay bai hoc can thiet, hay dung trang tim kiem de tim nhanh hon.
       </p>
 
       <div class="flex gap-4 justify-center flex-wrap max-sm:flex-col max-sm:items-center max-sm:gap-3">
         <NuxtLink to="/" class="btn btn-primary">
-          <Icon name="mdi:home" /> Go Home
+          <Icon name="mdi:home" /> Ve trang chu
         </NuxtLink>
         <NuxtLink to="/courses" class="btn btn-secondary">
-          Browse Courses
+          Xem khoa hoc
         </NuxtLink>
       </div>
     </div>

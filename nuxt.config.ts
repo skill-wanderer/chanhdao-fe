@@ -21,28 +21,28 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      title: 'Skill-Wanderer Dojo — Free Open Learning Platform',
-      htmlAttrs: { lang: 'en' },
+      title: 'Chanh Dao Hoc Tap — Nen tang hoc tap mo',
+      htmlAttrs: { lang: 'vi' },
       meta: [
-        { name: 'description', content: 'Skill-Wanderer Dojo is a free, open-access learning management system. Browse courses, track progress, and master new skills — no paywall, no barriers.' },
+        { name: 'description', content: 'Nen tang hoc tap mo va mien phi. Kham pha khoa hoc, theo doi tien do, va nang cao ky nang.' },
         { name: 'theme-color', content: '#FF6B35' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:title', content: 'Skill-Wanderer Dojo — Free Open Learning Platform' },
-        { property: 'og:description', content: 'Browse courses, track progress, and master new skills — free and open to everyone.' },
+        { property: 'og:title', content: 'Chanh Dao Hoc Tap — Nen tang hoc tap mo' },
+        { property: 'og:description', content: 'Kham pha khoa hoc, theo doi tien do, va hoc tap mien phi cho moi nguoi.' },
         { property: 'og:image', content: '/og-image.png' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Skill-Wanderer Dojo — Free Open Learning Platform' },
-        { name: 'twitter:description', content: 'Browse courses, track progress, and master new skills — free and open to everyone.' },
+        { name: 'twitter:title', content: 'Chanh Dao Hoc Tap — Nen tang hoc tap mo' },
+        { name: 'twitter:description', content: 'Kham pha khoa hoc, theo doi tien do, va hoc tap mien phi cho moi nguoi.' },
       ],
       link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/skill-wanderer-favicon.svg' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
       ],
     },
   },
 
   site: {
-    url: 'https://dojo.skill-wanderer.com',
-    name: 'Skill-Wanderer Dojo',
+    url: 'http://localhost:3000',
+    name: 'Chanh Dao Hoc Tap',
   },
 
   sitemap: {
@@ -57,8 +57,8 @@ export default defineNuxtConfig({
   schemaOrg: {
     identity: {
       type: 'Organization',
-      name: 'Skill-Wanderer Dojo',
-      url: 'https://dojo.skill-wanderer.com',
+      name: 'Chanh Dao Hoc Tap',
+      url: 'http://localhost:3000',
       logo: '/logo.png',
     },
   },
@@ -71,14 +71,14 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://dojo.skill-wanderer.com',
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
       keycloakUrl: process.env.NUXT_PUBLIC_KEYCLOAK_URL || '',
       keycloakRealm: process.env.NUXT_PUBLIC_KEYCLOAK_REALM || '',
       keycloakClientId: process.env.NUXT_PUBLIC_KEYCLOAK_CLIENT_ID || '',
       apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL || '',
       pathfinder: {
         apiUrl: process.env.NUXT_PUBLIC_PATHFINDER_API_URL || 'http://localhost:8000',
-        domains: process.env.NUXT_PUBLIC_PATHFINDER_DOMAINS || 'dojo.skill-wanderer.com',
+        domains: process.env.NUXT_PUBLIC_PATHFINDER_DOMAINS || 'localhost',
         sessionExpiryMinutes: Number(process.env.NUXT_PUBLIC_PATHFINDER_SESSION_EXPIRY_MINUTES) || 30,
         sessionStorage: process.env.NUXT_PUBLIC_PATHFINDER_SESSION_STORAGE || 'browser',
       },

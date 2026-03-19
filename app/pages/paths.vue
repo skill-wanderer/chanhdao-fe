@@ -4,8 +4,8 @@ import allPaths from '~/data/paths'
 const { formatDuration, getCourseDuration, getCourseBySlug } = useCourses()
 
 useSeo({
-  title: 'Learning Paths — Skill-Wanderer Dojo',
-  description: 'Follow curated learning paths to go from beginner to advanced. Structured sequences for web development, mobile, DevOps, QA, and more.',
+  title: 'Lo trinh hoc',
+  description: 'Cac lo trinh hoc duoc sap xep theo muc tieu, tu co ban den nang cao.',
 })
 
 const paths = allPaths
@@ -33,6 +33,15 @@ const difficultyClass = (d: string) => {
   }
 }
 
+const difficultyLabel = (d: string) => {
+  switch (d) {
+    case 'beginner': return 'Co ban'
+    case 'intermediate': return 'Trung cap'
+    case 'advanced': return 'Nang cao'
+    default: return d
+  }
+}
+
 /**
  * Compute total estimated duration for a learning path
  * by summing durations of its linked courses.
@@ -53,10 +62,10 @@ function isCourseAvailable(slug: string): boolean {
 <template>
   <div>
     <TheHero
-      title="Learning Paths"
-      subtitle="Structured Learning"
-      description="Follow curated paths designed to take you from beginner to confident. Each path sequences courses in the right order."
-      :cta-primary="{ label: 'Browse Courses', to: '/courses' }"
+      title="Lo trinh hoc"
+      subtitle="Hoc theo tung buoc"
+      description="Chon lo trinh phu hop va hoc theo trinh tu de dat ket qua ben vung."
+      :cta-primary="{ label: 'Xem khoa hoc', to: '/courses' }"
     />
 
     <section class="section">
@@ -67,18 +76,18 @@ function isCourseAvailable(slug: string): boolean {
           <input
             v-model="searchQuery"
             type="search"
-            placeholder="Search learning paths…"
+            placeholder="Tim lo trinh hoc..."
             class="flex-1 bg-transparent border-none text-[#e0e0e0] text-base outline-none placeholder:text-[rgba(224,224,224,0.35)]"
-            aria-label="Search learning paths"
+            aria-label="Tim lo trinh hoc"
           />
         </div>
         <div class="flex gap-2 flex-wrap max-md:justify-center">
           <button
             v-for="filter in [
-              { key: '', label: 'All', activeClasses: 'bg-brand-orange/15 border-brand-orange text-brand-orange' },
-              { key: 'beginner', label: 'Beginner', activeClasses: 'bg-[rgba(76,175,80,0.15)] border-[#4caf50] text-[#4caf50]' },
-              { key: 'intermediate', label: 'Intermediate', activeClasses: 'bg-[rgba(255,152,0,0.15)] border-[#ff9800] text-[#ff9800]' },
-              { key: 'advanced', label: 'Advanced', activeClasses: 'bg-[rgba(244,67,54,0.15)] border-[#f44336] text-[#f44336]' },
+              { key: '', label: 'Tat ca', activeClasses: 'bg-brand-orange/15 border-brand-orange text-brand-orange' },
+              { key: 'beginner', label: 'Co ban', activeClasses: 'bg-[rgba(76,175,80,0.15)] border-[#4caf50] text-[#4caf50]' },
+              { key: 'intermediate', label: 'Trung cap', activeClasses: 'bg-[rgba(255,152,0,0.15)] border-[#ff9800] text-[#ff9800]' },
+              { key: 'advanced', label: 'Nang cao', activeClasses: 'bg-[rgba(244,67,54,0.15)] border-[#f44336] text-[#f44336]' },
             ]"
             :key="filter.key"
             :class="[
@@ -96,12 +105,12 @@ function isCourseAvailable(slug: string): boolean {
 
       <!-- Results count -->
       <p v-if="searchQuery.trim() || selectedDifficulty" class="text-[0.95rem] text-[rgba(224,224,224,0.6)] mb-6">
-        {{ filteredPaths.length }} path{{ filteredPaths.length !== 1 ? 's' : '' }} found
+        Tim thay {{ filteredPaths.length }} lo trinh
         <template v-if="searchQuery.trim()">
-          for <strong class="text-brand-orange">"{{ searchQuery }}"</strong>
+          voi tu khoa <strong class="text-brand-orange">"{{ searchQuery }}"</strong>
         </template>
         <template v-if="selectedDifficulty">
-          in <strong class="text-brand-orange">{{ selectedDifficulty }}</strong>
+          o muc <strong class="text-brand-orange">{{ selectedDifficulty }}</strong>
         </template>
       </p>
 
@@ -112,12 +121,12 @@ function isCourseAvailable(slug: string): boolean {
             <div>
               <div class="flex items-center gap-2 mb-1">
                 <h2 class="text-xl font-bold">{{ path.title }}</h2>
-                <span :class="['badge', difficultyClass(path.difficulty)]">{{ path.difficulty }}</span>
+                <span :class="['badge', difficultyClass(path.difficulty)]">{{ difficultyLabel(path.difficulty) }}</span>
               </div>
               <p class="text-gray-400 text-sm">{{ path.description }}</p>
               <div class="flex items-center gap-4 mt-2">
                 <span class="text-xs text-gray-500">
-                  <Icon name="mdi:book-open-outline" class="inline" /> {{ path.courseCount }} courses
+                  <Icon name="mdi:book-open-outline" class="inline" /> {{ path.courseCount }} khoa hoc
                 </span>
                 <span v-if="getPathDuration(path)" class="text-xs text-gray-500">
                   <Icon name="mdi:clock-outline" class="inline" /> {{ formatDuration(getPathDuration(path)) }}
@@ -144,14 +153,14 @@ function isCourseAvailable(slug: string): boolean {
               <span v-else class="text-[rgba(224,224,224,0.72)] text-[0.95rem] font-medium">
                 {{ course.title }}
               </span>
-              <span v-if="!isCourseAvailable(course.slug)" class="ml-auto text-[0.72rem] uppercase tracking-wider text-brand-orange/80">Planned</span>
+              <span v-if="!isCourseAvailable(course.slug)" class="ml-auto text-[0.72rem] uppercase tracking-wider text-brand-orange/80">Sap mo</span>
             </div>
           </div>
 
           <!-- Coming soon when no courses yet -->
           <div v-else class="flex items-center gap-2.5 py-3 px-4 rounded-lg bg-brand-orange/5 border border-dashed border-brand-orange/20">
             <Icon name="mdi:hammer-wrench" class="text-brand-orange text-lg" />
-            <span class="text-sm text-gray-400">Courses for this path are being developed. Stay tuned!</span>
+            <span class="text-sm text-gray-400">Noi dung dang duoc cap nhat. Vui long quay lai sau.</span>
           </div>
         </div>
       </div>
@@ -159,10 +168,10 @@ function isCourseAvailable(slug: string): boolean {
       <!-- Empty state -->
       <div v-else class="text-center py-[60px] px-5 max-sm:py-10 max-sm:px-3">
         <Icon name="mdi:magnify-close" class="text-gray-600 text-5xl mb-4" />
-        <h3 class="text-xl font-semibold mb-2">No paths found</h3>
-        <p class="text-gray-500 mb-4">Try a different search term or clear your filters.</p>
+        <h3 class="text-xl font-semibold mb-2">Khong tim thay lo trinh</h3>
+        <p class="text-gray-500 mb-4">Thu tu khoa khac hoac xoa bo loc hien tai.</p>
         <button class="btn btn-outline btn-sm" @click="searchQuery = ''; selectedDifficulty = ''">
-          Clear Filters
+          Xoa bo loc
         </button>
       </div>
     </section>

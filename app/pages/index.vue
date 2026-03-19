@@ -4,8 +4,8 @@ import allCourses from '~/data/courses'
 import { isPublishedCourse } from '~/types/course'
 
 useSeo({
-  title: 'Skill-Wanderer Dojo — Free Open Learning Platform',
-  description: 'Skill-Wanderer Dojo is a free, open-access learning management system. Browse courses, track progress, and master new skills — no paywall, no barriers.',
+  title: 'Chanh Dao Hoc Tap — Nen tang hoc tap mo',
+  description: 'Nen tang hoc tap mo, mien phi. Kham pha khoa hoc, theo doi tien do va nang cao ky nang moi ngay.',
 })
 
 const learningPaths = [
@@ -20,38 +20,38 @@ const learningPaths = [
 const features = [
   {
     icon: 'mdi:lock-open-variant-outline',
-    title: 'Free & Open',
-    description: 'Every course is free and accessible. No paywalls, no premium gates — just learning.',
+    title: 'Mien phi va mo',
+    description: 'Moi khoa hoc deu co the truy cap mien phi, khong co paywall.',
   },
   {
     icon: 'mdi:school-outline',
-    title: 'Structured Paths',
-    description: 'Follow curated learning paths from beginner to advanced, step by step.',
+    title: 'Lo trinh ro rang',
+    description: 'Theo cac lo trinh duoc sap xep tu co ban den nang cao.',
   },
   {
     icon: 'mdi:chart-timeline-variant-shimmer',
-    title: 'Track Progress',
-    description: 'Mark lessons complete and see your progress across all enrolled courses.',
+    title: 'Theo doi tien do',
+    description: 'Danh dau bai hoc da xong va theo doi tien do tren tung khoa hoc.',
   },
   {
     icon: 'mdi:code-tags',
-    title: 'Hands-On Projects',
-    description: 'Learn by doing. Every course includes practical exercises and real projects.',
+    title: 'Hoc qua thuc hanh',
+    description: 'Tap trung vao bai tap va tinh huong ap dung thuc te.',
   },
   {
     icon: 'mdi:earth',
-    title: 'Open Source',
-    description: 'This platform is open source. Contribute, suggest, or fork — it belongs to everyone.',
+    title: 'Ma nguon mo',
+    description: 'Du an ma nguon mo de cong dong dong gop va phat trien.',
   },
   {
     icon: 'mdi:devices',
-    title: 'Learn Anywhere',
-    description: 'Responsive design works on desktop, tablet, and mobile. Learn on your terms.',
+    title: 'Hoc moi noi',
+    description: 'Giao dien tuong thich desktop, tablet va dien thoai.',
   },
   {
     icon: 'mdi:robot-outline',
-    title: 'AI-Powered Development',
-    description: 'With AI, building courses as code is faster than any drag-and-drop LMS. We\'re developers — we play to our strengths.',
+    title: 'Ho tro boi AI',
+    description: 'AI ho tro bien soan va nang cap noi dung nhanh, de dang duy tri.',
   },
 ]
 
@@ -62,26 +62,25 @@ const publishedCourseCount = allCourses.filter(isPublishedCourse).length
   <div>
     <!-- Hero -->
     <TheHero
-      title="Master Skills. No Barriers."
-      subtitle="Welcome to Skill-Wanderer Dojo"
-      description="A free, open-access learning platform replacing traditional LMS. Browse courses, track your progress, and level up — without paying a cent."
-      :cta-primary="{ label: 'Browse Courses', to: '/courses' }"
-      :cta-tertiary="{ label: 'Browse Learning Paths', to: '/paths' }"
-      :cta-secondary="{ label: 'Why Custom LMS?', href: 'https://wanderings.skill-wanderer.com/blog/wanderers-log-4-goodbye-moodle-hello-custom-lms/' }"
+      title="Hoc that vung. Khong gioi han."
+      subtitle="Chao mung den voi Chanh Dao Hoc Tap"
+      description="Nen tang hoc tap mo, de ban tu do kham pha khoa hoc va lo trinh theo nhip do rieng."
+      :cta-primary="{ label: 'Xem khoa hoc', to: '/courses' }"
+      :cta-tertiary="{ label: 'Xem lo trinh hoc', to: '/paths' }"
       :stats="[
-        { value: String(allPaths.length), label: 'Paths' },
-        { value: String(publishedCourseCount), label: 'Courses' },
-        { value: '100%', label: 'Free' },
-        { value: 'Open', label: 'Source' },
+        { value: String(allPaths.length), label: 'Lo trinh' },
+        { value: String(publishedCourseCount), label: 'Khoa hoc' },
+        { value: '100%', label: 'Mien phi' },
+        { value: 'Mo', label: 'Cong dong' },
       ]"
     />
 
     <!-- Features Section -->
     <section class="section section-glow">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Why the Dojo?</h2>
+        <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Vi sao chon nen tang nay?</h2>
         <p class="text-gray-400 max-w-xl mx-auto leading-relaxed">
-          Built to replace traditional LMS with a modern, fast, open learning experience.
+          Trai nghiem hoc tap hien dai, de tiep can va de duy tri lau dai.
         </p>
       </div>
 
@@ -98,11 +97,11 @@ const publishedCourseCount = allCourses.filter(isPublishedCourse).length
     <section class="section">
       <div class="flex items-center justify-between mb-8 flex-wrap gap-4">
         <div>
-          <h2 class="text-3xl font-bold gradient-text mb-2">Learning Paths</h2>
-          <p class="text-gray-400">Choose a path and start your journey</p>
+          <h2 class="text-3xl font-bold gradient-text mb-2">Lo trinh hoc</h2>
+          <p class="text-gray-400">Chon lo trinh va bat dau ngay hom nay</p>
         </div>
         <NuxtLink to="/paths" class="btn btn-outline btn-sm">
-          View All Paths <Icon name="mdi:arrow-right" />
+          Xem tat ca lo trinh <Icon name="mdi:arrow-right" />
         </NuxtLink>
       </div>
 
@@ -124,13 +123,13 @@ const publishedCourseCount = allCourses.filter(isPublishedCourse).length
     <section class="section section-narrow text-center">
       <div class="glass-card p-10 md:p-14">
         <Icon name="mdi:rocket-launch-outline" class="text-brand-orange text-4xl mb-4" />
-        <h2 class="text-2xl md:text-3xl font-bold gradient-text mb-4">Ready to Start Learning?</h2>
+        <h2 class="text-2xl md:text-3xl font-bold gradient-text mb-4">San sang bat dau hoc?</h2>
         <p class="text-gray-400 mb-6 leading-relaxed">
-          Jump into any course — no sign-up required for browsing. Create a free account to track your progress.
+          Ban co the xem khoa hoc ngay. Tao tai khoan mien phi de luu va theo doi tien do.
         </p>
         <div class="flex gap-4 justify-center flex-wrap">
           <NuxtLink to="/courses" class="btn btn-primary">
-            Explore Courses <Icon name="mdi:arrow-right" />
+            Kham pha khoa hoc <Icon name="mdi:arrow-right" />
           </NuxtLink>
         </div>
       </div>

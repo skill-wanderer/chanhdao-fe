@@ -9,18 +9,18 @@ const { getCourseBySlug } = useCourses()
 const course = getCourseBySlug(courseSlug)
 
 if (!course) {
-  throw createError({ statusCode: 404, statusMessage: 'Course not found' })
+  throw createError({ statusCode: 404, statusMessage: 'Khong tim thay khoa hoc' })
 }
 
 const allLessons = getAllLessons(course)
 const lesson = allLessons.find(l => l.slug === lessonSlug)
 
 if (!lesson) {
-  throw createError({ statusCode: 404, statusMessage: 'Lesson not found' })
+  throw createError({ statusCode: 404, statusMessage: 'Khong tim thay bai hoc' })
 }
 
 if (!isPublishedLesson(lesson)) {
-  throw createError({ statusCode: 404, statusMessage: 'Lesson not published yet' })
+  throw createError({ statusCode: 404, statusMessage: 'Bai hoc chua duoc cong bo' })
 }
 
 // Extract first YouTube video URL from lesson content for VideoObject schema
@@ -97,7 +97,7 @@ onMounted(async () => {
     isCompleted.value = data.completed
   }
   catch {
-    showError('Failed to load completion status. Please try again later.')
+    showError('Khong the tai trang thai hoan thanh. Vui long thu lai sau.')
   }
 })
 
@@ -121,7 +121,7 @@ async function toggleComplete() {
     isCompleted.value = newState
   }
   catch {
-    showError('Something went wrong. Please try again later.')
+    showError('Da xay ra loi. Vui long thu lai sau.')
   }
   finally {
     isLoading.value = false
@@ -136,15 +136,15 @@ async function toggleComplete() {
       <div v-if="errorToast" class="fixed top-5 right-5 z-[9999] flex items-center gap-2 py-3 px-4 bg-red-600/95 text-white rounded-[10px] text-sm font-medium shadow-[0_4px_20px_rgba(220,38,38,0.4)] max-w-[380px]" role="alert">
         <Icon name="mdi:alert-circle-outline" />
         <span>{{ errorToast }}</span>
-        <button class="ml-2 bg-transparent border-none text-white text-xl cursor-pointer opacity-80 leading-none hover:opacity-100" aria-label="Dismiss" @click="errorToast = ''">&times;</button>
+        <button class="ml-2 bg-transparent border-none text-white text-xl cursor-pointer opacity-80 leading-none hover:opacity-100" aria-label="Dong" @click="errorToast = ''">&times;</button>
       </div>
     </Transition>
 
     <!-- Breadcrumb -->
     <div class="section" style="padding-bottom: 0;">
       <BreadcrumbNav :items="[
-        { label: 'Home', to: '/' },
-        { label: 'Courses', to: '/courses' },
+        { label: 'Trang chu', to: '/' },
+        { label: 'Khoa hoc', to: '/courses' },
         { label: course.title, to: `/courses/${course.slug}` },
         { label: lesson.title },
       ]" />
@@ -183,7 +183,7 @@ async function toggleComplete() {
               >
                 <span class="shrink-0 text-xs w-6 text-[rgba(224,224,224,0.3)]">{{ String(course.modules.slice(0, mi).reduce((sum, m) => sum + m.lessons.length, 0) + li + 1).padStart(2, '0') }}</span>
                 <span>{{ l.title }}</span>
-                <span class="ml-auto text-[0.68rem] uppercase tracking-wider text-brand-orange/75">Planned</span>
+                <span class="ml-auto text-[0.68rem] uppercase tracking-wider text-brand-orange/75">Sap mo</span>
               </div>
             </template>
           </template>
@@ -194,17 +194,17 @@ async function toggleComplete() {
       <main>
         <div class="mb-8">
           <span class="text-[0.85rem] text-brand-orange font-semibold uppercase tracking-wide">
-            Lesson {{ currentIndex + 1 }} of {{ allLessons.length }}
+            Bai hoc {{ currentIndex + 1 }} / {{ allLessons.length }}
           </span>
           <h1 class="text-[clamp(1.5rem,3vw,2.2rem)] font-extrabold mt-2 mb-3">{{ lesson.title }}</h1>
           <div class="flex gap-4 text-sm text-[rgba(224,224,224,0.5)] flex-wrap">
             <span class="flex items-center gap-1">
               <Icon :name="lesson.type === 'video' ? 'mdi:play-circle-outline' : 'mdi:file-document-outline'" />
-              {{ lesson.type === 'video' ? 'Video' : 'Article' }}
+              {{ lesson.type === 'video' ? 'Video' : 'Bai viet' }}
             </span>
             <span v-if="lesson.updatedAt || course.updatedAt" class="flex items-center gap-1 text-[0.82rem] text-[rgba(224,224,224,0.35)]">
               <Icon name="mdi:update" />
-              Updated: {{ new Date(lesson.updatedAt || course.updatedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) }}
+              Cap nhat: {{ new Date(lesson.updatedAt || course.updatedAt).toLocaleDateString('vi-VN', { year: 'numeric', month: 'short', day: 'numeric' }) }}
             </span>
           </div>
         </div>
@@ -212,7 +212,7 @@ async function toggleComplete() {
         <!-- Video Placeholder -->
         <div v-if="lesson.type === 'video'" class="aspect-video bg-white/[0.03] border border-brand-orange/15 rounded-2xl flex flex-col items-center justify-center mb-8">
           <Icon name="mdi:play-circle" class="text-6xl text-brand-orange opacity-50" />
-          <p class="text-gray-500 mt-4">Video player will be integrated here</p>
+          <p class="text-gray-500 mt-4">Trinh phat video se duoc tich hop tai day</p>
         </div>
 
         <!-- Tabbed layout when lesson has both content and quiz -->
@@ -226,7 +226,7 @@ async function toggleComplete() {
               @click="activeTab = 'summary'"
             >
               <Icon name="mdi:book-open-variant" />
-              Summary & Takeaway
+              Tom tat va ghi nho
             </button>
             <button
               :class="[
@@ -272,9 +272,8 @@ async function toggleComplete() {
         <!-- Article Content Placeholder (no content yet) -->
         <div v-else class="lesson-content glass-card p-4 sm:p-6 md:p-8 mb-8">
           <p class="text-gray-400 leading-relaxed">
-            This is where the lesson content for <strong>"{{ lesson.title }}"</strong> will be rendered.
-            Content will be loaded from the API and can include formatted text, code snippets,
-            images, and interactive elements.
+            Noi dung cua bai <strong>"{{ lesson.title }}"</strong> se hien thi tai day.
+            Noi dung co the bao gom van ban dinh dang, doan ma, hinh anh va thanh phan tuong tac.
           </p>
         </div>
 
@@ -286,7 +285,7 @@ async function toggleComplete() {
             @click="toggleComplete"
           >
             <Icon :name="isLoading ? 'mdi:loading' : isCompleted ? 'mdi:check-circle' : 'mdi:check-circle-outline'" :class="{ 'animate-spin': isLoading }" />
-            {{ isCompleted ? 'Completed' : 'Mark as Complete' }}
+            {{ isCompleted ? 'Da hoan thanh' : 'Danh dau da hoc xong' }}
           </button>
         </div>
 
@@ -302,7 +301,7 @@ async function toggleComplete() {
           >
             <Icon name="mdi:arrow-left" />
             <div>
-              <span class="block text-xs text-[rgba(224,224,224,0.4)] uppercase tracking-wide">Previous</span>
+              <span class="block text-xs text-[rgba(224,224,224,0.4)] uppercase tracking-wide">Truoc</span>
               <span class="block font-semibold text-[0.95rem] max-sm:text-[0.85rem]">{{ prevLesson.title }}</span>
             </div>
           </NuxtLink>
@@ -314,7 +313,7 @@ async function toggleComplete() {
             class="flex items-center gap-3 py-4 px-5 no-underline text-[#e0e0e0] text-right justify-end glass-card max-sm:py-3 max-sm:px-3.5 max-sm:gap-2"
           >
             <div>
-              <span class="block text-xs text-[rgba(224,224,224,0.4)] uppercase tracking-wide">Next</span>
+              <span class="block text-xs text-[rgba(224,224,224,0.4)] uppercase tracking-wide">Tiep theo</span>
               <span class="block font-semibold text-[0.95rem] max-sm:text-[0.85rem]">{{ nextLesson.title }}</span>
             </div>
             <Icon name="mdi:arrow-right" />

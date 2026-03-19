@@ -8,18 +8,19 @@ const { formatDuration, getCourseDuration, getCourseBySlug } = useCourses()
 const path = allPaths.find(p => p.slug === slug)
 
 if (!path) {
-  throw createError({ statusCode: 404, statusMessage: 'Learning path not found' })
+  throw createError({ statusCode: 404, statusMessage: 'Khong tim thay lo trinh hoc' })
 }
 
-const siteUrl = 'https://dojo.skill-wanderer.com'
+const config = useRuntimeConfig()
+const siteUrl = (config.public.siteUrl as string) || 'http://localhost:3000'
 
 useSeo({
-  title: `${path.title} Learning Path — Skill-Wanderer Dojo`,
+  title: `${path.title} — Lo trinh hoc`,
   description: path.description,
   url: `${siteUrl}/paths/${path.slug}`,
   breadcrumbs: [
-    { name: 'Home', url: siteUrl },
-    { name: 'Learning Paths', url: `${siteUrl}/paths` },
+    { name: 'Trang chu', url: siteUrl },
+    { name: 'Lo trinh hoc', url: `${siteUrl}/paths` },
     { name: path.title },
   ],
 })
@@ -49,14 +50,23 @@ function difficultyClass(d: string): string {
     default: return 'badge-beginner'
   }
 }
+
+function difficultyLabel(d: string): string {
+  switch (d) {
+    case 'beginner': return 'Co ban'
+    case 'intermediate': return 'Trung cap'
+    case 'advanced': return 'Nang cao'
+    default: return d
+  }
+}
 </script>
 
 <template>
   <div>
     <div class="section" style="padding-bottom: 0;">
       <BreadcrumbNav :items="[
-        { label: 'Home', to: '/' },
-        { label: 'Learning Paths', to: '/paths' },
+        { label: 'Trang chu', to: '/' },
+        { label: 'Lo trinh hoc', to: '/paths' },
         { label: path.title },
       ]" />
     </div>
@@ -69,19 +79,19 @@ function difficultyClass(d: string): string {
             <div class="flex-1">
               <div class="flex items-center gap-2 mb-2 flex-wrap">
                 <h1 class="gradient-text text-[clamp(1.8rem,4vw,2.6rem)] font-black leading-[1.15]">{{ path.title }}</h1>
-                <span :class="['badge', difficultyClass(path.difficulty)]">{{ path.difficulty }}</span>
+                <span :class="['badge', difficultyClass(path.difficulty)]">{{ difficultyLabel(path.difficulty) }}</span>
               </div>
               <p class="text-[rgba(224,224,224,0.72)] text-[1.02rem] leading-[1.75]">{{ path.description }}</p>
 
               <div class="flex items-center gap-5 mt-4 flex-wrap">
                 <span class="text-sm text-[rgba(224,224,224,0.6)]">
-                  <Icon name="mdi:book-open-outline" class="inline" /> {{ path.courseCount }} planned courses
+                  <Icon name="mdi:book-open-outline" class="inline" /> {{ path.courseCount }} khoa hoc du kien
                 </span>
                 <span class="text-sm text-[rgba(224,224,224,0.6)]">
-                  <Icon name="mdi:check-circle-outline" class="inline" /> {{ availableCourses }} currently available
+                  <Icon name="mdi:check-circle-outline" class="inline" /> {{ availableCourses }} khoa hoc dang mo
                 </span>
                 <span v-if="totalDuration" class="text-sm text-[rgba(224,224,224,0.6)]">
-                  <Icon name="mdi:clock-outline" class="inline" /> {{ formatDuration(totalDuration) }} available content
+                  <Icon name="mdi:clock-outline" class="inline" /> {{ formatDuration(totalDuration) }} noi dung dang mo
                 </span>
               </div>
             </div>
@@ -94,7 +104,7 @@ function difficultyClass(d: string): string {
       <div class="glass-card p-7 max-md:p-5 max-sm:p-4">
         <div class="flex items-center gap-2 mb-5">
           <Icon name="mdi:map-marker-path" class="text-brand-orange text-xl" />
-          <h2 class="text-2xl font-bold">Curriculum Roadmap</h2>
+          <h2 class="text-2xl font-bold">Lo trinh noi dung</h2>
         </div>
 
         <div v-if="path.courses?.length" class="flex flex-col gap-3">
@@ -117,22 +127,22 @@ function difficultyClass(d: string): string {
               {{ course.title }}
             </span>
 
-            <span v-if="isCourseAvailable(course.slug)" class="ml-auto text-[0.72rem] uppercase tracking-wider text-[#4caf50]">Available</span>
-            <span v-else class="ml-auto text-[0.72rem] uppercase tracking-wider text-brand-orange/80">Planned</span>
+            <span v-if="isCourseAvailable(course.slug)" class="ml-auto text-[0.72rem] uppercase tracking-wider text-[#4caf50]">Dang mo</span>
+            <span v-else class="ml-auto text-[0.72rem] uppercase tracking-wider text-brand-orange/80">Sap mo</span>
           </div>
         </div>
 
         <div v-else class="flex items-center gap-2.5 py-3 px-4 rounded-lg bg-brand-orange/5 border border-dashed border-brand-orange/20">
           <Icon name="mdi:hammer-wrench" class="text-brand-orange text-lg" />
-          <span class="text-sm text-gray-400">Courses for this path are being developed. Stay tuned!</span>
+          <span class="text-sm text-gray-400">Noi dung dang duoc cap nhat. Vui long quay lai sau.</span>
         </div>
 
         <div class="mt-6 pt-5 border-t border-white/10 flex flex-wrap gap-3">
           <NuxtLink to="/courses" class="btn btn-primary btn-sm">
-            <Icon name="mdi:school-outline" /> Browse Available Courses
+            <Icon name="mdi:school-outline" /> Xem khoa hoc dang mo
           </NuxtLink>
           <NuxtLink to="/paths" class="btn btn-outline btn-sm">
-            <Icon name="mdi:arrow-left" /> Back to Learning Paths
+            <Icon name="mdi:arrow-left" /> Quay lai lo trinh hoc
           </NuxtLink>
         </div>
       </div>

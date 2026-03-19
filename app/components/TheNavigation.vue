@@ -1,8 +1,6 @@
 <script setup lang="ts">
 const isScrolled = ref(false)
 const isMobileOpen = ref(false)
-const isEcosystemOpen = ref(false)
-const isMobileEcosystemOpen = ref(false)
 const isUserMenuOpen = ref(false)
 
 const { isAuthEnabled, isAuthenticated, user, loginUrl, registerUrl, logout } = useKeycloak()
@@ -16,21 +14,13 @@ if (import.meta.client) {
 const route = useRoute()
 watch(() => route.path, () => {
   isMobileOpen.value = false
-  isMobileEcosystemOpen.value = false
 })
 
 const navLinks = [
-  { label: 'Courses', to: '/courses' },
-  { label: 'Learning Paths', to: '/paths' },
+  { label: 'Khoa hoc', to: '/courses' },
+  { label: 'Lo trinh hoc', to: '/paths' },
   { label: 'Lyra', to: '/lyra' },
-  { label: 'About', href: 'https://skill-wanderer.com/about' },
-  { label: 'Why Custom Dojo?', href: 'https://wanderings.skill-wanderer.com/blog/wanderers-log-4-goodbye-moodle-hello-custom-lms/' },
-]
-
-const ecosystemLinks = [
-  { label: 'Hub', href: 'https://skill-wanderer.com/', icon: 'mdi:home' },
-  { label: 'Dojo', to: '/', icon: 'mdi:fire', current: true },
-  { label: 'Blog', href: 'https://wanderings.skill-wanderer.com/', icon: 'mdi:post' },
+  { label: 'Gioi thieu', to: '/about' },
 ]
 </script>
 
@@ -38,94 +28,29 @@ const ecosystemLinks = [
   <header
     class="fixed top-0 left-0 right-0 z-[100] border-b border-brand-orange/10 transition-all duration-300"
   >
-    <!-- Active Development Banner -->
-    <div class="bg-gradient-to-r from-amber-500 to-red-500 text-white text-center px-4 py-2 text-sm leading-snug overflow-hidden">
-      <div class="flex items-center justify-center gap-2 max-w-[960px] mx-auto">
-        <Icon name="mdi:hammer-wrench" class="shrink-0 text-[1.15rem] max-sm:hidden" />
-        <p class="m-0 break-words">
-          The new <strong>Skill-Wanderer Dojo</strong> is in active development.
-          Until we finish the migration, the old dojo lives at
-          <a
-            href="https://legacy-dojo.skill-wanderer.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-white font-bold underline underline-offset-2 hover:text-amber-200 break-all"
-          >legacy-dojo.skill-wanderer.com</a>.
-        </p>
-      </div>
-    </div>
-
     <nav
       class="max-w-content mx-auto flex items-center justify-between backdrop-blur-[12px] transition-all duration-300"
       :class="isScrolled ? 'py-2.5 px-5 bg-[rgba(15,15,15,0.95)] lg:px-5 max-lg:px-4 max-lg:py-2' : 'py-4 px-5 bg-[rgba(15,15,15,0.85)] max-lg:px-4 max-lg:py-3'"
     >
       <!-- Logo -->
-      <NuxtLink to="/" class="flex items-center gap-2 text-[1.3rem] font-bold no-underline" aria-label="Skill-Wanderer Dojo Home">
+      <NuxtLink to="/" class="flex items-center gap-2 text-[1.3rem] font-bold no-underline" aria-label="Trang chu Chanh Dao">
         <Icon name="mdi:fire" class="text-brand-orange text-[1.6rem]" />
-        <span class="text-[clamp(0.85rem,3vw,1.2rem)] whitespace-nowrap gradient-text">Skill-Wanderer <span class="logo-accent max-[400px]:hidden">Dojo</span></span>
+        <span class="text-[clamp(0.85rem,3vw,1.2rem)] whitespace-nowrap gradient-text">Chanh Dao <span class="logo-accent max-[400px]:hidden">Hoc Tap</span></span>
       </NuxtLink>
 
       <!-- Desktop Links -->
       <ul class="hidden lg:flex list-none items-center gap-5">
         <li v-for="link in navLinks" :key="link.label">
-          <a v-if="link.href" :href="link.href" class="nav-link" target="_blank" rel="noopener noreferrer">
-            {{ link.label }}
-          </a>
-          <NuxtLink v-else :to="link.to" class="nav-link" active-class="nav-link--active">
+          <NuxtLink :to="link.to" class="nav-link" active-class="nav-link--active">
             {{ link.label }}
           </NuxtLink>
         </li>
 
-        <!-- Platform Ecosystem Dropdown -->
-        <li
-          class="relative"
-          @mouseenter="isEcosystemOpen = true"
-          @mouseleave="isEcosystemOpen = false"
-        >
-          <button
-            class="nav-link flex items-center gap-1 bg-transparent border-none cursor-pointer font-[inherit] !text-brand-orange after:hidden"
-            @click="isEcosystemOpen = !isEcosystemOpen"
-          >
-            Platform Ecosystem
-            <Icon
-              name="mdi:chevron-down"
-              size="18"
-              class="transition-transform duration-300"
-              :class="{ 'rotate-180': isEcosystemOpen }"
-            />
-          </button>
-          <Transition name="dropdown">
-            <div v-show="isEcosystemOpen" class="absolute top-[calc(100%+12px)] right-0 min-w-[180px] bg-[rgba(30,30,30,0.98)] backdrop-blur-[16px] border border-brand-orange/15 rounded-[10px] py-2 shadow-dropdown">
-              <template v-for="ecoLink in ecosystemLinks" :key="ecoLink.label">
-                <NuxtLink
-                  v-if="ecoLink.to"
-                  :to="ecoLink.to"
-                  class="flex items-center gap-2.5 px-[18px] py-2.5 text-[#e0e0e0] text-[0.92rem] font-medium no-underline transition-all duration-200 whitespace-nowrap hover:text-brand-orange hover:bg-brand-orange/[0.08]"
-                  :class="{ '!text-brand-orange': ecoLink.current }"
-                >
-                  <Icon :name="ecoLink.icon" size="18" class="shrink-0" />
-                  {{ ecoLink.label }}
-                  <span v-if="ecoLink.current" class="ml-auto text-[0.7rem] px-[7px] py-0.5 rounded-md bg-brand-orange/15 text-brand-orange font-semibold">You are here</span>
-                </NuxtLink>
-                <a
-                  v-else
-                  :href="ecoLink.href"
-                  class="flex items-center gap-2.5 px-[18px] py-2.5 text-[#e0e0e0] text-[0.92rem] font-medium no-underline transition-all duration-200 whitespace-nowrap hover:text-brand-orange hover:bg-brand-orange/[0.08]"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon :name="ecoLink.icon" size="18" class="shrink-0" />
-                  {{ ecoLink.label }}
-                </a>
-              </template>
-            </div>
-          </Transition>
-        </li>
       </ul>
 
       <!-- Search + Auth + CTA -->
       <div class="hidden lg:flex items-center gap-3">
-        <NuxtLink to="/search" class="flex items-center text-[#e0e0e0] transition-colors duration-300 hover:text-brand-orange" aria-label="Search courses">
+        <NuxtLink to="/search" class="flex items-center text-[#e0e0e0] transition-colors duration-300 hover:text-brand-orange" aria-label="Tim kiem khoa hoc">
           <Icon name="mdi:magnify" size="22" />
         </NuxtLink>
 
@@ -135,11 +60,11 @@ const ecosystemLinks = [
           <template v-if="!isAuthenticated">
             <a :href="loginUrl()" class="btn btn-outline btn-sm">
               <Icon name="mdi:login" size="18" />
-              Login
+              Dang nhap
             </a>
             <a :href="registerUrl()" class="btn btn-primary btn-sm">
               <Icon name="mdi:account-plus" size="18" />
-              Register
+              Dang ky
             </a>
           </template>
 
@@ -158,7 +83,7 @@ const ecosystemLinks = [
               <span class="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-brand-orange to-brand-deep text-white font-bold text-[0.85rem] shrink-0">
                 {{ user?.name?.charAt(0)?.toUpperCase() || 'U' }}
               </span>
-              <span class="max-w-[120px] overflow-hidden text-ellipsis whitespace-nowrap">{{ user?.name || 'User' }}</span>
+              <span class="max-w-[120px] overflow-hidden text-ellipsis whitespace-nowrap">{{ user?.name || 'Nguoi dung' }}</span>
               <Icon
                 name="mdi:chevron-down"
                 size="18"
@@ -175,7 +100,7 @@ const ecosystemLinks = [
                 <hr class="border-none border-t border-brand-orange/10 my-1" />
                 <button class="flex items-center gap-2.5 px-[18px] py-2.5 w-full bg-transparent border-none cursor-pointer text-[#e0e0e0] text-[0.92rem] font-medium font-[inherit] transition-all duration-200 hover:text-brand-orange hover:bg-brand-orange/[0.08]" @click="logout">
                   <Icon name="mdi:logout" size="18" />
-                  Sign Out
+                  Dang xuat
                 </button>
               </div>
             </Transition>
@@ -188,7 +113,7 @@ const ecosystemLinks = [
       <button
         class="flex lg:hidden bg-transparent border-none text-[#e0e0e0] cursor-pointer"
         :aria-expanded="isMobileOpen"
-        aria-label="Toggle navigation"
+        aria-label="Bat tat menu"
         @click="isMobileOpen = !isMobileOpen"
       >
         <Icon :name="isMobileOpen ? 'mdi:close' : 'mdi:menu'" size="28" />
@@ -199,11 +124,7 @@ const ecosystemLinks = [
     <Transition name="slide-down">
       <div v-if="isMobileOpen" class="flex flex-col py-4 px-5 max-lg:px-4 lg:hidden bg-[rgba(15,15,15,0.95)] backdrop-blur-[12px]">
         <template v-for="link in navLinks" :key="link.label">
-          <a v-if="link.href" :href="link.href" class="mobile-link" target="_blank" rel="noopener noreferrer">
-            {{ link.label }}
-          </a>
           <NuxtLink
-            v-else
             :to="link.to"
             class="mobile-link"
             active-class="mobile-link--active"
@@ -212,58 +133,18 @@ const ecosystemLinks = [
           </NuxtLink>
         </template>
 
-        <!-- Mobile Ecosystem Dropdown -->
-        <button
-          class="mobile-link flex items-center justify-between w-full bg-transparent border-none cursor-pointer font-[inherit] text-base !text-brand-orange border-b border-white/5"
-          @click="isMobileEcosystemOpen = !isMobileEcosystemOpen"
-        >
-          Platform Ecosystem
-          <Icon
-            name="mdi:chevron-down"
-            size="18"
-            class="transition-transform duration-300"
-            :class="{ 'rotate-180': isMobileEcosystemOpen }"
-          />
-        </button>
-        <Transition name="slide-down">
-          <div v-if="isMobileEcosystemOpen" class="pl-4">
-            <template v-for="ecoLink in ecosystemLinks" :key="ecoLink.label">
-              <NuxtLink
-                v-if="ecoLink.to"
-                :to="ecoLink.to"
-                class="mobile-link gap-2"
-                :class="{ 'mobile-link--active': ecoLink.current }"
-              >
-                <Icon :name="ecoLink.icon" size="18" class="mr-2" />
-                {{ ecoLink.label }}
-                <span v-if="ecoLink.current" class="ml-auto text-[0.7rem] px-[7px] py-0.5 rounded-md bg-brand-orange/15 text-brand-orange font-semibold">Current</span>
-              </NuxtLink>
-              <a
-                v-else
-                :href="ecoLink.href"
-                class="mobile-link gap-2"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icon :name="ecoLink.icon" size="18" class="mr-2" />
-                {{ ecoLink.label }}
-              </a>
-            </template>
-          </div>
-        </Transition>
-
         <NuxtLink to="/search" class="mobile-link">
-          <Icon name="mdi:magnify" class="mr-2" /> Search
+          <Icon name="mdi:magnify" class="mr-2" /> Tim kiem
         </NuxtLink>
 
         <!-- Mobile Auth buttons -->
         <template v-if="isAuthEnabled">
           <template v-if="!isAuthenticated">
             <a :href="loginUrl()" class="mobile-link">
-              <Icon name="mdi:login" class="mr-2" /> Login
+              <Icon name="mdi:login" class="mr-2" /> Dang nhap
             </a>
             <a :href="registerUrl()" class="mobile-link">
-              <Icon name="mdi:account-plus" class="mr-2" /> Register
+              <Icon name="mdi:account-plus" class="mr-2" /> Dang ky
             </a>
           </template>
           <template v-else>
@@ -271,10 +152,10 @@ const ecosystemLinks = [
               <span class="flex items-center justify-center w-7 h-7 rounded-full bg-gradient-to-br from-brand-orange to-brand-deep text-white font-bold text-[0.78rem] shrink-0">
                 {{ user?.name?.charAt(0)?.toUpperCase() || 'U' }}
               </span>
-              <span>{{ user?.name || 'User' }}</span>
+              <span>{{ user?.name || 'Nguoi dung' }}</span>
             </div>
             <button class="mobile-link" @click="logout">
-              <Icon name="mdi:logout" class="mr-2" /> Sign Out
+              <Icon name="mdi:logout" class="mr-2" /> Dang xuat
             </button>
           </template>
         </template>

@@ -31,7 +31,7 @@ const course: Course = {
     },
   ],
   tags: ['phat-hoc', 'viet-nam', 'nhap-mon'],
-  instructor: 'Skill-Wanderer',
+  instructor: 'Ban bien soan',
   author: phatHocPhoThongAuthor,
   createdAt: '2026-03-19',
   updatedAt: '2026-03-19',
