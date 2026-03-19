@@ -12,7 +12,7 @@ const message = computed(() => {
 })
 
 useSeo({
-  title: `${statusCode.value} — Chánh Đạo Học Tập`,
+  title: `${statusCode.value} — Chánh Đạo`,
   description: message.value,
   noIndex: true,
 })
@@ -30,8 +30,8 @@ useSeo({
         <NuxtLink to="/" class="btn btn-primary">
           <Icon name="mdi:home" /> Về trang chủ
         </NuxtLink>
-        <NuxtLink to="/courses" class="btn btn-secondary">
-          Xem khóa học
+        <NuxtLink to="/phap-quyen" class="btn btn-secondary">
+          Xem pháp quyển
         </NuxtLink>
       </div>
     </div>

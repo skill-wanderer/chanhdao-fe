@@ -1,0 +1,26 @@
+<svg width="640" height="800" viewBox="0 0 640 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="800" rx="40" fill="#FCF8ED"/>
+  <rect x="28" y="28" width="584" height="744" rx="28" fill="url(#bg)" stroke="#D4AF37" stroke-opacity="0.24" stroke-width="2"/>
+  <circle cx="320" cy="250" r="116" fill="url(#halo)"/>
+  <path d="M252 271C252 233.444 282.444 203 320 203C357.556 203 388 233.444 388 271V340H252V271Z" fill="#F7E7B5" fill-opacity="0.95"/>
+  <path d="M246 328H394C407.255 328 418 338.745 418 352V358C418 371.255 407.255 382 394 382H246C232.745 382 222 371.255 222 358V352C222 338.745 232.745 328 246 328Z" fill="#FFF8E3" stroke="#D4AF37" stroke-opacity="0.35" stroke-width="2"/>
+  <path d="M269 407C269 378.281 292.281 355 321 355C349.719 355 373 378.281 373 407V459H269V407Z" fill="#E6C56A" fill-opacity="0.92"/>
+  <path d="M196 497C196 456.131 229.131 423 270 423H370C410.869 423 444 456.131 444 497V612H196V497Z" fill="#B8860B" fill-opacity="0.9"/>
+  <rect x="170" y="560" width="300" height="120" rx="24" fill="#FFF8E3" fill-opacity="0.84"/>
+  <path d="M227 612C227 582.176 251.176 558 281 558H359C388.824 558 413 582.176 413 612V680H227V612Z" fill="#FCF8ED"/>
+  <path d="M249 480L320 438L391 480" stroke="#FFF8E3" stroke-opacity="0.8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="128" y="84" width="384" height="64" rx="20" fill="#FFF8E3" fill-opacity="0.84"/>
+  <text x="320" y="124" text-anchor="middle" fill="#8D6710" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700">THIEN THU</text>
+  <text x="320" y="700" text-anchor="middle" fill="#6D4C14" font-family="Arial, Helvetica, sans-serif" font-size="20" letter-spacing="3">TEMPORARY PLACEHOLDER</text>
+  <text x="320" y="730" text-anchor="middle" fill="#9A7B33" font-family="Arial, Helvetica, sans-serif" font-size="16">Replace this file when the final portrait is ready</text>
+  <defs>
+    <linearGradient id="bg" x1="320" y1="28" x2="320" y2="772" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8E3"/>
+      <stop offset="1" stop-color="#F4E2A6"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(320 250) rotate(90) scale(116)">
+      <stop stop-color="#F7E7B5"/>
+      <stop offset="1" stop-color="#F7E7B5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

@@ -5,8 +5,8 @@ const course: Course = {
   id: 'course-phat-hoc-pho-thong-quyen-1',
   slug: 'phat-hoc-pho-thong-quyen-1',
   title: 'Phật học phổ thông quyển 1',
-  excerpt: 'Khóa học nền tảng nhập môn Phật học dành cho người mới bắt đầu.',
-  description: 'Đây là khóa học placeholder cho lộ trình nội dung Phật học tiếng Việt.\n\nNội dung chi tiết sẽ được cập nhật theo từng bài học trong các phiên bản tiếp theo.',
+  excerpt: 'Pháp quyển nền tảng nhập môn Phật học dành cho người mới bắt đầu.',
+  description: 'Đây là pháp quyển placeholder cho pháp lộ nội dung Phật học dành cho người Việt.\n\nNội dung chi tiết sẽ được cập nhật theo từng bài học trong các phiên bản tiếp theo.',
   difficulty: 'beginner',
   lessonCount: 1,
   modules: [
@@ -19,7 +19,7 @@ const course: Course = {
         {
           id: 'lesson-gioi-thieu-khoa-hoc',
           slug: 'gioi-thieu-khoa-hoc',
-          title: 'Giới thiệu khóa học',
+          title: 'Giới thiệu pháp quyển',
           type: 'article',
           status: 'draft',
           order: 1,

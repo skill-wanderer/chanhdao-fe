@@ -9,7 +9,7 @@ const { getCourseBySlug } = useCourses()
 const course = getCourseBySlug(courseSlug)
 
 if (!course) {
-  throw createError({ statusCode: 404, statusMessage: 'Không tìm thấy khóa học' })
+  throw createError({ statusCode: 404, statusMessage: 'Không tìm thấy pháp quyển' })
 }
 
 const allLessons = getAllLessons(course)
@@ -144,8 +144,8 @@ async function toggleComplete() {
     <div class="section" style="padding-bottom: 0;">
       <BreadcrumbNav :items="[
         { label: 'Trang chủ', to: '/' },
-        { label: 'Khóa học', to: '/courses' },
-        { label: course.title, to: `/courses/${course.slug}` },
+        { label: 'Pháp quyển', to: '/phap-quyen' },
+        { label: course.title, to: `/phap-quyen/${course.slug}` },
         { label: lesson.title },
       ]" />
     </div>
@@ -166,7 +166,7 @@ async function toggleComplete() {
             <template v-for="(l, li) in mod.lessons" :key="l.id">
               <NuxtLink
                 v-if="isPublishedLesson(l)"
-                :to="`/courses/${course.slug}/lessons/${l.slug}`"
+                :to="`/phap-quyen/${course.slug}/bai-hoc/${l.slug}`"
                 :class="[
                   'flex items-center gap-2.5 py-2.5 px-3 rounded-lg no-underline text-[0.85rem] transition-all duration-200',
                   l.slug === lessonSlug
@@ -296,7 +296,7 @@ async function toggleComplete() {
         <nav class="grid grid-cols-2 gap-4 max-md:grid-cols-1">
           <NuxtLink
             v-if="prevLesson"
-            :to="`/courses/${course.slug}/lessons/${prevLesson.slug}`"
+            :to="`/phap-quyen/${course.slug}/bai-hoc/${prevLesson.slug}`"
             class="flex items-center gap-3 py-4 px-5 no-underline text-text-primary glass-card max-sm:py-3 max-sm:px-3.5 max-sm:gap-2"
           >
             <Icon name="mdi:arrow-left" />
@@ -309,7 +309,7 @@ async function toggleComplete() {
 
           <NuxtLink
             v-if="nextLesson"
-            :to="`/courses/${course.slug}/lessons/${nextLesson.slug}`"
+            :to="`/phap-quyen/${course.slug}/bai-hoc/${nextLesson.slug}`"
             class="flex items-center gap-3 py-4 px-5 no-underline text-text-primary text-right justify-end glass-card max-sm:py-3 max-sm:px-3.5 max-sm:gap-2"
           >
             <div>

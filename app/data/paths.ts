@@ -12,7 +12,7 @@ const paths: PathData[] = [
   {
     title: 'Phật học cơ bản',
     slug: 'phat-hoc-can-ban',
-    description: 'Lộ trình nhập môn với placeholder cho khóa học Phật học phổ thông quyển 1.',
+    description: 'Pháp lộ nhập môn với placeholder cho pháp quyển Phật học phổ thông quyển 1.',
     difficulty: 'beginner',
     icon: 'mdi:book-open-variant',
     courseCount: 1,

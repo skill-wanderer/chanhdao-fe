@@ -2,8 +2,8 @@
 const { courses, searchCourses, getCoursesByDifficulty } = useCourses()
 
 useSeo({
-  title: 'Tất cả khóa học',
-  description: 'Tổng hợp các khóa học mở và miễn phí để bạn học theo lộ trình phù hợp.',
+  title: 'Pháp quyển',
+  description: 'Tổng hợp các pháp quyển mở và miễn phí để bạn học theo lộ trình phù hợp.',
 })
 
 const searchQuery = ref('')
@@ -37,9 +37,9 @@ const difficultyLabels: Record<string, string> = {
     <!-- Hero -->
     <section class="pt-[170px] pb-[60px] px-5 text-center">
       <div class="max-w-[700px] mx-auto">
-        <h1 class="gradient-text text-[clamp(2rem,5vw,3.5rem)] font-black font-serif mb-3">Tất cả khóa học</h1>
+        <h1 class="gradient-text text-[clamp(2rem,5vw,3.5rem)] font-black font-serif mb-3">Pháp quyển</h1>
         <p class="text-text-secondary text-[1.1rem] leading-relaxed mb-7">
-          Khóa học mở và miễn phí với nội dung đa dạng, để bạn học theo nhu cầu.
+          Pháp quyển mở và miễn phí với nội dung đa dạng, để bạn học theo nhu cầu.
         </p>
 
         <!-- Search -->
@@ -68,7 +68,7 @@ const difficultyLabels: Record<string, string> = {
 
       <!-- Results Count -->
       <p class="text-sm text-text-muted mb-6">
-        Tìm thấy {{ filteredCourses.length }} khóa học
+        Tìm thấy {{ filteredCourses.length }} pháp quyển
       </p>
 
       <!-- Course Grid -->
@@ -79,7 +79,7 @@ const difficultyLabels: Record<string, string> = {
       <!-- Empty State -->
       <div v-else class="text-center py-[60px] px-5">
         <Icon name="mdi:magnify-close" class="text-text-light text-5xl mb-4" />
-          <h3 class="text-xl font-semibold mb-2">Không tìm thấy khóa học</h3>
+          <h3 class="text-xl font-semibold mb-2">Không tìm thấy pháp quyển</h3>
           <p class="text-text-muted">Thử từ khóa khác hoặc điều chỉnh bộ lọc.</p>
       </div>
     </section>

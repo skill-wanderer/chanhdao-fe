@@ -8,7 +8,6 @@ const route = useRoute()
     <main class="flex-1">
       <slot />
     </main>
-    <TheSubscribe v-if="!route.path.includes('/lessons/')" />
     <TheFooter />
     <ClientOnly>
       <PathfinderChat />

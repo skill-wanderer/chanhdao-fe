@@ -21,9 +21,9 @@ function handleSearch() {
     <input
       v-model="query"
       type="search"
-      placeholder="Tìm khóa học, lộ trình học, kỹ năng..."
+      placeholder="Tìm pháp quyển, pháp lộ, kỹ năng..."
       class="flex-1 bg-transparent border-none text-text-primary text-base outline-none placeholder:text-text-light min-w-0 max-[500px]:w-full max-[500px]:text-[0.95rem]"
-      aria-label="Tìm khóa học và lộ trình học"
+      aria-label="Tìm pháp quyển và pháp lộ"
     />
     <button type="submit" class="btn btn-primary btn-sm max-[500px]:w-full max-[500px]:justify-center">Tìm kiếm</button>
   </form>

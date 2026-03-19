@@ -80,16 +80,16 @@ export function useCourseSeo(course: CourseSeoOptions) {
   const siteUrl = (config.public.siteUrl as string) || 'https://chanhdao.vn'
 
   useSeo({
-    title: `${course.title} — Chanh Dao Hoc Tap`,
+    title: `${course.title} — Chanh Dao`,
     description: course.description,
     image: course.thumbnail || '/og-image.png',
-    url: `${siteUrl}/courses/${course.slug}`,
+    url: `${siteUrl}/phap-quyen/${course.slug}`,
     type: 'article',
     datePublished: course.datePublished,
     dateModified: course.dateModified,
     breadcrumbs: [
       { name: 'Trang chu', url: siteUrl },
-      { name: 'Khoa hoc', url: `${siteUrl}/courses` },
+      { name: 'Phap quyen', url: `${siteUrl}/phap-quyen` },
       { name: course.title },
     ],
   })
@@ -100,7 +100,7 @@ export function useCourseSeo(course: CourseSeoOptions) {
       description: course.description,
       provider: {
         '@type': 'Organization',
-        name: 'Chanh Dao Hoc Tap',
+        name: 'Chanh Dao',
         url: siteUrl,
       },
       isAccessibleForFree: true,
@@ -140,10 +140,10 @@ interface LessonSeoOptions {
 export function useLessonSeo(lesson: LessonSeoOptions) {
   const config = useRuntimeConfig()
   const siteUrl = (config.public.siteUrl as string) || 'https://chanhdao.vn'
-  const lessonUrl = `${siteUrl}/courses/${lesson.courseSlug}/lessons/${lesson.lessonSlug}`
+  const lessonUrl = `${siteUrl}/phap-quyen/${lesson.courseSlug}/bai-hoc/${lesson.lessonSlug}`
 
   useSeo({
-    title: `${lesson.title} — ${lesson.courseTitle} — Chanh Dao Hoc Tap`,
+    title: `${lesson.title} — ${lesson.courseTitle} — Chanh Dao`,
     description: lesson.description || `Bai hoc ${lesson.title} thuoc khoa ${lesson.courseTitle}. Nen tang hoc tap mo va mien phi.`,
     url: lessonUrl,
     type: 'article',
@@ -151,8 +151,8 @@ export function useLessonSeo(lesson: LessonSeoOptions) {
     dateModified: lesson.dateModified,
     breadcrumbs: [
       { name: 'Trang chu', url: siteUrl },
-      { name: 'Khoa hoc', url: `${siteUrl}/courses` },
-      { name: lesson.courseTitle, url: `${siteUrl}/courses/${lesson.courseSlug}` },
+      { name: 'Phap quyen', url: `${siteUrl}/phap-quyen` },
+      { name: lesson.courseTitle, url: `${siteUrl}/phap-quyen/${lesson.courseSlug}` },
       { name: lesson.title },
     ],
   })

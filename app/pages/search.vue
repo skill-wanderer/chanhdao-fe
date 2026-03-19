@@ -6,8 +6,8 @@ const router = useRouter()
 const route = useRoute()
 
 useSeo({
-  title: 'Tìm kiếm',
-  description: 'Tìm khóa học và lộ trình học theo tên, chủ đề hoặc kỹ năng.',
+  title: 'Tìm kiếm pháp quyển & pháp lộ',
+  description: 'Tìm kiếm pháp quyển và pháp lộ theo tên, chủ đề hoặc kỹ năng tại Chánh Đạo.',
 })
 
 const { searchCourses, formatDuration, getCourseDuration, getCourseBySlug } = useCourses()
@@ -79,7 +79,7 @@ watch(() => route.query.q, (newQ) => {
   <div>
     <section class="pt-[170px] px-5 pb-10 text-center max-md:pt-[150px] max-md:px-4 max-md:pb-8 max-sm:pt-[140px] max-sm:px-3 max-sm:pb-6">
       <div class="max-w-[600px] mx-auto">
-        <h1 class="gradient-text text-3xl md:text-4xl font-bold mb-6">Tìm kiếm</h1>
+        <h1 class="gradient-text text-3xl md:text-4xl font-bold mb-6">Tìm kiếm pháp quyển & pháp lộ</h1>
         <SearchBar @search="handleSearch" />
       </div>
     </section>
@@ -96,8 +96,8 @@ watch(() => route.query.q, (newQ) => {
           <button
             v-for="tab in [
               { key: 'all', label: `Tất cả (${totalResults})` },
-              { key: 'courses', label: `Khóa học (${courseResults.length})` },
-              { key: 'paths', label: `Lộ trình (${pathResults.length})` },
+              { key: 'courses', label: `Pháp quyển (${courseResults.length})` },
+              { key: 'paths', label: `Pháp lộ (${pathResults.length})` },
             ]"
             :key="tab.key"
             :class="[
@@ -115,7 +115,7 @@ watch(() => route.query.q, (newQ) => {
         <!-- Courses section -->
         <div v-if="(activeTab === 'all' || activeTab === 'courses') && courseResults.length" class="mb-12">
           <h2 v-if="activeTab === 'all'" class="flex items-center gap-2 text-xl font-bold font-serif mb-5 text-text-primary">
-            <Icon name="mdi:school-outline" class="text-brand-accent" /> Khóa học
+            <Icon name="mdi:school-outline" class="text-brand-accent" /> Pháp quyển
           </h2>
           <div class="card-grid">
             <CourseCard v-for="course in courseResults" :key="course.id" :course="course" />
@@ -125,7 +125,7 @@ watch(() => route.query.q, (newQ) => {
         <!-- Paths section -->
         <div v-if="(activeTab === 'all' || activeTab === 'paths') && pathResults.length" class="mb-12">
           <h2 v-if="activeTab === 'all'" class="flex items-center gap-2 text-xl font-bold font-serif mb-5 text-text-primary">
-            <Icon name="mdi:map-marker-path" class="text-brand-accent" /> Lộ trình học
+            <Icon name="mdi:map-marker-path" class="text-brand-accent" /> Pháp lộ
           </h2>
           <div class="flex flex-col gap-6">
             <div v-for="path in pathResults" :key="path.slug" class="glass-card p-7 max-md:p-5 max-sm:p-4">
@@ -139,7 +139,7 @@ watch(() => route.query.q, (newQ) => {
                   <p class="text-text-secondary text-sm">{{ path.description }}</p>
                   <div class="flex items-center gap-4 mt-2">
                     <span class="text-xs text-text-muted">
-                      <Icon name="mdi:book-open-outline" class="inline" /> {{ path.courseCount }} khóa học
+                      <Icon name="mdi:book-open-outline" class="inline" /> {{ path.courseCount }} pháp quyển
                     </span>
                     <span v-if="getPathDuration(path)" class="text-xs text-text-muted">
                       <Icon name="mdi:clock-outline" class="inline" /> {{ formatDuration(getPathDuration(path)) }}
@@ -158,7 +158,7 @@ watch(() => route.query.q, (newQ) => {
                   <span class="flex items-center justify-center w-7 h-7 rounded-full bg-brand-primary/[0.12] text-brand-accent text-[0.8rem] font-bold shrink-0">{{ index + 1 }}</span>
                   <NuxtLink
                     v-if="isCourseAvailable(course.slug)"
-                    :to="`/courses/${course.slug}`"
+                    :to="`/phap-quyen/${course.slug}`"
                     class="text-text-primary no-underline text-[0.95rem] font-medium transition-colors duration-200 hover:text-brand-accent"
                   >
                     {{ course.title }}
@@ -184,7 +184,7 @@ watch(() => route.query.q, (newQ) => {
           <Icon name="mdi:magnify-close" class="text-text-light text-5xl mb-4" />
           <h3 class="text-xl font-semibold mb-2">Không tìm thấy kết quả</h3>
           <p class="text-text-muted mb-4">Thử tìm với từ khóa khác.</p>
-          <NuxtLink to="/courses" class="btn btn-outline btn-sm">Xem tất cả khóa học</NuxtLink>
+          <NuxtLink to="/phap-quyen" class="btn btn-outline btn-sm">Xem tất cả pháp quyển</NuxtLink>
         </div>
       </template>
 
@@ -192,7 +192,7 @@ watch(() => route.query.q, (newQ) => {
         <div class="text-center py-[60px] px-5 max-sm:py-10 max-sm:px-3">
           <Icon name="mdi:magnify" class="text-text-light text-5xl mb-4" />
           <h3 class="text-xl font-semibold mb-2">Bạn muốn học gì hôm nay?</h3>
-          <p class="text-text-muted">Hãy tìm khóa học và lộ trình theo tên, chủ đề hoặc kỹ năng.</p>
+          <p class="text-text-muted">Hãy tìm pháp quyển và pháp lộ theo tên, chủ đề hoặc kỹ năng.</p>
         </div>
       </template>
     </section>

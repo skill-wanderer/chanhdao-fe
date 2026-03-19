@@ -23,9 +23,9 @@ const isRevealing = ref(false)
 let revealTimer: ReturnType<typeof setTimeout> | null = null
 
 const suggestions = [
-  'Có những khóa học nào?',
-  'Theo dõi tiến độ học như thế nào?',
-  'Giới thiệu cho tôi về lộ trình học',
+  'Tôi nên bắt đầu học từ đâu?',
+  'Gợi ý cho tôi một bài học phù hợp lúc này',
+  'Giải thích giúp tôi một thuật ngữ Phật học',
 ]
 
 function toggle() {
@@ -112,17 +112,11 @@ onBeforeUnmount(() => stopReveal())
     <button
       v-if="!isOpen"
       class="lyra-fab"
-      aria-label="Mo Lyra"
+      aria-label="Mở Thiện Thư"
       @click="toggle"
     >
       <span class="lyra-fab-ring" />
-      <!-- Book icon -->
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
-        <path d="M8 7h8" />
-        <path d="M8 11h6" />
-      </svg>
+      <Icon name="mdi:dharmachakra" class="lyra-book-icon lyra-fab-icon" aria-hidden="true" />
     </button>
   </Transition>
 
@@ -137,14 +131,17 @@ onBeforeUnmount(() => stopReveal())
       <!-- Header -->
       <div class="lyra-header">
         <div class="flex items-center gap-2">
-          <!-- Book icon -->
-          <svg class="lyra-book-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B8860B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-          </svg>
+          <img
+            class="lyra-header-avatar"
+            src="/images/thien-thu.jpg"
+            alt="Thiện Thư"
+            width="28"
+            height="28"
+            loading="lazy"
+          >
           <div>
-            <div class="lyra-title-text">Lyra</div>
-            <div class="lyra-subtitle">TRỢ LÝ HỌC TẬP</div>
+            <div class="lyra-title-text">Thiện Thư</div>
+            <div class="lyra-subtitle">NGƯỜI BẠN ĐỒNG TU</div>
           </div>
         </div>
         <div class="flex items-center gap-1">
@@ -175,19 +172,19 @@ onBeforeUnmount(() => stopReveal())
       <div ref="messagesEl" class="lyra-messages">
         <!-- Welcome -->
         <div v-if="history.length === 0" class="lyra-welcome">
-          <svg class="lyra-welcome-book" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#B8860B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-            <path d="M6 8h2" />
-            <path d="M6 12h2" />
-            <path d="M16 8h2" />
-            <path d="M16 12h2" />
-          </svg>
+          <img
+            class="lyra-welcome-avatar"
+            src="/images/thien-thu.jpg"
+            alt="Thiện Thư"
+            width="56"
+            height="56"
+            loading="lazy"
+          >
           <p class="text-sm font-semibold mt-3 mb-1">
-            Chào mừng bạn đến kho tri thức!
+            Chào bạn, mình là Thiện Thư.
           </p>
           <p class="text-xs opacity-60 leading-relaxed mb-3">
-            Hãy đặt câu hỏi về khóa học, bài học và lộ trình học. Lyra sẽ giúp bạn tìm thông tin liên quan.
+            Mình ở đây để cùng bạn lần mở kho tàng pháp bảo, tìm bài học phù hợp và giải thích những điều còn khó hiểu theo cách gần gũi, dễ tiếp cận.
           </p>
           <div class="lyra-suggestions">
             <button
@@ -209,10 +206,14 @@ onBeforeUnmount(() => stopReveal())
           >
             <!-- Assistant avatar -->
             <div v-if="msg.role === 'assistant'" class="lyra-avatar">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B8860B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-              </svg>
+              <img
+                class="lyra-avatar-img"
+                src="/images/thien-thu.jpg"
+                alt="Thiện Thư"
+                width="24"
+                height="24"
+                loading="lazy"
+              >
             </div>
             <!-- Last assistant message: show typewriter text while revealing -->
             <!-- eslint-disable-next-line vue/no-v-html -->
@@ -235,10 +236,14 @@ onBeforeUnmount(() => stopReveal())
         <!-- Typing indicator -->
         <div v-if="loading" class="lyra-msg lyra-msg-assistant">
           <div class="lyra-avatar">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF8C42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-            </svg>
+            <img
+              class="lyra-avatar-img"
+              src="/images/thien-thu.jpg"
+              alt="Thiện Thư"
+              width="24"
+              height="24"
+              loading="lazy"
+            >
           </div>
           <div class="lyra-bubble lyra-typing">
             <span /><span /><span />
@@ -287,7 +292,7 @@ onBeforeUnmount(() => stopReveal())
           v-model="input"
           class="lyra-input"
           type="text"
-          placeholder="Bạn đang tìm kiến thức nào..."
+          placeholder="Bạn muốn cùng Thiện Thư tìm hiểu điều gì..."
           maxlength="2000"
           :disabled="loading"
         >
@@ -295,7 +300,7 @@ onBeforeUnmount(() => stopReveal())
           class="lyra-send-btn"
           type="submit"
           :disabled="loading || !input.trim()"
-          title="Gui"
+          title="Gửi"
         >
           <!-- Quill/feather icon -->
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -418,6 +423,21 @@ onBeforeUnmount(() => stopReveal())
   animation: lyra-hover-book 6s ease-in-out infinite;
 }
 
+.lyra-fab-icon {
+  font-size: 2.15rem;
+  color: #fffdf7;
+  filter: drop-shadow(0 2px 4px rgba(109, 76, 20, 0.22));
+}
+
+.lyra-header-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 2px 6px rgba(109, 76, 20, 0.2);
+}
+
 .lyra-title-text {
   font-size: 0.875rem;
   font-weight: bold;
@@ -468,6 +488,15 @@ onBeforeUnmount(() => stopReveal())
   animation: lyra-hover-book 5s ease-in-out infinite;
 }
 
+.lyra-welcome-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 4px 12px rgba(109, 76, 20, 0.2);
+}
+
 .lyra-suggestions {
   display: flex;
   flex-wrap: wrap;
@@ -516,6 +545,13 @@ onBeforeUnmount(() => stopReveal())
   justify-content: center;
   flex-shrink: 0;
   margin-top: 2px;
+  overflow: hidden;
+}
+
+.lyra-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .lyra-bubble {

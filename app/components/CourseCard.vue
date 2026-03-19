@@ -29,7 +29,7 @@ const difficultyLabel = computed(() => {
 </script>
 
 <template>
-  <NuxtLink :to="`/courses/${course.slug}`" class="group glass-card flex flex-col overflow-hidden no-underline text-text-primary" :aria-label="`Xem khóa học: ${course.title}`">
+  <NuxtLink :to="`/phap-quyen/${course.slug}`" class="group glass-card flex flex-col overflow-hidden no-underline text-text-primary" :aria-label="`Xem pháp quyển: ${course.title}`">
     <div class="relative aspect-video overflow-hidden bg-brand-primary/[0.03]">
       <NuxtImg
         v-if="course.thumbnail"

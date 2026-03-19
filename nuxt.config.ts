@@ -21,17 +21,17 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      title: 'Chanh Dao Hoc Tap — Nen tang hoc tap mo',
+      title: 'Chanh Dao — Nen tang hoc tap mo',
       htmlAttrs: { lang: 'vi' },
       meta: [
         { name: 'description', content: 'Nen tang hoc tap mo va mien phi. Kham pha khoa hoc, theo doi tien do, va nang cao ky nang.' },
         { name: 'theme-color', content: '#D4AF37' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:title', content: 'Chanh Dao Hoc Tap — Nen tang hoc tap mo' },
+        { property: 'og:title', content: 'Chanh Dao — Nen tang hoc tap mo' },
         { property: 'og:description', content: 'Kham pha khoa hoc, theo doi tien do, va hoc tap mien phi cho moi nguoi.' },
         { property: 'og:image', content: '/og-image.png' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Chanh Dao Hoc Tap — Nen tang hoc tap mo' },
+        { name: 'twitter:title', content: 'Chanh Dao — Nen tang hoc tap mo' },
         { name: 'twitter:description', content: 'Kham pha khoa hoc, theo doi tien do, va hoc tap mien phi cho moi nguoi.' },
       ],
       link: [
@@ -42,7 +42,7 @@ export default defineNuxtConfig({
 
   site: {
     url: 'https://chanhdao.vn',
-    name: 'Chanh Dao Hoc Tap',
+    name: 'Chanh Dao',
   },
 
   sitemap: {
@@ -57,7 +57,7 @@ export default defineNuxtConfig({
   schemaOrg: {
     identity: {
       type: 'Organization',
-      name: 'Chanh Dao Hoc Tap',
+      name: 'Chanh Dao',
       url: 'https://chanhdao.vn',
       logo: '/logo.png',
     },
@@ -91,7 +91,7 @@ export default defineNuxtConfig({
 
   // Security headers for iframe embedding
   routeRules: {
-    '/courses/**': {
+    '/phap-quyen/**': {
       isr: 3600,
       headers: {
         'Content-Security-Policy': "frame-src 'self' https://www.youtube-nocookie.com https://open.spotify.com https://cdn.jsdelivr.net;",
@@ -99,6 +99,7 @@ export default defineNuxtConfig({
       },
     },
     '/': { prerender: true },
-    '/about': { prerender: true },
+    '/about': { redirect: '/gioi-thieu' },
+    '/gioi-thieu': { prerender: true },
   },
 })

@@ -12,7 +12,7 @@ export default defineSitemapEventHandler(() => {
 
   return [
     asSitemapUrl({
-      loc: `/courses/${courseSlug}`,
+      loc: `/phap-quyen/${courseSlug}`,
       lastmod,
       changefreq: 'monthly',
       priority: 0.8,

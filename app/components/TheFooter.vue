@@ -3,12 +3,12 @@ const currentYear = new Date().getFullYear()
 
 const footerLinks = {
   learn: [
-    { label: 'Tất cả khóa học', to: '/courses' },
-    { label: 'Lộ trình học', to: '/paths' },
+    { label: 'Tất cả pháp quyển', to: '/phap-quyen' },
+    { label: 'Pháp Lộ', to: '/phap-lo' },
     { label: 'Tìm kiếm', to: '/search' },
   ],
   about: [
-    { label: 'Giới thiệu', to: '/about' },
+    { label: 'Giới thiệu', to: '/gioi-thieu' },
     { label: 'Mã nguồn mở', href: 'https://github.com/skill-wanderer/chanhdao-fe' },
   ],
   community: [

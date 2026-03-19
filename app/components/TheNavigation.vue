@@ -17,10 +17,10 @@ watch(() => route.path, () => {
 })
 
 const navLinks = [
-  { label: 'Khóa học', to: '/courses' },
-  { label: 'Lộ trình học', to: '/paths' },
-  { label: 'Lyra', to: '/lyra' },
-  { label: 'Giới thiệu', to: '/about' },
+  { label: 'Pháp quyển', to: '/phap-quyen' },
+  { label: 'Pháp Lộ', to: '/phap-lo' },
+  { label: 'Thiện Thư', to: '/thien-thu' },
+  { label: 'Giới thiệu', to: '/gioi-thieu' },
 ]
 </script>
 
@@ -50,7 +50,7 @@ const navLinks = [
 
       <!-- Search + Auth + CTA -->
       <div class="hidden lg:flex items-center gap-3">
-        <NuxtLink to="/search" class="flex items-center text-text-secondary transition-colors duration-300 hover:text-brand-accent" aria-label="Tìm kiếm khóa học">
+        <NuxtLink to="/search" class="flex items-center text-text-secondary transition-colors duration-300 hover:text-brand-accent" aria-label="Tìm kiếm pháp quyển">
           <Icon name="mdi:magnify" size="22" />
         </NuxtLink>
 

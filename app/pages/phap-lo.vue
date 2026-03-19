@@ -4,8 +4,8 @@ import allPaths from '~/data/paths'
 const { formatDuration, getCourseDuration, getCourseBySlug } = useCourses()
 
 useSeo({
-  title: 'Lộ trình học',
-  description: 'Các lộ trình học được sắp xếp theo mục tiêu, từ cơ bản đến nâng cao.',
+  title: 'Pháp Lộ',
+  description: 'Các pháp lộ được sắp xếp theo mục tiêu, từ cơ bản đến nâng cao.',
 })
 
 const paths = allPaths
@@ -62,10 +62,10 @@ function isCourseAvailable(slug: string): boolean {
 <template>
   <div>
     <TheHero
-      title="Lộ trình học"
+      title="Pháp Lộ"
       subtitle="Học theo từng bước"
-      description="Chọn lộ trình phù hợp và học theo trình tự để đạt kết quả bền vững."
-      :cta-primary="{ label: 'Xem khóa học', to: '/courses' }"
+      description="Chọn pháp lộ phù hợp và học theo trình tự để đạt kết quả bền vững."
+      :cta-primary="{ label: 'Xem pháp quyển', to: '/phap-quyen' }"
     />
 
     <section class="section">
@@ -76,9 +76,9 @@ function isCourseAvailable(slug: string): boolean {
           <input
             v-model="searchQuery"
             type="search"
-            placeholder="Tìm lộ trình học..."
+            placeholder="Tìm pháp lộ..."
             class="flex-1 bg-transparent border-none text-text-primary text-base outline-none placeholder:text-text-light"
-            aria-label="Tìm lộ trình học"
+            aria-label="Tìm pháp lộ"
           />
         </div>
         <div class="flex gap-2 flex-wrap max-md:justify-center">
@@ -105,7 +105,7 @@ function isCourseAvailable(slug: string): boolean {
 
       <!-- Results count -->
       <p v-if="searchQuery.trim() || selectedDifficulty" class="text-[0.95rem] text-text-secondary mb-6">
-        Tìm thấy {{ filteredPaths.length }} lộ trình
+        Tìm thấy {{ filteredPaths.length }} pháp lộ
         <template v-if="searchQuery.trim()">
           với từ khóa <strong class="text-brand-accent">"{{ searchQuery }}"</strong>
         </template>
@@ -126,7 +126,7 @@ function isCourseAvailable(slug: string): boolean {
               <p class="text-text-secondary text-sm">{{ path.description }}</p>
               <div class="flex items-center gap-4 mt-2">
                 <span class="text-xs text-text-muted">
-                  <Icon name="mdi:book-open-outline" class="inline" /> {{ path.courseCount }} khóa học
+                  <Icon name="mdi:book-open-outline" class="inline" /> {{ path.courseCount }} pháp quyển
                 </span>
                 <span v-if="getPathDuration(path)" class="text-xs text-text-muted">
                   <Icon name="mdi:clock-outline" class="inline" /> {{ formatDuration(getPathDuration(path)) }}
@@ -145,7 +145,7 @@ function isCourseAvailable(slug: string): boolean {
               <span class="flex items-center justify-center w-7 h-7 rounded-full bg-brand-primary/[0.12] text-brand-accent text-[0.8rem] font-bold shrink-0">{{ index + 1 }}</span>
               <NuxtLink
                 v-if="isCourseAvailable(course.slug)"
-                :to="`/courses/${course.slug}`"
+                :to="`/phap-quyen/${course.slug}`"
                 class="text-text-primary no-underline text-[0.95rem] font-medium transition-colors duration-200 hover:text-brand-accent"
               >
                 {{ course.title }}
@@ -168,7 +168,7 @@ function isCourseAvailable(slug: string): boolean {
       <!-- Empty state -->
       <div v-else class="text-center py-[60px] px-5 max-sm:py-10 max-sm:px-3">
         <Icon name="mdi:magnify-close" class="text-text-light text-5xl mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Không tìm thấy lộ trình</h3>
+        <h3 class="text-xl font-semibold mb-2">Không tìm thấy pháp lộ</h3>
         <p class="text-text-muted mb-4">Thử từ khóa khác hoặc xóa bộ lọc hiện tại.</p>
         <button class="btn btn-outline btn-sm" @click="searchQuery = ''; selectedDifficulty = ''">
           Xóa bộ lọc

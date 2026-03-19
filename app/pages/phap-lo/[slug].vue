@@ -8,19 +8,19 @@ const { formatDuration, getCourseDuration, getCourseBySlug } = useCourses()
 const path = allPaths.find(p => p.slug === slug)
 
 if (!path) {
-  throw createError({ statusCode: 404, statusMessage: 'Không tìm thấy lộ trình học' })
+  throw createError({ statusCode: 404, statusMessage: 'Không tìm thấy Pháp lộ' })
 }
 
 const config = useRuntimeConfig()
 const siteUrl = (config.public.siteUrl as string) || 'http://localhost:3000'
 
 useSeo({
-  title: `${path.title} — Lộ trình học`,
+  title: `${path.title} — Pháp Lộ`,
   description: path.description,
-  url: `${siteUrl}/paths/${path.slug}`,
+  url: `${siteUrl}/phap-lo/${path.slug}`,
   breadcrumbs: [
     { name: 'Trang chủ', url: siteUrl },
-    { name: 'Lộ trình học', url: `${siteUrl}/paths` },
+    { name: 'Pháp Lộ', url: `${siteUrl}/phap-lo` },
     { name: path.title },
   ],
 })
@@ -66,7 +66,7 @@ function difficultyLabel(d: string): string {
     <div class="section" style="padding-bottom: 0;">
       <BreadcrumbNav :items="[
         { label: 'Trang chủ', to: '/' },
-        { label: 'Lộ trình học', to: '/paths' },
+        { label: 'Pháp Lộ', to: '/phap-lo' },
         { label: path.title },
       ]" />
     </div>
@@ -85,10 +85,10 @@ function difficultyLabel(d: string): string {
 
               <div class="flex items-center gap-5 mt-4 flex-wrap">
                 <span class="text-sm text-text-muted">
-                  <Icon name="mdi:book-open-outline" class="inline" /> {{ path.courseCount }} khóa học dự kiến
+                  <Icon name="mdi:book-open-outline" class="inline" /> {{ path.courseCount }} pháp quyển dự kiến
                 </span>
                 <span class="text-sm text-text-muted">
-                  <Icon name="mdi:check-circle-outline" class="inline" /> {{ availableCourses }} khóa học đang mở
+                  <Icon name="mdi:check-circle-outline" class="inline" /> {{ availableCourses }} pháp quyển đang mở
                 </span>
                 <span v-if="totalDuration" class="text-sm text-text-muted">
                   <Icon name="mdi:clock-outline" class="inline" /> {{ formatDuration(totalDuration) }} nội dung đang mở
@@ -117,7 +117,7 @@ function difficultyLabel(d: string): string {
 
             <NuxtLink
               v-if="isCourseAvailable(course.slug)"
-              :to="`/courses/${course.slug}`"
+              :to="`/phap-quyen/${course.slug}`"
               class="text-text-primary no-underline text-[0.98rem] font-medium transition-colors duration-200 hover:text-brand-primary"
             >
               {{ course.title }}
@@ -138,11 +138,11 @@ function difficultyLabel(d: string): string {
         </div>
 
         <div class="mt-6 pt-5 border-t border-brand-primary/10 flex flex-wrap gap-3">
-          <NuxtLink to="/courses" class="btn btn-primary btn-sm">
-            <Icon name="mdi:school-outline" /> Xem khóa học đang mở
+          <NuxtLink to="/phap-quyen" class="btn btn-primary btn-sm">
+            <Icon name="mdi:school-outline" /> Xem pháp quyển đang mở
           </NuxtLink>
-          <NuxtLink to="/paths" class="btn btn-outline btn-sm">
-            <Icon name="mdi:arrow-left" /> Quay lại lộ trình học
+          <NuxtLink to="/phap-lo" class="btn btn-outline btn-sm">
+            <Icon name="mdi:arrow-left" /> Quay lại pháp lộ
           </NuxtLink>
         </div>
       </div>

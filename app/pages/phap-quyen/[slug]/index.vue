@@ -8,7 +8,7 @@ const { getCourseBySlug, formatDuration, getCourseDuration } = useCourses()
 const course = getCourseBySlug(slug)
 
 if (!course) {
-  throw createError({ statusCode: 404, statusMessage: 'Không tìm thấy khóa học' })
+  throw createError({ statusCode: 404, statusMessage: 'Không tìm thấy pháp quyển' })
 }
 
 useCourseSeo({
@@ -61,7 +61,7 @@ const totalDuration = computed(() => getCourseDuration(course))
     <div class="section" style="padding-bottom: 0;">
       <BreadcrumbNav :items="[
         { label: 'Trang chủ', to: '/' },
-        { label: 'Khóa học', to: '/courses' },
+        { label: 'Pháp quyển', to: '/phap-quyen' },
         { label: course.title },
       ]" />
     </div>
@@ -98,14 +98,14 @@ const totalDuration = computed(() => getCourseDuration(course))
 
           <NuxtLink
             v-if="availableLessons.length"
-            :to="`/courses/${course.slug}/lessons/${availableLessons[0]?.slug}`"
+            :to="`/phap-quyen/${course.slug}/bai-hoc/${availableLessons[0]?.slug}`"
             class="btn btn-primary mt-6"
           >
             <Icon name="mdi:play" /> Bắt đầu học
           </NuxtLink>
 
           <div v-else class="mt-6 rounded-xl border border-dashed border-brand-primary/20 bg-brand-primary/5 py-3 px-4 text-sm text-text-secondary">
-            Nội dung bài học đang được cập nhật. Cấu trúc khóa học đã sẵn sàng và bài học sẽ mở dần.
+            Nội dung bài học đang được cập nhật. Cấu trúc pháp quyển đã sẵn sàng và bài học sẽ mở dần.
           </div>
         </div>
 
@@ -140,7 +140,7 @@ const totalDuration = computed(() => getCourseDuration(course))
       <div class="glass-card flex gap-5 p-6 items-start max-sm:flex-col max-sm:items-center max-sm:text-center">
         <img
           :src="course.author.avatarUrl"
-          :alt="`${course.author.name} — Tác giả khóa học`"
+          :alt="`${course.author.name} — Tác giả pháp quyển`"
           class="w-20 h-20 rounded-full object-cover border-2 border-brand-primary/30 shrink-0"
           width="80"
           height="80"
@@ -176,7 +176,7 @@ const totalDuration = computed(() => getCourseDuration(course))
 
     <!-- Lessons List -->
     <section class="section">
-      <h2 class="text-2xl font-bold mb-6">Nội dung khóa học</h2>
+      <h2 class="text-2xl font-bold mb-6">Nội dung pháp quyển</h2>
 
       <div v-for="mod in course.modules" :key="mod.id" class="mb-8 last:mb-0">
         <div class="flex items-center gap-3 mb-4 p-3 px-4 rounded-xl bg-brand-primary/[0.06] border border-brand-primary/[0.12]">
