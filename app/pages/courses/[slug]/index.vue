@@ -75,23 +75,23 @@ const totalDuration = computed(() => getCourseDuration(course))
             <span class="badge badge-free">Miễn phí</span>
           </div>
 
-          <h1 class="gradient-text text-[clamp(1.8rem,4vw,2.8rem)] font-black leading-[1.15] mb-4">{{ course.title }}</h1>
-          <p class="text-[rgba(224,224,224,0.7)] text-[1.05rem] leading-[1.8] mb-5" style="white-space: pre-line;">{{ course.description }}</p>
+          <h1 class="gradient-text text-[clamp(1.8rem,4vw,2.8rem)] font-black font-serif leading-[1.15] mb-4">{{ course.title }}</h1>
+          <p class="text-text-secondary text-[1.05rem] leading-[1.8] mb-5" style="white-space: pre-line;">{{ course.description }}</p>
 
           <div class="flex gap-5 flex-wrap mb-4 max-sm:gap-3">
-            <span class="flex items-center gap-1.5 text-sm text-[rgba(224,224,224,0.6)] max-sm:text-[0.82rem]">
+            <span class="flex items-center gap-1.5 text-sm text-text-muted max-sm:text-[0.82rem]">
               <Icon name="mdi:play-circle-outline" /> {{ course.lessonCount }} bài học
             </span>
-            <span v-if="totalDuration" class="flex items-center gap-1.5 text-sm text-[rgba(224,224,224,0.6)] max-sm:text-[0.82rem]">
+            <span v-if="totalDuration" class="flex items-center gap-1.5 text-sm text-text-muted max-sm:text-[0.82rem]">
               <Icon name="mdi:clock-outline" /> {{ formatDuration(totalDuration) }}
             </span>
-            <span class="flex items-center gap-1.5 text-sm text-[rgba(224,224,224,0.6)] max-sm:text-[0.82rem]">
+            <span class="flex items-center gap-1.5 text-sm text-text-muted max-sm:text-[0.82rem]">
               <Icon name="mdi:account-outline" /> {{ course.instructor || 'Ban biên soạn' }}
             </span>
           </div>
 
           <div class="flex gap-2 flex-wrap">
-            <span v-for="tag in course.tags" :key="tag" class="py-1 px-3 rounded-full text-[0.78rem] bg-brand-orange/10 text-brand-orange border border-brand-orange/15">
+            <span v-for="tag in course.tags" :key="tag" class="py-1 px-3 rounded-full text-[0.78rem] bg-brand-primary/10 text-brand-accent border border-brand-primary/15">
               {{ tag }}
             </span>
           </div>
@@ -104,7 +104,7 @@ const totalDuration = computed(() => getCourseDuration(course))
             <Icon name="mdi:play" /> Bắt đầu học
           </NuxtLink>
 
-          <div v-else class="mt-6 rounded-xl border border-dashed border-brand-orange/20 bg-brand-orange/5 py-3 px-4 text-sm text-[rgba(224,224,224,0.68)]">
+          <div v-else class="mt-6 rounded-xl border border-dashed border-brand-primary/20 bg-brand-primary/5 py-3 px-4 text-sm text-text-secondary">
             Nội dung bài học đang được cập nhật. Cấu trúc khóa học đã sẵn sàng và bài học sẽ mở dần.
           </div>
         </div>
@@ -116,13 +116,13 @@ const totalDuration = computed(() => getCourseDuration(course))
             <div class="progress-bar mb-2">
               <div class="progress-bar-fill" :style="{ width: `${progressPercent}%` }" />
             </div>
-            <p class="text-sm text-gray-400 mb-4">
+            <p class="text-sm text-text-secondary mb-4">
               Đã hoàn thành {{ completedCount }} / {{ availableLessons.length }} bài học đang mở
             </p>
 
-            <div class="text-sm text-gray-500 space-y-2">
+            <div class="text-sm text-text-muted space-y-2">
               <div class="flex items-center gap-2">
-                <Icon name="mdi:trophy-outline" class="text-brand-yellow" />
+                <Icon name="mdi:trophy-outline" class="text-brand-gold-light" />
                 <span>Chứng nhận sau khi hoàn thành</span>
               </div>
               <div class="flex items-center gap-2">
@@ -141,20 +141,20 @@ const totalDuration = computed(() => getCourseDuration(course))
         <img
           :src="course.author.avatarUrl"
           :alt="`${course.author.name} — Tác giả khóa học`"
-          class="w-20 h-20 rounded-full object-cover border-2 border-brand-orange/30 shrink-0"
+          class="w-20 h-20 rounded-full object-cover border-2 border-brand-primary/30 shrink-0"
           width="80"
           height="80"
           loading="lazy"
         />
         <div class="flex-1">
-          <h2 class="text-[1.1rem] font-bold text-[#e0e0e0] mb-1">Thông tin tác giả</h2>
-          <p class="text-sm text-brand-orange mb-2 font-semibold">{{ course.author.name }} · {{ course.author.title }}</p>
-          <p class="text-sm text-[rgba(224,224,224,0.65)] leading-relaxed mb-3">{{ course.author.bio }}</p>
+          <h2 class="text-[1.1rem] font-bold font-serif text-text-primary mb-1">Thông tin tác giả</h2>
+          <p class="text-sm text-brand-accent mb-2 font-semibold">{{ course.author.name }} · {{ course.author.title }}</p>
+          <p class="text-sm text-text-secondary leading-relaxed mb-3">{{ course.author.bio }}</p>
           <div class="flex gap-4 max-sm:justify-center">
-            <a v-if="course.author.linkedinUrl" :href="course.author.linkedinUrl" target="_blank" rel="noopener" class="flex items-center gap-1 text-[0.85rem] text-[rgba(224,224,224,0.5)] transition-colors duration-300 hover:text-brand-orange">
+            <a v-if="course.author.linkedinUrl" :href="course.author.linkedinUrl" target="_blank" rel="noopener" class="flex items-center gap-1 text-[0.85rem] text-text-muted transition-colors duration-300 hover:text-brand-accent">
               <Icon name="mdi:linkedin" /> LinkedIn
             </a>
-            <a v-if="course.author.websiteUrl" :href="course.author.websiteUrl" target="_blank" rel="noopener" class="flex items-center gap-1 text-[0.85rem] text-[rgba(224,224,224,0.5)] transition-colors duration-300 hover:text-brand-orange">
+            <a v-if="course.author.websiteUrl" :href="course.author.websiteUrl" target="_blank" rel="noopener" class="flex items-center gap-1 text-[0.85rem] text-text-muted transition-colors duration-300 hover:text-brand-accent">
               <Icon name="mdi:web" /> Website
             </a>
           </div>
@@ -165,10 +165,10 @@ const totalDuration = computed(() => getCourseDuration(course))
     <!-- Last Updated -->
     <section class="section" style="padding-top: 12px; padding-bottom: 0;">
       <div class="flex gap-5 flex-wrap">
-        <span class="flex items-center gap-1.5 text-[0.85rem] text-[rgba(224,224,224,0.45)]">
+        <span class="flex items-center gap-1.5 text-[0.85rem] text-text-light">
           <Icon name="mdi:calendar-outline" /> Đăng: {{ new Date(course.createdAt).toLocaleDateString('vi-VN', { year: 'numeric', month: 'long', day: 'numeric' }) }}
         </span>
-        <span v-if="course.updatedAt !== course.createdAt" class="flex items-center gap-1.5 text-[0.85rem] text-[rgba(224,224,224,0.45)]">
+        <span v-if="course.updatedAt !== course.createdAt" class="flex items-center gap-1.5 text-[0.85rem] text-text-light">
           <Icon name="mdi:update" /> Cập nhật: {{ new Date(course.updatedAt).toLocaleDateString('vi-VN', { year: 'numeric', month: 'long', day: 'numeric' }) }}
         </span>
       </div>
@@ -179,11 +179,11 @@ const totalDuration = computed(() => getCourseDuration(course))
       <h2 class="text-2xl font-bold mb-6">Nội dung khóa học</h2>
 
       <div v-for="mod in course.modules" :key="mod.id" class="mb-8 last:mb-0">
-        <div class="flex items-center gap-3 mb-4 p-3 px-4 rounded-xl bg-brand-orange/[0.06] border border-brand-orange/[0.12]">
-          <Icon name="mdi:book-open-variant" class="text-[1.4rem] text-brand-orange" />
+        <div class="flex items-center gap-3 mb-4 p-3 px-4 rounded-xl bg-brand-primary/[0.06] border border-brand-primary/[0.12]">
+          <Icon name="mdi:book-open-variant" class="text-[1.4rem] text-brand-accent" />
           <div>
-            <h3 class="text-[1.1rem] font-bold text-[#e0e0e0]">{{ mod.title }}</h3>
-            <span class="text-[0.8rem] text-[rgba(224,224,224,0.5)]">
+            <h3 class="text-[1.1rem] font-bold font-serif text-text-primary">{{ mod.title }}</h3>
+            <span class="text-[0.8rem] text-text-muted">
               {{ mod.lessons.length }} bài học
               <template v-if="mod.lessons.some(l => l.durationMinutes)">
                 · {{ formatDuration(mod.lessons.reduce((s, l) => s + (l.durationMinutes || 0), 0)) }}

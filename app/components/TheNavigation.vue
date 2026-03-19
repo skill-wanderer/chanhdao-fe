@@ -26,16 +26,16 @@ const navLinks = [
 
 <template>
   <header
-    class="fixed top-0 left-0 right-0 z-[100] border-b border-brand-orange/10 transition-all duration-300"
+    class="fixed top-0 left-0 right-0 z-[100] border-b border-brand-primary/10 transition-all duration-300"
   >
     <nav
       class="max-w-content mx-auto flex items-center justify-between backdrop-blur-[12px] transition-all duration-300"
-      :class="isScrolled ? 'py-2.5 px-5 bg-[rgba(15,15,15,0.95)] lg:px-5 max-lg:px-4 max-lg:py-2' : 'py-4 px-5 bg-[rgba(15,15,15,0.85)] max-lg:px-4 max-lg:py-3'"
+      :class="isScrolled ? 'py-2.5 px-5 bg-[rgba(252,248,237,0.97)] lg:px-5 max-lg:px-4 max-lg:py-2' : 'py-4 px-5 bg-[rgba(252,248,237,0.92)] max-lg:px-4 max-lg:py-3'"
     >
       <!-- Logo -->
       <NuxtLink to="/" class="flex items-center gap-2 text-[1.3rem] font-bold no-underline" aria-label="Trang chủ Chánh Đạo">
-        <Icon name="mdi:fire" class="text-brand-orange text-[1.6rem]" />
-        <span class="text-[clamp(0.85rem,3vw,1.2rem)] whitespace-nowrap gradient-text">Chánh Đạo <span class="logo-accent max-[400px]:hidden">Học Tập</span></span>
+        <Icon name="mdi:dharmachakra" class="text-brand-primary text-[1.6rem]" />
+        <span class="text-[clamp(0.85rem,3vw,1.2rem)] whitespace-nowrap font-serif gradient-text">CHÁNH ĐẠO<span class="logo-accent max-[400px]:hidden">.VN</span></span>
       </NuxtLink>
 
       <!-- Desktop Links -->
@@ -50,7 +50,7 @@ const navLinks = [
 
       <!-- Search + Auth + CTA -->
       <div class="hidden lg:flex items-center gap-3">
-        <NuxtLink to="/search" class="flex items-center text-[#e0e0e0] transition-colors duration-300 hover:text-brand-orange" aria-label="Tìm kiếm khóa học">
+        <NuxtLink to="/search" class="flex items-center text-text-secondary transition-colors duration-300 hover:text-brand-accent" aria-label="Tìm kiếm khóa học">
           <Icon name="mdi:magnify" size="22" />
         </NuxtLink>
 
@@ -76,11 +76,11 @@ const navLinks = [
             @mouseleave="isUserMenuOpen = false"
           >
             <button
-              class="flex items-center gap-2 bg-transparent border-none cursor-pointer text-[#e0e0e0] font-[inherit] text-[0.92rem] font-medium px-2 py-1 rounded-lg transition-colors duration-200 hover:bg-brand-orange/[0.08]"
+              class="flex items-center gap-2 bg-transparent border-none cursor-pointer text-text-primary font-[inherit] text-[0.92rem] font-medium px-2 py-1 rounded-lg transition-colors duration-200 hover:bg-brand-primary/[0.08]"
               @click="isUserMenuOpen = !isUserMenuOpen"
               :aria-expanded="isUserMenuOpen"
             >
-              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-brand-orange to-brand-deep text-white font-bold text-[0.85rem] shrink-0">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-brand-primary to-brand-accent text-white font-bold text-[0.85rem] shrink-0">
                 {{ user?.name?.charAt(0)?.toUpperCase() || 'U' }}
               </span>
               <span class="max-w-[120px] overflow-hidden text-ellipsis whitespace-nowrap">{{ user?.name || 'Người dùng' }}</span>
@@ -92,13 +92,13 @@ const navLinks = [
               />
             </button>
             <Transition name="dropdown">
-              <div v-show="isUserMenuOpen" class="absolute top-[calc(100%+12px)] right-0 min-w-[220px] bg-[rgba(30,30,30,0.98)] backdrop-blur-[16px] border border-brand-orange/15 rounded-[10px] py-2 shadow-dropdown">
+              <div v-show="isUserMenuOpen" class="absolute top-[calc(100%+12px)] right-0 min-w-[220px] bg-white backdrop-blur-[16px] border border-brand-primary/15 rounded-[10px] py-2 shadow-dropdown">
                 <div class="px-[18px] py-3 flex flex-col gap-0.5">
-                  <span class="font-semibold text-[0.95rem] text-[#e0e0e0]">{{ user?.name }}</span>
-                  <span class="text-[0.8rem] text-[rgba(224,224,224,0.6)]">{{ user?.email }}</span>
+                  <span class="font-semibold text-[0.95rem] text-text-primary">{{ user?.name }}</span>
+                  <span class="text-[0.8rem] text-text-muted">{{ user?.email }}</span>
                 </div>
-                <hr class="border-none border-t border-brand-orange/10 my-1" />
-                <button class="flex items-center gap-2.5 px-[18px] py-2.5 w-full bg-transparent border-none cursor-pointer text-[#e0e0e0] text-[0.92rem] font-medium font-[inherit] transition-all duration-200 hover:text-brand-orange hover:bg-brand-orange/[0.08]" @click="logout">
+                <hr class="border-none border-t border-brand-primary/10 my-1" />
+                <button class="flex items-center gap-2.5 px-[18px] py-2.5 w-full bg-transparent border-none cursor-pointer text-text-primary text-[0.92rem] font-medium font-[inherit] transition-all duration-200 hover:text-brand-accent hover:bg-brand-primary/[0.08]" @click="logout">
                   <Icon name="mdi:logout" size="18" />
                   Đăng xuất
                 </button>
@@ -111,7 +111,7 @@ const navLinks = [
 
       <!-- Mobile Toggle -->
       <button
-        class="flex lg:hidden bg-transparent border-none text-[#e0e0e0] cursor-pointer"
+        class="flex lg:hidden bg-transparent border-none text-text-primary cursor-pointer"
         :aria-expanded="isMobileOpen"
         aria-label="Bật tắt menu"
         @click="isMobileOpen = !isMobileOpen"
@@ -122,7 +122,7 @@ const navLinks = [
 
     <!-- Mobile Menu -->
     <Transition name="slide-down">
-      <div v-if="isMobileOpen" class="flex flex-col py-4 px-5 max-lg:px-4 lg:hidden bg-[rgba(15,15,15,0.95)] backdrop-blur-[12px]">
+      <div v-if="isMobileOpen" class="flex flex-col py-4 px-5 max-lg:px-4 lg:hidden bg-[rgba(252,248,237,0.97)] backdrop-blur-[12px]">
         <template v-for="link in navLinks" :key="link.label">
           <NuxtLink
             :to="link.to"
@@ -148,8 +148,8 @@ const navLinks = [
             </a>
           </template>
           <template v-else>
-            <div class="flex items-center gap-2.5 py-3 text-brand-orange font-semibold border-b border-white/5">
-              <span class="flex items-center justify-center w-7 h-7 rounded-full bg-gradient-to-br from-brand-orange to-brand-deep text-white font-bold text-[0.78rem] shrink-0">
+            <div class="flex items-center gap-2.5 py-3 text-brand-accent font-semibold border-b border-brand-primary/10">
+              <span class="flex items-center justify-center w-7 h-7 rounded-full bg-gradient-to-br from-brand-primary to-brand-accent text-white font-bold text-[0.78rem] shrink-0">
                 {{ user?.name?.charAt(0)?.toUpperCase() || 'U' }}
               </span>
               <span>{{ user?.name || 'Người dùng' }}</span>
@@ -167,19 +167,19 @@ const navLinks = [
 
 <style scoped>
 .logo-accent {
-  -webkit-text-fill-color: var(--accent-yellow);
+  -webkit-text-fill-color: #B8860B;
 }
 
 .nav-link {
-  @apply text-[#e0e0e0] font-medium text-[0.9rem] relative py-1 transition-colors duration-300 whitespace-nowrap;
+  @apply text-text-secondary font-medium text-[0.9rem] relative py-1 transition-colors duration-300 whitespace-nowrap;
 }
 .nav-link::after {
   content: '';
-  @apply absolute -bottom-0.5 left-0 w-0 h-0.5 bg-brand-orange rounded-sm transition-all duration-300;
+  @apply absolute -bottom-0.5 left-0 w-0 h-0.5 bg-brand-primary rounded-sm transition-all duration-300;
 }
 .nav-link:hover,
 .nav-link--active {
-  @apply text-brand-orange;
+  @apply text-brand-accent;
 }
 .nav-link:hover::after,
 .nav-link--active::after {
@@ -187,11 +187,11 @@ const navLinks = [
 }
 
 .mobile-link {
-  @apply flex items-center py-3 text-[#e0e0e0] font-medium border-b border-white/5 transition-colors duration-300;
+  @apply flex items-center py-3 text-text-primary font-medium border-b border-brand-primary/10 transition-colors duration-300;
 }
 .mobile-link:hover,
 .mobile-link--active {
-  @apply text-brand-orange;
+  @apply text-brand-accent;
 }
 
 /* Transitions */

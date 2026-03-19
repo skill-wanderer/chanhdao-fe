@@ -138,7 +138,7 @@ onBeforeUnmount(() => stopReveal())
       <div class="lyra-header">
         <div class="flex items-center gap-2">
           <!-- Book icon -->
-          <svg class="lyra-book-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF8C42" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="lyra-book-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B8860B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
             <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
           </svg>
@@ -175,7 +175,7 @@ onBeforeUnmount(() => stopReveal())
       <div ref="messagesEl" class="lyra-messages">
         <!-- Welcome -->
         <div v-if="history.length === 0" class="lyra-welcome">
-          <svg class="lyra-welcome-book" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#FF8C42" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="lyra-welcome-book" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#B8860B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
             <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
             <path d="M6 8h2" />
@@ -209,7 +209,7 @@ onBeforeUnmount(() => stopReveal())
           >
             <!-- Assistant avatar -->
             <div v-if="msg.role === 'assistant'" class="lyra-avatar">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF8C42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B8860B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
               </svg>
@@ -318,9 +318,9 @@ onBeforeUnmount(() => stopReveal())
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #FF8C42, #FF6B35 50%, #E85D25);
-  border: 2px solid rgba(255, 217, 61, 0.3);
-  box-shadow: 0 4px 24px rgba(255, 107, 53, 0.45);
+  background: radial-gradient(circle at 35% 35%, #D4AF37, #B8860B 50%, #9A7209);
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 4px 24px rgba(212, 175, 55, 0.35);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -333,7 +333,7 @@ onBeforeUnmount(() => stopReveal())
 .lyra-fab:hover {
   transform: scale(1.1);
   animation: none;
-  box-shadow: 0 6px 32px rgba(255, 107, 53, 0.6);
+  box-shadow: 0 6px 32px rgba(212, 175, 55, 0.5);
 }
 
 .lyra-fab-ring {
@@ -341,7 +341,7 @@ onBeforeUnmount(() => stopReveal())
   width: 76px;
   height: 76px;
   border-radius: 50%;
-  border: 1.5px dashed rgba(255, 217, 61, 0.25);
+  border: 1.5px dashed rgba(212, 175, 55, 0.25);
   animation: lyra-spin 12s linear infinite;
   pointer-events: none;
 }
@@ -355,12 +355,12 @@ onBeforeUnmount(() => stopReveal())
   height: 540px;
   max-width: calc(100vw - 2rem);
   max-height: calc(100vh - 3rem);
-  background: #0d1117;
-  border: 1px solid rgba(255, 217, 61, 0.12);
+  background: #FFFDF5;
+  border: 1px solid rgba(212, 175, 55, 0.18);
   border-radius: 18px;
-  box-shadow: 0 8px 48px rgba(0, 0, 0, 0.6),
-    0 0 1px rgba(255, 107, 53, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  box-shadow: 0 8px 48px rgba(62, 47, 27, 0.12),
+    0 0 1px rgba(212, 175, 55, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
   z-index: 9999;
   display: flex;
   flex-direction: column;
@@ -380,7 +380,7 @@ onBeforeUnmount(() => stopReveal())
   position: absolute;
   width: 2px;
   height: 2px;
-  background: #FFD93D;
+  background: #D4AF37;
   border-radius: 50%;
   opacity: 0;
   animation: lyra-float 4s ease-in-out infinite;
@@ -405,8 +405,8 @@ onBeforeUnmount(() => stopReveal())
 /* ===== Header ===== */
 .lyra-header {
   padding: 0.75rem 1rem;
-  background: linear-gradient(135deg, rgba(255, 107, 53, 0.12) 0%, rgba(13, 17, 23, 0.95) 100%);
-  border-bottom: 1px solid rgba(255, 217, 61, 0.08);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(252, 248, 237, 0.98) 100%);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.12);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -421,7 +421,7 @@ onBeforeUnmount(() => stopReveal())
 .lyra-title-text {
   font-size: 0.875rem;
   font-weight: bold;
-  background: linear-gradient(135deg, #FFD93D, #FF6B35);
+  background: linear-gradient(135deg, #D4AF37, #B8860B);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -438,14 +438,14 @@ onBeforeUnmount(() => stopReveal())
   border: none;
   cursor: pointer;
   padding: 4px;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(62, 47, 27, 0.45);
   transition: color 0.2s ease, background 0.2s ease;
   border-radius: 4px;
 }
 
 .lyra-header-btn:hover {
-  color: #FFD93D;
-  background: rgba(255, 217, 61, 0.08);
+  color: #B8860B;
+  background: rgba(212, 175, 55, 0.08);
 }
 
 /* ===== Messages ===== */
@@ -461,7 +461,7 @@ onBeforeUnmount(() => stopReveal())
 .lyra-welcome {
   text-align: center;
   padding: 1.5rem 1rem 1rem;
-  color: #b0b0b0;
+  color: #6B5D4A;
 }
 
 .lyra-welcome-book {
@@ -476,9 +476,9 @@ onBeforeUnmount(() => stopReveal())
 }
 
 .lyra-suggestion {
-  background: rgba(255, 107, 53, 0.08);
-  border: 1px solid rgba(255, 107, 53, 0.2);
-  color: #FF8C42;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  color: #B8860B;
   font-size: 0.6875rem;
   padding: 5px 10px;
   border-radius: 20px;
@@ -487,8 +487,8 @@ onBeforeUnmount(() => stopReveal())
 }
 
 .lyra-suggestion:hover {
-  background: rgba(255, 107, 53, 0.18);
-  border-color: rgba(255, 107, 53, 0.4);
+  background: rgba(212, 175, 55, 0.18);
+  border-color: rgba(212, 175, 55, 0.4);
 }
 
 /* ===== Message rows ===== */
@@ -510,7 +510,7 @@ onBeforeUnmount(() => stopReveal())
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: rgba(255, 107, 53, 0.15);
+  background: rgba(212, 175, 55, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -528,21 +528,21 @@ onBeforeUnmount(() => stopReveal())
 }
 
 .lyra-msg-user .lyra-bubble {
-  background: linear-gradient(135deg, #FF6B35, #E85D25);
+  background: linear-gradient(135deg, #D4AF37, #B8860B);
   color: #fff;
   border-bottom-right-radius: 4px;
-  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.2);
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.2);
 }
 
 .lyra-msg-assistant .lyra-bubble {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  color: #d0d0d0;
+  background: rgba(252, 248, 237, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  color: #3E2F1B;
   border-bottom-left-radius: 4px;
 }
 
 .lyra-msg-assistant .lyra-bubble :deep(a) {
-  color: #FFD93D;
+  color: #B8860B;
 }
 
 /* ===== Prose typography inside assistant bubbles ===== */
@@ -555,7 +555,7 @@ onBeforeUnmount(() => stopReveal())
 }
 
 .lyra-prose :deep(strong) {
-  color: #e8e8e8;
+  color: #3E2F1B;
   font-weight: 600;
 }
 
@@ -579,14 +579,14 @@ onBeforeUnmount(() => stopReveal())
 }
 
 .lyra-prose :deep(code) {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(212, 175, 55, 0.08);
   padding: 1px 4px;
   border-radius: 4px;
   font-size: 0.75rem;
 }
 
 .lyra-prose :deep(pre) {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(62, 47, 27, 0.06);
   padding: 0.5em 0.6em;
   border-radius: 6px;
   overflow-x: auto;
@@ -599,7 +599,7 @@ onBeforeUnmount(() => stopReveal())
 }
 
 .lyra-prose :deep(blockquote) {
-  border-left: 2px solid rgba(255, 107, 53, 0.4);
+  border-left: 2px solid rgba(212, 175, 55, 0.4);
   margin: 0.4em 0;
   padding-left: 0.6em;
   opacity: 0.85;
@@ -609,7 +609,7 @@ onBeforeUnmount(() => stopReveal())
 .lyra-prose :deep(h2),
 .lyra-prose :deep(h3),
 .lyra-prose :deep(h4) {
-  color: #e8e8e8;
+  color: #3E2F1B;
   font-weight: 600;
   margin: 0.6em 0 0.3em;
   font-size: 0.85rem;
@@ -617,7 +617,7 @@ onBeforeUnmount(() => stopReveal())
 
 .lyra-prose :deep(hr) {
   border: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
   margin: 0.5em 0;
 }
 
@@ -632,7 +632,7 @@ onBeforeUnmount(() => stopReveal())
 .lyra-typing span {
   width: 6px;
   height: 6px;
-  background: #FF8C42;
+  background: #B8860B;
   border-radius: 50%;
   animation: lyra-dot 1.4s infinite both;
 }
@@ -664,7 +664,7 @@ onBeforeUnmount(() => stopReveal())
   align-items: center;
   gap: 4px;
   font-size: 0.6875rem;
-  color: #FFD93D;
+  color: #B8860B;
   opacity: 0.7;
   text-decoration: none;
   overflow: hidden;
@@ -690,9 +690,9 @@ onBeforeUnmount(() => stopReveal())
 }
 
 .lyra-clear-btn {
-  background: rgba(255, 107, 53, 0.08);
-  border: 1px solid rgba(255, 107, 53, 0.2);
-  color: #FF8C42;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  color: #B8860B;
   font-size: 0.6875rem;
   padding: 5px 12px;
   border-radius: 20px;
@@ -704,8 +704,8 @@ onBeforeUnmount(() => stopReveal())
 }
 
 .lyra-clear-btn:hover {
-  background: rgba(255, 107, 53, 0.18);
-  border-color: rgba(255, 107, 53, 0.4);
+  background: rgba(212, 175, 55, 0.18);
+  border-color: rgba(212, 175, 55, 0.4);
 }
 
 /* ===== Error ===== */
@@ -722,8 +722,8 @@ onBeforeUnmount(() => stopReveal())
 /* ===== Input bar ===== */
 .lyra-input-bar {
   padding: 0.625rem 0.75rem;
-  background: rgba(13, 17, 23, 0.95);
-  border-top: 1px solid rgba(255, 217, 61, 0.08);
+  background: rgba(255, 253, 245, 0.98);
+  border-top: 1px solid rgba(212, 175, 55, 0.12);
   display: flex;
   gap: 0.5rem;
   position: relative;
@@ -732,31 +732,31 @@ onBeforeUnmount(() => stopReveal())
 
 .lyra-input {
   flex: 1;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(252, 248, 237, 0.6);
+  border: 1px solid rgba(212, 175, 55, 0.15);
   border-radius: 10px;
   padding: 0.5rem 0.75rem;
   font-size: 0.8125rem;
-  color: #e0e0e0;
+  color: #3E2F1B;
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .lyra-input::placeholder {
-  color: #555;
+  color: #9A8B72;
   font-style: italic;
 }
 
 .lyra-input:focus {
-  border-color: rgba(255, 107, 53, 0.4);
-  box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.08);
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.08);
 }
 
 .lyra-send-btn {
   width: 38px;
   height: 38px;
   border-radius: 10px;
-  background: linear-gradient(135deg, #FF6B35, #E85D25);
+  background: linear-gradient(135deg, #D4AF37, #B8860B);
   border: none;
   cursor: pointer;
   display: flex;
@@ -768,7 +768,7 @@ onBeforeUnmount(() => stopReveal())
 
 .lyra-send-btn:hover:not(:disabled) {
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.35);
 }
 
 .lyra-send-btn:disabled {
@@ -778,8 +778,8 @@ onBeforeUnmount(() => stopReveal())
 
 /* ===== Animations ===== */
 @keyframes lyra-pulse {
-  0%, 100% { box-shadow: 0 4px 24px rgba(255, 107, 53, 0.45); }
-  50% { box-shadow: 0 4px 32px rgba(255, 107, 53, 0.7), 0 0 8px rgba(255, 217, 61, 0.2); }
+  0%, 100% { box-shadow: 0 4px 24px rgba(212, 175, 55, 0.35); }
+  50% { box-shadow: 0 4px 32px rgba(212, 175, 55, 0.55), 0 0 8px rgba(212, 175, 55, 0.2); }
 }
 
 @keyframes lyra-spin {

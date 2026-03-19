@@ -1,6 +1,9 @@
 /* ========================================
-  Chanh Dao Hoc Tap Tailwind Extensions
+  Chánh Đạo — Pháp Bảo Hoàng Kim Theme
+  Digital Library & Zen Minimalism
    ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -12,25 +15,31 @@
   }
 
   body {
-    @apply font-sans bg-surface-dark text-[#e0e0e0] leading-relaxed min-h-screen overflow-x-hidden;
+    @apply font-sans bg-surface-bg text-text-primary leading-relaxed min-h-screen overflow-x-hidden;
+    font-size: 18px;
   }
 
   a {
-    @apply text-brand-orange no-underline transition-colors duration-300;
+    @apply text-brand-accent no-underline transition-colors duration-300;
   }
 
   a:hover {
-    @apply text-brand-yellow;
+    @apply text-brand-primary;
   }
 
   img {
     @apply max-w-full h-auto block;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-text-primary;
+  }
 }
 
 @layer utilities {
   .gradient-text {
-    @apply bg-gradient-to-br from-brand-orange to-brand-yellow bg-clip-text;
+    @apply bg-clip-text;
+    background-image: linear-gradient(135deg, #D4AF37, #B8860B);
     -webkit-text-fill-color: transparent;
   }
 }
@@ -45,7 +54,7 @@
 
   .btn-primary {
     @apply text-white shadow-brand;
-    background: linear-gradient(135deg, #FF6B35, #E85D25);
+    background: linear-gradient(135deg, #D4AF37, #B8860B);
   }
 
   .btn-primary:hover {
@@ -53,32 +62,32 @@
   }
 
   .btn-secondary {
-    @apply bg-transparent text-brand-orange border-2 border-brand-orange;
+    @apply bg-transparent text-brand-accent border-2 border-brand-accent;
   }
 
   .btn-secondary:hover {
-    @apply bg-brand-orange text-white -translate-y-0.5;
+    @apply bg-brand-accent text-white -translate-y-0.5;
   }
 
   .btn-outline {
-    @apply bg-transparent text-[#e0e0e0] border border-brand-orange/30;
+    @apply bg-transparent text-text-secondary border border-brand-primary/30;
   }
 
   .btn-outline:hover {
-    @apply bg-brand-orange/10 border-brand-orange text-brand-orange;
+    @apply bg-brand-primary/10 border-brand-primary text-brand-accent;
   }
 
   .btn-sm {
     @apply py-2.5 px-5 text-[0.95rem];
   }
 
-  /* ---- Glass Card ---- */
+  /* ---- Card ---- */
   .glass-card {
-    @apply bg-surface-card border border-brand-orange/20 rounded-card transition-all duration-300;
+    @apply bg-white border border-brand-primary/15 rounded-card shadow-card transition-all duration-300;
   }
 
   .glass-card:hover {
-    @apply -translate-y-1 border-brand-orange/40 bg-surface-card-hover;
+    @apply -translate-y-1 border-brand-primary/30 shadow-brand;
   }
 
   /* ---- Badges ---- */
@@ -87,29 +96,29 @@
   }
 
   .badge-beginner {
-    @apply text-semantic-success bg-[rgba(76,175,80,0.15)];
+    @apply text-semantic-success bg-[rgba(76,175,80,0.12)];
   }
 
   .badge-intermediate {
-    @apply text-semantic-growth bg-[rgba(33,150,243,0.15)];
+    @apply text-semantic-growth bg-[rgba(33,150,243,0.12)];
   }
 
   .badge-advanced {
-    @apply text-semantic-wisdom bg-[rgba(156,39,176,0.15)];
+    @apply text-semantic-wisdom bg-[rgba(156,39,176,0.12)];
   }
 
   .badge-free {
-    @apply text-brand-orange bg-brand-orange/15;
+    @apply text-brand-accent bg-[rgba(212,175,55,0.12)];
   }
 
   /* ---- Progress Bar ---- */
   .progress-bar {
-    @apply h-2 bg-white/10 rounded overflow-hidden;
+    @apply h-2 bg-brand-primary/10 rounded overflow-hidden;
   }
 
   .progress-bar-fill {
     @apply h-full rounded;
-    background: linear-gradient(90deg, #FF6B35, #FFD93D);
+    background: linear-gradient(90deg, #D4AF37, #B8860B);
     transition: width 0.6s ease;
   }
 
@@ -134,18 +143,19 @@
 
 /* ---- Prose Content for Rendered Lesson HTML ---- */
 .prose-content {
-  color: rgba(224, 224, 224, 0.85);
+  color: #3E2F1B;
   line-height: 1.8;
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 .prose-content h2 {
+  font-family: 'Lora', serif;
   font-size: 1.5rem;
   font-weight: 700;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
-  color: #e0e0e0;
-  border-bottom: 1px solid rgba(255, 107, 53, 0.15);
+  color: #3E2F1B;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
   padding-bottom: 0.5rem;
 }
 
@@ -154,11 +164,12 @@
 }
 
 .prose-content h3 {
+  font-family: 'Lora', serif;
   font-size: 1.2rem;
   font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
-  color: #e0e0e0;
+  color: #3E2F1B;
 }
 
 .prose-content p {
@@ -185,10 +196,10 @@
 }
 
 .prose-content blockquote {
-  border-left: 3px solid #FF6B35;
+  border-left: 3px solid #D4AF37;
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
-  background: rgba(255, 107, 53, 0.05);
+  background: rgba(212, 175, 55, 0.06);
   border-radius: 0 8px 8px 0;
 }
 
@@ -197,20 +208,20 @@
 }
 
 .prose-content strong {
-  color: #e0e0e0;
+  color: #3E2F1B;
   font-weight: 600;
 }
 
 .prose-content em {
-  color: rgba(224, 224, 224, 0.7);
+  color: #6B5B3E;
 }
 
 .prose-content code {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(212, 175, 55, 0.1);
   padding: 2px 6px;
   border-radius: 4px;
   font-size: 0.9em;
-  color: #FF6B35;
+  color: #B8860B;
 }
 
 .prose-content table {
@@ -221,29 +232,29 @@
 }
 
 .prose-content thead {
-  background: rgba(255, 107, 53, 0.1);
+  background: rgba(212, 175, 55, 0.08);
 }
 
 .prose-content th {
   padding: 10px 14px;
   text-align: left;
   font-weight: 600;
-  color: #e0e0e0;
-  border-bottom: 2px solid rgba(255, 107, 53, 0.2);
+  color: #3E2F1B;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.25);
 }
 
 .prose-content td {
   padding: 10px 14px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
 }
 
 .prose-content tr:hover td {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(212, 175, 55, 0.04);
 }
 
 .prose-content hr {
   border: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
   margin: 2rem 0;
 }
 
@@ -254,9 +265,9 @@
   gap: 14px;
   padding: 16px 20px;
   border-radius: 12px;
-  background: rgba(255, 193, 7, 0.08);
-  border: 1px solid rgba(255, 193, 7, 0.2);
-  border-left: 4px solid #ffc107;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-left: 4px solid #D4AF37;
   margin-bottom: 20px;
 }
 
@@ -267,7 +278,7 @@
 }
 
 .prose-content .format-notice > div > strong {
-  color: #ffc107;
+  color: #B8860B;
   display: block;
   margin-bottom: 4px;
   font-size: 1rem;
@@ -276,11 +287,11 @@
 .prose-content .format-notice p {
   margin: 0;
   font-size: 0.9rem;
-  color: rgba(224, 224, 224, 0.7);
+  color: #6B5B3E;
 }
 
 .prose-content .format-notice p strong {
-  color: #ffc107;
+  color: #B8860B;
   display: inline;
   font-size: inherit;
 }
@@ -297,21 +308,21 @@
   border-radius: 50px;
   font-size: 0.88rem;
   font-weight: 600;
-  border: 1px solid rgba(255, 107, 53, 0.2);
+  border: 1px solid rgba(212, 175, 55, 0.25);
   background: transparent;
-  color: rgba(224, 224, 224, 0.7);
+  color: #6B5B3E;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .prose-content .format-tab:hover {
-  border-color: #FF6B35;
-  color: #FF6B35;
+  border-color: #D4AF37;
+  color: #B8860B;
 }
 
 .prose-content .format-tab.active {
-  background: #FF6B35;
-  border-color: #FF6B35;
+  background: #D4AF37;
+  border-color: #D4AF37;
   color: #fff;
 }
 
@@ -319,7 +330,7 @@
 .prose-content .audio-embed iframe,
 .prose-content .slides-embed iframe {
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.15);
   max-width: 100%;
 }
 
@@ -327,5 +338,5 @@
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 16px rgba(62, 47, 27, 0.12);
 }

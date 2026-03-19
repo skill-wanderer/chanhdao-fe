@@ -25,7 +25,7 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: 'vi' },
       meta: [
         { name: 'description', content: 'Nen tang hoc tap mo va mien phi. Kham pha khoa hoc, theo doi tien do, va nang cao ky nang.' },
-        { name: 'theme-color', content: '#FF6B35' },
+        { name: 'theme-color', content: '#D4AF37' },
         { property: 'og:type', content: 'website' },
         { property: 'og:title', content: 'Chanh Dao Hoc Tap — Nen tang hoc tap mo' },
         { property: 'og:description', content: 'Kham pha khoa hoc, theo doi tien do, va hoc tap mien phi cho moi nguoi.' },

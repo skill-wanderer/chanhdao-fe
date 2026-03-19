@@ -75,22 +75,22 @@ function difficultyLabel(d: string): string {
       <div class="max-w-content mx-auto">
         <div class="glass-card p-8 max-md:p-6 max-sm:p-4">
           <div class="flex gap-4 items-start mb-4 max-md:flex-col">
-            <Icon :name="path.icon" class="text-[2.2rem] text-brand-orange shrink-0 mt-1" />
+            <Icon :name="path.icon" class="text-[2.2rem] text-brand-primary shrink-0 mt-1" />
             <div class="flex-1">
               <div class="flex items-center gap-2 mb-2 flex-wrap">
                 <h1 class="gradient-text text-[clamp(1.8rem,4vw,2.6rem)] font-black leading-[1.15]">{{ path.title }}</h1>
                 <span :class="['badge', difficultyClass(path.difficulty)]">{{ difficultyLabel(path.difficulty) }}</span>
               </div>
-              <p class="text-[rgba(224,224,224,0.72)] text-[1.02rem] leading-[1.75]">{{ path.description }}</p>
+              <p class="text-text-secondary text-[1.02rem] leading-[1.75]">{{ path.description }}</p>
 
               <div class="flex items-center gap-5 mt-4 flex-wrap">
-                <span class="text-sm text-[rgba(224,224,224,0.6)]">
+                <span class="text-sm text-text-muted">
                   <Icon name="mdi:book-open-outline" class="inline" /> {{ path.courseCount }} khóa học dự kiến
                 </span>
-                <span class="text-sm text-[rgba(224,224,224,0.6)]">
+                <span class="text-sm text-text-muted">
                   <Icon name="mdi:check-circle-outline" class="inline" /> {{ availableCourses }} khóa học đang mở
                 </span>
-                <span v-if="totalDuration" class="text-sm text-[rgba(224,224,224,0.6)]">
+                <span v-if="totalDuration" class="text-sm text-text-muted">
                   <Icon name="mdi:clock-outline" class="inline" /> {{ formatDuration(totalDuration) }} nội dung đang mở
                 </span>
               </div>
@@ -103,7 +103,7 @@ function difficultyLabel(d: string): string {
     <section class="section" style="padding-top: 0;">
       <div class="glass-card p-7 max-md:p-5 max-sm:p-4">
         <div class="flex items-center gap-2 mb-5">
-          <Icon name="mdi:map-marker-path" class="text-brand-orange text-xl" />
+          <Icon name="mdi:map-marker-path" class="text-brand-primary text-xl" />
           <h2 class="text-2xl font-bold">Lộ trình nội dung</h2>
         </div>
 
@@ -111,33 +111,33 @@ function difficultyLabel(d: string): string {
           <div
             v-for="(course, index) in path.courses"
             :key="course.slug"
-            class="flex items-center gap-3 py-3 px-4 rounded-lg bg-white/[0.03] border border-white/[0.06]"
+            class="flex items-center gap-3 py-3 px-4 rounded-lg bg-brand-primary/[0.03] border border-brand-primary/[0.06]"
           >
-            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-orange/[0.12] text-brand-orange text-[0.85rem] font-bold shrink-0">{{ index + 1 }}</span>
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-primary/[0.12] text-brand-primary text-[0.85rem] font-bold shrink-0">{{ index + 1 }}</span>
 
             <NuxtLink
               v-if="isCourseAvailable(course.slug)"
               :to="`/courses/${course.slug}`"
-              class="text-[#e0e0e0] no-underline text-[0.98rem] font-medium transition-colors duration-200 hover:text-brand-orange"
+              class="text-text-primary no-underline text-[0.98rem] font-medium transition-colors duration-200 hover:text-brand-primary"
             >
               {{ course.title }}
             </NuxtLink>
 
-            <span v-else class="text-[rgba(224,224,224,0.72)] text-[0.98rem] font-medium">
+            <span v-else class="text-text-secondary text-[0.98rem] font-medium">
               {{ course.title }}
             </span>
 
             <span v-if="isCourseAvailable(course.slug)" class="ml-auto text-[0.72rem] uppercase tracking-wider text-[#4caf50]">Đang mở</span>
-            <span v-else class="ml-auto text-[0.72rem] uppercase tracking-wider text-brand-orange/80">Sắp mở</span>
+            <span v-else class="ml-auto text-[0.72rem] uppercase tracking-wider text-brand-accent/80">Sắp mở</span>
           </div>
         </div>
 
-        <div v-else class="flex items-center gap-2.5 py-3 px-4 rounded-lg bg-brand-orange/5 border border-dashed border-brand-orange/20">
-          <Icon name="mdi:hammer-wrench" class="text-brand-orange text-lg" />
-          <span class="text-sm text-gray-400">Nội dung đang được cập nhật. Vui lòng quay lại sau.</span>
+        <div v-else class="flex items-center gap-2.5 py-3 px-4 rounded-lg bg-brand-primary/5 border border-dashed border-brand-primary/20">
+          <Icon name="mdi:hammer-wrench" class="text-brand-primary text-lg" />
+          <span class="text-sm text-text-secondary">Nội dung đang được cập nhật. Vui lòng quay lại sau.</span>
         </div>
 
-        <div class="mt-6 pt-5 border-t border-white/10 flex flex-wrap gap-3">
+        <div class="mt-6 pt-5 border-t border-brand-primary/10 flex flex-wrap gap-3">
           <NuxtLink to="/courses" class="btn btn-primary btn-sm">
             <Icon name="mdi:school-outline" /> Xem khóa học đang mở
           </NuxtLink>

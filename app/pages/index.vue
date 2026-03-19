@@ -78,17 +78,17 @@ const publishedCourseCount = allCourses.filter(isPublishedCourse).length
     <!-- Features Section -->
     <section class="section section-glow">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Vì sao chọn nền tảng này?</h2>
-        <p class="text-gray-400 max-w-xl mx-auto leading-relaxed">
+        <h2 class="text-3xl md:text-4xl font-bold font-serif gradient-text mb-4">Vì sao chọn nền tảng này?</h2>
+        <p class="text-text-secondary max-w-xl mx-auto leading-relaxed">
           Trải nghiệm học tập hiện đại, dễ tiếp cận và dễ duy trì lâu dài.
         </p>
       </div>
 
       <div class="card-grid">
         <div v-for="feature in features" :key="feature.title" class="glass-card p-6 text-center">
-          <Icon :name="feature.icon" class="text-brand-orange text-3xl mb-4" />
-          <h3 class="text-lg font-bold mb-2">{{ feature.title }}</h3>
-          <p class="text-sm text-gray-400 leading-relaxed">{{ feature.description }}</p>
+          <Icon :name="feature.icon" class="text-brand-primary text-3xl mb-4" />
+          <h3 class="text-lg font-bold font-serif mb-2">{{ feature.title }}</h3>
+          <p class="text-sm text-text-secondary leading-relaxed">{{ feature.description }}</p>
         </div>
       </div>
     </section>
@@ -97,8 +97,8 @@ const publishedCourseCount = allCourses.filter(isPublishedCourse).length
     <section class="section">
       <div class="flex items-center justify-between mb-8 flex-wrap gap-4">
         <div>
-          <h2 class="text-3xl font-bold gradient-text mb-2">Lộ trình học</h2>
-          <p class="text-gray-400">Chọn lộ trình và bắt đầu ngay hôm nay</p>
+          <h2 class="text-3xl font-bold font-serif gradient-text mb-2">Lộ trình học</h2>
+          <p class="text-text-secondary">Chọn lộ trình và bắt đầu ngay hôm nay</p>
         </div>
         <NuxtLink to="/paths" class="btn btn-outline btn-sm">
           Xem tất cả lộ trình <Icon name="mdi:arrow-right" />
@@ -111,10 +111,10 @@ const publishedCourseCount = allCourses.filter(isPublishedCourse).length
           :key="path.slug"
           to="/paths"
           class="glass-card p-6 text-center"
-          style="text-decoration: none; color: var(--light-text);"
+          style="text-decoration: none; color: inherit;"
         >
-          <Icon :name="path.icon" class="text-brand-orange text-3xl mb-4" />
-          <h3 class="text-lg font-bold">{{ path.title }}</h3>
+          <Icon :name="path.icon" class="text-brand-primary text-3xl mb-4" />
+          <h3 class="text-lg font-bold font-serif">{{ path.title }}</h3>
         </NuxtLink>
       </div>
     </section>
@@ -122,9 +122,9 @@ const publishedCourseCount = allCourses.filter(isPublishedCourse).length
     <!-- CTA Banner -->
     <section class="section section-narrow text-center">
       <div class="glass-card p-10 md:p-14">
-        <Icon name="mdi:rocket-launch-outline" class="text-brand-orange text-4xl mb-4" />
-        <h2 class="text-2xl md:text-3xl font-bold gradient-text mb-4">Sẵn sàng bắt đầu học?</h2>
-        <p class="text-gray-400 mb-6 leading-relaxed">
+        <Icon name="mdi:rocket-launch-outline" class="text-brand-primary text-4xl mb-4" />
+        <h2 class="text-2xl md:text-3xl font-bold font-serif gradient-text mb-4">Sẵn sàng bắt đầu học?</h2>
+        <p class="text-text-secondary mb-6 leading-relaxed">
           Bạn có thể xem khóa học ngay. Tạo tài khoản miễn phí để lưu và theo dõi tiến độ.
         </p>
         <div class="flex gap-4 justify-center flex-wrap">

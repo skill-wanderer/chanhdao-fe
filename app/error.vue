@@ -19,11 +19,11 @@ useSeo({
 </script>
 
 <template>
-  <div class="min-h-screen flex items-center justify-center p-10 max-sm:p-6 bg-surface-dark text-[#e0e0e0]">
+  <div class="min-h-screen flex items-center justify-center p-10 max-sm:p-6 bg-surface-bg text-text-primary">
     <div class="text-center max-w-[500px]">
-      <span class="text-[clamp(5rem,15vw,10rem)] font-black leading-none block mb-4 gradient-text">{{ statusCode }}</span>
-      <h1 class="text-[clamp(1.3rem,4vw,1.8rem)] font-bold mb-3">{{ message }}</h1>
-      <p class="text-[rgba(224,224,224,0.6)] text-base mb-8">
+      <span class="text-[clamp(5rem,15vw,10rem)] font-black font-serif leading-none block mb-4 gradient-text">{{ statusCode }}</span>
+      <h1 class="text-[clamp(1.3rem,4vw,1.8rem)] font-bold font-serif mb-3">{{ message }}</h1>
+      <p class="text-text-secondary text-base mb-8">
         Trang bạn cần tìm không tồn tại hoặc đã được di chuyển.
       </p>
       <div class="flex gap-4 justify-center flex-wrap max-sm:flex-col max-sm:items-center max-sm:gap-3">

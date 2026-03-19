@@ -153,8 +153,8 @@ async function toggleComplete() {
     <!-- Lesson Content -->
     <section class="grid grid-cols-[280px_1fr] max-w-content mx-auto p-5 gap-8 max-md:grid-cols-1 max-md:p-4 max-sm:p-3 max-sm:gap-4">
       <!-- Sidebar: Lesson list -->
-      <aside class="sticky top-[70px] max-h-[calc(100vh-70px)] overflow-y-auto self-start max-md:static max-md:top-auto max-md:max-h-none max-md:overflow-y-visible max-md:border-b max-md:border-white/5 max-md:pb-5 max-md:mb-5">
-        <h3 class="text-base font-bold mb-3 text-[#e0e0e0]">{{ course.title }}</h3>
+      <aside class="sticky top-[70px] max-h-[calc(100vh-70px)] overflow-y-auto self-start max-md:static max-md:top-auto max-md:max-h-none max-md:overflow-y-visible max-md:border-b max-md:border-brand-primary/5 max-md:pb-5 max-md:mb-5">
+        <h3 class="text-base font-bold mb-3 text-text-primary">{{ course.title }}</h3>
         <div class="mb-4">
           <div class="progress-bar">
             <div class="progress-bar-fill" :style="{ width: '0%' }" />
@@ -162,7 +162,7 @@ async function toggleComplete() {
         </div>
         <nav class="flex flex-col gap-0.5">
           <template v-for="(mod, mi) in course.modules" :key="mod.id">
-            <div class="text-xs font-bold uppercase tracking-wide text-[rgba(224,224,224,0.4)] py-3 px-3 pb-1 mt-2 first:mt-0">{{ mod.title }}</div>
+            <div class="text-xs font-bold uppercase tracking-wide text-text-light py-3 px-3 pb-1 mt-2 first:mt-0">{{ mod.title }}</div>
             <template v-for="(l, li) in mod.lessons" :key="l.id">
               <NuxtLink
                 v-if="isPublishedLesson(l)"
@@ -170,20 +170,20 @@ async function toggleComplete() {
                 :class="[
                   'flex items-center gap-2.5 py-2.5 px-3 rounded-lg no-underline text-[0.85rem] transition-all duration-200',
                   l.slug === lessonSlug
-                    ? 'bg-brand-orange/10 text-brand-orange font-semibold'
-                    : 'text-[rgba(224,224,224,0.6)] hover:bg-white/5 hover:text-[#e0e0e0]'
+                    ? 'bg-brand-primary/10 text-brand-primary font-semibold'
+                    : 'text-text-muted hover:bg-brand-primary/5 hover:text-text-primary'
                 ]"
               >
-                <span :class="['shrink-0 text-xs w-6', l.slug === lessonSlug ? 'text-brand-orange' : 'text-[rgba(224,224,224,0.3)]']">{{ String(course.modules.slice(0, mi).reduce((sum, m) => sum + m.lessons.length, 0) + li + 1).padStart(2, '0') }}</span>
+                <span :class="['shrink-0 text-xs w-6', l.slug === lessonSlug ? 'text-brand-primary' : 'text-text-light']">{{ String(course.modules.slice(0, mi).reduce((sum, m) => sum + m.lessons.length, 0) + li + 1).padStart(2, '0') }}</span>
                 <span>{{ l.title }}</span>
               </NuxtLink>
               <div
                 v-else
-                class="flex items-center gap-2.5 py-2.5 px-3 rounded-lg text-[0.85rem] text-[rgba(224,224,224,0.45)]"
+                class="flex items-center gap-2.5 py-2.5 px-3 rounded-lg text-[0.85rem] text-text-light"
               >
-                <span class="shrink-0 text-xs w-6 text-[rgba(224,224,224,0.3)]">{{ String(course.modules.slice(0, mi).reduce((sum, m) => sum + m.lessons.length, 0) + li + 1).padStart(2, '0') }}</span>
+                <span class="shrink-0 text-xs w-6 text-text-light">{{ String(course.modules.slice(0, mi).reduce((sum, m) => sum + m.lessons.length, 0) + li + 1).padStart(2, '0') }}</span>
                 <span>{{ l.title }}</span>
-                <span class="ml-auto text-[0.68rem] uppercase tracking-wider text-brand-orange/75">Sắp mở</span>
+                <span class="ml-auto text-[0.68rem] uppercase tracking-wider text-brand-accent/75">Sắp mở</span>
               </div>
             </template>
           </template>
@@ -193,16 +193,16 @@ async function toggleComplete() {
       <!-- Main content -->
       <main>
         <div class="mb-8">
-          <span class="text-[0.85rem] text-brand-orange font-semibold uppercase tracking-wide">
+          <span class="text-[0.85rem] text-brand-primary font-semibold uppercase tracking-wide">
             Bài học {{ currentIndex + 1 }} / {{ allLessons.length }}
           </span>
           <h1 class="text-[clamp(1.5rem,3vw,2.2rem)] font-extrabold mt-2 mb-3">{{ lesson.title }}</h1>
-          <div class="flex gap-4 text-sm text-[rgba(224,224,224,0.5)] flex-wrap">
+          <div class="flex gap-4 text-sm text-text-muted flex-wrap">
             <span class="flex items-center gap-1">
               <Icon :name="lesson.type === 'video' ? 'mdi:play-circle-outline' : 'mdi:file-document-outline'" />
               {{ lesson.type === 'video' ? 'Video' : 'Bài viết' }}
             </span>
-            <span v-if="lesson.updatedAt || course.updatedAt" class="flex items-center gap-1 text-[0.82rem] text-[rgba(224,224,224,0.35)]">
+            <span v-if="lesson.updatedAt || course.updatedAt" class="flex items-center gap-1 text-[0.82rem] text-text-light">
               <Icon name="mdi:update" />
               Cập nhật: {{ new Date(lesson.updatedAt || course.updatedAt).toLocaleDateString('vi-VN', { year: 'numeric', month: 'short', day: 'numeric' }) }}
             </span>
@@ -210,9 +210,9 @@ async function toggleComplete() {
         </div>
 
         <!-- Video Placeholder -->
-        <div v-if="lesson.type === 'video'" class="aspect-video bg-white/[0.03] border border-brand-orange/15 rounded-2xl flex flex-col items-center justify-center mb-8">
-          <Icon name="mdi:play-circle" class="text-6xl text-brand-orange opacity-50" />
-          <p class="text-gray-500 mt-4">Trình phát video sẽ được tích hợp tại đây</p>
+        <div v-if="lesson.type === 'video'" class="aspect-video bg-brand-primary/[0.03] border border-brand-primary/15 rounded-2xl flex flex-col items-center justify-center mb-8">
+          <Icon name="mdi:play-circle" class="text-6xl text-brand-primary opacity-50" />
+          <p class="text-text-muted mt-4">Trình phát video sẽ được tích hợp tại đây</p>
         </div>
 
         <!-- Tabbed layout when lesson has both content and quiz -->
@@ -221,7 +221,7 @@ async function toggleComplete() {
             <button
               :class="[
                 'inline-flex items-center gap-2 py-3 px-6 text-[0.95rem] font-semibold bg-transparent border-none border-b-[3px] border-transparent cursor-pointer transition-all duration-200 -mb-[2px]',
-                activeTab === 'summary' ? 'text-brand-orange !border-brand-orange' : 'text-[rgba(224,224,224,0.5)] hover:text-[rgba(224,224,224,0.8)] hover:bg-brand-orange/[0.04]'
+                activeTab === 'summary' ? 'text-brand-primary !border-brand-primary' : 'text-text-muted hover:text-text-secondary hover:bg-brand-primary/[0.04]'
               ]"
               @click="activeTab = 'summary'"
             >
@@ -231,7 +231,7 @@ async function toggleComplete() {
             <button
               :class="[
                 'inline-flex items-center gap-2 py-3 px-6 text-[0.95rem] font-semibold bg-transparent border-none border-b-[3px] border-transparent cursor-pointer transition-all duration-200 -mb-[2px]',
-                activeTab === 'quiz' ? 'text-brand-orange !border-brand-orange' : 'text-[rgba(224,224,224,0.5)] hover:text-[rgba(224,224,224,0.8)] hover:bg-brand-orange/[0.04]'
+                activeTab === 'quiz' ? 'text-brand-primary !border-brand-primary' : 'text-text-muted hover:text-text-secondary hover:bg-brand-primary/[0.04]'
               ]"
               @click="activeTab = 'quiz'"
             >
@@ -271,7 +271,7 @@ async function toggleComplete() {
 
         <!-- Article Content Placeholder (no content yet) -->
         <div v-else class="lesson-content glass-card p-4 sm:p-6 md:p-8 mb-8">
-          <p class="text-gray-400 leading-relaxed">
+          <p class="text-text-secondary leading-relaxed">
             Nội dung của bài <strong>"{{ lesson.title }}"</strong> sẽ hiển thị tại đây.
             Nội dung có thể bao gồm văn bản định dạng, đoạn mã, hình ảnh và thành phần tương tác.
           </p>
@@ -297,11 +297,11 @@ async function toggleComplete() {
           <NuxtLink
             v-if="prevLesson"
             :to="`/courses/${course.slug}/lessons/${prevLesson.slug}`"
-            class="flex items-center gap-3 py-4 px-5 no-underline text-[#e0e0e0] glass-card max-sm:py-3 max-sm:px-3.5 max-sm:gap-2"
+            class="flex items-center gap-3 py-4 px-5 no-underline text-text-primary glass-card max-sm:py-3 max-sm:px-3.5 max-sm:gap-2"
           >
             <Icon name="mdi:arrow-left" />
             <div>
-              <span class="block text-xs text-[rgba(224,224,224,0.4)] uppercase tracking-wide">Trước</span>
+              <span class="block text-xs text-text-light uppercase tracking-wide">Trước</span>
               <span class="block font-semibold text-[0.95rem] max-sm:text-[0.85rem]">{{ prevLesson.title }}</span>
             </div>
           </NuxtLink>
@@ -310,10 +310,10 @@ async function toggleComplete() {
           <NuxtLink
             v-if="nextLesson"
             :to="`/courses/${course.slug}/lessons/${nextLesson.slug}`"
-            class="flex items-center gap-3 py-4 px-5 no-underline text-[#e0e0e0] text-right justify-end glass-card max-sm:py-3 max-sm:px-3.5 max-sm:gap-2"
+            class="flex items-center gap-3 py-4 px-5 no-underline text-text-primary text-right justify-end glass-card max-sm:py-3 max-sm:px-3.5 max-sm:gap-2"
           >
             <div>
-              <span class="block text-xs text-[rgba(224,224,224,0.4)] uppercase tracking-wide">Tiếp theo</span>
+              <span class="block text-xs text-text-light uppercase tracking-wide">Tiếp theo</span>
               <span class="block font-semibold text-[0.95rem] max-sm:text-[0.85rem]">{{ nextLesson.title }}</span>
             </div>
             <Icon name="mdi:arrow-right" />
@@ -334,7 +334,7 @@ async function toggleComplete() {
 }
 
 .lesson-tabs {
-  @apply flex gap-1 border-b-2 border-white/[0.06];
+  @apply flex gap-1 border-b-2 border-brand-primary/[0.06];
 }
 
 .toast-enter-active,
