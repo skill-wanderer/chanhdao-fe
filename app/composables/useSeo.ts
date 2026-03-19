@@ -70,25 +70,26 @@ interface CourseSeoOptions {
 }
 
 const difficultyToLevel: Record<string, string> = {
-  beginner: 'Beginner',
-  intermediate: 'Intermediate',
-  advanced: 'Advanced',
+  beginner: 'Co ban',
+  intermediate: 'Trung cap',
+  advanced: 'Nang cao',
 }
 
 export function useCourseSeo(course: CourseSeoOptions) {
-  const siteUrl = 'https://dojo.skill-wanderer.com'
+  const config = useRuntimeConfig()
+  const siteUrl = (config.public.siteUrl as string) || 'https://chanhdao.vn'
 
   useSeo({
-    title: `${course.title} — Skill-Wanderer Dojo`,
+    title: `${course.title} — Chanh Dao`,
     description: course.description,
     image: course.thumbnail || '/og-image.png',
-    url: `${siteUrl}/courses/${course.slug}`,
+    url: `${siteUrl}/phap-quyen/${course.slug}`,
     type: 'article',
     datePublished: course.datePublished,
     dateModified: course.dateModified,
     breadcrumbs: [
-      { name: 'Home', url: siteUrl },
-      { name: 'Courses', url: `${siteUrl}/courses` },
+      { name: 'Trang chu', url: siteUrl },
+      { name: 'Phap quyen', url: `${siteUrl}/phap-quyen` },
       { name: course.title },
     ],
   })
@@ -99,7 +100,7 @@ export function useCourseSeo(course: CourseSeoOptions) {
       description: course.description,
       provider: {
         '@type': 'Organization',
-        name: 'Skill-Wanderer Dojo',
+        name: 'Chanh Dao',
         url: siteUrl,
       },
       isAccessibleForFree: true,
@@ -137,20 +138,21 @@ interface LessonSeoOptions {
 }
 
 export function useLessonSeo(lesson: LessonSeoOptions) {
-  const siteUrl = 'https://dojo.skill-wanderer.com'
-  const lessonUrl = `${siteUrl}/courses/${lesson.courseSlug}/lessons/${lesson.lessonSlug}`
+  const config = useRuntimeConfig()
+  const siteUrl = (config.public.siteUrl as string) || 'https://chanhdao.vn'
+  const lessonUrl = `${siteUrl}/phap-quyen/${lesson.courseSlug}/bai-hoc/${lesson.lessonSlug}`
 
   useSeo({
-    title: `${lesson.title} — ${lesson.courseTitle} — Skill-Wanderer Dojo`,
-    description: lesson.description || `Lesson: ${lesson.title} from ${lesson.courseTitle}. Free and open learning at Skill-Wanderer Dojo.`,
+    title: `${lesson.title} — ${lesson.courseTitle} — Chanh Dao`,
+    description: lesson.description || `Bai hoc ${lesson.title} thuoc khoa ${lesson.courseTitle}. Nen tang hoc tap mo va mien phi.`,
     url: lessonUrl,
     type: 'article',
     datePublished: lesson.datePublished,
     dateModified: lesson.dateModified,
     breadcrumbs: [
-      { name: 'Home', url: siteUrl },
-      { name: 'Courses', url: `${siteUrl}/courses` },
-      { name: lesson.courseTitle, url: `${siteUrl}/courses/${lesson.courseSlug}` },
+      { name: 'Trang chu', url: siteUrl },
+      { name: 'Phap quyen', url: `${siteUrl}/phap-quyen` },
+      { name: lesson.courseTitle, url: `${siteUrl}/phap-quyen/${lesson.courseSlug}` },
       { name: lesson.title },
     ],
   })

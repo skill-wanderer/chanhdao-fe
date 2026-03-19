@@ -22,7 +22,7 @@ interface StoredSession {
   expiresAt: number
 }
 
-const STORAGE_KEY = 'pathfinder_chat_session'
+const STORAGE_KEY = 'pathfinder_chat_session_thien_thu'
 
 export function usePathfinder() {
   const config = useRuntimeConfig()

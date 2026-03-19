@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Tac gia mac dinh">
+  <defs>
+    <linearGradient id="avatarG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF8C42"/>
+      <stop offset="100%" stop-color="#E85D25"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="60" fill="#1A1A1A"/>
+  <circle cx="60" cy="46" r="20" fill="url(#avatarG)"/>
+  <path d="M24 104c5-18 19-28 36-28s31 10 36 28" fill="none" stroke="url(#avatarG)" stroke-width="12" stroke-linecap="round"/>
+</svg>

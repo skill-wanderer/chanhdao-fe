@@ -13,11 +13,11 @@ defineProps<Props>()
 </script>
 
 <template>
-  <section class="hero relative pt-[150px] pb-[60px] px-4 text-center overflow-hidden md:pt-[180px] md:pb-20 md:px-5 w-full max-w-full">
+  <section class="hero relative pt-[150px] pb-[60px] px-4 text-center overflow-hidden md:pt-[180px] md:pb-20 md:px-5 w-full max-w-full bg-surface-bg-alt">
     <div class="max-w-narrow mx-auto relative z-[1]">
-      <h1 class="gradient-text text-[clamp(2.5rem,7vw,4.5rem)] font-black leading-[1.1] mb-5">{{ title }}</h1>
-      <p v-if="subtitle" class="text-[clamp(1.2rem,2.5vw,1.5rem)] text-[#e0e0e0] mb-3 font-medium">{{ subtitle }}</p>
-      <p v-if="description" class="text-[1.1rem] text-[rgba(224,224,224,0.7)] leading-[1.8] max-w-[600px] mx-auto mb-8">{{ description }}</p>
+      <h1 class="font-serif gradient-text text-[clamp(2.5rem,7vw,4.5rem)] font-black leading-[1.1] mb-5">{{ title }}</h1>
+      <p v-if="subtitle" class="text-[clamp(1.2rem,2.5vw,1.5rem)] text-text-primary mb-3 font-medium">{{ subtitle }}</p>
+      <p v-if="description" class="text-[1.1rem] text-text-secondary leading-[1.8] max-w-[600px] mx-auto mb-8">{{ description }}</p>
 
       <div v-if="ctaPrimary || ctaSecondary || ctaTertiary" class="flex gap-5 justify-center flex-wrap mb-12 max-md:flex-col max-md:items-center">
         <NuxtLink v-if="ctaPrimary" :to="ctaPrimary.to" class="btn btn-primary">
@@ -38,8 +38,8 @@ defineProps<Props>()
 
       <div v-if="stats && stats.length" class="flex justify-center gap-6 flex-wrap md:gap-12">
         <div v-for="stat in stats" :key="stat.label" class="flex flex-col items-center">
-          <span class="gradient-text text-[2rem] font-extrabold">{{ stat.value }}</span>
-          <span class="text-[0.85rem] text-[rgba(224,224,224,0.5)] uppercase tracking-widest mt-1">{{ stat.label }}</span>
+          <span class="gradient-text font-serif text-[2rem] font-extrabold">{{ stat.value }}</span>
+          <span class="text-[0.85rem] text-text-muted uppercase tracking-widest mt-1">{{ stat.label }}</span>
         </div>
       </div>
     </div>
@@ -50,6 +50,6 @@ defineProps<Props>()
 .hero::before {
   content: '';
   @apply absolute -top-[100px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] pointer-events-none;
-  background: radial-gradient(circle, rgba(255, 107, 53, 0.08) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 60%);
 }
 </style>

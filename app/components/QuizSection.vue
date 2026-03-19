@@ -200,12 +200,12 @@ const scorePercentage = computed(() => {
 </script>
 
 <template>
-  <div class="mt-8 bg-surface-card border border-brand-orange/15 rounded-2xl p-8 max-md:p-5">
+  <div class="mt-8 bg-white border border-brand-primary/15 rounded-2xl p-8 max-md:p-5">
     <div class="flex items-start gap-3.5 mb-6">
       <div class="text-[2rem] shrink-0 leading-none">📝</div>
       <div>
-        <h2 class="text-[1.4rem] font-bold mb-1 gradient-text">{{ title || 'Module Quiz' }}</h2>
-        <p class="text-sm text-[rgba(224,224,224,0.5)] m-0">Optional — Test your understanding of the module concepts</p>
+        <h2 class="text-[1.4rem] font-bold font-serif mb-1 gradient-text">{{ title || 'Module Quiz' }}</h2>
+        <p class="text-sm text-text-muted m-0">Optional — Test your understanding of the module concepts</p>
       </div>
     </div>
 
@@ -214,11 +214,11 @@ const scorePercentage = computed(() => {
       <div class="flex items-center gap-3">
         <span class="text-[1.8rem] shrink-0">{{ savedScore.scorePercentage >= passThreshold ? '🎉' : '📖' }}</span>
         <div>
-          <strong class="block text-[1.05rem] text-[#e0e0e0]">
+          <strong class="block text-[1.05rem] text-text-primary">
             {{ savedScore.scorePercentage >= passThreshold ? 'Previously passed!' : 'Previous attempt' }}
           </strong>
-          <p class="mt-0.5 text-sm text-[rgba(224,224,224,0.6)] m-0">
-            Your last score: <strong class="text-[#e0e0e0]">{{ savedScore.score }}/{{ savedScore.totalQuestions }}</strong> ({{ savedScore.scorePercentage }}%)
+          <p class="mt-0.5 text-sm text-text-secondary m-0">
+            Your last score: <strong class="text-text-primary">{{ savedScore.score }}/{{ savedScore.totalQuestions }}</strong> ({{ savedScore.scorePercentage }}%)
           </p>
         </div>
       </div>
@@ -229,16 +229,16 @@ const scorePercentage = computed(() => {
       <div class="flex items-center gap-3">
         <span class="text-[1.8rem] shrink-0">{{ scorePercentage >= passThreshold ? '🎉' : '📖' }}</span>
         <div>
-          <strong class="block text-[1.05rem] text-[#e0e0e0]">
+          <strong class="block text-[1.05rem] text-text-primary">
             {{ scorePercentage >= passThreshold ? 'Great job!' : 'Keep studying!' }}
           </strong>
-          <p class="mt-0.5 text-sm text-[rgba(224,224,224,0.6)] m-0">
-            You scored <strong class="text-[#e0e0e0]">{{ score }}/{{ questions.length }}</strong> ({{ scorePercentage }}%)
+          <p class="mt-0.5 text-sm text-text-secondary m-0">
+            You scored <strong class="text-text-primary">{{ score }}/{{ questions.length }}</strong> ({{ scorePercentage }}%)
             <span v-if="isSubmitted" class="text-[#4ade80] text-[0.85rem] font-medium">— Score saved ✓</span>
           </p>
         </div>
       </div>
-      <button class="inline-flex items-center gap-1.5 px-[18px] py-2 rounded-full text-[0.85rem] font-semibold border border-brand-orange/30 bg-transparent text-brand-orange cursor-pointer transition-all duration-300 hover:bg-brand-orange/10 hover:border-brand-orange" @click="resetQuiz">
+      <button class="inline-flex items-center gap-1.5 px-[18px] py-2 rounded-full text-[0.85rem] font-semibold border border-brand-primary/30 bg-transparent text-brand-accent cursor-pointer transition-all duration-300 hover:bg-brand-primary/10 hover:border-brand-primary" @click="resetQuiz">
         <Icon name="mdi:refresh" />
         Try Again
       </button>
@@ -252,8 +252,8 @@ const scorePercentage = computed(() => {
         class="quiz-question"
         :class="{ 'quiz-question--checked': isChecked }"
       >
-        <p class="text-base font-semibold text-[#e0e0e0] mb-4 leading-relaxed m-0">
-          <span class="text-brand-orange mr-1.5">{{ qi + 1 }}.</span>
+        <p class="text-base font-semibold text-text-primary mb-4 leading-relaxed m-0">
+          <span class="text-brand-accent mr-1.5">{{ qi + 1 }}.</span>
           {{ question.question }}
         </p>
         <div class="flex flex-col gap-2">
@@ -301,27 +301,27 @@ const scorePercentage = computed(() => {
       </div>
       <div class="flex items-center justify-center gap-6 mb-5 max-md:gap-4">
         <div class="flex flex-col items-center gap-1">
-          <span class="text-2xl font-extrabold text-[#e0e0e0] max-md:text-xl">{{ score }}/{{ questions.length }}</span>
-          <span class="text-[0.78rem] uppercase tracking-wide text-[rgba(224,224,224,0.45)] font-semibold">Correct</span>
+          <span class="text-2xl font-extrabold text-text-primary max-md:text-xl">{{ score }}/{{ questions.length }}</span>
+          <span class="text-[0.78rem] uppercase tracking-wide text-text-light font-semibold">Correct</span>
         </div>
-        <div class="w-px h-9 bg-white/[0.08]" />
+        <div class="w-px h-9 bg-brand-primary/[0.12]" />
         <div class="flex flex-col items-center gap-1">
-          <span class="text-2xl font-extrabold text-[#e0e0e0] max-md:text-xl">{{ scorePercentage }}%</span>
-          <span class="text-[0.78rem] uppercase tracking-wide text-[rgba(224,224,224,0.45)] font-semibold">Score</span>
+          <span class="text-2xl font-extrabold text-text-primary max-md:text-xl">{{ scorePercentage }}%</span>
+          <span class="text-[0.78rem] uppercase tracking-wide text-text-light font-semibold">Score</span>
         </div>
-        <div class="w-px h-9 bg-white/[0.08]" />
+        <div class="w-px h-9 bg-brand-primary/[0.12]" />
         <div class="flex flex-col items-center gap-1">
-          <span class="text-2xl font-extrabold text-[#e0e0e0] max-md:text-xl">{{ passThreshold }}%</span>
-          <span class="text-[0.78rem] uppercase tracking-wide text-[rgba(224,224,224,0.45)] font-semibold">Passing</span>
+          <span class="text-2xl font-extrabold text-text-primary max-md:text-xl">{{ passThreshold }}%</span>
+          <span class="text-[0.78rem] uppercase tracking-wide text-text-light font-semibold">Passing</span>
         </div>
       </div>
-      <div class="relative h-2 rounded bg-white/[0.06]">
+      <div class="relative h-2 rounded bg-brand-primary/[0.08]">
         <div
           class="h-full rounded transition-[width] duration-[600ms]"
           :class="scorePercentage >= passThreshold ? 'bg-gradient-to-r from-[#4caf50] to-[#66bb6a]' : 'bg-gradient-to-r from-[#ffc107] to-[#ffca28]'"
           :style="{ width: scorePercentage + '%' }"
         />
-        <div class="absolute -top-1 w-0.5 h-4 bg-white/30 rounded-sm -translate-x-1/2" :style="{ left: passThreshold + '%' }" />
+        <div class="absolute -top-1 w-0.5 h-4 bg-text-light/30 rounded-sm -translate-x-1/2" :style="{ left: passThreshold + '%' }" />
       </div>
     </div>
 
@@ -399,21 +399,21 @@ const scorePercentage = computed(() => {
 
 /* Question Card */
 .quiz-question {
-  @apply p-5 bg-white/[0.02] border border-white/[0.06] rounded-xl transition-colors duration-300 max-md:p-4;
+  @apply p-5 bg-surface-bg-alt/50 border border-brand-primary/[0.08] rounded-xl transition-colors duration-300 max-md:p-4;
 }
 .quiz-question:hover:not(.quiz-question--checked) {
-  @apply border-brand-orange/15;
+  @apply border-brand-primary/15;
 }
 
 /* Option States */
 .quiz-option {
-  @apply flex items-center gap-2.5 py-2.5 px-3.5 rounded-lg border border-white/[0.06] bg-white/[0.02] cursor-pointer transition-all duration-200 text-[rgba(224,224,224,0.75)] text-[0.92rem] max-md:py-2 max-md:px-3 max-md:text-[0.87rem];
+  @apply flex items-center gap-2.5 py-2.5 px-3.5 rounded-lg border border-brand-primary/[0.08] bg-white cursor-pointer transition-all duration-200 text-text-secondary text-[0.92rem] max-md:py-2 max-md:px-3 max-md:text-[0.87rem];
 }
 .quiz-option:hover:not(.quiz-option--disabled) {
-  @apply bg-white/[0.05] border-brand-orange/20;
+  @apply bg-brand-primary/[0.04] border-brand-primary/20;
 }
 .quiz-option--selected:not(.quiz-option--correct):not(.quiz-option--incorrect) {
-  @apply bg-brand-orange/[0.08] border-brand-orange/30 text-[#e0e0e0];
+  @apply bg-brand-primary/[0.08] border-brand-primary/30 text-text-primary;
 }
 .quiz-option--correct {
   background: rgba(76, 175, 80, 0.1) !important;
@@ -436,10 +436,10 @@ const scorePercentage = computed(() => {
 
 /* Option Key Circles */
 .quiz-option-key {
-  @apply inline-flex items-center justify-center w-[26px] h-[26px] rounded-full text-[0.78rem] font-bold shrink-0 border-2 border-white/[0.12] bg-transparent transition-all duration-200;
+  @apply inline-flex items-center justify-center w-[26px] h-[26px] rounded-full text-[0.78rem] font-bold shrink-0 border-2 border-brand-primary/[0.15] bg-transparent transition-all duration-200;
 }
 .quiz-option--selected:not(.quiz-option--correct):not(.quiz-option--incorrect) .quiz-option-key {
-  @apply border-brand-orange bg-brand-orange text-white;
+  @apply border-brand-primary bg-brand-primary text-white;
 }
 .quiz-option--correct .quiz-option-key {
   @apply border-[#4caf50] bg-[#4caf50] text-white;
@@ -474,11 +474,11 @@ const scorePercentage = computed(() => {
 
 /* Tooltip */
 .quiz-btn-tooltip {
-  @apply hidden absolute bottom-[calc(100%+10px)] left-1/2 -translate-x-1/2 bg-[rgba(30,30,30,0.95)] text-[#ffc107] text-[0.82rem] py-2 px-3.5 rounded-lg whitespace-nowrap border border-[rgba(255,193,7,0.3)] shadow-[0_4px_12px_rgba(0,0,0,0.3)] z-10 pointer-events-none;
+  @apply hidden absolute bottom-[calc(100%+10px)] left-1/2 -translate-x-1/2 bg-surface-bg-alt text-brand-accent text-[0.82rem] py-2 px-3.5 rounded-lg whitespace-nowrap border border-brand-primary/20 shadow-card z-10 pointer-events-none;
 }
 .quiz-btn-tooltip::after {
   content: '';
-  @apply absolute top-full left-1/2 -translate-x-1/2 border-[6px] border-transparent border-t-[rgba(255,193,7,0.3)];
+  @apply absolute top-full left-1/2 -translate-x-1/2 border-[6px] border-transparent border-t-brand-primary/20;
 }
 .quiz-btn-wrapper:hover .quiz-btn-tooltip {
   @apply block;

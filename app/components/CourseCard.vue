@@ -17,11 +17,20 @@ const difficultyClass = computed(() => {
     default: return 'badge-beginner'
   }
 })
+
+const difficultyLabel = computed(() => {
+  switch (props.course.difficulty) {
+    case 'beginner': return 'Cơ bản'
+    case 'intermediate': return 'Trung cấp'
+    case 'advanced': return 'Nâng cao'
+    default: return props.course.difficulty
+  }
+})
 </script>
 
 <template>
-  <NuxtLink :to="`/courses/${course.slug}`" class="group glass-card flex flex-col overflow-hidden no-underline text-[#e0e0e0]" :aria-label="`View course: ${course.title}`">
-    <div class="relative aspect-video overflow-hidden bg-white/[0.02]">
+  <NuxtLink :to="`/phap-quyen/${course.slug}`" class="group glass-card flex flex-col overflow-hidden no-underline text-text-primary" :aria-label="`Xem pháp quyển: ${course.title}`">
+    <div class="relative aspect-video overflow-hidden bg-brand-primary/[0.03]">
       <NuxtImg
         v-if="course.thumbnail"
         :src="course.thumbnail"
@@ -31,27 +40,27 @@ const difficultyClass = computed(() => {
         loading="lazy"
         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
       />
-      <div v-else class="w-full h-full flex items-center justify-center text-brand-orange/30 bg-brand-orange/5">
+      <div v-else class="w-full h-full flex items-center justify-center text-brand-primary/30 bg-brand-primary/5">
         <Icon name="mdi:school-outline" size="48" />
       </div>
-      <span class="badge badge-free absolute top-3 right-3">Free</span>
+      <span class="badge badge-free absolute top-3 right-3">Miễn phí</span>
     </div>
 
     <div class="p-5 flex-1 flex flex-col">
       <div class="flex items-center gap-3 mb-3">
-        <span :class="['badge', difficultyClass]">{{ course.difficulty }}</span>
+        <span :class="['badge', difficultyClass]">{{ difficultyLabel }}</span>
       </div>
 
-      <h3 class="text-[1.15rem] font-bold mb-2 leading-tight">{{ course.title }}</h3>
-      <p class="text-sm text-[rgba(224,224,224,0.6)] leading-relaxed flex-1 line-clamp-2">{{ course.excerpt }}</p>
+      <h3 class="text-[1.15rem] font-bold mb-2 leading-tight font-serif">{{ course.title }}</h3>
+      <p class="text-sm text-text-secondary leading-relaxed flex-1 line-clamp-2">{{ course.excerpt }}</p>
 
       <div class="mt-4 flex items-center justify-between gap-3">
         <div class="flex items-center gap-4">
-          <div class="flex items-center gap-1.5 text-sm text-[rgba(224,224,224,0.5)]">
+          <div class="flex items-center gap-1.5 text-sm text-text-muted">
             <Icon name="mdi:play-circle-outline" size="16" />
-            {{ course.lessonCount }} lessons
+            {{ course.lessonCount }} bài học
           </div>
-          <div v-if="totalDuration" class="flex items-center gap-1.5 text-sm text-[rgba(224,224,224,0.5)]">
+          <div v-if="totalDuration" class="flex items-center gap-1.5 text-sm text-text-muted">
             <Icon name="mdi:clock-outline" size="16" />
             {{ formatDuration(totalDuration) }}
           </div>
@@ -60,7 +69,7 @@ const difficultyClass = computed(() => {
           <div class="progress-bar flex-1">
             <div class="progress-bar-fill" :style="{ width: `${course.progress}%` }" />
           </div>
-          <span class="text-xs text-brand-orange font-semibold">{{ course.progress }}%</span>
+          <span class="text-xs text-brand-accent font-semibold">{{ course.progress }}%</span>
         </div>
       </div>
     </div>
