@@ -77,7 +77,7 @@ const difficultyToLevel: Record<string, string> = {
 
 export function useCourseSeo(course: CourseSeoOptions) {
   const config = useRuntimeConfig()
-  const siteUrl = (config.public.siteUrl as string) || 'http://localhost:3000'
+  const siteUrl = (config.public.siteUrl as string) || 'https://chanhdao.vn'
 
   useSeo({
     title: `${course.title} — Chanh Dao Hoc Tap`,
@@ -139,7 +139,7 @@ interface LessonSeoOptions {
 
 export function useLessonSeo(lesson: LessonSeoOptions) {
   const config = useRuntimeConfig()
-  const siteUrl = (config.public.siteUrl as string) || 'http://localhost:3000'
+  const siteUrl = (config.public.siteUrl as string) || 'https://chanhdao.vn'
   const lessonUrl = `${siteUrl}/courses/${lesson.courseSlug}/lessons/${lesson.lessonSlug}`
 
   useSeo({

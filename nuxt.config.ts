@@ -41,7 +41,7 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: 'http://localhost:3000',
+    url: 'https://chanhdao.vn',
     name: 'Chanh Dao Hoc Tap',
   },
 
@@ -58,7 +58,7 @@ export default defineNuxtConfig({
     identity: {
       type: 'Organization',
       name: 'Chanh Dao Hoc Tap',
-      url: 'http://localhost:3000',
+      url: 'https://chanhdao.vn',
       logo: '/logo.png',
     },
   },
@@ -71,7 +71,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://chanhdao.vn',
       keycloakUrl: process.env.NUXT_PUBLIC_KEYCLOAK_URL || '',
       keycloakRealm: process.env.NUXT_PUBLIC_KEYCLOAK_REALM || '',
       keycloakClientId: process.env.NUXT_PUBLIC_KEYCLOAK_CLIENT_ID || '',
