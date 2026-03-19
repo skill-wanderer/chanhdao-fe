@@ -64,10 +64,16 @@ const footerLinks = {
         </div>
       </div>
 
-      <div class="border-t border-brand-primary/10 pt-5 flex justify-between items-center text-sm text-text-light max-md:flex-col max-md:gap-2 max-md:text-center">
-        <p>&copy; {{ currentYear }} Chánh Đạo. Phát hành theo giấy phép Apache.</p>
-        <p class="flex items-center gap-1">
-          Phát triển với <Icon name="mdi:heart" class="text-brand-accent text-sm" /> và <Icon name="mdi:vuejs" class="text-semantic-success text-sm" /> Nuxt
+      <div class="border-t border-brand-primary/10 pt-5 text-sm text-text-light">
+        <div class="flex justify-between items-center max-md:flex-col max-md:gap-2 max-md:text-center">
+          <p>&copy; {{ currentYear }} Chánh Đạo. Phát hành theo giấy phép Apache.</p>
+          <p class="flex items-center gap-1">
+            Phát triển với <Icon name="mdi:heart" class="text-brand-accent text-sm" /> và <Icon name="mdi:vuejs" class="text-semantic-success text-sm" /> Nuxt
+          </p>
+        </div>
+        <p class="mt-3 text-xs text-text-muted max-md:text-center">
+          Đây là dự án phi lợi nhuận kết hợp cùng
+          <a href="https://skill-wanderer.com" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:text-brand-primary transition-colors duration-300">skill-wanderer.com</a>.
         </p>
       </div>
     </div>

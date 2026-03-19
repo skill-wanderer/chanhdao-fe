@@ -1,37 +1,70 @@
-# Chanh Dao FE
+# Chanh Dao Frontend
 
-Frontend Nuxt cho nen tang hoc tap mo va mien phi.
+Frontend Nuxt cua Chanh Dao, nen tang hoc tap mo duoc host tai https://chanhdao.vn.
 
-## Open Source Repo
+Day la du an phi loi nhuan, duoc phat trien voi muc tieu mo rong co hoi hoc tap va tiep can tri thuc cho cong dong. Du an duoc ket hop trien khai cung Skill-Wanderer tai https://skill-wanderer.com.
 
-- https://github.com/skill-wanderer/chanhdao-fe
+## Tong quan
 
-## Cong nghe
+Repository nay chua phan frontend cho website Chanh Dao. Ung dung tap trung vao trai nghiem hoc tap don gian, de truy cap, toi uu SEO, va ho tro noi dung khoa hoc, lo trinh hoc, bai hoc, tim kiem, cung mot so luong tich hop phuc vu nguoi hoc.
+
+## Website va lien ket
+
+- Website chinh thuc: https://chanhdao.vn
+- Don vi dong hanh: https://skill-wanderer.com
+- Ma nguon: https://github.com/skill-wanderer/chanhdao-fe
+
+## Cong nghe su dung
 
 - Nuxt 4
 - Vue 3
-- Tailwind CSS
 - TypeScript
+- Tailwind CSS
+- Nuxt Sitemap
+- Nuxt Robots
+- Schema.org cho SEO
 
-## Cai dat
+## Tinh nang chinh
+
+- Trang gioi thieu va cac trang noi dung tinh
+- Danh sach khoa hoc va chi tiet khoa hoc
+- Lo trinh hoc va bai hoc dong
+- Tim kiem noi dung
+- Tich hop SEO, sitemap, robots, va schema markup
+- Ho tro xac thuc thong qua Keycloak
+
+## Cai dat va chay local
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Build
+Mac dinh ung dung chay bang Nuxt dev server.
+
+## Build va preview
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## Muc tieu
+Neu can tao static output:
 
-- Cung cap trai nghiem hoc tap don gian, de tiep can.
-- Ho tro tim kiem khoa hoc, lo trinh hoc va theo doi tien do.
-- Duy tri ma nguon mo de cong dong dong gop.
+```bash
+npm run generate
+```
+
+## Muc tieu du an
+
+- Xay dung mot khong gian hoc tap mo, de tiep can va huu ich cho cong dong.
+- Cung cap trai nghiem hoc tap mien phi tren web tai ten mien chanhdao.vn.
+- Duy tri mot san pham phi loi nhuan co the phat trien ben vung voi su dong hanh cua Skill-Wanderer.
+- Giu kien truc frontend ro rang, than thien voi SEO, va de mo rong noi dung trong tuong lai.
+
+## Dong gop
+
+Neu ban muon dong gop, hay bat dau bang viec tao issue hoac pull request trong repository nay. Moi thay doi nen giu dung tinh chat phi loi nhuan, de truy cap, va phu hop voi dinh huong noi dung cua du an.
 
 ## Giay phep
 
