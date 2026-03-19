@@ -13,12 +13,10 @@ import type { Course } from '~/types/course'
  *       index.ts        — module metadata + lesson imports
  *       <lesson-slug>.ts — individual lesson data
  */
-import manualSoftwareTesting from './manual-software-testing-black-box-techniques'
-import aiFirstLearningForTechCareers from './ai-first-learning-for-tech-careers'
+import phatHocPhoThongQuyen1 from './phat-hoc-pho-thong-quyen-1'
 
 const allCourses: Course[] = [
-  manualSoftwareTesting,
-  aiFirstLearningForTechCareers,
+  phatHocPhoThongQuyen1,
 ]
 
 export default allCourses
