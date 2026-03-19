@@ -17,10 +17,10 @@ watch(() => route.path, () => {
 })
 
 const navLinks = [
-  { label: 'Khoa hoc', to: '/courses' },
-  { label: 'Lo trinh hoc', to: '/paths' },
+  { label: 'Khóa học', to: '/courses' },
+  { label: 'Lộ trình học', to: '/paths' },
   { label: 'Lyra', to: '/lyra' },
-  { label: 'Gioi thieu', to: '/about' },
+  { label: 'Giới thiệu', to: '/about' },
 ]
 </script>
 
@@ -33,9 +33,9 @@ const navLinks = [
       :class="isScrolled ? 'py-2.5 px-5 bg-[rgba(15,15,15,0.95)] lg:px-5 max-lg:px-4 max-lg:py-2' : 'py-4 px-5 bg-[rgba(15,15,15,0.85)] max-lg:px-4 max-lg:py-3'"
     >
       <!-- Logo -->
-      <NuxtLink to="/" class="flex items-center gap-2 text-[1.3rem] font-bold no-underline" aria-label="Trang chu Chanh Dao">
+      <NuxtLink to="/" class="flex items-center gap-2 text-[1.3rem] font-bold no-underline" aria-label="Trang chủ Chánh Đạo">
         <Icon name="mdi:fire" class="text-brand-orange text-[1.6rem]" />
-        <span class="text-[clamp(0.85rem,3vw,1.2rem)] whitespace-nowrap gradient-text">Chanh Dao <span class="logo-accent max-[400px]:hidden">Hoc Tap</span></span>
+        <span class="text-[clamp(0.85rem,3vw,1.2rem)] whitespace-nowrap gradient-text">Chánh Đạo <span class="logo-accent max-[400px]:hidden">Học Tập</span></span>
       </NuxtLink>
 
       <!-- Desktop Links -->
@@ -50,7 +50,7 @@ const navLinks = [
 
       <!-- Search + Auth + CTA -->
       <div class="hidden lg:flex items-center gap-3">
-        <NuxtLink to="/search" class="flex items-center text-[#e0e0e0] transition-colors duration-300 hover:text-brand-orange" aria-label="Tim kiem khoa hoc">
+        <NuxtLink to="/search" class="flex items-center text-[#e0e0e0] transition-colors duration-300 hover:text-brand-orange" aria-label="Tìm kiếm khóa học">
           <Icon name="mdi:magnify" size="22" />
         </NuxtLink>
 
@@ -60,11 +60,11 @@ const navLinks = [
           <template v-if="!isAuthenticated">
             <a :href="loginUrl()" class="btn btn-outline btn-sm">
               <Icon name="mdi:login" size="18" />
-              Dang nhap
+              Đăng nhập
             </a>
             <a :href="registerUrl()" class="btn btn-primary btn-sm">
               <Icon name="mdi:account-plus" size="18" />
-              Dang ky
+              Đăng ký
             </a>
           </template>
 
@@ -83,7 +83,7 @@ const navLinks = [
               <span class="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-brand-orange to-brand-deep text-white font-bold text-[0.85rem] shrink-0">
                 {{ user?.name?.charAt(0)?.toUpperCase() || 'U' }}
               </span>
-              <span class="max-w-[120px] overflow-hidden text-ellipsis whitespace-nowrap">{{ user?.name || 'Nguoi dung' }}</span>
+              <span class="max-w-[120px] overflow-hidden text-ellipsis whitespace-nowrap">{{ user?.name || 'Người dùng' }}</span>
               <Icon
                 name="mdi:chevron-down"
                 size="18"
@@ -100,7 +100,7 @@ const navLinks = [
                 <hr class="border-none border-t border-brand-orange/10 my-1" />
                 <button class="flex items-center gap-2.5 px-[18px] py-2.5 w-full bg-transparent border-none cursor-pointer text-[#e0e0e0] text-[0.92rem] font-medium font-[inherit] transition-all duration-200 hover:text-brand-orange hover:bg-brand-orange/[0.08]" @click="logout">
                   <Icon name="mdi:logout" size="18" />
-                  Dang xuat
+                  Đăng xuất
                 </button>
               </div>
             </Transition>
@@ -113,7 +113,7 @@ const navLinks = [
       <button
         class="flex lg:hidden bg-transparent border-none text-[#e0e0e0] cursor-pointer"
         :aria-expanded="isMobileOpen"
-        aria-label="Bat tat menu"
+        aria-label="Bật tắt menu"
         @click="isMobileOpen = !isMobileOpen"
       >
         <Icon :name="isMobileOpen ? 'mdi:close' : 'mdi:menu'" size="28" />
@@ -134,17 +134,17 @@ const navLinks = [
         </template>
 
         <NuxtLink to="/search" class="mobile-link">
-          <Icon name="mdi:magnify" class="mr-2" /> Tim kiem
+          <Icon name="mdi:magnify" class="mr-2" /> Tìm kiếm
         </NuxtLink>
 
         <!-- Mobile Auth buttons -->
         <template v-if="isAuthEnabled">
           <template v-if="!isAuthenticated">
             <a :href="loginUrl()" class="mobile-link">
-              <Icon name="mdi:login" class="mr-2" /> Dang nhap
+              <Icon name="mdi:login" class="mr-2" /> Đăng nhập
             </a>
             <a :href="registerUrl()" class="mobile-link">
-              <Icon name="mdi:account-plus" class="mr-2" /> Dang ky
+              <Icon name="mdi:account-plus" class="mr-2" /> Đăng ký
             </a>
           </template>
           <template v-else>
@@ -152,10 +152,10 @@ const navLinks = [
               <span class="flex items-center justify-center w-7 h-7 rounded-full bg-gradient-to-br from-brand-orange to-brand-deep text-white font-bold text-[0.78rem] shrink-0">
                 {{ user?.name?.charAt(0)?.toUpperCase() || 'U' }}
               </span>
-              <span>{{ user?.name || 'Nguoi dung' }}</span>
+              <span>{{ user?.name || 'Người dùng' }}</span>
             </div>
             <button class="mobile-link" @click="logout">
-              <Icon name="mdi:logout" class="mr-2" /> Dang xuat
+              <Icon name="mdi:logout" class="mr-2" /> Đăng xuất
             </button>
           </template>
         </template>

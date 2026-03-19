@@ -3,13 +3,13 @@ const currentYear = new Date().getFullYear()
 
 const footerLinks = {
   learn: [
-    { label: 'Tat ca khoa hoc', to: '/courses' },
-    { label: 'Lo trinh hoc', to: '/paths' },
-    { label: 'Tim kiem', to: '/search' },
+    { label: 'Tất cả khóa học', to: '/courses' },
+    { label: 'Lộ trình học', to: '/paths' },
+    { label: 'Tìm kiếm', to: '/search' },
   ],
   about: [
-    { label: 'Gioi thieu', to: '/about' },
-    { label: 'Ma nguon mo', href: 'https://github.com/skill-wanderer/chanhdao-fe' },
+    { label: 'Giới thiệu', to: '/about' },
+    { label: 'Mã nguồn mở', href: 'https://github.com/skill-wanderer/chanhdao-fe' },
   ],
   community: [
     { label: 'GitHub', href: 'https://github.com/skill-wanderer/chanhdao-fe' },
@@ -25,16 +25,16 @@ const footerLinks = {
         <div>
           <NuxtLink to="/" class="flex items-center gap-2 no-underline mb-3" aria-label="Home">
             <Icon name="mdi:fire" class="text-brand-orange text-2xl" />
-            <span class="gradient-text text-lg font-bold">Chanh Dao Hoc Tap</span>
+            <span class="gradient-text text-lg font-bold">Chánh Đạo Học Tập</span>
           </NuxtLink>
           <p class="text-[rgba(224,224,224,0.6)] text-sm leading-relaxed max-w-[280px]">
-            Nen tang hoc tap mo mien phi, de bat ky ai cung co the tiep can.
+            Nền tảng học tập mở miễn phí, để bất kỳ ai cũng có thể tiếp cận.
           </p>
         </div>
 
         <!-- Learn -->
         <div>
-          <h4 class="text-[#e0e0e0] text-sm font-bold uppercase tracking-widest mb-4">Hoc tap</h4>
+          <h4 class="text-[#e0e0e0] text-sm font-bold uppercase tracking-widest mb-4">Học tập</h4>
           <ul class="list-none flex flex-col gap-2.5">
             <li v-for="link in footerLinks.learn" :key="link.to">
               <NuxtLink :to="link.to" class="text-[rgba(224,224,224,0.6)] text-sm transition-colors duration-300 hover:text-brand-orange">{{ link.label }}</NuxtLink>
@@ -44,7 +44,7 @@ const footerLinks = {
 
         <!-- About -->
         <div>
-          <h4 class="text-[#e0e0e0] text-sm font-bold uppercase tracking-widest mb-4">Gioi thieu</h4>
+          <h4 class="text-[#e0e0e0] text-sm font-bold uppercase tracking-widest mb-4">Giới thiệu</h4>
           <ul class="list-none flex flex-col gap-2.5">
             <li v-for="link in footerLinks.about" :key="link.label">
               <NuxtLink v-if="link.to" :to="link.to" class="text-[rgba(224,224,224,0.6)] text-sm transition-colors duration-300 hover:text-brand-orange">{{ link.label }}</NuxtLink>
@@ -55,7 +55,7 @@ const footerLinks = {
 
         <!-- Community -->
         <div>
-          <h4 class="text-[#e0e0e0] text-sm font-bold uppercase tracking-widest mb-4">Cong dong</h4>
+          <h4 class="text-[#e0e0e0] text-sm font-bold uppercase tracking-widest mb-4">Cộng đồng</h4>
           <ul class="list-none flex flex-col gap-2.5">
             <li v-for="link in footerLinks.community" :key="link.label">
               <a :href="link.href" target="_blank" rel="noopener noreferrer" class="text-[rgba(224,224,224,0.6)] text-sm transition-colors duration-300 hover:text-brand-orange">{{ link.label }}</a>
@@ -65,9 +65,9 @@ const footerLinks = {
       </div>
 
       <div class="border-t border-white/5 pt-5 flex justify-between items-center text-sm text-[rgba(224,224,224,0.4)] max-md:flex-col max-md:gap-2 max-md:text-center">
-        <p>&copy; {{ currentYear }} Chanh Dao Hoc Tap. Phat hanh theo giay phep Apache.</p>
+        <p>&copy; {{ currentYear }} Chánh Đạo Học Tập. Phát hành theo giấy phép Apache.</p>
         <p class="flex items-center gap-1">
-          Phat trien voi <Icon name="mdi:heart" class="text-brand-orange text-sm" /> va <Icon name="mdi:vuejs" class="text-semantic-success text-sm" /> Nuxt
+          Phát triển với <Icon name="mdi:heart" class="text-brand-orange text-sm" /> và <Icon name="mdi:vuejs" class="text-semantic-success text-sm" /> Nuxt
         </p>
       </div>
     </div>

@@ -4,8 +4,8 @@ import allCourses from '~/data/courses'
 import { isPublishedCourse } from '~/types/course'
 
 useSeo({
-  title: 'Chanh Dao Hoc Tap — Nen tang hoc tap mo',
-  description: 'Nen tang hoc tap mo, mien phi. Kham pha khoa hoc, theo doi tien do va nang cao ky nang moi ngay.',
+  title: 'Chánh Đạo Học Tập — Nền tảng học tập mở',
+  description: 'Nền tảng học tập mở, miễn phí. Khám phá khóa học, theo dõi tiến độ và nâng cao kỹ năng mỗi ngày.',
 })
 
 const learningPaths = [
@@ -20,38 +20,38 @@ const learningPaths = [
 const features = [
   {
     icon: 'mdi:lock-open-variant-outline',
-    title: 'Mien phi va mo',
-    description: 'Moi khoa hoc deu co the truy cap mien phi, khong co paywall.',
+    title: 'Miễn phí và mở',
+    description: 'Mọi khóa học đều có thể truy cập miễn phí, không có paywall.',
   },
   {
     icon: 'mdi:school-outline',
-    title: 'Lo trinh ro rang',
-    description: 'Theo cac lo trinh duoc sap xep tu co ban den nang cao.',
+    title: 'Lộ trình rõ ràng',
+    description: 'Theo các lộ trình được sắp xếp từ cơ bản đến nâng cao.',
   },
   {
     icon: 'mdi:chart-timeline-variant-shimmer',
-    title: 'Theo doi tien do',
-    description: 'Danh dau bai hoc da xong va theo doi tien do tren tung khoa hoc.',
+    title: 'Theo dõi tiến độ',
+    description: 'Đánh dấu bài học đã xong và theo dõi tiến độ trên từng khóa học.',
   },
   {
     icon: 'mdi:code-tags',
-    title: 'Hoc qua thuc hanh',
-    description: 'Tap trung vao bai tap va tinh huong ap dung thuc te.',
+    title: 'Học qua thực hành',
+    description: 'Tập trung vào bài tập và tình huống áp dụng thực tế.',
   },
   {
     icon: 'mdi:earth',
-    title: 'Ma nguon mo',
-    description: 'Du an ma nguon mo de cong dong dong gop va phat trien.',
+    title: 'Mã nguồn mở',
+    description: 'Dự án mã nguồn mở để cộng đồng đóng góp và phát triển.',
   },
   {
     icon: 'mdi:devices',
-    title: 'Hoc moi noi',
-    description: 'Giao dien tuong thich desktop, tablet va dien thoai.',
+    title: 'Học mọi nơi',
+    description: 'Giao diện tương thích desktop, tablet và điện thoại.',
   },
   {
     icon: 'mdi:robot-outline',
-    title: 'Ho tro boi AI',
-    description: 'AI ho tro bien soan va nang cap noi dung nhanh, de dang duy tri.',
+    title: 'Hỗ trợ bởi AI',
+    description: 'AI hỗ trợ biên soạn và nâng cấp nội dung nhanh, dễ dàng duy trì.',
   },
 ]
 
@@ -62,25 +62,25 @@ const publishedCourseCount = allCourses.filter(isPublishedCourse).length
   <div>
     <!-- Hero -->
     <TheHero
-      title="Hoc that vung. Khong gioi han."
-      subtitle="Chao mung den voi Chanh Dao Hoc Tap"
-      description="Nen tang hoc tap mo, de ban tu do kham pha khoa hoc va lo trinh theo nhip do rieng."
-      :cta-primary="{ label: 'Xem khoa hoc', to: '/courses' }"
-      :cta-tertiary="{ label: 'Xem lo trinh hoc', to: '/paths' }"
+      title="Học thật vững. Không giới hạn."
+      subtitle="Chào mừng đến với Chánh Đạo Học Tập"
+      description="Nền tảng học tập mở, để bạn tự do khám phá khóa học và lộ trình theo nhịp độ riêng."
+      :cta-primary="{ label: 'Xem khóa học', to: '/courses' }"
+      :cta-tertiary="{ label: 'Xem lộ trình học', to: '/paths' }"
       :stats="[
-        { value: String(allPaths.length), label: 'Lo trinh' },
-        { value: String(publishedCourseCount), label: 'Khoa hoc' },
-        { value: '100%', label: 'Mien phi' },
-        { value: 'Mo', label: 'Cong dong' },
+        { value: String(allPaths.length), label: 'Lộ trình' },
+        { value: String(publishedCourseCount), label: 'Khóa học' },
+        { value: '100%', label: 'Miễn phí' },
+        { value: 'Mở', label: 'Cộng đồng' },
       ]"
     />
 
     <!-- Features Section -->
     <section class="section section-glow">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Vi sao chon nen tang nay?</h2>
+        <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Vì sao chọn nền tảng này?</h2>
         <p class="text-gray-400 max-w-xl mx-auto leading-relaxed">
-          Trai nghiem hoc tap hien dai, de tiep can va de duy tri lau dai.
+          Trải nghiệm học tập hiện đại, dễ tiếp cận và dễ duy trì lâu dài.
         </p>
       </div>
 
@@ -97,11 +97,11 @@ const publishedCourseCount = allCourses.filter(isPublishedCourse).length
     <section class="section">
       <div class="flex items-center justify-between mb-8 flex-wrap gap-4">
         <div>
-          <h2 class="text-3xl font-bold gradient-text mb-2">Lo trinh hoc</h2>
-          <p class="text-gray-400">Chon lo trinh va bat dau ngay hom nay</p>
+          <h2 class="text-3xl font-bold gradient-text mb-2">Lộ trình học</h2>
+          <p class="text-gray-400">Chọn lộ trình và bắt đầu ngay hôm nay</p>
         </div>
         <NuxtLink to="/paths" class="btn btn-outline btn-sm">
-          Xem tat ca lo trinh <Icon name="mdi:arrow-right" />
+          Xem tất cả lộ trình <Icon name="mdi:arrow-right" />
         </NuxtLink>
       </div>
 
@@ -123,13 +123,13 @@ const publishedCourseCount = allCourses.filter(isPublishedCourse).length
     <section class="section section-narrow text-center">
       <div class="glass-card p-10 md:p-14">
         <Icon name="mdi:rocket-launch-outline" class="text-brand-orange text-4xl mb-4" />
-        <h2 class="text-2xl md:text-3xl font-bold gradient-text mb-4">San sang bat dau hoc?</h2>
+        <h2 class="text-2xl md:text-3xl font-bold gradient-text mb-4">Sẵn sàng bắt đầu học?</h2>
         <p class="text-gray-400 mb-6 leading-relaxed">
-          Ban co the xem khoa hoc ngay. Tao tai khoan mien phi de luu va theo doi tien do.
+          Bạn có thể xem khóa học ngay. Tạo tài khoản miễn phí để lưu và theo dõi tiến độ.
         </p>
         <div class="flex gap-4 justify-center flex-wrap">
           <NuxtLink to="/courses" class="btn btn-primary">
-            Kham pha khoa hoc <Icon name="mdi:arrow-right" />
+            Khám phá khóa học <Icon name="mdi:arrow-right" />
           </NuxtLink>
         </div>
       </div>

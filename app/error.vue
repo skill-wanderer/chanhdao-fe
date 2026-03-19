@@ -7,12 +7,12 @@ const props = defineProps<{
 
 const statusCode = computed(() => props.error?.statusCode || 500)
 const message = computed(() => {
-  if (statusCode.value === 404) return 'Khong tim thay trang'
-  return props.error?.statusMessage || 'Da xay ra loi'
+  if (statusCode.value === 404) return 'Không tìm thấy trang'
+  return props.error?.statusMessage || 'Đã xảy ra lỗi'
 })
 
 useSeo({
-  title: `${statusCode.value} — Chanh Dao Hoc Tap`,
+  title: `${statusCode.value} — Chánh Đạo Học Tập`,
   description: message.value,
   noIndex: true,
 })
@@ -24,14 +24,14 @@ useSeo({
       <span class="text-[clamp(5rem,15vw,10rem)] font-black leading-none block mb-4 gradient-text">{{ statusCode }}</span>
       <h1 class="text-[clamp(1.3rem,4vw,1.8rem)] font-bold mb-3">{{ message }}</h1>
       <p class="text-[rgba(224,224,224,0.6)] text-base mb-8">
-        Trang ban can tim khong ton tai hoac da duoc di chuyen.
+        Trang bạn cần tìm không tồn tại hoặc đã được di chuyển.
       </p>
       <div class="flex gap-4 justify-center flex-wrap max-sm:flex-col max-sm:items-center max-sm:gap-3">
         <NuxtLink to="/" class="btn btn-primary">
-          <Icon name="mdi:home" /> Ve trang chu
+          <Icon name="mdi:home" /> Về trang chủ
         </NuxtLink>
         <NuxtLink to="/courses" class="btn btn-secondary">
-          Xem khoa hoc
+          Xem khóa học
         </NuxtLink>
       </div>
     </div>

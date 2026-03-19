@@ -20,16 +20,16 @@ const difficultyClass = computed(() => {
 
 const difficultyLabel = computed(() => {
   switch (props.course.difficulty) {
-    case 'beginner': return 'Co ban'
-    case 'intermediate': return 'Trung cap'
-    case 'advanced': return 'Nang cao'
+    case 'beginner': return 'Cơ bản'
+    case 'intermediate': return 'Trung cấp'
+    case 'advanced': return 'Nâng cao'
     default: return props.course.difficulty
   }
 })
 </script>
 
 <template>
-  <NuxtLink :to="`/courses/${course.slug}`" class="group glass-card flex flex-col overflow-hidden no-underline text-[#e0e0e0]" :aria-label="`Xem khoa hoc: ${course.title}`">
+  <NuxtLink :to="`/courses/${course.slug}`" class="group glass-card flex flex-col overflow-hidden no-underline text-[#e0e0e0]" :aria-label="`Xem khóa học: ${course.title}`">
     <div class="relative aspect-video overflow-hidden bg-white/[0.02]">
       <NuxtImg
         v-if="course.thumbnail"
@@ -43,7 +43,7 @@ const difficultyLabel = computed(() => {
       <div v-else class="w-full h-full flex items-center justify-center text-brand-orange/30 bg-brand-orange/5">
         <Icon name="mdi:school-outline" size="48" />
       </div>
-      <span class="badge badge-free absolute top-3 right-3">Mien phi</span>
+      <span class="badge badge-free absolute top-3 right-3">Miễn phí</span>
     </div>
 
     <div class="p-5 flex-1 flex flex-col">
@@ -58,7 +58,7 @@ const difficultyLabel = computed(() => {
         <div class="flex items-center gap-4">
           <div class="flex items-center gap-1.5 text-sm text-[rgba(224,224,224,0.5)]">
             <Icon name="mdi:play-circle-outline" size="16" />
-            {{ course.lessonCount }} bai hoc
+            {{ course.lessonCount }} bài học
           </div>
           <div v-if="totalDuration" class="flex items-center gap-1.5 text-sm text-[rgba(224,224,224,0.5)]">
             <Icon name="mdi:clock-outline" size="16" />

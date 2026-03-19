@@ -23,9 +23,9 @@ const isRevealing = ref(false)
 let revealTimer: ReturnType<typeof setTimeout> | null = null
 
 const suggestions = [
-  'Co nhung khoa hoc nao?',
-  'Theo doi tien do hoc nhu the nao?',
-  'Gioi thieu cho toi ve lo trinh hoc',
+  'Có những khóa học nào?',
+  'Theo dõi tiến độ học như thế nào?',
+  'Giới thiệu cho tôi về lộ trình học',
 ]
 
 function toggle() {
@@ -144,13 +144,13 @@ onBeforeUnmount(() => stopReveal())
           </svg>
           <div>
             <div class="lyra-title-text">Lyra</div>
-            <div class="lyra-subtitle">TRO LY HOC TAP</div>
+            <div class="lyra-subtitle">TRỢ LÝ HỌC TẬP</div>
           </div>
         </div>
         <div class="flex items-center gap-1">
           <button
             class="lyra-header-btn"
-            title="Dat lai hoi thoai"
+            title="Đặt lại hội thoại"
             @click="handleReset"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -160,7 +160,7 @@ onBeforeUnmount(() => stopReveal())
           </button>
           <button
             class="lyra-header-btn"
-            title="Dong"
+            title="Đóng"
             @click="toggle"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -184,10 +184,10 @@ onBeforeUnmount(() => stopReveal())
             <path d="M16 12h2" />
           </svg>
           <p class="text-sm font-semibold mt-3 mb-1">
-            Chao mung ban den kho tri thuc!
+            Chào mừng bạn đến kho tri thức!
           </p>
           <p class="text-xs opacity-60 leading-relaxed mb-3">
-            Hay dat cau hoi ve khoa hoc, bai hoc va lo trinh hoc. Lyra se giup ban tim thong tin lien quan.
+            Hãy đặt câu hỏi về khóa học, bài học và lộ trình học. Lyra sẽ giúp bạn tìm thông tin liên quan.
           </p>
           <div class="lyra-suggestions">
             <button
@@ -247,7 +247,7 @@ onBeforeUnmount(() => stopReveal())
 
         <!-- Sources -->
         <div v-if="sources.length > 0 && !loading" class="lyra-sources">
-          <div class="lyra-sources-label">Nguon tham chieu</div>
+          <div class="lyra-sources-label">Nguồn tham chiếu</div>
           <a
             v-for="(src, si) in sources"
             :key="si"
@@ -271,7 +271,7 @@ onBeforeUnmount(() => stopReveal())
               <polyline points="23 4 23 10 17 10" />
               <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
             </svg>
-            Dat lai hoi thoai
+            Đặt lại hội thoại
           </button>
         </div>
       </div>
@@ -287,7 +287,7 @@ onBeforeUnmount(() => stopReveal())
           v-model="input"
           class="lyra-input"
           type="text"
-          placeholder="Ban dang tim kien thuc nao..."
+          placeholder="Bạn đang tìm kiến thức nào..."
           maxlength="2000"
           :disabled="loading"
         >

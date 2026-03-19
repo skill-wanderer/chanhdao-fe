@@ -8,19 +8,19 @@ const { formatDuration, getCourseDuration, getCourseBySlug } = useCourses()
 const path = allPaths.find(p => p.slug === slug)
 
 if (!path) {
-  throw createError({ statusCode: 404, statusMessage: 'Khong tim thay lo trinh hoc' })
+  throw createError({ statusCode: 404, statusMessage: 'Không tìm thấy lộ trình học' })
 }
 
 const config = useRuntimeConfig()
 const siteUrl = (config.public.siteUrl as string) || 'http://localhost:3000'
 
 useSeo({
-  title: `${path.title} — Lo trinh hoc`,
+  title: `${path.title} — Lộ trình học`,
   description: path.description,
   url: `${siteUrl}/paths/${path.slug}`,
   breadcrumbs: [
-    { name: 'Trang chu', url: siteUrl },
-    { name: 'Lo trinh hoc', url: `${siteUrl}/paths` },
+    { name: 'Trang chủ', url: siteUrl },
+    { name: 'Lộ trình học', url: `${siteUrl}/paths` },
     { name: path.title },
   ],
 })
@@ -53,9 +53,9 @@ function difficultyClass(d: string): string {
 
 function difficultyLabel(d: string): string {
   switch (d) {
-    case 'beginner': return 'Co ban'
-    case 'intermediate': return 'Trung cap'
-    case 'advanced': return 'Nang cao'
+    case 'beginner': return 'Cơ bản'
+    case 'intermediate': return 'Trung cấp'
+    case 'advanced': return 'Nâng cao'
     default: return d
   }
 }
@@ -65,8 +65,8 @@ function difficultyLabel(d: string): string {
   <div>
     <div class="section" style="padding-bottom: 0;">
       <BreadcrumbNav :items="[
-        { label: 'Trang chu', to: '/' },
-        { label: 'Lo trinh hoc', to: '/paths' },
+        { label: 'Trang chủ', to: '/' },
+        { label: 'Lộ trình học', to: '/paths' },
         { label: path.title },
       ]" />
     </div>
@@ -85,13 +85,13 @@ function difficultyLabel(d: string): string {
 
               <div class="flex items-center gap-5 mt-4 flex-wrap">
                 <span class="text-sm text-[rgba(224,224,224,0.6)]">
-                  <Icon name="mdi:book-open-outline" class="inline" /> {{ path.courseCount }} khoa hoc du kien
+                  <Icon name="mdi:book-open-outline" class="inline" /> {{ path.courseCount }} khóa học dự kiến
                 </span>
                 <span class="text-sm text-[rgba(224,224,224,0.6)]">
-                  <Icon name="mdi:check-circle-outline" class="inline" /> {{ availableCourses }} khoa hoc dang mo
+                  <Icon name="mdi:check-circle-outline" class="inline" /> {{ availableCourses }} khóa học đang mở
                 </span>
                 <span v-if="totalDuration" class="text-sm text-[rgba(224,224,224,0.6)]">
-                  <Icon name="mdi:clock-outline" class="inline" /> {{ formatDuration(totalDuration) }} noi dung dang mo
+                  <Icon name="mdi:clock-outline" class="inline" /> {{ formatDuration(totalDuration) }} nội dung đang mở
                 </span>
               </div>
             </div>
@@ -104,7 +104,7 @@ function difficultyLabel(d: string): string {
       <div class="glass-card p-7 max-md:p-5 max-sm:p-4">
         <div class="flex items-center gap-2 mb-5">
           <Icon name="mdi:map-marker-path" class="text-brand-orange text-xl" />
-          <h2 class="text-2xl font-bold">Lo trinh noi dung</h2>
+          <h2 class="text-2xl font-bold">Lộ trình nội dung</h2>
         </div>
 
         <div v-if="path.courses?.length" class="flex flex-col gap-3">
@@ -127,22 +127,22 @@ function difficultyLabel(d: string): string {
               {{ course.title }}
             </span>
 
-            <span v-if="isCourseAvailable(course.slug)" class="ml-auto text-[0.72rem] uppercase tracking-wider text-[#4caf50]">Dang mo</span>
-            <span v-else class="ml-auto text-[0.72rem] uppercase tracking-wider text-brand-orange/80">Sap mo</span>
+            <span v-if="isCourseAvailable(course.slug)" class="ml-auto text-[0.72rem] uppercase tracking-wider text-[#4caf50]">Đang mở</span>
+            <span v-else class="ml-auto text-[0.72rem] uppercase tracking-wider text-brand-orange/80">Sắp mở</span>
           </div>
         </div>
 
         <div v-else class="flex items-center gap-2.5 py-3 px-4 rounded-lg bg-brand-orange/5 border border-dashed border-brand-orange/20">
           <Icon name="mdi:hammer-wrench" class="text-brand-orange text-lg" />
-          <span class="text-sm text-gray-400">Noi dung dang duoc cap nhat. Vui long quay lai sau.</span>
+          <span class="text-sm text-gray-400">Nội dung đang được cập nhật. Vui lòng quay lại sau.</span>
         </div>
 
         <div class="mt-6 pt-5 border-t border-white/10 flex flex-wrap gap-3">
           <NuxtLink to="/courses" class="btn btn-primary btn-sm">
-            <Icon name="mdi:school-outline" /> Xem khoa hoc dang mo
+            <Icon name="mdi:school-outline" /> Xem khóa học đang mở
           </NuxtLink>
           <NuxtLink to="/paths" class="btn btn-outline btn-sm">
-            <Icon name="mdi:arrow-left" /> Quay lai lo trinh hoc
+            <Icon name="mdi:arrow-left" /> Quay lại lộ trình học
           </NuxtLink>
         </div>
       </div>
