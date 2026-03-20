@@ -44,7 +44,7 @@ const founders: TeamMember[] = [
     ],
   },
   {
-    name: 'Đổng Văn Dũng',
+    name: 'Đồng Văn Dũng',
     role: 'Đứng đầu nội dung dự án',
     avatar: '/dong-van-dung.jpg',
     bio: [
