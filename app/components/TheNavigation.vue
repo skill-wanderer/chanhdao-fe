@@ -21,6 +21,7 @@ const navLinks = [
   { label: 'Pháp Lộ', to: '/phap-lo' },
   { label: 'Thiện Thư', to: '/thien-thu' },
   { label: 'Giới thiệu', to: '/gioi-thieu' },
+  { label: 'Liên hệ', to: '/lien-he' },
 ]
 </script>
 

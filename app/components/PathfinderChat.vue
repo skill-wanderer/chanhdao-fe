@@ -11,7 +11,7 @@ function renderMd(text: string): string {
   return marked.parse(text, { async: false }) as string
 }
 
-const { history, loading, error, sources, sendMessage, resetChat } = usePathfinder()
+const { history, loading, error, sources, sendMessage, resetChat } = useAnLacVien()
 
 const isOpen = ref(false)
 const input = ref('')

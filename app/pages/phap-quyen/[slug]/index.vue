@@ -53,6 +53,12 @@ const difficultyLabel = computed(() => {
 })
 
 const totalDuration = computed(() => getCourseDuration(course))
+const authorBioParagraphs = computed(() =>
+  (course.author?.bio ?? '')
+    .split(/\n\s*\n/)
+    .map(paragraph => paragraph.trim())
+    .filter(Boolean)
+)
 </script>
 
 <template>
@@ -119,17 +125,6 @@ const totalDuration = computed(() => getCourseDuration(course))
             <p class="text-sm text-text-secondary mb-4">
               Đã hoàn thành {{ completedCount }} / {{ availableLessons.length }} bài học đang mở
             </p>
-
-            <div class="text-sm text-text-muted space-y-2">
-              <div class="flex items-center gap-2">
-                <Icon name="mdi:trophy-outline" class="text-brand-gold-light" />
-                <span>Chứng nhận sau khi hoàn thành</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <Icon name="mdi:infinity" class="text-semantic-growth" />
-                <span>Truy cập lâu dài</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -149,7 +144,11 @@ const totalDuration = computed(() => getCourseDuration(course))
         <div class="flex-1">
           <h2 class="text-[1.1rem] font-bold font-serif text-text-primary mb-1">Thông tin tác giả</h2>
           <p class="text-sm text-brand-accent mb-2 font-semibold">{{ course.author.name }} · {{ course.author.title }}</p>
-          <p class="text-sm text-text-secondary leading-relaxed mb-3">{{ course.author.bio }}</p>
+          <div class="mb-3 space-y-3 text-sm text-text-secondary leading-relaxed text-left max-sm:text-center">
+            <p v-for="(paragraph, index) in authorBioParagraphs" :key="`${course.author.name}-${index}`">
+              {{ paragraph }}
+            </p>
+          </div>
           <div class="flex gap-4 max-sm:justify-center">
             <a v-if="course.author.linkedinUrl" :href="course.author.linkedinUrl" target="_blank" rel="noopener" class="flex items-center gap-1 text-[0.85rem] text-text-muted transition-colors duration-300 hover:text-brand-accent">
               <Icon name="mdi:linkedin" /> LinkedIn

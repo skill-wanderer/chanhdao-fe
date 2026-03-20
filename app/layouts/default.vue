@@ -10,7 +10,7 @@ const route = useRoute()
     </main>
     <TheFooter />
     <ClientOnly>
-      <PathfinderChat />
+      <AnLacVienChat />
     </ClientOnly>
   </div>
 </template>

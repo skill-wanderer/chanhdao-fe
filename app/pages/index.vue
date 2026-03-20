@@ -66,7 +66,7 @@ const publishedCourseCount = allCourses.filter(isPublishedCourse).length
     <TheHero
       title="Học Phật học vững vàng với trợ lực AI"
       subtitle="Chào mừng đến với Chánh Đạo"
-      description="Nền tảng mở dành cho người Việt học Phật giáo, kết hợp công nghệ AI mới để soạn nội dung, hỗ trợ truy cứu giáo lý và tìm tòi chủ đề liên hệ."
+      description="Nền tảng mở dành cho người Việt học Phật giáo, kết hợp công nghệ AI mới để soạn nội dung, hỗ trợ truy cứu giáo lý và tìm tòi chủ đề."
       :cta-primary="{ label: 'Xem pháp quyển', to: '/phap-quyen' }"
       :cta-tertiary="{ label: 'Xem Pháp Lộ', to: '/phap-lo' }"
       :stats="[

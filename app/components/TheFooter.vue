@@ -9,10 +9,14 @@ const footerLinks = {
   ],
   about: [
     { label: 'Giới thiệu', to: '/gioi-thieu' },
-    { label: 'Mã nguồn mở', href: 'https://github.com/skill-wanderer/chanhdao-fe' },
+    { label: 'Liên hệ', to: '/lien-he' },
+    { label: 'Mã nguồn mở', href: 'https://github.com/skill-wanderer' },
   ],
   community: [
-    { label: 'GitHub', href: 'https://github.com/skill-wanderer/chanhdao-fe' },
+    { label: 'Frontend', href: 'https://github.com/skill-wanderer/chanhdao-fe' },
+    { label: 'Backend API', href: 'https://github.com/skill-wanderer/chanhdao-be' },
+    { label: 'Keycloak SSO', href: 'https://github.com/skill-wanderer/keycloak-sso' },
+    { label: 'AI Service', href: 'https://github.com/skill-wanderer/an-lac-vien-ai' },
   ],
 }
 </script>
@@ -28,7 +32,7 @@ const footerLinks = {
             <span class="gradient-text text-lg font-bold font-serif">CHÁNH ĐẠO.VN</span>
           </NuxtLink>
           <p class="text-text-muted text-sm leading-relaxed max-w-[280px]">
-            Con đường dẫn đến Tuệ Giác. Số hoá toàn bộ Tam Tạng Kinh Điển Việt Nam.
+            Con đường tới tuệ giác và số hóa các bộ kinh luận Phật giáo.
           </p>
         </div>
 

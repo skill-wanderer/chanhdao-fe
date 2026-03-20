@@ -36,7 +36,7 @@ useSeo({
 
       <div class="glass-card p-8 md:p-12 space-y-6">
         <div class="flex gap-4 items-start">
-          <Icon name="mdi:book-open-page-variant-outline" class="text-brand-primary text-3xl mt-1 shrink-0" />
+          <Icon name="mdi:dharmachakra" class="text-brand-primary text-3xl mt-1 shrink-0" />
           <div>
             <h3 class="text-xl font-bold mb-2">Một danh xưng mang ý hướng đồng hành</h3>
             <p class="text-text-secondary leading-relaxed">
@@ -169,10 +169,10 @@ useSeo({
     <!-- CTA -->
     <section class="section section-narrow text-center">
       <div class="glass-card p-10">
-        <Icon name="mdi:book-open-page-variant-outline" class="text-brand-primary text-4xl mb-4" />
+        <Icon name="mdi:dharmachakra" class="text-brand-primary text-4xl mb-4" />
         <h2 class="text-2xl font-bold gradient-text mb-4">Bắt đầu trò chuyện cùng Thiện Thư</h2>
         <p class="text-text-secondary mb-6 leading-relaxed">
-          Bạn có thể mở Thiện Thư từ mọi trang bằng biểu tượng cuốn sách ở góc dưới, rồi bắt đầu với một câu hỏi,
+          Bạn có thể mở Thiện Thư từ mọi trang bằng biểu tượng pháp luân ở góc dưới, rồi bắt đầu với một câu hỏi,
           một thuật ngữ chưa rõ hoặc một nhu cầu học tập đang hiện diện lúc này.
         </p>
         <div class="flex gap-4 justify-center flex-wrap">

@@ -14,9 +14,13 @@ import type { Course } from '~/types/course'
  *       <lesson-slug>.ts — individual lesson data
  */
 import phatHocPhoThongQuyen1 from './phat-hoc-pho-thong-quyen-1'
+import phatHocPhoThongQuyen2 from './phat-hoc-pho-thong-quyen-2'
+import phatHocPhoThongQuyen3 from './phat-hoc-pho-thong-quyen-3'
 
 const allCourses: Course[] = [
   phatHocPhoThongQuyen1,
+  phatHocPhoThongQuyen2,
+  phatHocPhoThongQuyen3,
 ]
 
 export default allCourses

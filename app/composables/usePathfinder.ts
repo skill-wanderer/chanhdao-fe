@@ -22,16 +22,16 @@ interface StoredSession {
   expiresAt: number
 }
 
-const STORAGE_KEY = 'pathfinder_chat_session_thien_thu'
+const STORAGE_KEY = 'anlacvien_chat_session_thien_thu'
 
-export function usePathfinder() {
+export function useAnLacVien() {
   const config = useRuntimeConfig()
   const {
     apiUrl,
     domains: domainsRaw,
     sessionExpiryMinutes,
     sessionStorage: storageMode,
-  } = config.public.pathfinder as {
+  } = config.public.anLacVien as {
     apiUrl: string
     domains: string
     sessionExpiryMinutes: number

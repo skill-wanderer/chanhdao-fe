@@ -1,0 +1,15 @@
+import type { Lesson } from '~/types/course'
+
+const lesson: Lesson = {
+  id: 'lesson-khoa-9-bai-3-tam-vuong',
+  slug: 'bai-thu-3-tam-vuong',
+  title: 'Bài Thứ 3 - I. Tâm vương',
+  type: 'article',
+  status: 'draft',
+  order: 5,
+  content: '<p>Nội dung bài học đang được biên soạn.</p>',
+  createdAt: '2026-03-20',
+  updatedAt: '2026-03-20',
+}
+
+export default lesson

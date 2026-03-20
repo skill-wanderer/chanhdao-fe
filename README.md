@@ -12,7 +12,15 @@ Repository nay chua phan frontend cho website Chanh Dao. Ung dung tap trung vao 
 
 - Website chinh thuc: https://chanhdao.vn
 - Don vi dong hanh: https://skill-wanderer.com
-- Ma nguon: https://github.com/skill-wanderer/chanhdao-fe
+
+## Kien truc kho ma nguon (microservice)
+
+Du an Chanh Dao duoc to chuc theo nhieu repository tach biet theo tung thanh phan chuc nang:
+
+- Frontend (Nuxt): https://github.com/skill-wanderer/chanhdao-fe
+- Backend API: https://github.com/skill-wanderer/chanhdao-be
+- Xac thuc SSO (Keycloak): https://github.com/skill-wanderer/keycloak-sso
+- AI service: https://github.com/skill-wanderer/an-lac-vien-ai
 
 ## Cong nghe su dung
 

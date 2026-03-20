@@ -1,8 +1,77 @@
 <script setup lang="ts">
+type TeamMember = {
+  name: string
+  role: string
+  bio: string[]
+  avatar: string
+}
+
+type ProjectRepository = {
+  name: string
+  role: string
+  href: string
+}
+
 useSeo({
   title: 'Giới thiệu Chánh Đạo — AI cho học Phật học',
   description: 'Nền tảng dành cho người Việt học Phật giáo, kết hợp AI để soạn nội dung, hỗ trợ truy cứu Phật học và phát triển nhiều hình thức học tập phục vụ tu học.',
 })
+
+const founders: TeamMember[] = [
+  {
+    name: 'Nguyễn Hồng Quân',
+    role: 'Đứng đầu công nghệ của dự án',
+    avatar: '/nguyen-hong-quan.jpg',
+    bio: [
+      'Từng trải qua một thời kỳ dài vô thường trước khi được biết đến giáo lý Phật giáo. Sau đó cũng trải qua nhiều biến động ảnh hưởng đến con đường tu tập, nhưng càng về sau càng thấy thấm sâu giáo lý Phật giáo.',
+      'Mong muốn tạo được một nền tảng kết hợp công nghệ AI để có thể hỗ trợ mọi người học tập giáo lý Phật giáo, không còn rào cản và giới hạn trong việc tiếp cận.',
+    ],
+  },
+  {
+    name: 'Đổng Văn Dũng',
+    role: 'Đứng đầu nội dung dự án',
+    avatar: '/dong-van-dung.jpg',
+    bio: [
+      'Là một người bình thường, may mắn có duyên được biết đến đạo Phật và dần nhận ra đây là con đường chân thật, hướng đến sự hiểu biết và chấm dứt khổ đau.',
+      'Với mong muốn giúp mọi người tiếp cận chánh pháp dễ dàng, thuận lợi và sâu sắc hơn, đội ngũ ứng dụng AI vào việc học và tìm hiểu kinh điển.',
+      'Trong quá trình thực hành, luôn mong được lắng nghe và học hỏi thêm từ tất cả mọi người.',
+    ],
+  },
+]
+
+const operationSupportTeam: TeamMember[] = [
+  {
+    name: 'Skill-Wanderer',
+    role: 'Đội ngũ hỗ trợ vận hành',
+    avatar: '/skill-wanderer.svg',
+    bio: [
+      'Được sáng lập bởi Nguyễn Hồng Quân, Skill-Wanderer định hướng phát triển theo mô hình doanh nghiệp xã hội phi lợi nhuận, lấy giá trị cộng đồng và giáo dục bền vững làm trọng tâm. Đơn vị vận hành theo hướng tạo doanh thu từ các đối tác công nghệ để tái đầu tư vào các hoạt động giáo dục phi lợi nhuận.',
+    ],
+  },
+]
+
+const projectRepositories: ProjectRepository[] = [
+  {
+    name: 'skill-wanderer/chanhdao-fe',
+    role: 'Frontend (Nuxt)',
+    href: 'https://github.com/skill-wanderer/chanhdao-fe',
+  },
+  {
+    name: 'skill-wanderer/chanhdao-be',
+    role: 'Backend API',
+    href: 'https://github.com/skill-wanderer/chanhdao-be',
+  },
+  {
+    name: 'skill-wanderer/keycloak-sso',
+    role: 'SSO (Keycloak)',
+    href: 'https://github.com/skill-wanderer/keycloak-sso',
+  },
+  {
+    name: 'skill-wanderer/an-lac-vien-ai',
+    role: 'AI Service',
+    href: 'https://github.com/skill-wanderer/an-lac-vien-ai',
+  },
+]
 </script>
 
 <template>
@@ -111,17 +180,103 @@ useSeo({
       </div>
     </section>
 
+    <section class="section section-narrow pt-0">
+      <h2 class="text-3xl md:text-4xl font-bold font-serif gradient-text mb-6 text-center">Đội ngũ sáng lập</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <article
+          v-for="member in founders"
+          :key="member.name"
+          class="glass-card p-6 md:p-8"
+        >
+          <div class="flex items-start gap-4 md:gap-5">
+            <NuxtImg
+              :src="member.avatar"
+              :alt="`Ảnh đại diện của ${member.name}`"
+              width="96"
+              height="96"
+              loading="lazy"
+              class="w-20 h-20 md:w-24 md:h-24 rounded-2xl object-cover border border-brand-primary/25 bg-brand-primary/5"
+            />
+            <div class="space-y-1">
+              <h3 class="text-xl font-bold font-serif">{{ member.name }}</h3>
+              <p class="text-sm font-semibold uppercase tracking-wide text-brand-accent">{{ member.role }}</p>
+            </div>
+          </div>
+          <div class="mt-5 space-y-3 text-text-secondary leading-relaxed">
+            <p v-for="(paragraph, index) in member.bio" :key="`${member.name}-${index}`">
+              {{ paragraph }}
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-narrow pt-0">
+      <h2 class="text-3xl md:text-4xl font-bold font-serif gradient-text mb-6 text-center">Đội ngũ hỗ trợ vận hành</h2>
+      <div class="glass-card p-6 md:p-8 space-y-5">
+        <article
+          v-for="team in operationSupportTeam"
+          :key="team.name"
+          class="flex flex-col md:flex-row items-start gap-5"
+        >
+          <NuxtImg
+            :src="team.avatar"
+            :alt="`Ảnh đại diện của ${team.name}`"
+            width="96"
+            height="96"
+            loading="lazy"
+            class="w-20 h-20 md:w-24 md:h-24 rounded-2xl object-cover border border-brand-primary/25 bg-brand-primary/5"
+          />
+          <div class="flex-1 space-y-3">
+            <div>
+              <h3 class="text-xl font-bold font-serif">{{ team.name }}</h3>
+              <p class="text-sm font-semibold uppercase tracking-wide text-brand-accent">{{ team.role }}</p>
+            </div>
+            <p
+              v-for="(paragraph, index) in team.bio"
+              :key="`${team.name}-${index}`"
+              class="text-text-secondary leading-relaxed"
+            >
+              {{ paragraph }}
+            </p>
+            <a
+              href="https://skill-wanderer.com"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 font-semibold"
+            >
+              Trang web: skill-wanderer.com
+              <Icon name="mdi:open-in-new" />
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <!-- Open Source CTA -->
     <section class="section section-narrow text-center">
       <div class="glass-card p-10">
         <Icon name="mdi:source-repository" class="text-brand-primary text-4xl mb-4" />
-        <h2 class="text-2xl font-bold font-serif gradient-text mb-4">Dự án mã nguồn mở</h2>
+        <h2 class="text-2xl font-bold font-serif gradient-text mb-4">Hệ sinh thái mã nguồn mở</h2>
         <p class="text-text-secondary mb-6 leading-relaxed">
-          Bạn có thể theo dõi quá trình phát triển, đóng góp ý kiến và gửi pull request tại kho mã nguồn mở.
+          Dự án được triển khai theo mô hình microservice. Bạn có thể theo dõi quá trình phát triển, đóng góp ý kiến và gửi pull request tại các kho mã nguồn bên dưới.
         </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left mb-6">
+          <a
+            v-for="repo in projectRepositories"
+            :key="repo.name"
+            :href="repo.href"
+            target="_blank"
+            rel="noopener"
+            class="rounded-2xl border border-brand-primary/20 bg-white/50 px-5 py-4 transition-colors duration-300 hover:border-brand-primary/45"
+          >
+            <p class="text-xs uppercase tracking-wide text-text-muted">{{ repo.role }}</p>
+            <p class="font-semibold text-text-primary mt-1 break-all">{{ repo.name }}</p>
+          </a>
+        </div>
         <div class="flex gap-4 justify-center flex-wrap">
-          <a href="https://github.com/skill-wanderer/chanhdao-fe" target="_blank" rel="noopener" class="btn btn-primary">
-            Xem kho mã nguồn <Icon name="mdi:open-in-new" />
+          <a href="https://github.com/skill-wanderer" target="_blank" rel="noopener" class="btn btn-primary">
+            Xem toàn bộ tổ chức <Icon name="mdi:open-in-new" />
           </a>
           <NuxtLink to="/phap-quyen" class="btn btn-outline">
             Xem pháp quyển <Icon name="mdi:arrow-right" />

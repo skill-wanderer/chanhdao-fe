@@ -96,6 +96,18 @@ function difficultyLabel(d: string): string {
               </div>
             </div>
           </div>
+
+          <div
+            v-if="path.content"
+            class="mt-6 rounded-2xl border border-brand-primary/10 bg-brand-primary/[0.03] px-5 py-4 text-text-secondary"
+          >
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-brand-accent/80">
+              Lời dẫn
+            </p>
+            <div class="space-y-4 text-[1rem] leading-[1.9]" style="white-space: pre-line;">
+              {{ path.content }}
+            </div>
+          </div>
         </div>
       </div>
     </section>
