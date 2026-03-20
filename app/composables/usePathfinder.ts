@@ -23,6 +23,11 @@ interface StoredSession {
 }
 
 const STORAGE_KEY = 'anlacvien_chat_session_thien_thu'
+const DEFAULT_PERSONALITY = 'thien_thu'
+
+function normalizePersonality(personality?: string | null) {
+  return personality === 'librarian' || !personality ? DEFAULT_PERSONALITY : personality
+}
 
 export function useAnLacVien() {
   const config = useRuntimeConfig()
@@ -47,7 +52,7 @@ export function useAnLacVien() {
   const loading = ref(false)
   const error = ref<string | null>(null)
   const sources = ref<Source[]>([])
-  const personality = ref<string>('librarian')
+  const personality = ref<string>(DEFAULT_PERSONALITY)
 
   function getStorage(): Storage | null {
     if (import.meta.server) return null
@@ -70,7 +75,7 @@ export function useAnLacVien() {
       }
 
       history.value = session.history
-      personality.value = session.personality || 'librarian'
+      personality.value = normalizePersonality(session.personality)
     }
     catch {
       storage.removeItem(STORAGE_KEY)
@@ -136,6 +141,7 @@ export function useAnLacVien() {
     history.value = []
     sources.value = []
     error.value = null
+    personality.value = DEFAULT_PERSONALITY
 
     const storage = getStorage()
     if (storage) {
