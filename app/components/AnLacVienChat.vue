@@ -156,7 +156,7 @@ onBeforeUnmount(() => stopReveal())
             </svg>
           </button>
           <button
-            class="lyra-header-btn"
+            class="lyra-header-btn lyra-header-btn-close"
             title="Đóng"
             @click="toggle"
           >
@@ -164,6 +164,7 @@ onBeforeUnmount(() => stopReveal())
               <line x1="18" y1="6" x2="6" y2="18" />
               <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
+            <span class="lyra-header-btn-text">Đóng chat</span>
           </button>
         </div>
       </div>
@@ -458,9 +459,14 @@ onBeforeUnmount(() => stopReveal())
   border: none;
   cursor: pointer;
   padding: 4px;
+  min-height: 32px;
   color: rgba(62, 47, 27, 0.45);
   transition: color 0.2s ease, background 0.2s ease;
   border-radius: 4px;
+}
+
+.lyra-header-btn-text {
+  display: none;
 }
 
 .lyra-header-btn:hover {
@@ -876,6 +882,33 @@ onBeforeUnmount(() => stopReveal())
   .lyra-fab {
     bottom: 1rem;
     right: 1rem;
+  }
+
+  .lyra-header {
+    padding: 0.875rem 0.875rem 0.75rem;
+  }
+
+  .lyra-header-btn {
+    min-height: 40px;
+    min-width: 40px;
+  }
+
+  .lyra-header-btn-close {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 999px;
+    color: #8B6914;
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.22);
+  }
+
+  .lyra-header-btn-text {
+    display: inline;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
   }
 }
 </style>

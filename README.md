@@ -1,28 +1,28 @@
-# Chanh Dao Frontend
+# Chánh Đạo Frontend
 
-Frontend Nuxt cua Chanh Dao, nen tang hoc tap mo duoc host tai https://chanhdao.vn.
+Frontend Nuxt của Chánh Đạo, nền tảng học tập mở được triển khai tại https://chanhdao.vn.
 
-Day la du an phi loi nhuan, duoc phat trien voi muc tieu mo rong co hoi hoc tap va tiep can tri thuc cho cong dong. Du an duoc ket hop trien khai cung Skill-Wanderer tai https://skill-wanderer.com.
+Đây là dự án phi lợi nhuận, được phát triển với mục tiêu mở rộng cơ hội học tập và tiếp cận tri thức cho cộng đồng. Dự án được phối hợp triển khai cùng Skill-Wanderer tại https://skill-wanderer.com.
 
-## Tong quan
+## Tổng quan
 
-Repository nay chua phan frontend cho website Chanh Dao. Ung dung tap trung vao trai nghiem hoc tap don gian, de truy cap, toi uu SEO, va ho tro noi dung khoa hoc, lo trinh hoc, bai hoc, tim kiem, cung mot so luong tich hop phuc vu nguoi hoc.
+Repository này chứa phần frontend cho website Chánh Đạo. Ứng dụng tập trung vào trải nghiệm học tập đơn giản, dễ truy cập, tối ưu SEO, và hỗ trợ nội dung khóa học, lộ trình học, bài học, tìm kiếm, cùng một số luồng tích hợp phục vụ người học.
 
-## Website va lien ket
+## Website và liên kết
 
-- Website chinh thuc: https://chanhdao.vn
-- Don vi dong hanh: https://skill-wanderer.com
+- Website chính thức: https://chanhdao.vn
+- Đơn vị đồng hành: https://skill-wanderer.com
 
-## Kien truc kho ma nguon (microservice)
+## Kiến trúc kho mã nguồn (microservice)
 
-Du an Chanh Dao duoc to chuc theo nhieu repository tach biet theo tung thanh phan chuc nang:
+Dự án Chánh Đạo được tổ chức theo nhiều repository tách biệt theo từng thành phần chức năng:
 
 - Frontend (Nuxt): https://github.com/skill-wanderer/chanhdao-fe
 - Backend API: https://github.com/skill-wanderer/chanhdao-be
-- Xac thuc SSO (Keycloak): https://github.com/skill-wanderer/keycloak-sso
+- Xác thực SSO (Keycloak): https://github.com/skill-wanderer/keycloak-sso
 - AI service: https://github.com/skill-wanderer/an-lac-vien-ai
 
-## Cong nghe su dung
+## Công nghệ sử dụng
 
 - Nuxt 4
 - Vue 3
@@ -32,48 +32,48 @@ Du an Chanh Dao duoc to chuc theo nhieu repository tach biet theo tung thanh pha
 - Nuxt Robots
 - Schema.org cho SEO
 
-## Tinh nang chinh
+## Tính năng chính
 
-- Trang gioi thieu va cac trang noi dung tinh
-- Danh sach khoa hoc va chi tiet khoa hoc
-- Lo trinh hoc va bai hoc dong
-- Tim kiem noi dung
-- Tich hop SEO, sitemap, robots, va schema markup
-- Ho tro xac thuc thong qua Keycloak
+- Trang giới thiệu và các trang nội dung tĩnh
+- Danh sách khóa học và chi tiết khóa học
+- Lộ trình học và bài học động
+- Tìm kiếm nội dung
+- Tích hợp SEO, sitemap, robots và schema markup
+- Hỗ trợ xác thực thông qua Keycloak
 
-## Cai dat va chay local
+## Cài đặt và chạy local
 
 ```bash
 npm install
 npm run dev
 ```
 
-Mac dinh ung dung chay bang Nuxt dev server.
+Mặc định ứng dụng chạy bằng Nuxt dev server.
 
-## Build va preview
+## Build và preview
 
 ```bash
 npm run build
 npm run preview
 ```
 
-Neu can tao static output:
+Nếu cần tạo static output:
 
 ```bash
 npm run generate
 ```
 
-## Muc tieu du an
+## Mục tiêu dự án
 
-- Xay dung mot khong gian hoc tap mo, de tiep can va huu ich cho cong dong.
-- Cung cap trai nghiem hoc tap mien phi tren web tai ten mien chanhdao.vn.
-- Duy tri mot san pham phi loi nhuan co the phat trien ben vung voi su dong hanh cua Skill-Wanderer.
-- Giu kien truc frontend ro rang, than thien voi SEO, va de mo rong noi dung trong tuong lai.
+- Xây dựng một không gian học tập mở, dễ tiếp cận và hữu ích cho cộng đồng.
+- Cung cấp trải nghiệm học tập miễn phí trên web tại tên miền chanhdao.vn.
+- Duy trì một sản phẩm phi lợi nhuận có thể phát triển bền vững với sự đồng hành của Skill-Wanderer.
+- Giữ kiến trúc frontend rõ ràng, thân thiện với SEO, và dễ mở rộng nội dung trong tương lai.
 
-## Dong gop
+## Đóng góp
 
-Neu ban muon dong gop, hay bat dau bang viec tao issue hoac pull request trong repository nay. Moi thay doi nen giu dung tinh chat phi loi nhuan, de truy cap, va phu hop voi dinh huong noi dung cua du an.
+Nếu bạn muốn đóng góp, hãy bắt đầu bằng việc tạo issue hoặc pull request trong repository này. Mọi thay đổi nên giữ đúng tính chất phi lợi nhuận, dễ truy cập, và phù hợp với định hướng nội dung của dự án.
 
-## Giay phep
+## Giấy phép
 
 Apache-2.0
