@@ -32,7 +32,7 @@ const footerLinks = {
             <span class="gradient-text text-lg font-bold font-serif">CHÁNH ĐẠO.VN</span>
           </NuxtLink>
           <p class="text-text-muted text-sm leading-relaxed max-w-[280px]">
-            Con đường tới tuệ giác và số hóa các bộ kinh luận Phật giáo.
+            Số hóa kinh điển | Mở đường tuệ giác.
           </p>
         </div>
 

@@ -13,8 +13,24 @@ type ProjectRepository = {
 }
 
 useSeo({
-  title: 'Giới thiệu Chánh Đạo — AI cho học Phật học',
-  description: 'Nền tảng dành cho người Việt học Phật giáo, kết hợp AI để soạn nội dung, hỗ trợ truy cứu Phật học và phát triển nhiều hình thức học tập phục vụ tu học.',
+  title: 'Giới thiệu Chánh Đạo | Sứ mệnh, đội ngũ và định hướng ứng dụng AI',
+  description: 'Tìm hiểu sứ mệnh của Chánh Đạo, đội ngũ sáng lập, cách dự án ứng dụng AI vào học Phật và định hướng phát triển nền tảng tu học mở cho người Việt.',
+  url: '/gioi-thieu',
+  pageType: 'AboutPage',
+  keywords: [
+    'giới thiệu Chánh Đạo',
+    'sứ mệnh Chánh Đạo',
+    'đội ngũ Chánh Đạo',
+    'AI học Phật',
+    'nền tảng học Phật cho người Việt',
+  ],
+  about: [
+    'sứ mệnh giáo dục Phật học',
+    'đội ngũ sáng lập',
+    'AI hỗ trợ tu học',
+    'mã nguồn mở',
+  ],
+  audience: 'Người Việt quan tâm đến học Phật và dự án Chánh Đạo',
 })
 
 const founders: TeamMember[] = [

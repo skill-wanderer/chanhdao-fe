@@ -1,7 +1,23 @@
 <script setup lang="ts">
 useSeo({
-  title: 'Thiện Thư - Người Cầm Đèn Trong Kho Tàng Pháp Bảo',
-  description: 'Thiện Thư là người bạn đồng tu hỗ trợ tìm bài học, dẫn nguồn và kết nối bạn với hệ sinh thái tu học trên nền tảng.',
+  title: 'Thiện Thư | Trợ lý AI đồng hành học Phật trên Chánh Đạo',
+  description: 'Thiện Thư là trợ lý AI đồng hành trên Chánh Đạo, hỗ trợ người học tìm bài học, lần nguồn tham chiếu và kết nối các nội dung tu học phù hợp với nhu cầu hiện tại.',
+  url: '/thien-thu',
+  pageType: 'AboutPage',
+  keywords: [
+    'Thiện Thư',
+    'trợ lý AI học Phật',
+    'AI đồng hành tu học',
+    'tra cứu giáo lý Phật giáo',
+    'Chánh Đạo AI',
+  ],
+  about: [
+    'Thiện Thư',
+    'AI hỗ trợ học Phật',
+    'tra cứu bài học',
+    'kết nối nguồn tham chiếu',
+  ],
+  audience: 'Người học Phật cần trợ lý AI để tra cứu và định hướng nội dung',
 })
 </script>
 

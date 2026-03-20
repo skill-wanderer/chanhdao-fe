@@ -21,18 +21,23 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      title: 'Chanh Dao — Nen tang hoc tap mo',
+      title: 'Chánh Đạo | Số hóa kinh điển | Mở đường tuệ giác.',
       htmlAttrs: { lang: 'vi' },
       meta: [
-        { name: 'description', content: 'Nen tang hoc tap mo va mien phi. Kham pha khoa hoc, theo doi tien do, va nang cao ky nang.' },
+        { name: 'description', content: 'Chánh Đạo là nền tảng học Phật học mở giúp người Việt tìm pháp lộ, học pháp quyển miễn phí và tra cứu giáo lý với trợ lực AI.' },
         { name: 'theme-color', content: '#D4AF37' },
+        { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
+        { property: 'og:site_name', content: 'Chánh Đạo' },
+        { property: 'og:locale', content: 'vi_VN' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:title', content: 'Chanh Dao — Nen tang hoc tap mo' },
-        { property: 'og:description', content: 'Kham pha khoa hoc, theo doi tien do, va hoc tap mien phi cho moi nguoi.' },
-        { property: 'og:image', content: '/og-image.png' },
+        { property: 'og:title', content: 'Chánh Đạo | Số hóa kinh điển | Mở đường tuệ giác.' },
+        { property: 'og:description', content: 'Tìm pháp lộ, học pháp quyển miễn phí và khám phá nội dung Phật học rõ ràng hơn với trợ lực AI trên Chánh Đạo.' },
+        { property: 'og:image', content: 'https://chanhdao.vn/og-image.png' },
+        { property: 'og:url', content: 'https://chanhdao.vn' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Chanh Dao — Nen tang hoc tap mo' },
-        { name: 'twitter:description', content: 'Kham pha khoa hoc, theo doi tien do, va hoc tap mien phi cho moi nguoi.' },
+        { name: 'twitter:title', content: 'Chánh Đạo | Số hóa kinh điển | Mở đường tuệ giác.' },
+        { name: 'twitter:description', content: 'Nền tảng học Phật học mở cho người Việt với pháp lộ, pháp quyển miễn phí và trợ lực AI để tra cứu giáo lý.' },
+        { name: 'twitter:image', content: 'https://chanhdao.vn/og-image.png' },
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
@@ -42,7 +47,7 @@ export default defineNuxtConfig({
 
   site: {
     url: 'https://chanhdao.vn',
-    name: 'Chanh Dao',
+    name: 'Chánh Đạo',
   },
 
   sitemap: {
@@ -57,7 +62,7 @@ export default defineNuxtConfig({
   schemaOrg: {
     identity: {
       type: 'Organization',
-      name: 'Chanh Dao',
+      name: 'Chánh Đạo',
       url: 'https://chanhdao.vn',
       logo: '/logo.png',
     },

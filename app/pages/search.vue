@@ -4,16 +4,67 @@ import allPaths from '~/data/paths'
 
 const router = useRouter()
 const route = useRoute()
-
-useSeo({
-  title: 'Tìm kiếm pháp quyển & pháp lộ',
-  description: 'Tìm kiếm pháp quyển và pháp lộ theo tên, chủ đề hoặc kỹ năng tại Chánh Đạo.',
-})
+const config = useRuntimeConfig()
+const siteUrl = ((config.public.siteUrl as string) || 'https://chanhdao.vn').replace(/\/+$/, '')
 
 const { searchCourses, formatDuration, getCourseDuration, getCourseBySlug } = useCourses()
 
 const query = ref((route.query.q as string) || '')
 const activeTab = ref<'all' | 'courses' | 'paths'>('all')
+
+const searchTitle = computed(() => {
+  const normalizedQuery = query.value.trim()
+  return normalizedQuery
+    ? `Kết quả tìm kiếm "${normalizedQuery}" | Chánh Đạo`
+    : 'Tìm kiếm pháp quyển và pháp lộ | Chánh Đạo'
+})
+
+const searchDescription = computed(() => {
+  const normalizedQuery = query.value.trim()
+  return normalizedQuery
+    ? `Xem kết quả tìm kiếm cho "${normalizedQuery}" trên Chánh Đạo để tìm pháp quyển, pháp lộ và nội dung Phật học liên quan.`
+    : 'Tìm pháp quyển, pháp lộ và chủ đề Phật học trên Chánh Đạo theo tên bài học, nội dung hoặc định hướng học tập.'
+})
+
+const searchUrl = computed(() => {
+  const normalizedQuery = query.value.trim()
+  if (!normalizedQuery) {
+    return '/search'
+  }
+
+  return `/search?q=${encodeURIComponent(normalizedQuery)}`
+})
+
+useSeo({
+  title: searchTitle,
+  description: searchDescription,
+  url: searchUrl,
+  pageType: 'SearchResultsPage',
+  noIndex: true,
+  keywords: computed(() => {
+    const normalizedQuery = query.value.trim()
+    return normalizedQuery
+      ? [normalizedQuery, 'tìm kiếm Phật học', 'tìm pháp quyển', 'tìm pháp lộ', 'Chánh Đạo']
+      : ['tìm kiếm Phật học', 'tìm pháp quyển', 'tìm pháp lộ', 'Chánh Đạo']
+  }),
+  about: computed(() => {
+    const normalizedQuery = query.value.trim()
+    return normalizedQuery
+      ? ['tìm kiếm nội dung Phật học', normalizedQuery, 'pháp quyển', 'pháp lộ']
+      : ['tìm kiếm nội dung Phật học', 'pháp quyển', 'pháp lộ']
+  }),
+  audience: 'Người Việt đang tìm nội dung Phật học phù hợp',
+  schemas: computed(() => [{
+    '@type': 'WebSite',
+    name: 'Chánh Đạo',
+    url: siteUrl,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${siteUrl}/search?q={search_term_string}`,
+      'query-input': 'required name=search_term_string',
+    },
+  }]),
+})
 
 const courseResults = computed(() => {
   if (!query.value.trim()) return []
@@ -71,6 +122,8 @@ const difficultyLabel = (d: string) => {
 watch(() => route.query.q, (newQ) => {
   if (typeof newQ === 'string') {
     query.value = newQ
+  } else {
+    query.value = ''
   }
 })
 </script>

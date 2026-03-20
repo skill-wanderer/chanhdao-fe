@@ -1,7 +1,22 @@
 <script setup lang="ts">
 useSeo({
-  title: 'Liên hệ — Chánh Đạo',
-  description: 'Gửi câu hỏi, góp ý hoặc phản hồi đến đội ngũ Chánh Đạo. Chúng tôi luôn sẵn sàng lắng nghe.',
+  title: 'Liên hệ Chánh Đạo | Gửi câu hỏi, góp ý và hợp tác',
+  description: 'Liên hệ với đội ngũ Chánh Đạo để gửi câu hỏi, góp ý về nội dung Phật học, phản hồi trải nghiệm hoặc trao đổi về hợp tác và đóng góp dự án.',
+  url: '/lien-he',
+  pageType: 'ContactPage',
+  keywords: [
+    'liên hệ Chánh Đạo',
+    'góp ý Chánh Đạo',
+    'hỗ trợ người học Phật',
+    'dự án Phật học mã nguồn mở',
+  ],
+  about: [
+    'liên hệ đội ngũ Chánh Đạo',
+    'góp ý nội dung Phật học',
+    'hỗ trợ dự án',
+    'đóng góp mã nguồn mở',
+  ],
+  audience: 'Người học, cộng tác viên và đối tác của Chánh Đạo',
 })
 
 const { submitContact } = useSubmissions()

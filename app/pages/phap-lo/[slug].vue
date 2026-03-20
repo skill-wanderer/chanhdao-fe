@@ -6,6 +6,11 @@ const slug = route.params.slug as string
 
 const { formatDuration, getCourseDuration, getCourseBySlug } = useCourses()
 const path = allPaths.find(p => p.slug === slug)
+const difficultyLabels: Record<string, string> = {
+  beginner: 'cơ bản',
+  intermediate: 'trung cấp',
+  advanced: 'nâng cao',
+}
 
 if (!path) {
   throw createError({ statusCode: 404, statusMessage: 'Không tìm thấy Pháp lộ' })
@@ -13,15 +18,39 @@ if (!path) {
 
 const config = useRuntimeConfig()
 const siteUrl = (config.public.siteUrl as string) || 'http://localhost:3000'
+const difficultyLabelForSeo = difficultyLabels[path.difficulty] || 'phù hợp'
+const availableCourseCount = path.courses?.filter(course => getCourseBySlug(course.slug)).length || 0
 
 useSeo({
-  title: `${path.title} — Pháp Lộ`,
-  description: path.description,
+  title: `${path.title} | Pháp lộ học Phật ${difficultyLabelForSeo} | Chánh Đạo`,
+  description: `${path.title} là pháp lộ học Phật ${difficultyLabelForSeo} tại Chánh Đạo, gồm ${path.courseCount} pháp quyển dự kiến và ${availableCourseCount} pháp quyển đang mở. ${path.description}`,
   url: `${siteUrl}/phap-lo/${path.slug}`,
+  pageType: 'CollectionPage',
+  keywords: [
+    path.title,
+    'pháp lộ học Phật',
+    'lộ trình học Phật',
+    `Phật học ${difficultyLabelForSeo}`,
+    'Chánh Đạo',
+  ],
+  about: [path.title, 'pháp lộ', 'giáo lý Phật giáo', 'học Phật theo lộ trình'],
+  audience: 'Người Việt học Phật theo lộ trình có hệ thống',
   breadcrumbs: [
     { name: 'Trang chủ', url: siteUrl },
     { name: 'Pháp Lộ', url: `${siteUrl}/phap-lo` },
     { name: path.title },
+  ],
+  schemas: [
+    {
+      '@type': 'ItemList',
+      name: `Danh sách pháp quyển trong pháp lộ ${path.title}`,
+      itemListElement: (path.courses || []).map((course, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: course.title,
+        url: `${siteUrl}/phap-quyen/${course.slug}`,
+      })),
+    },
   ],
 })
 

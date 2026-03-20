@@ -2,13 +2,42 @@
 import allPaths from '~/data/paths'
 
 const { formatDuration, getCourseDuration, getCourseBySlug } = useCourses()
+const config = useRuntimeConfig()
+const siteUrl = ((config.public.siteUrl as string) || 'https://chanhdao.vn').replace(/\/+$/, '')
+const paths = allPaths
 
 useSeo({
-  title: 'Pháp Lộ',
-  description: 'Các pháp lộ được sắp xếp theo mục tiêu, từ cơ bản đến nâng cao.',
+  title: 'Pháp lộ học Phật | Lộ trình từ cơ bản đến nâng cao | Chánh Đạo',
+  description: 'Khám phá các pháp lộ học Phật tại Chánh Đạo với lộ trình rõ ràng từ căn bản đến nâng cao, giúp người học chọn hướng đi phù hợp và học có hệ thống.',
+  url: '/phap-lo',
+  pageType: 'CollectionPage',
+  keywords: [
+    'pháp lộ học Phật',
+    'lộ trình học Phật',
+    'Phật học cơ bản',
+    'Phật học nâng cao',
+    'học Phật cho người Việt',
+  ],
+  about: [
+    'lộ trình học Phật',
+    'pháp lộ Chánh Đạo',
+    'chọn hướng học Phật',
+    'giáo lý Phật giáo',
+  ],
+  audience: 'Người Việt muốn học Phật theo lộ trình',
+  schemas: [
+    {
+      '@type': 'ItemList',
+      name: 'Danh sách pháp lộ học Phật',
+      itemListElement: paths.map((path, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: path.title,
+        url: `${siteUrl}/phap-lo/${path.slug}`,
+      })),
+    },
+  ],
 })
-
-const paths = allPaths
 
 const searchQuery = ref('')
 const selectedDifficulty = ref('')

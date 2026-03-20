@@ -23,6 +23,22 @@ if (!isPublishedLesson(lesson)) {
   throw createError({ statusCode: 404, statusMessage: 'Bài học chưa được công bố' })
 }
 
+function stripHtmlContent(content?: string): string {
+  return (content || '')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+const lessonPlainText = stripHtmlContent(lesson.content)
+const lessonDescription = lessonPlainText
+  ? `${lessonPlainText.slice(0, 180)}${lessonPlainText.length > 180 ? '…' : ''}`
+  : `Bài học ${lesson.title} thuộc pháp quyển ${course.title} trên Chánh Đạo, giúp người học tiếp cận giáo lý rõ ràng và có dẫn chiếu.`
+const lessonKeywords = [lesson.title, course.title, 'bài học Phật học', ...(course.tags || [])]
+
 // Extract first YouTube video URL from lesson content for VideoObject schema
 const videoUrlMatch = lesson.content?.match(/youtube-nocookie\.com\/embed\/([a-zA-Z0-9_-]{11})/)
 const firstVideoUrl = videoUrlMatch ? `https://www.youtube-nocookie.com/embed/${videoUrlMatch[1]}` : undefined
@@ -32,6 +48,8 @@ useLessonSeo({
   courseTitle: course.title,
   courseSlug: courseSlug,
   lessonSlug: lessonSlug,
+  description: lessonDescription,
+  keywords: lessonKeywords,
   datePublished: lesson.createdAt || course.createdAt,
   dateModified: lesson.updatedAt || course.updatedAt,
   videoUrl: firstVideoUrl,

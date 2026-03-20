@@ -3,9 +3,41 @@ import allPaths from '~/data/paths'
 import allCourses from '~/data/courses'
 import { isPublishedCourse } from '~/types/course'
 
+const config = useRuntimeConfig()
+const siteUrl = ((config.public.siteUrl as string) || 'https://chanhdao.vn').replace(/\/+$/, '')
+
 useSeo({
-  title: 'Chánh Đạo — Ứng dụng AI để học Phật học',
-  description: 'Nền tảng mở dành cho người Việt học Phật giáo, kết hợp AI để soạn nội dung, hỗ trợ truy cứu Phật học và mở rộng nhiều hình thức học như video, slide, podcast, quiz.',
+  title: 'Chánh Đạo | Số hóa kinh điển | Mở đường tuệ giác.',
+  description: 'Chánh Đạo là nền tảng học Phật học mở giúp người Việt tìm pháp lộ, học pháp quyển miễn phí và tra cứu giáo lý rõ ràng hơn với trợ lực AI.',
+  url: '/',
+  keywords: [
+    'Chánh Đạo',
+    'học Phật online',
+    'Phật học cho người Việt',
+    'pháp lộ học Phật',
+    'pháp quyển miễn phí',
+    'AI hỗ trợ học Phật',
+  ],
+  about: [
+    'Phật học',
+    'giáo lý Phật giáo',
+    'học Phật cho người Việt',
+    'pháp lộ',
+    'pháp quyển',
+  ],
+  audience: 'Người Việt học Phật giáo',
+  schemas: [
+    {
+      '@type': 'WebSite',
+      name: 'Chánh Đạo',
+      url: siteUrl,
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: `${siteUrl}/search?q={search_term_string}`,
+        'query-input': 'required name=search_term_string',
+      },
+    },
+  ],
 })
 
 const learningPaths = [

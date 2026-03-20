@@ -1,9 +1,39 @@
 <script setup lang="ts">
 const { courses, searchCourses, getCoursesByDifficulty } = useCourses()
+const config = useRuntimeConfig()
+const siteUrl = ((config.public.siteUrl as string) || 'https://chanhdao.vn').replace(/\/+$/, '')
 
 useSeo({
-  title: 'Pháp quyển',
-  description: 'Tổng hợp các pháp quyển mở và miễn phí để bạn học theo lộ trình phù hợp.',
+  title: 'Pháp quyển học Phật | Khóa học Phật học miễn phí | Chánh Đạo',
+  description: 'Xem toàn bộ pháp quyển học Phật tại Chánh Đạo, từ nhập môn đến chuyên sâu, với nội dung miễn phí, dễ theo dõi và phù hợp cho người Việt tự học.',
+  url: '/phap-quyen',
+  pageType: 'CollectionPage',
+  keywords: [
+    'pháp quyển học Phật',
+    'khóa học Phật học miễn phí',
+    'Phật học online',
+    'nội dung Phật học cho người Việt',
+    'Chánh Đạo pháp quyển',
+  ],
+  about: [
+    'pháp quyển',
+    'khóa học Phật học',
+    'học Phật miễn phí',
+    'giáo lý Phật giáo',
+  ],
+  audience: 'Người Việt tự học Phật qua pháp quyển',
+  schemas: [
+    {
+      '@type': 'ItemList',
+      name: 'Danh sách pháp quyển học Phật',
+      itemListElement: courses.value.map((course, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: course.title,
+        url: `${siteUrl}/phap-quyen/${course.slug}`,
+      })),
+    },
+  ],
 })
 
 const searchQuery = ref('')

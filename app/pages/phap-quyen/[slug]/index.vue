@@ -16,11 +16,15 @@ useCourseSeo({
   description: course.description,
   slug: course.slug,
   thumbnail: course.thumbnail,
+  tags: course.tags,
   difficulty: course.difficulty,
   datePublished: course.createdAt,
   dateModified: course.updatedAt,
   author: course.author ? { name: course.author.name, url: course.author.websiteUrl } : undefined,
 })
+
+const config = useRuntimeConfig()
+const siteUrl = ((config.public.siteUrl as string) || 'https://chanhdao.vn').replace(/\/+$/, '')
 
 const allLessons = computed(() => getAllLessons(course))
 const availableLessons = computed(() => allLessons.value.filter(isPublishedLesson))
@@ -59,6 +63,17 @@ const authorBioParagraphs = computed(() =>
     .map(paragraph => paragraph.trim())
     .filter(Boolean)
 )
+
+useSchemaOrg([{
+  '@type': 'ItemList',
+  name: `Danh sách bài học trong pháp quyển ${course.title}`,
+  itemListElement: availableLessons.value.map((lesson, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: lesson.title,
+    url: `${siteUrl}/phap-quyen/${course.slug}/bai-hoc/${lesson.slug}`,
+  })),
+}])
 </script>
 
 <template>

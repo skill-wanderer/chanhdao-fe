@@ -8,6 +8,14 @@
  */
 definePageMeta({ layout: false })
 
+useSeo({
+  title: 'Đăng nhập Chánh Đạo | Đang xử lý xác thực',
+  description: 'Trang xử lý xác thực tài khoản của Chánh Đạo. Trang này chỉ dùng cho đăng nhập và không được lập chỉ mục.',
+  url: '/auth/callback',
+  noIndex: true,
+  pageType: 'WebPage',
+})
+
 const config = useRuntimeConfig()
 const { keycloakRealm, keycloakClientId } = config.public
 const keycloakUrl = (config.public.keycloakUrl as string || '').replace(/\/+$/, '')

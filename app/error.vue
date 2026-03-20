@@ -12,8 +12,9 @@ const message = computed(() => {
 })
 
 useSeo({
-  title: `${statusCode.value} — Chánh Đạo`,
-  description: message.value,
+  title: () => `${statusCode.value} | Chánh Đạo`,
+  description: () => `${message.value}. Trang này không khả dụng trên Chánh Đạo và không nên được lập chỉ mục.`,
+  pageType: 'WebPage',
   noIndex: true,
 })
 </script>
