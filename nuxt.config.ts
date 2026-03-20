@@ -77,7 +77,7 @@ export default defineNuxtConfig({
       keycloakClientId: process.env.NUXT_PUBLIC_KEYCLOAK_CLIENT_ID || '',
       apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL || '',
       anLacVien: {
-        apiUrl: process.env.NUXT_PUBLIC_ANLACVIEN_API_URL || 'http://localhost:8000',
+        apiUrl: process.env.NUXT_PUBLIC_ANLACVIEN_API_URL || '',
         domains: process.env.NUXT_PUBLIC_ANLACVIEN_DOMAINS || 'localhost',
         sessionExpiryMinutes: Number(process.env.NUXT_PUBLIC_ANLACVIEN_SESSION_EXPIRY_MINUTES) || 30,
         sessionStorage: process.env.NUXT_PUBLIC_ANLACVIEN_SESSION_STORAGE || 'browser',

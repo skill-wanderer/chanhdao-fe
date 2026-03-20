@@ -95,6 +95,12 @@ export function useAnLacVien() {
     loading.value = true
     error.value = null
 
+    if (!apiUrl) {
+      error.value = 'An Lac Vien API URL is not configured'
+      loading.value = false
+      return null
+    }
+
     history.value.push({ role: 'user', content: question })
 
     try {
