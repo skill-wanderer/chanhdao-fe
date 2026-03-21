@@ -228,13 +228,24 @@ async function toggleComplete() {
         </div>
 
         <!-- Video Placeholder -->
-        <div v-if="lesson.type === 'video'" class="aspect-video bg-brand-primary/[0.03] border border-brand-primary/15 rounded-2xl flex flex-col items-center justify-center mb-8">
+        <div v-if="lesson.type === 'video' && !lesson.learningMethods?.length" class="aspect-video bg-brand-primary/[0.03] border border-brand-primary/15 rounded-2xl flex flex-col items-center justify-center mb-8">
           <Icon name="mdi:play-circle" class="text-6xl text-brand-primary opacity-50" />
           <p class="text-text-muted mt-4">Trình phát video sẽ được tích hợp tại đây</p>
         </div>
 
-        <!-- Tabbed layout when lesson has both content and quiz -->
-        <div v-if="lesson.content && lesson.quiz" class="flex flex-col mb-8">
+        <!-- Multi-learn tabbed layout -->
+        <LessonMultiLearn
+          v-if="lesson.learningMethods?.length"
+          :learning-methods="lesson.learningMethods"
+          :quiz="lesson.quiz"
+          :course-slug="courseSlug"
+          :lesson-slug="lessonSlug"
+          :return-to="route.path"
+          class="mb-8"
+        />
+
+        <!-- Tabbed layout when lesson has both content and quiz (no learningMethods) -->
+        <div v-else-if="lesson.content && lesson.quiz" class="flex flex-col mb-8">
           <div class="lesson-tabs">
             <button
               :class="[
@@ -254,7 +265,7 @@ async function toggleComplete() {
               @click="activeTab = 'quiz'"
             >
               <Icon name="mdi:pencil-outline" />
-              Quiz
+              Câu hỏi
             </button>
           </div>
           <div v-show="activeTab === 'summary'" class="rounded-b-2xl glass-card">

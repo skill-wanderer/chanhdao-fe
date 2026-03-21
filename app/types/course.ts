@@ -32,6 +32,21 @@ export interface QuizQuestion {
   question: string
   options: Record<string, string>
   answer: string
+  explanation?: Record<string, string>
+}
+
+export type LearningMethodType = 'video' | 'audio' | 'slide' | 'reading'
+
+export interface LearningMethod {
+  type: LearningMethodType
+  label: string
+  icon: string
+  videoUrl?: string
+  audioEmbedUrl?: string
+  slideUrl?: string
+  readingContent?: string
+  infographicUrl?: string
+  tableOfContents?: { id: string; label: string; indent?: number }[]
 }
 
 export interface Lesson {
@@ -48,6 +63,7 @@ export interface Lesson {
   hideCompletion?: boolean
   createdAt?: string
   updatedAt?: string
+  learningMethods?: LearningMethod[]
   quiz?: {
     title?: string
     passPercentage?: number

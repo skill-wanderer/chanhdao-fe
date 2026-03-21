@@ -167,7 +167,7 @@ async function submitScore() {
     }
   }
   catch {
-    submitError.value = 'Failed to submit score. Please try again.'
+    submitError.value = 'Lưu điểm thất bại. Vui lòng thử lại.'
   }
   finally {
     isSubmitting.value = false
@@ -204,8 +204,8 @@ const scorePercentage = computed(() => {
     <div class="flex items-start gap-3.5 mb-6">
       <div class="text-[2rem] shrink-0 leading-none">📝</div>
       <div>
-        <h2 class="text-[1.4rem] font-bold font-serif mb-1 gradient-text">{{ title || 'Module Quiz' }}</h2>
-        <p class="text-sm text-text-muted m-0">Optional — Test your understanding of the module concepts</p>
+        <h2 class="text-[1.4rem] font-bold font-serif mb-1 gradient-text">{{ title || 'Câu Hỏi Ôn Tập' }}</h2>
+        <p class="text-sm text-text-muted m-0">Không bắt buộc — Kiểm tra mức độ hiểu biết của bạn về nội dung bài học</p>
       </div>
     </div>
 
@@ -215,10 +215,10 @@ const scorePercentage = computed(() => {
         <span class="text-[1.8rem] shrink-0">{{ savedScore.scorePercentage >= passThreshold ? '🎉' : '📖' }}</span>
         <div>
           <strong class="block text-[1.05rem] text-text-primary">
-            {{ savedScore.scorePercentage >= passThreshold ? 'Previously passed!' : 'Previous attempt' }}
+            {{ savedScore.scorePercentage >= passThreshold ? 'Đã đạt trước đó!' : 'Lần làm trước' }}
           </strong>
           <p class="mt-0.5 text-sm text-text-secondary m-0">
-            Your last score: <strong class="text-text-primary">{{ savedScore.score }}/{{ savedScore.totalQuestions }}</strong> ({{ savedScore.scorePercentage }}%)
+            Điểm lần trước: <strong class="text-text-primary">{{ savedScore.score }}/{{ savedScore.totalQuestions }}</strong> ({{ savedScore.scorePercentage }}%)
           </p>
         </div>
       </div>
@@ -230,17 +230,17 @@ const scorePercentage = computed(() => {
         <span class="text-[1.8rem] shrink-0">{{ scorePercentage >= passThreshold ? '🎉' : '📖' }}</span>
         <div>
           <strong class="block text-[1.05rem] text-text-primary">
-            {{ scorePercentage >= passThreshold ? 'Great job!' : 'Keep studying!' }}
+            {{ scorePercentage >= passThreshold ? 'Tuyệt vời!' : 'Hãy ôn tập thêm!' }}
           </strong>
           <p class="mt-0.5 text-sm text-text-secondary m-0">
-            You scored <strong class="text-text-primary">{{ score }}/{{ questions.length }}</strong> ({{ scorePercentage }}%)
-            <span v-if="isSubmitted" class="text-[#4ade80] text-[0.85rem] font-medium">— Score saved ✓</span>
+            Bạn đạt <strong class="text-text-primary">{{ score }}/{{ questions.length }}</strong> ({{ scorePercentage }}%)
+            <span v-if="isSubmitted" class="text-[#4ade80] text-[0.85rem] font-medium">— Đã lưu điểm ✓</span>
           </p>
         </div>
       </div>
       <button class="inline-flex items-center gap-1.5 px-[18px] py-2 rounded-full text-[0.85rem] font-semibold border border-brand-primary/30 bg-transparent text-brand-accent cursor-pointer transition-all duration-300 hover:bg-brand-primary/10 hover:border-brand-primary" @click="resetQuiz">
         <Icon name="mdi:refresh" />
-        Try Again
+        Thử Lại
       </button>
     </div>
 
@@ -290,6 +290,18 @@ const scorePercentage = computed(() => {
             </span>
           </label>
         </div>
+
+        <!-- Explanation after checking -->
+        <div v-if="isChecked && question.explanation" class="quiz-explanation">
+          <div v-if="selectedAnswers[qi] && selectedAnswers[qi] !== question.answer && question.explanation[selectedAnswers[qi]!]" class="quiz-explanation-item quiz-explanation-item--wrong">
+            <Icon name="mdi:close-circle" class="shrink-0 text-[#f44336] mt-0.5" />
+            <span>{{ question.explanation[selectedAnswers[qi]!] }}</span>
+          </div>
+          <div v-if="question.explanation[question.answer]" class="quiz-explanation-item quiz-explanation-item--correct">
+            <Icon name="mdi:lightbulb-on-outline" class="shrink-0 text-[#4caf50] mt-0.5" />
+            <span>{{ question.explanation[question.answer] }}</span>
+          </div>
+        </div>
       </li>
     </ol>
 
@@ -297,22 +309,22 @@ const scorePercentage = computed(() => {
     <div v-if="isChecked" class="quiz-result-summary" :class="scorePercentage >= passThreshold ? 'quiz-result-summary--pass' : 'quiz-result-summary--fail'">
       <div class="flex items-center justify-center gap-2.5 mb-5">
         <span class="text-[1.6rem]">{{ scorePercentage >= passThreshold ? '🏆' : '💪' }}</span>
-        <span class="quiz-result-label text-[1.2rem] font-bold">{{ scorePercentage >= passThreshold ? 'You Passed!' : 'Not Quite There' }}</span>
+        <span class="quiz-result-label text-[1.2rem] font-bold">{{ scorePercentage >= passThreshold ? 'Bạn Đã Đạt!' : 'Chưa Đạt' }}</span>
       </div>
       <div class="flex items-center justify-center gap-6 mb-5 max-md:gap-4">
         <div class="flex flex-col items-center gap-1">
           <span class="text-2xl font-extrabold text-text-primary max-md:text-xl">{{ score }}/{{ questions.length }}</span>
-          <span class="text-[0.78rem] uppercase tracking-wide text-text-light font-semibold">Correct</span>
+          <span class="text-[0.78rem] uppercase tracking-wide text-text-light font-semibold">Đúng</span>
         </div>
         <div class="w-px h-9 bg-brand-primary/[0.12]" />
         <div class="flex flex-col items-center gap-1">
           <span class="text-2xl font-extrabold text-text-primary max-md:text-xl">{{ scorePercentage }}%</span>
-          <span class="text-[0.78rem] uppercase tracking-wide text-text-light font-semibold">Score</span>
+          <span class="text-[0.78rem] uppercase tracking-wide text-text-light font-semibold">Điểm</span>
         </div>
         <div class="w-px h-9 bg-brand-primary/[0.12]" />
         <div class="flex flex-col items-center gap-1">
           <span class="text-2xl font-extrabold text-text-primary max-md:text-xl">{{ passThreshold }}%</span>
-          <span class="text-[0.78rem] uppercase tracking-wide text-text-light font-semibold">Passing</span>
+          <span class="text-[0.78rem] uppercase tracking-wide text-text-light font-semibold">Đạt</span>
         </div>
       </div>
       <div class="relative h-2 rounded bg-brand-primary/[0.08]">
@@ -334,10 +346,10 @@ const scorePercentage = computed(() => {
           @click="checkQuiz"
         >
           <Icon name="mdi:check-bold" />
-          Check Quiz
+          Kiểm Tra
         </button>
         <span v-if="!allAnswered" class="quiz-btn-tooltip">
-          Please answer all {{ questions.length }} questions before checking ({{ unansweredCount }} remaining)
+          Vui lòng trả lời tất cả {{ questions.length }} câu hỏi trước khi kiểm tra (còn {{ unansweredCount }} câu)
         </span>
       </div>
       <button
@@ -346,7 +358,7 @@ const scorePercentage = computed(() => {
         @click="resetQuiz"
       >
         <Icon name="mdi:refresh" />
-        Retake Quiz
+        Làm Lại
       </button>
 
       <div v-if="isChecked && !isAuthenticated" class="flex items-center gap-2.5 flex-wrap max-md:flex-col max-md:items-center">
@@ -355,18 +367,18 @@ const scorePercentage = computed(() => {
           @click="submitScore"
         >
           <Icon name="mdi:login" />
-          Log in to save score
+          Đăng nhập để lưu điểm
         </button>
       </div>
 
       <div v-if="isChecked && isAuthenticated" class="flex items-center gap-2.5 flex-wrap max-md:flex-col max-md:items-center">
         <span v-if="isSubmitting" class="inline-flex items-center gap-1.5 text-[#4ade80] font-semibold text-[0.95rem]">
           <Icon name="mdi:loading" class="animate-spin" />
-          Saving score...
+          Đang lưu điểm...
         </span>
         <span v-else-if="isSubmitted" class="inline-flex items-center gap-1.5 text-[#4ade80] font-semibold text-[0.95rem]">
           <Icon name="mdi:check-circle" />
-          Score Submitted!
+          Đã Lưu Điểm!
         </span>
         <button
           v-else-if="submitError"
@@ -375,7 +387,7 @@ const scorePercentage = computed(() => {
           @click="submitScore"
         >
           <Icon name="mdi:cloud-upload-outline" />
-          Retry Submit
+          Thử Lưu Lại
         </button>
         <p v-if="submitError" class="text-[#f87171] text-[0.85rem] m-0">{{ submitError }}</p>
       </div>
@@ -449,6 +461,20 @@ const scorePercentage = computed(() => {
 }
 .quiz-option--missed .quiz-option-key {
   @apply border-[rgba(76,175,80,0.5)] text-[rgba(76,175,80,0.7)];
+}
+
+/* Explanation */
+.quiz-explanation {
+  @apply mt-3 flex flex-col gap-2;
+}
+.quiz-explanation-item {
+  @apply flex items-start gap-2 text-[0.88rem] leading-relaxed py-2 px-3 rounded-lg;
+}
+.quiz-explanation-item--wrong {
+  @apply bg-[rgba(244,67,54,0.06)] text-[#c62828];
+}
+.quiz-explanation-item--correct {
+  @apply bg-[rgba(76,175,80,0.06)] text-[#2e7d32];
 }
 
 /* Result Summary */
