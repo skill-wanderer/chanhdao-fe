@@ -215,24 +215,6 @@ const lesson: Lesson = {
   updatedAt: '2026-03-24',
   learningMethods: [
     {
-      type: 'video',
-      label: 'Video',
-      icon: 'mdi:play-circle-outline',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/kpiB1jhmtb8',
-    },
-    {
-      type: 'audio',
-      label: 'Audio',
-      icon: 'mdi:headphones',
-      audioEmbedUrl: 'https://open.spotify.com/embed/episode/5BHnzfRMK16b1odxUmv0SD?utm_source=generator',
-    },
-    {
-      type: 'slide',
-      label: 'Slide',
-      icon: 'mdi:presentation',
-      slideUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-1/bai-thu-3-luoc-su-duc-phat-thich-ca-tu-thanh-dao-den-niet-ban/Architecture_of_Awakening.pdf',
-    },
-    {
       type: 'reading',
       label: 'Bản đọc',
       icon: 'mdi:book-open-page-variant',
@@ -253,6 +235,24 @@ const lesson: Lesson = {
         { id: 'ket-luan', label: 'C. Kết Luận: Noi gương sáng của Phật và ghi nhớ lời di chúc — Hãy tinh tấn lên để giải thoát' },
         { id: 'phu-luc', label: 'Phụ lục: Niên lịch của Phật Thích Ca' },
       ],
+    },
+    {
+      type: 'slide',
+      label: 'Slide',
+      icon: 'mdi:presentation',
+      slideUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-1/bai-thu-3-luoc-su-duc-phat-thich-ca-tu-thanh-dao-den-niet-ban/Architecture_of_Awakening.pdf',
+    },
+    {
+      type: 'video',
+      label: 'Video',
+      icon: 'mdi:play-circle-outline',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/kpiB1jhmtb8',
+    },
+    {
+      type: 'audio',
+      label: 'Audio',
+      icon: 'mdi:headphones',
+      audioEmbedUrl: 'https://open.spotify.com/embed/episode/5BHnzfRMK16b1odxUmv0SD?utm_source=generator',
     },
   ],
   quiz: {

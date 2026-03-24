@@ -118,24 +118,6 @@ const lesson: Lesson = {
   updatedAt: '2026-03-21',
   learningMethods: [
     {
-      type: 'video',
-      label: 'Video',
-      icon: 'mdi:play-circle-outline',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/z4hiFEboMvo',
-    },
-    {
-      type: 'audio',
-      label: 'Audio',
-      icon: 'mdi:headphones',
-      audioEmbedUrl: 'https://open.spotify.com/embed/episode/4wob78eCIyIWoZJFsXb8nP?utm_source=generator',
-    },
-    {
-      type: 'slide',
-      label: 'Slide',
-      icon: 'mdi:presentation',
-      slideUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-1/dao-phat/The_Awakening_Path.pdf',
-    },
-    {
       type: 'reading',
       label: 'Bản đọc',
       icon: 'mdi:book-open-page-variant',
@@ -151,6 +133,24 @@ const lesson: Lesson = {
         { id: 'su-loi-ich', label: 'VI. Sự Lợi Ích Của Đạo Phật', indent: 1 },
         { id: 'ket-luan', label: 'C. Kết Luận' },
       ],
+    },
+    {
+      type: 'slide',
+      label: 'Slide',
+      icon: 'mdi:presentation',
+      slideUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-1/dao-phat/The_Awakening_Path.pdf',
+    },
+    {
+      type: 'video',
+      label: 'Video',
+      icon: 'mdi:play-circle-outline',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/z4hiFEboMvo',
+    },
+    {
+      type: 'audio',
+      label: 'Audio',
+      icon: 'mdi:headphones',
+      audioEmbedUrl: 'https://open.spotify.com/embed/episode/4wob78eCIyIWoZJFsXb8nP?utm_source=generator',
     },
   ],
   quiz: {

@@ -110,24 +110,6 @@ const lesson: Lesson = {
   updatedAt: '2026-03-22',
   learningMethods: [
     {
-      type: 'video',
-      label: 'Video',
-      icon: 'mdi:play-circle-outline',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/OVv1Zz2vxsA',
-    },
-    {
-      type: 'audio',
-      label: 'Audio',
-      icon: 'mdi:headphones',
-      audioEmbedUrl: 'https://open.spotify.com/embed/episode/5w35ZLXlI6vEABdHH1nUSw?utm_source=generator',
-    },
-    {
-      type: 'slide',
-      label: 'Slide',
-      icon: 'mdi:presentation',
-      slideUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-1/bai-thu-2-luoc-su-duc-phat-thich-ca-tu-giang-sinh-den-thanh-dao/The_Path_to_Enlightenment.pdf',
-    },
-    {
       type: 'reading',
       label: 'Bản đọc',
       icon: 'mdi:book-open-page-variant',
@@ -145,6 +127,24 @@ const lesson: Lesson = {
         { id: 'y-nghia-xuat-gia', label: 'VIII. Ý nghĩa cao cả trong sự xuất gia tìm đạo của Ngài', indent: 1 },
         { id: 'ket-luan', label: 'C. Kết Luận: Chúng ta nên phát tâm rộng lớn và mạnh mẽ trong sự tu hành, để xứng đáng là người theo dấu chân Phật' },
       ],
+    },
+    {
+      type: 'slide',
+      label: 'Slide',
+      icon: 'mdi:presentation',
+      slideUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-1/bai-thu-2-luoc-su-duc-phat-thich-ca-tu-giang-sinh-den-thanh-dao/The_Path_to_Enlightenment.pdf',
+    },
+    {
+      type: 'video',
+      label: 'Video',
+      icon: 'mdi:play-circle-outline',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/OVv1Zz2vxsA',
+    },
+    {
+      type: 'audio',
+      label: 'Audio',
+      icon: 'mdi:headphones',
+      audioEmbedUrl: 'https://open.spotify.com/embed/episode/5w35ZLXlI6vEABdHH1nUSw?utm_source=generator',
     },
   ],
   quiz: {
