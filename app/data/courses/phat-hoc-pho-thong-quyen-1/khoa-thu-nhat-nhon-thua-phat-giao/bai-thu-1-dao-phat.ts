@@ -125,6 +125,7 @@ const lesson: Lesson = {
       readingContent,
       tableOfContents: [
         { id: 'mo-de', label: 'A. Mở Đề' },
+        { id: 'chanh-de', label: 'B. Chánh Đề' },
         { id: 'dinh-nghia', label: 'I. Định Nghĩa', indent: 1 },
         { id: 'dao-phat-co-tu-hoi-nao', label: 'II. Đạo Phật Có Từ Hồi Nào', indent: 1 },
         { id: 'ai-khai-sang-ra-dao-phat', label: 'III. Ai Khai Sáng Ra Đạo Phật', indent: 1 },
