@@ -87,6 +87,14 @@ function scrollToSection(id: string) {
       </div>
     </div>
 
+    <!-- Source note -->
+    <div class="source-note">
+      <Icon name="mdi:information-outline" class="text-base shrink-0 mt-0.5" />
+      <p class="m-0 text-[0.82rem] leading-relaxed">
+        Nội dung <strong>Bản đọc</strong> được trích dẫn nguyên văn từ sách. Các nội dung <strong>Video</strong>, <strong>Audio</strong>, <strong>Slide</strong> và <strong>ảnh minh họa</strong> được tạo bằng AI để hỗ trợ việc học.
+      </p>
+    </div>
+
     <!-- Tab bar -->
     <div class="multi-learn-tabs">
       <button
@@ -258,6 +266,12 @@ function scrollToSection(id: string) {
 .encourage-progress-fill {
   @apply h-full rounded-full transition-all duration-700 ease-out;
   background: linear-gradient(90deg, #D4AF37, #B8860B);
+}
+
+.source-note {
+  @apply flex items-start gap-2 rounded-lg px-4 py-3 mb-4 text-text-secondary;
+  background: rgba(var(--color-brand-primary-rgb, 107, 91, 62), 0.05);
+  border: 1px solid rgba(var(--color-brand-primary-rgb, 107, 91, 62), 0.12);
 }
 
 .multi-learn-tabs {

@@ -53,10 +53,26 @@ export default defineNuxtConfig({
   sitemap: {
     sources: ['/__sitemap__/urls'],
     exclude: ['/auth/**', '/search'],
+    defaults: {
+      changefreq: 'weekly',
+      priority: 0.5,
+    },
+    xslColumns: [
+      { label: 'URL', width: '65%' },
+      { label: 'Last Modified', select: 'sitemap:lastmod', width: '20%' },
+      { label: 'Priority', select: 'sitemap:priority', width: '15%' },
+    ],
   },
 
   robots: {
-    allow: '/',
+    groups: [
+      {
+        userAgent: ['*'],
+        allow: ['/'],
+        disallow: ['/auth/', '/search', '/api/'],
+      },
+    ],
+    sitemap: ['https://chanhdao.vn/sitemap.xml'],
   },
 
   schemaOrg: {
