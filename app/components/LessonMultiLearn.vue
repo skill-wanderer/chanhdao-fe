@@ -126,7 +126,7 @@ function scrollToSection(id: string) {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
               loading="lazy"
-              sandbox="allow-scripts allow-same-origin allow-popups allow-presentation"
+              sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-presentation"
               title="Video bài học"
             />
           </div>

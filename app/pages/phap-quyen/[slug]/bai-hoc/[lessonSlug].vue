@@ -60,6 +60,28 @@ const currentIndex = allLessons.findIndex(l => l.slug === lessonSlug)
 const prevLesson = currentIndex > 0 ? allLessons[currentIndex - 1] : null
 const nextLesson = currentIndex < allLessons.length - 1 ? allLessons[currentIndex + 1] : null
 
+const sidebarOpen = ref(false)
+const isMobile = ref(false)
+
+function updateIsMobile() {
+  isMobile.value = window.innerWidth < 768
+}
+
+onMounted(() => {
+  updateIsMobile()
+  window.addEventListener('resize', updateIsMobile)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', updateIsMobile)
+})
+
+function closeSidebarOnMobile() {
+  if (isMobile.value) {
+    sidebarOpen.value = false
+  }
+}
+
 const { isAuthEnabled, isAuthenticated, accessToken } = useKeycloak()
 const config = useRuntimeConfig()
 const apiBaseUrl = (config.public.apiBaseUrl as string).replace(/\/+$/, '')
@@ -69,7 +91,7 @@ const processedContent = computed(() => {
   if (!lesson.content) return ''
   return lesson.content.replace(
     /<iframe([^>]*src="https:\/\/www\.youtube-nocookie\.com\/[^"]*"[^>]*)>/g,
-    '<iframe$1 sandbox="allow-scripts allow-same-origin allow-popups allow-presentation" loading="lazy">'
+    '<iframe$1 sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-presentation" loading="lazy">'
   )
 })
 
@@ -168,11 +190,43 @@ async function toggleComplete() {
       ]" />
     </div>
 
-    <!-- Lesson Content -->
-    <section class="grid grid-cols-[280px_1fr] max-w-content mx-auto p-5 gap-8 max-md:grid-cols-1 max-md:p-4 max-sm:p-3 max-sm:gap-4">
-      <!-- Sidebar: Lesson list -->
-      <aside class="sticky top-[70px] max-h-[calc(100vh-70px)] overflow-y-auto self-start max-md:static max-md:top-auto max-md:max-h-none max-md:overflow-y-visible max-md:border-b max-md:border-brand-primary/5 max-md:pb-5 max-md:mb-5">
-        <h3 class="text-base font-bold mb-3 text-text-primary">{{ course.title }}</h3>
+    <!-- Sidebar Toggle Button -->
+    <button
+      class="sidebar-toggle-btn"
+      :class="{ 'sidebar-toggle-btn--open': sidebarOpen }"
+      :aria-label="sidebarOpen ? 'Đóng danh sách bài học' : 'Mở danh sách bài học'"
+      :aria-expanded="sidebarOpen"
+      @click="sidebarOpen = !sidebarOpen"
+    >
+      <Icon :name="sidebarOpen ? 'mdi:close' : 'mdi:format-list-bulleted'" class="text-lg" />
+      <span class="sidebar-toggle-label">{{ sidebarOpen ? 'Đóng' : 'Bài học' }}</span>
+    </button>
+
+    <!-- Sidebar Backdrop (mobile) -->
+    <Transition name="backdrop">
+      <div
+        v-if="sidebarOpen && isMobile"
+        class="fixed inset-0 bg-black/40 z-40"
+        @click="sidebarOpen = false"
+      />
+    </Transition>
+
+    <!-- Sidebar Drawer -->
+    <Transition name="sidebar">
+      <aside
+        v-if="sidebarOpen"
+        class="sidebar-drawer"
+      >
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="text-base font-bold text-text-primary m-0">{{ course.title }}</h3>
+          <button
+            class="p-1.5 rounded-lg hover:bg-brand-primary/10 text-text-muted transition-colors"
+            aria-label="Đóng"
+            @click="sidebarOpen = false"
+          >
+            <Icon name="mdi:close" class="text-lg" />
+          </button>
+        </div>
         <div class="mb-4">
           <div class="progress-bar">
             <div class="progress-bar-fill" :style="{ width: '0%' }" />
@@ -191,6 +245,7 @@ async function toggleComplete() {
                     ? 'bg-brand-primary/10 text-brand-primary font-semibold'
                     : 'text-text-muted hover:bg-brand-primary/5 hover:text-text-primary'
                 ]"
+                @click="closeSidebarOnMobile"
               >
                 <span :class="['shrink-0 text-xs w-6', l.slug === lessonSlug ? 'text-brand-primary' : 'text-text-light']">{{ String(course.modules.slice(0, mi).reduce((sum, m) => sum + m.lessons.length, 0) + li + 1).padStart(2, '0') }}</span>
                 <span>{{ l.title }}</span>
@@ -207,7 +262,10 @@ async function toggleComplete() {
           </template>
         </nav>
       </aside>
+    </Transition>
 
+    <!-- Lesson Content -->
+    <section class="max-w-content mx-auto p-5 max-md:p-4 max-sm:p-3">
       <!-- Main content -->
       <main>
         <div class="mb-8">
@@ -351,6 +409,7 @@ async function toggleComplete() {
         </nav>
       </main>
     </section>
+    <!-- end lesson content -->
   </div>
 </template>
 
@@ -374,5 +433,66 @@ async function toggleComplete() {
 .toast-leave-to {
   opacity: 0;
   transform: translateX(40px);
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle-btn {
+  @apply fixed z-50 flex items-center gap-1.5 py-2 px-3 rounded-full
+    bg-surface-card border border-brand-primary/20
+    text-text-secondary text-sm font-medium
+    shadow-lg cursor-pointer
+    transition-all duration-200
+    hover:bg-brand-primary/10 hover:border-brand-primary/40 hover:text-brand-primary
+    hover:shadow-xl;
+  bottom: 24px;
+  left: 24px;
+  backdrop-filter: blur(12px);
+}
+.sidebar-toggle-btn--open {
+  @apply bg-brand-primary/10 text-brand-primary border-brand-primary/40;
+}
+.sidebar-toggle-label {
+  @apply max-sm:hidden;
+}
+
+/* Sidebar Drawer */
+.sidebar-drawer {
+  @apply fixed top-0 left-0 z-50 h-full w-[300px] max-w-[85vw]
+    bg-surface-bg border-r border-brand-primary/10
+    overflow-y-auto p-5 pt-20
+    shadow-2xl;
+}
+
+/* Desktop sidebar */
+@media (min-width: 768px) {
+  .sidebar-drawer {
+    @apply top-[64px] h-[calc(100vh-64px)] pt-5 w-[300px]
+      shadow-lg;
+  }
+  .sidebar-toggle-btn {
+    bottom: auto;
+    top: 80px;
+    left: 16px;
+  }
+}
+
+/* Sidebar transitions */
+.sidebar-enter-active,
+.sidebar-leave-active {
+  transition: transform 0.3s ease;
+}
+.sidebar-enter-from,
+.sidebar-leave-to {
+  transform: translateX(-100%);
+}
+
+/* Backdrop transitions */
+.backdrop-enter-active,
+.backdrop-leave-active {
+  transition: opacity 0.3s ease;
+}
+.backdrop-enter-from,
+.backdrop-leave-to {
+  opacity: 0;
 }
 </style>
