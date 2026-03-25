@@ -60,8 +60,8 @@ const currentIndex = allLessons.findIndex(l => l.slug === lessonSlug)
 const prevLesson = currentIndex > 0 ? allLessons[currentIndex - 1] : null
 const nextLesson = currentIndex < allLessons.length - 1 ? allLessons[currentIndex + 1] : null
 
-const sidebarOpen = ref(false)
 const isMobile = ref(false)
+const sidebarOpen = ref(false)
 
 function updateIsMobile() {
   isMobile.value = window.innerWidth < 768
@@ -69,6 +69,7 @@ function updateIsMobile() {
 
 onMounted(() => {
   updateIsMobile()
+  sidebarOpen.value = !isMobile.value
   window.addEventListener('resize', updateIsMobile)
 })
 
