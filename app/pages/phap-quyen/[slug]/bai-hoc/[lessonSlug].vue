@@ -69,7 +69,7 @@ function updateIsMobile() {
 
 onMounted(() => {
   updateIsMobile()
-  sidebarOpen.value = !isMobile.value
+  sidebarOpen.value = false
   window.addEventListener('resize', updateIsMobile)
 })
 
