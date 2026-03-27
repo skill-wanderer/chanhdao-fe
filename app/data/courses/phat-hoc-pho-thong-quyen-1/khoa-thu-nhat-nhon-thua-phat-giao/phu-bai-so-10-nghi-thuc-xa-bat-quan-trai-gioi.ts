@@ -7,6 +7,7 @@ const lesson: Lesson = {
   type: 'article',
   status: 'draft',
   order: 13,
+  durationMinutes: 45,
   content: '<p>Nội dung bài học đang được biên soạn.</p>',
   createdAt: '2026-03-20',
   updatedAt: '2026-03-20',

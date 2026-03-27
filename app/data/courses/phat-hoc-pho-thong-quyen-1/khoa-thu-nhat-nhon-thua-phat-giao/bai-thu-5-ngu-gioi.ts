@@ -1,29 +1,6 @@
 import type { Lesson } from '~/types/course'
 
 const readingContent = `
-<section id="dan-bai">
-<h2>DÀN BÀI</h2>
-<p><strong>A.- MỞ ĐỀ:</strong> Sau khi làm lễ Quy y xong, phải giữ giới. Giới luật là giềng mối của kẻ tu hành.</p>
-<p><strong>B.- CHÁNH ĐỀ</strong></p>
-<ul>
-<li><strong>I. Định nghĩa Ngũ giới</strong></li>
-<li><strong>II. Thành phần của Ngũ giới</strong>
-<ul>
-<li>1. Không giết hại.</li>
-<li>2. Không trộm cướp.</li>
-<li>3. Không tà dâm.</li>
-<li>4. Không nói sai sự thật.</li>
-<li>5. Không uống rượu.</li>
-</ul>
-</li>
-</ul>
-<p><strong>C.- KẾT LUẬN:</strong></p>
-<ul>
-<li>Phật tử không giữ Năm giới, không phải là Phật tử.</li>
-<li>Người không theo Đạo Phật cũng nên giữ Năm giới.</li>
-</ul>
-</section>
-
 <section id="mo-de">
 <h2>A. MỞ ĐỀ</h2>
 <p>Sau khi quy y Tam bảo rồi, người Phật tử tại gia phải sống đúng theo quy luật mà Ðức Phật đã chế ra, để tiến bước trên đường Ðạo. Quy luật ấy là Ngũ giới. Người theo đạo Nho phải sống đúng theo Tam cương, Ngũ thường, thì người theo Ðạo Phật cũng không thể chỉ thọ Tam quy mà không trì Ngũ giới.</p>
@@ -224,7 +201,6 @@ const lesson: Lesson = {
       infographicUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-1/bai-thu-5-ngu-gioi/infographic.png',
       readingContent,
       tableOfContents: [
-        { id: 'dan-bai', label: 'Dàn Bài' },
         { id: 'mo-de', label: 'A. Mở Đề' },
         { id: 'chanh-de', label: 'B. Chánh Đề' },
         { id: 'dinh-nghia', label: 'I. Định Nghĩa', indent: 1 },

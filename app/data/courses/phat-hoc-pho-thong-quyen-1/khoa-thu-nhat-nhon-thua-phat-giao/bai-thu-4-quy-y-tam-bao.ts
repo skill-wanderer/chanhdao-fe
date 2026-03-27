@@ -1,55 +1,6 @@
 import type { Lesson } from '~/types/course'
 
 const readingContent = `
-<section id="dan-bai">
-<h2>DÀN BÀI</h2>
-<p><strong>A - MỞ ĐỀ:</strong> Người sống trên đời như người đi trong đêm tối, cần phải có người hướng dẫn.</p>
-<p><strong>B - CHÁNH ĐỀ:</strong></p>
-<ul>
-<li><strong>I. Định danh và giải nghĩa:</strong>
-<ul>
-<li>1. Quy y là gì?</li>
-<li>2. Tam bảo là gì?</li>
-<li>3. Quy y Tam bảo là thế nào?</li>
-</ul>
-</li>
-<li><strong>II. Ba bực Tam Bảo</strong>
-<ul>
-<li>1. Đồng thể Tam bảo.</li>
-<li>2. Xuất thế gian Tam bảo.</li>
-<li>3. Thế gian trụ trì Tam bảo.</li>
-</ul>
-</li>
-<li><strong>III. Sự quy y Tam Bảo</strong>
-<ul>
-<li>1. Sự quy y Phật.</li>
-<li>2. Sự quy y Pháp.</li>
-<li>3. Sự quy y Tăng.</li>
-</ul>
-</li>
-<li><strong>IV. Lý quy y Tam Bảo</strong>
-<ul>
-<li>1. Tự quy y Phật.</li>
-<li>2. Tự quy y Pháp.</li>
-<li>3. Tự quy y Tăng.</li>
-</ul>
-</li>
-<li><strong>V. Nghi thức quy y</strong>
-<ul>
-<li>1. Trước tiên phải gội rửa thân, tâm cho sạch.</li>
-<li>2. Phát nguyện rõ ràng trước Tam bảo.</li>
-</ul>
-</li>
-<li><strong>VI. Lợi ích về quy y Tam Bảo</strong>
-<ul>
-<li>1. Khỏi đi lạc đường vào nơi tăm tối, khỏi phải chết đuối trong bể khổ.</li>
-<li>2. Khi đã phát nguyện quy y, mình dễ giữ lời đã hứa, vì đã có sự chứng tri của Phật và chúng Tăng.</li>
-</ul>
-</li>
-</ul>
-<p><strong>C. KẾT LUẬN:</strong> Khuyên tín đồ nên quy y cả sự lẫn lý, và tinh tiến trong sự quy y.</p>
-</section>
-
 <section id="mo-de">
 <h2>A. MỞ ĐỀ</h2>
 <p>Cảnh giới Ta-bà của chúng ta là một cảnh giới đầy mê mờ và dục vọng. Chúng ta đang lặn hụp trong bể nước mắt của đau khổ và bùn nhơ của dục vọng, sống trôi lăn trong cảnh ấy, chúng ta khó thấy được bến bờ sáng sủa, yên ổn để lội vào. Thật là đáng thương cho thân phận con người chúng ta.</p>
@@ -208,7 +159,6 @@ const lesson: Lesson = {
       infographicUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-1/bai-thu-4-quy-y-tam-bao/04.png',
       readingContent,
       tableOfContents: [
-        { id: 'dan-bai', label: 'Dàn Bài' },
         { id: 'mo-de', label: 'A. Mở Đề' },
         { id: 'chanh-de', label: 'B. Chánh Đề' },
         { id: 'dinh-danh-va-giai-nghia', label: 'I. Định Danh Và Giải Nghĩa', indent: 1 },

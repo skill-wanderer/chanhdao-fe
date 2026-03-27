@@ -7,6 +7,7 @@ const lesson: Lesson = {
   type: 'article',
   status: 'published',
   order: 7,
+  durationMinutes: 45,
   content: '<p>Nội dung bài học đang được biên soạn.</p>',
   createdAt: '2026-03-20',
   updatedAt: '2026-03-26',
@@ -17,7 +18,6 @@ const lesson: Lesson = {
       icon: 'mdi:book-open-page-variant',
       infographicUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-1/bai-thu-7-tho-phat-lay-phat-cung-phat/infographic.png',
       tableOfContents: [
-        { id: 'dan-bai', label: 'Dàn Bài' },
         { id: 'mo-de', label: 'A. Mở Đề' },
         { id: 'chanh-de', label: 'B. Chánh Đề' },
         { id: 'tho-phat', label: 'I. Thờ Phật', indent: 1 },
@@ -41,64 +41,6 @@ const lesson: Lesson = {
       ],
       readingContent: `
 <div class="prose prose-lg max-w-none dark:prose-invert">
-
-  <!-- DÀN BÀI -->
-  <section id="dan-bai">
-    <h2 class="text-2xl font-bold text-primary-700 dark:text-primary-300">DÀN BÀI</h2>
-    <p><strong>A.- MỞ ĐỀ:</strong> Phàm những bậc có công ơn lớn với nhân loại đều được tôn thờ. Sự tôn thờ ấy là biểu hiện của lòng tri ân và sự hâm mộ.</p>
-    <p><strong>B.- CHÁNH ĐỀ:</strong></p>
-    <ul>
-      <li><strong>I. Thờ Phật</strong>
-        <ul>
-          <li>1. Phật là một bậc đáng tôn thờ.</li>
-          <li>2. Phải thờ Phật như thế nào mới đúng ý nghĩa?</li>
-          <li>3. Phải thờ Đức Phật nào?</li>
-          <li>4. Cách thức thờ Phật.</li>
-        </ul>
-      </li>
-      <li><strong>II. Lạy Phật</strong>
-        <ul>
-          <li>1. Ý nghĩa lạy Phật.</li>
-          <li>2. Phải lạy Phật như thế nào mới đúng ý nghĩa?
-            <ul>
-              <li>Lễ sai.</li>
-              <li>Lễ đúng.</li>
-            </ul>
-          </li>
-          <li>3. Bốn phép lạy (thuộc về lý)
-            <ul>
-              <li>Phát trí thanh tịnh lễ.</li>
-              <li>Biến nhập pháp giới lễ.</li>
-              <li>Chánh quán lễ.</li>
-              <li>Thật tướng bình đẳng lễ.</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><strong>III. Cúng Phật</strong>
-        <ul>
-          <li>1. Ý nghĩa về cúng Phật.</li>
-          <li>2. Phải cúng Phật với những gì? (về sự)</li>
-          <li>3. Năm món diệu hương để cúng Phật (về lý)
-            <ul>
-              <li>a) Hương giới.</li>
-              <li>b) Hương định.</li>
-              <li>c) Hương huệ.</li>
-              <li>d) Hương giải thoát.</li>
-              <li>e) Hương giải thoát tri kiến.</li>
-            </ul>
-          </li>
-          <li>4. Cúng dường Pháp bảo.</li>
-          <li>5. Cúng dường Tăng bảo.</li>
-        </ul>
-      </li>
-    </ul>
-    <p><strong>C.- KẾT LUẬN:</strong></p>
-    <ul>
-      <li>1. Lợi ích của sự thờ Phật, lạy Phật, cúng Phật.</li>
-      <li>2. Khuyên phát tâm chánh tín trong sự thờ Phật, lạy Phật, cúng Phật.</li>
-    </ul>
-  </section>
 
   <!-- A. MỞ ĐỀ -->
   <section id="mo-de">
@@ -143,8 +85,8 @@ const lesson: Lesson = {
       <section id="cach-thuc-tho-phat">
         <h4 class="text-lg font-semibold">4. Cách thức thờ Phật</h4>
         <p>Như vậy trong nhà tín đồ, nếu muốn thờ tượng Phật, thì nhiều nhất là ba vị. Và nên nhớ rằng, trong khi thờ Tam thế Phật, phải sắp đặt chung một bàn. Nếu tượng lồng kiếng thì nên treo ngay thẳng, không được cái cao, cái thấp, cũng không được cái to, cái bé; còn như tượng gỗ, tượng đồng tượng sành, thì để ngang hàng đồng bậc, không nên để từng trên, cấp dưới. Bàn thờ Phật phải đặt chính giữa nhà, bàn thờ ông bà thì nên thờ một bên. Nếu nhà lầu thì thờ Phật ở tầng trên.</p>
-        <div class="my-6 rounded-lg border-l-4 border-blue-400 bg-blue-50/60 p-5 dark:border-blue-600 dark:bg-blue-900/20">
-          <p class="mb-0 text-blue-800 dark:text-blue-300">Tại bàn thờ Phật không nên để tạp vật nào khác, ngoài <strong>bình bông, lư hương, chân đèn và dĩa quả</strong>. Những vật này mỗi ngày đều chăm sóc lau quét sạch sẽ luôn.</p>
+        <div class="my-6 rounded-lg border-l-4 border-blue-400 bg-blue-50/30 p-5 dark:border-blue-600 dark:bg-gray-800/60 text-gray-800 dark:text-gray-300">
+          <p class="mb-0">Tại bàn thờ Phật không nên để tạp vật nào khác, ngoài <strong>bình bông, lư hương, chân đèn và dĩa quả</strong>. Những vật này mỗi ngày đều chăm sóc lau quét sạch sẽ luôn.</p>
         </div>
         <p>Lần đầu tiên thỉnh tượng Phật, tín đồ phải làm lễ thượng tượng, cũng gọi là <strong>lễ an vị Phật</strong>. Lễ này không bắt buộc phải tổ chức linh đình, chỉ nên làm một cách đơn giản, nhưng không kém vẻ trang nghiêm và tinh khiết. Muốn được hai đặc điểm ấy, chủ nhà phải dọn mình sạch sẽ: ăn chay, giữ giới và mời thêm thiện hữu trí thức đến hộ niệm một thời kinh.</p>
         <p>Và bắt đầu từ ngày làm lễ an vị Phật trở đi, tất cả mọi người trong nhà, mỗi ngày ra vô trông thấy tượng Phật, nên nghĩ nhớ đến đức hạnh cao cả của Ngài mà chỉnh đốn lại thân tâm mình. Mỗi ngày đều lo cải thiện lại sự cư xử với nhau, đối nội cũng như đối ngoại, phải luôn luôn thấm nhuần tinh thần từ bi, bác ái và bình đẳng. Như thế mới xứng đáng với danh nghĩa của một gia đình có thờ Phật.</p>
@@ -166,8 +108,8 @@ const lesson: Lesson = {
         <h4 class="text-lg font-semibold">2. Phải lạy Phật như thế nào mới đúng ý nghĩa</h4>
         <p>Ðể cho đúng với ý nghĩa trên, khi lạy Phật phải quỳ xuống, ngửa hai bàn tay ra như đang nâng hai chân Phật và cúi lưng xuống đặt trán mình trên hai lòng bàn tay.</p>
         <p>Trước khi lạy Phật, phải dọn mình cho sạch sẽ: rửa mặt, súc miệng, lau tay chân, thay y phục và mặc áo tràng. Xong xuôi, mới đốt hương ra trước bàn Phật, đứng ngay thẳng, tay chắp để trước ngực, mắt nhìn tượng Phật, tâm tưởng đến các tướng tốt và những đức hạnh cao cả của Ngài, và tỏ bày nguyện vọng chân chánh của mình, xá rồi cắm hương vào lư, đánh tiếng chuông và lạy Phật 3 lạy.</p>
-        <div class="my-6 rounded-lg border-l-4 border-green-400 bg-green-50/60 p-5 dark:border-green-600 dark:bg-green-900/20">
-          <h5 class="mt-0 mb-2 font-bold text-green-800 dark:text-green-300">Lễ đúng — Thân tâm cung kính lễ</h5>
+        <div class="my-6 rounded-lg border-l-4 border-green-400 bg-green-50/30 p-5 dark:border-green-600 dark:bg-gray-800/60 text-gray-800 dark:text-gray-300">
+          <h5 class="mt-0 mb-2 font-bold">Lễ đúng — Thân tâm cung kính lễ</h5>
           <p class="mb-0">Lễ Phật như thế mới đúng phép; trong kinh gọi là <em>"thân tâm cung kính lễ"</em>, nghĩa là thân thì hăng hái tề chỉnh, nghiêm trang, tâm thì hớn hở vui mừng và hết lòng thành kính như gặp được Phật còn tại thế.</p>
         </div>
         <div class="my-6 rounded-lg border-l-4 border-red-400 bg-red-50/60 p-5 dark:border-red-600 dark:bg-red-900/20">
@@ -185,18 +127,18 @@ const lesson: Lesson = {
         <h4 class="text-lg font-semibold">3. Bốn phép lạy (thuộc về lý)</h4>
         <p>Về phương diện Lý, thì có bốn phép lễ:</p>
 
-        <div class="my-6 rounded-lg border-l-4 border-blue-400 bg-blue-50/60 p-5 dark:border-blue-600 dark:bg-blue-900/20">
-          <h5 class="mt-0 mb-2 font-bold text-blue-800 dark:text-blue-300">a) Phát trí thanh tịnh lễ</h5>
+        <div class="my-6 rounded-lg border-l-4 border-blue-400 bg-blue-50/30 p-5 dark:border-blue-600 dark:bg-gray-800/60 text-gray-800 dark:text-gray-300">
+          <h5 class="mt-0 mb-2 font-bold">a) Phát trí thanh tịnh lễ</h5>
           <p class="mb-0">Trong phép này, người hành lễ phải thấu suốt rằng cảnh giới của chư Phật đều tùy tâm hiện bày, nên lạy một Ðức Phật, tức là lạy tất cả Chư Phật, lạy một lạy, tức là lạy tất cả Pháp giới, vì Pháp thân của Phật dung thông.</p>
         </div>
 
-        <div class="my-6 rounded-lg border-l-4 border-green-400 bg-green-50/60 p-5 dark:border-green-600 dark:bg-green-900/20">
-          <h5 class="mt-0 mb-2 font-bold text-green-800 dark:text-green-300">b) Biến nhập pháp giới lễ</h5>
+        <div class="my-6 rounded-lg border-l-4 border-green-400 bg-green-50/30 p-5 dark:border-green-600 dark:bg-gray-800/60 text-gray-800 dark:text-gray-300">
+          <h5 class="mt-0 mb-2 font-bold">b) Biến nhập pháp giới lễ</h5>
           <p class="mb-0">Trong phép này, người hành lễ phải tự quán thân, tâm cùng tất cả các pháp, từ hồi nào đến giờ đều không rời pháp giới.</p>
         </div>
 
-        <div class="my-6 rounded-lg border-l-4 border-purple-400 bg-purple-50/60 p-5 dark:border-purple-600 dark:bg-purple-900/20">
-          <h5 class="mt-0 mb-2 font-bold text-purple-800 dark:text-purple-300">c) Chánh quán lễ</h5>
+        <div class="my-6 rounded-lg border-l-4 border-purple-400 bg-purple-50/30 p-5 dark:border-purple-600 dark:bg-gray-800/60 text-gray-800 dark:text-gray-300">
+          <h5 class="mt-0 mb-2 font-bold">c) Chánh quán lễ</h5>
           <p class="mb-0">Trong phép này, người hành lễ lạy Ðức Phật ngay nơi tự tâm của mình, chứ không duyên với Ðức Phật nào khác, vì tất cả chúng sanh từ xưa đến nay, đều sẵn có Phật tánh viên mãn, bình đẳng và chân giác.</p>
         </div>
 
@@ -222,8 +164,8 @@ const lesson: Lesson = {
       <section id="cung-phat-voi-gi">
         <h4 class="text-lg font-semibold">2. Phải cúng Phật với những gì? (về sự)</h4>
         <p>Vẫn biết rằng chúng ta nên cúng dường Phật để hình dung như Ngài còn tại thế, nhưng nếu chúng ta, mỗi khi cúng Phật, lại bày biện đủ thức ăn uống, nào yến tiệc cỗ bàn linh đình thì thật là phí của, phí công mà lại còn làm sai lạc ý nghĩa sâu xa của sự cúng Phật.</p>
-        <div class="my-6 rounded-lg border-l-4 border-green-400 bg-green-50/60 p-5 dark:border-green-600 dark:bg-green-900/20">
-          <p class="mb-0 text-green-800 dark:text-green-300">Vậy, muốn cúng Phật đúng ý nghĩa thì chỉ nên dùng <strong>hương thơm, đèn sáng, hoa tươi, trái tốt, nước trong</strong> và đôi khi thêm <strong>cơm trắng</strong> là đủ.</p>
+        <div class="my-6 rounded-lg border-l-4 border-green-400 bg-green-50/30 p-5 dark:border-green-600 dark:bg-gray-800/60 text-gray-800 dark:text-gray-300">
+          <p class="mb-0">Vậy, muốn cúng Phật đúng ý nghĩa thì chỉ nên dùng <strong>hương thơm, đèn sáng, hoa tươi, trái tốt, nước trong</strong> và đôi khi thêm <strong>cơm trắng</strong> là đủ.</p>
         </div>
       </section>
 
@@ -231,18 +173,18 @@ const lesson: Lesson = {
         <h4 class="text-lg font-semibold">3. Năm món diệu hương để cúng Phật (về lý)</h4>
         <p>Ðoạn trên là nói về sự, về hình tướng bên ngoài khi cúng Phật. Còn về phương diện Lý, thì phải dùng năm món diệu hương để cúng Phật như sau:</p>
 
-        <div class="my-6 rounded-lg border-l-4 border-blue-400 bg-blue-50/60 p-5 dark:border-blue-600 dark:bg-blue-900/20">
-          <h5 class="mt-0 mb-2 font-bold text-blue-800 dark:text-blue-300">a) Giới hương</h5>
+        <div class="my-6 rounded-lg border-l-4 border-blue-400 bg-blue-50/30 p-5 dark:border-blue-600 dark:bg-gray-800/60 text-gray-800 dark:text-gray-300">
+          <h5 class="mt-0 mb-2 font-bold">a) Giới hương</h5>
           <p class="mb-0">Pháp thân của Phật rất thanh tịnh, nếu về mặt Sự, chúng ta đã dùng hương trầm đốt cúng, thì về mặt Lý, chúng ta cũng phải trì giới cho trang nghiêm thanh tịnh, để cúng dường được đủ cả về Sự và Lý.</p>
         </div>
 
-        <div class="my-6 rounded-lg border-l-4 border-green-400 bg-green-50/60 p-5 dark:border-green-600 dark:bg-green-900/20">
-          <h5 class="mt-0 mb-2 font-bold text-green-800 dark:text-green-300">b) Ðịnh hương</h5>
+        <div class="my-6 rounded-lg border-l-4 border-green-400 bg-green-50/30 p-5 dark:border-green-600 dark:bg-gray-800/60 text-gray-800 dark:text-gray-300">
+          <h5 class="mt-0 mb-2 font-bold">b) Ðịnh hương</h5>
           <p class="mb-0">Thân tâm chúng ta bị mê nhiễm và thường loạn động trong mọi hoàn cảnh. Nếu để buông trôi mãi trong tình trạng ấy, thì chúng ta chẳng tu hành gì được. Vậy hằng ngày, hằng giờ, hằng phút, hằng giây, hằng sát-na chúng ta phải cố gắng tập định tĩnh tâm hồn, đừng để cho những ý nghĩ, hành động xấu xa xâm chiếm tâm hồn và làm cho chúng ta phải loạn động. Làm cho tâm tư lắng xuống, như thế gọi là dùng Ðịnh hương cúng Phật.</p>
         </div>
 
-        <div class="my-6 rounded-lg border-l-4 border-purple-400 bg-purple-50/60 p-5 dark:border-purple-600 dark:bg-purple-900/20">
-          <h5 class="mt-0 mb-2 font-bold text-purple-800 dark:text-purple-300">c) Huệ hương</h5>
+        <div class="my-6 rounded-lg border-l-4 border-purple-400 bg-purple-50/30 p-5 dark:border-purple-600 dark:bg-gray-800/60 text-gray-800 dark:text-gray-300">
+          <h5 class="mt-0 mb-2 font-bold">c) Huệ hương</h5>
           <p>Huệ hương cúng Phật là lúc nào cũng phải lưu tâm vào ba món sáng tỏ: <strong>Văn huệ, Tư huệ, và Tu huệ</strong>.</p>
           <ul>
             <li><strong>Văn huệ</strong> là lắng nghe lời giáo hóa quý báu của chư Phật và Thánh Hiền Tăng.</li>
@@ -287,14 +229,14 @@ const lesson: Lesson = {
       <p>Như các đoạn trên đã nói, chúng ta thờ lạy và cúng Phật là do lòng tri ân sâu xa của chúng ta đối với bậc đã hy sinh tất cả hạnh phúc vĩnh cửu cho chúng sanh; lý do thứ hai của sự thờ lạy và cúng, ấy là để cho chúng ta luôn luôn có trước mắt, trên đầu chúng ta, một cái gương mẫu hoàn toàn chân, thiện, mỹ để noi theo.</p>
       <p>Sự thờ, lạy và cúng Phật, nếu thực hành một cách thành tâm, thiện chí và đúng ý nghĩa, thì sẽ đem lại cho người rất nhiều lợi ích trong hiện tại và vị lai:</p>
 
-      <div class="my-6 rounded-lg border-l-4 border-green-400 bg-green-50/60 p-5 dark:border-green-600 dark:bg-green-900/20">
-        <h5 class="mt-0 mb-2 font-bold text-green-800 dark:text-green-300">a) Trong hiện tại</h5>
+      <div class="my-6 rounded-lg border-l-4 border-green-400 bg-green-50/30 p-5 dark:border-green-600 dark:bg-gray-800/60 text-gray-800 dark:text-gray-300">
+        <h5 class="mt-0 mb-2 font-bold">a) Trong hiện tại</h5>
         <p>Mỗi chúng ta và gia đình chúng ta, bao giờ cũng như sống trong bầu không khí xán lạn, trong ảnh hưởng tốt lành, đạo vị của Chư Phật. Chúng ta luôn luôn sống trong nghiêm chỉnh, trong lễ nghi, trên thuận dưới hòa, vì mỗi ý nghĩ, mỗi cử chỉ, mỗi lời nói của chúng ta đều được đôi mắt sáng suốt của Ðức Phật soi xuống.</p>
         <p class="mb-0">Chúng ta không dám sống bừa bãi, làm xằng, nghĩ quấy khi Ðức Phật đang ngự trị trong gia đình và trong lòng mỗi chúng ta. Chỉ những tâm hồn trống rỗng, không tin tưởng, không tôn thờ một vị thiêng liêng cao cả nào, mới dễ sa ngã, trụy lạc. Cho nên trong gia đình, nếu muốn có hạnh phúc trong hiện tại, muốn sống một đời sống có ý nghĩa, muốn con em đừng bê tha, trụy lạc, thì người gia chủ nên thiết bàn Phật, để ngày ngày lễ bái và cúng dường Ngài và tập cho con em sống một đời sống hiền lương và có đạo vị.</p>
       </div>
 
-      <div class="my-6 rounded-lg border-l-4 border-purple-400 bg-purple-50/60 p-5 dark:border-purple-600 dark:bg-purple-900/20">
-        <h5 class="mt-0 mb-2 font-bold text-purple-800 dark:text-purple-300">b) Khi lâm chung</h5>
+      <div class="my-6 rounded-lg border-l-4 border-purple-400 bg-purple-50/30 p-5 dark:border-purple-600 dark:bg-gray-800/60 text-gray-800 dark:text-gray-300">
+        <h5 class="mt-0 mb-2 font-bold">b) Khi lâm chung</h5>
         <p class="mb-0">Nghiệp lành mà chúng ta đã huân tập trong hằng ngày sẽ cảm ứng đến lòng từ bi vô hạn của Chư Phật và Bồ-tát. Do <em>"Luật đồng thanh tương ứng, đồng khí tương cầu"</em>, Chư Phật và Bồ-tát sẽ phóng quang đến tiếp dẫn giác linh chúng ta về cõi Tịnh độ an vui, tự tại.</p>
       </div>
     </section>

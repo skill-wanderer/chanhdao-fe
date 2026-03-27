@@ -7,6 +7,7 @@ const lesson: Lesson = {
   type: 'article',
   status: 'published',
   order: 6,
+  durationMinutes: 45,
   content: '<p>Nội dung bài học đang được biên soạn.</p>',
   createdAt: '2026-03-20',
   updatedAt: '2026-03-25',
@@ -75,19 +76,19 @@ const lesson: Lesson = {
           <li><strong>Vô danh sám hối</strong> (lý)</li>
         </ul>
 
-        <div class="my-6 rounded-lg border-l-4 border-blue-400 bg-blue-50/60 p-5 dark:border-blue-600 dark:bg-blue-900/20">
-          <h5 class="mt-0 mb-2 font-bold text-blue-800 dark:text-blue-300">a) Tác pháp sám hối</h5>
+        <div class="my-6 rounded-lg border-l-4 border-blue-400 bg-blue-50/30 p-5 dark:border-blue-600 dark:bg-gray-800/60 text-gray-800 dark:text-gray-300">
+          <h5 class="mt-0 mb-2 font-bold">a) Tác pháp sám hối</h5>
           <p class="mb-0">Pháp sám hối này thuộc về sự, phải lập giới đàn và thỉnh thanh tịnh Tăng chứng minh, nên gọi là tác pháp. Khi vào giới tràng, mình phải thành thật tỏ bày tội lỗi một cách thành khẩn, chí tâm ăn năn và nguyện về sau không tái phạm nữa. Một lòng thành kính sám hối như vậy, khi giới thể được thanh tịnh, tức là hết tội.</p>
         </div>
 
-        <div class="my-6 rounded-lg border-l-4 border-green-400 bg-green-50/60 p-5 dark:border-green-600 dark:bg-green-900/20">
-          <h5 class="mt-0 mb-2 font-bold text-green-800 dark:text-green-300">b) Thủ tướng sám hối</h5>
+        <div class="my-6 rounded-lg border-l-4 border-green-400 bg-green-50/30 p-5 dark:border-green-600 dark:bg-gray-800/60 text-gray-800 dark:text-gray-300">
+          <h5 class="mt-0 mb-2 font-bold">b) Thủ tướng sám hối</h5>
           <p>Pháp nầy thuộc về sự, và khó hơn pháp trước. Phật chế pháp này, là sám hối thuộc quán tưởng, cho những người tu hành có trình độ cao, hoặc ở chỗ không có Tăng, hay có, nhưng không được thanh tịnh.</p>
           <p class="mb-0">Muốn tu pháp này, hành giả phải đến trước Tượng Phật hay Bồ tát, thành tâm lễ bái, trình bày những tội lỗi đã phạm, và nguyện ăn năn chừa bỏ. Làm như thế từ 1 ngày, 3 ngày, 7 ngày, 49 ngày, và mãi mãi đến khi nào thấy được hảo tướng: như thấy hào quang, hoa sen báu, thấy Phật, Bồ tát đến xoa đầu v.v... thì mới thôi.</p>
         </div>
 
-        <div class="my-6 rounded-lg border-l-4 border-purple-400 bg-purple-50/60 p-5 dark:border-purple-600 dark:bg-purple-900/20">
-          <h5 class="mt-0 mb-2 font-bold text-purple-800 dark:text-purple-300">c) Hồng danh sám hối</h5>
+        <div class="my-6 rounded-lg border-l-4 border-purple-400 bg-purple-50/30 p-5 dark:border-purple-600 dark:bg-gray-800/60 text-gray-800 dark:text-gray-300">
+          <h5 class="mt-0 mb-2 font-bold">c) Hồng danh sám hối</h5>
           <p>Pháp sám hối này cũng thuộc về sự, do Ngài Bất Động Pháp Sư đời nhà Tống bên Trung Hoa soạn ra. Ngài rút 53 danh hiệu Phật trong Kinh <em>"Ngũ Thập Tam Phật"</em> tức là từ Đức Phật Phổ Quang cho đến Đức Phật Nhứt Thế Pháp Tràng Mãn Vương, và rút 35 hiệu Phật trong Kinh <em>"Quán Dược Vương, Dược Thượng"</em>, với Pháp thân Đức Phật A-Di-Đà, sau thêm vào kệ Phổ Hiền Đại Nguyện, thành nghi thức sám hối này, tổng cộng là <strong>108 lạy</strong>, để ám chỉ trừ <strong>108 phiền não</strong>.</p>
           <p>Nghi thức sám hối này, nếu ai chí thành kính lễ, thì sẽ diệt trừ được những phiền não và tội lỗi đã tạo, trong đời hiện tại cũng như nhiều đời quá khứ. Đức Phật Tỳ-Bà-Thi nói: <em>"Nếu chúng sanh nào nghe danh hiệu 53 vị Phật này, thì trăm ngàn ức kiếp không đọa vào ba đường ác"</em>. Đức Phật Thích Ca nói: <em>"Thuở xưa, đời Phật Diệu Quang, ta đi tu nhằm đời mạt pháp, nhờ được nghe danh hiệu 53 vị Phật này, và thành tâm lễ bái, mà tránh khỏi những đau khổ trong đường sanh tử luân hồi nhiều kiếp"</em>. Còn 35 danh hiệu Phật sau, từ Đức Phật Thích Ca cho đến Đức Phật Bửu-Liên-Hoa Thiện-Trụ-Ta-La-Thọ Vương, thì trong Kinh Bửu-Tích nói: <em>"Nếu tất cả chúng sanh, hoặc phạm tội ngũ nghịch hay thập ác, đến muôn kiếp không thể sám hối, chỉ xưng danh hiệu 35 vị Phật này và lễ bái, thì bao nhiêu tội chướng đều tiêu trừ"</em>.</p>
           <p>Hồng danh của Chư Phật có công đức không thể nghĩ bàn như vậy, nên Ngài Bất Động Pháp sư mới soạn ra để làm nghi thức sám hối. Pháp hồng danh sám hối hiện nay, hầu hết các chùa đều thực hành theo.</p>
