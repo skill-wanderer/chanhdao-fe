@@ -138,7 +138,7 @@ const lesson: Lesson = {
       type: 'video',
       label: 'Video',
       icon: 'mdi:play-circle-outline',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/OVv1Zz2vxsA',
+      videoUrl: 'https://www.youtube.com/embed/OVv1Zz2vxsA',
     },
     {
       type: 'audio',

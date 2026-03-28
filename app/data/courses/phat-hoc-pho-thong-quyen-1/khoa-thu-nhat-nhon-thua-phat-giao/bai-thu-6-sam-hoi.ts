@@ -162,7 +162,7 @@ const lesson: Lesson = {
       type: 'video',
       label: 'Video',
       icon: 'mdi:play-circle-outline',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/-BS0hdzVbA8',
+      videoUrl: 'https://www.youtube.com/embed/-BS0hdzVbA8',
     },
     {
       type: 'audio',

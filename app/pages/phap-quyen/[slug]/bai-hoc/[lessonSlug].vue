@@ -41,7 +41,7 @@ const lessonKeywords = [lesson.title, course.title, 'bài học Phật học', .
 
 // Extract first YouTube video URL from lesson content for VideoObject schema
 const videoUrlMatch = lesson.content?.match(/youtube-nocookie\.com\/embed\/([a-zA-Z0-9_-]{11})/)
-const firstVideoUrl = videoUrlMatch ? `https://www.youtube-nocookie.com/embed/${videoUrlMatch[1]}` : undefined
+const firstVideoUrl = videoUrlMatch ? `https://www.youtube.com/embed/${videoUrlMatch[1]}` : undefined
 
 useLessonSeo({
   title: lesson.title,

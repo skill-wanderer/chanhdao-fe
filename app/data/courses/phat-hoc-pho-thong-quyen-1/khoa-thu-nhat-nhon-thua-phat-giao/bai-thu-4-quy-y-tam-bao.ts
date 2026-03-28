@@ -180,7 +180,7 @@ const lesson: Lesson = {
       type: 'video',
       label: 'Video',
       icon: 'mdi:play-circle-outline',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/w0Y7lUJ6VsU',
+      videoUrl: 'https://www.youtube.com/embed/w0Y7lUJ6VsU',
     },
     {
       type: 'audio',

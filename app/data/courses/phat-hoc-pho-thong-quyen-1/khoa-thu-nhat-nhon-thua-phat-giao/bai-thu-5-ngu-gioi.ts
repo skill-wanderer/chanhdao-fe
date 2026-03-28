@@ -225,7 +225,7 @@ const lesson: Lesson = {
       type: 'video',
       label: 'Video',
       icon: 'mdi:play-circle-outline',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/RpwxxE2ogHU',
+      videoUrl: 'https://www.youtube.com/embed/RpwxxE2ogHU',
     },
     {
       type: 'audio',
