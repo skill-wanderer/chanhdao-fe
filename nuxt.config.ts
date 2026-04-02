@@ -1,10 +1,7 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-const noStoreHtmlHeaders = {
-  'Cache-Control': 'no-store',
-}
+import { prerenderRoutes } from './build/prerender-routes'
 
+// https://nuxt.com/docs/api/configuration/nuxt-config
 const phapQuyenHeaders = {
-  ...noStoreHtmlHeaders,
   'Content-Security-Policy': "frame-src 'self' https://www.youtube.com https://open.spotify.com https://cdn.jsdelivr.net;",
   'Permissions-Policy': 'fullscreen=(self "https://www.youtube.com" "https://open.spotify.com")',
 }
@@ -118,21 +115,17 @@ export default defineNuxtConfig({
 
   nitro: {
     compressPublicAssets: true,
-    preset: process.env.CF_PAGES || process.env.CLOUDFLARE_PAGES ? 'cloudflare_pages' : undefined,
-    cloudflare: {
-      nodeCompat: true,
+    preset: process.env.CF_PAGES || process.env.CLOUDFLARE_PAGES ? 'cloudflare_pages_static' : undefined,
+    prerender: {
+      autoSubfolderIndex: false,
+      routes: prerenderRoutes,
     },
   },
 
   // Security headers for iframe embedding
   routeRules: {
-    '/phap-lo': { headers: noStoreHtmlHeaders },
-    '/phap-lo/**': { headers: noStoreHtmlHeaders },
     '/phap-quyen': { headers: phapQuyenHeaders },
     '/phap-quyen/**': { headers: phapQuyenHeaders },
-    '/': { prerender: true },
     '/about': { redirect: '/gioi-thieu' },
-    '/gioi-thieu': { prerender: true },
-    '/lien-he': { prerender: true },
   },
 })

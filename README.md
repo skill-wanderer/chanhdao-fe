@@ -57,10 +57,20 @@ npm run build
 npm run preview
 ```
 
-Nếu cần tạo static output:
+`npm run build` hiện tạo static output đã prerender toàn bộ các trang nội dung để triển khai lên Cloudflare Pages.
+
+Output tĩnh được sinh tại `dist/`.
+
+Nếu cần chạy generate thủ công:
 
 ```bash
 npm run generate
+```
+
+Nếu cần build SSR để kiểm tra hoặc chạy môi trường server:
+
+```bash
+npm run build:ssr
 ```
 
 ## Mục tiêu dự án
