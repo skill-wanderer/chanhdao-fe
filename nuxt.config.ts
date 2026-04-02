@@ -1,4 +1,6 @@
-import { prerenderRoutes } from './build/prerender-routes'
+/// <reference types="node" />
+
+import { draftLessonRoutes, prerenderRoutes } from './build/prerender-routes'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const phapQuyenHeaders = {
@@ -118,6 +120,8 @@ export default defineNuxtConfig({
     preset: process.env.CF_PAGES || process.env.CLOUDFLARE_PAGES ? 'cloudflare_pages_static' : undefined,
     prerender: {
       autoSubfolderIndex: false,
+      crawlLinks: false,
+      ignore: draftLessonRoutes,
       routes: prerenderRoutes,
     },
   },
