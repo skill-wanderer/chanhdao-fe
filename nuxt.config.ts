@@ -3,6 +3,25 @@
 import { draftLessonRoutes, prerenderRoutes } from './build/prerender-routes'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
+const googleCrawlerUserAgents = [
+  'Googlebot',
+  'Googlebot-Image',
+  'GoogleOther',
+  'Google-Extended',
+]
+
+const aiCrawlerUserAgents = [
+  'GPTBot',
+  'OAI-SearchBot',
+  'ChatGPT-User',
+  'ClaudeBot',
+  'Claude-SearchBot',
+  'anthropic-ai',
+  'PerplexityBot',
+  'Perplexity-User',
+  'CCBot',
+]
+
 const phapQuyenHeaders = {
   'Content-Security-Policy': "frame-src 'self' https://www.youtube.com https://open.spotify.com https://cdn.jsdelivr.net;",
   'Permissions-Policy': 'fullscreen=(self "https://www.youtube.com" "https://open.spotify.com")',
@@ -36,6 +55,7 @@ export default defineNuxtConfig({
         { name: 'description', content: 'Chánh Đạo là nền tảng học Phật học mở giúp người Việt tìm pháp lộ, học pháp quyển miễn phí và tra cứu giáo lý với trợ lực AI.' },
         { name: 'theme-color', content: '#D4AF37' },
         { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
+        { name: 'googlebot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
         { property: 'og:site_name', content: 'Chánh Đạo' },
         { property: 'og:locale', content: 'vi_VN' },
         { property: 'og:type', content: 'website' },
@@ -76,9 +96,16 @@ export default defineNuxtConfig({
   robots: {
     groups: [
       {
+        userAgent: googleCrawlerUserAgents,
+        allow: ['/'],
+      },
+      {
+        userAgent: aiCrawlerUserAgents,
+        allow: ['/'],
+      },
+      {
         userAgent: ['*'],
         allow: ['/'],
-        disallow: ['/auth/', '/search', '/api/'],
       },
     ],
     sitemap: ['https://chanhdao.vn/sitemap.xml'],
