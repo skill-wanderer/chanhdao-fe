@@ -127,13 +127,6 @@ const readingContent = `
 <p><em>Người biết đủ, dù nằm trên đất cát vẫn an lạc.</em></p>
 </blockquote>
 </section>
-
-<section id="navigation">
-<h2>ĐIỀU HƯỚNG BÀI HỌC</h2>
-<p>⬅️ Bài trước: <a href="/phap-quyen/phat-hoc-pho-thong-quyen-1/bai-hoc/bai-thu-3-vo-thuong">Bài Thứ 3 - Vô thường</a></p>
-<p>📚 Quay về khóa học: <a href="/phap-quyen/phat-hoc-pho-thong-quyen-1">Phật học phổ thông quyển 1</a></p>
-<p>➡️ Bài kế tiếp: Bài Thứ 5 - Nhân quả <em>(đang biên soạn)</em></p>
-</section>
 `
 
 const lesson: Lesson = {
@@ -164,7 +157,6 @@ const lesson: Lesson = {
         { id: 'giai-dap-thac-mac', label: 'VI. Giải đáp những thắc mắc về Thiểu dục và Tri túc', indent: 1 },
         { id: 'ket-luan', label: 'C. Kết Luận: Tu hạnh Thiểu dục và Tri túc để có an vui chân thật' },
         { id: 'phu-luc', label: 'Phụ lục' },
-        { id: 'navigation', label: 'Điều hướng bài học' },
       ],
     },
     {
