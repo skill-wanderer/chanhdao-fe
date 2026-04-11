@@ -8,8 +8,9 @@ const props = defineProps<{
   index: number
 }>()
 
-const { formatDuration } = useCourses()
+const { formatDuration, getLessonDuration } = useCourses()
 const isAvailable = computed(() => isPublishedLesson(props.lesson))
+const lessonDuration = computed(() => getLessonDuration(props.lesson))
 </script>
 
 <template>
@@ -33,9 +34,9 @@ const isAvailable = computed(() => isPublishedLesson(props.lesson))
           <Icon :name="lesson.type === 'video' ? 'mdi:play-circle-outline' : 'mdi:file-document-outline'" size="14" />
           {{ lesson.type === 'video' ? 'Video' : 'Bài viết' }}
         </span>
-        <span v-if="lesson.durationMinutes" class="flex items-center gap-1">
+        <span v-if="lessonDuration" class="flex items-center gap-1">
           <Icon name="mdi:clock-outline" size="14" />
-          {{ formatDuration(lesson.durationMinutes) }}
+          {{ formatDuration(lessonDuration) }}
         </span>
       </div>
     </div>
@@ -62,9 +63,9 @@ const isAvailable = computed(() => isPublishedLesson(props.lesson))
           <Icon :name="lesson.type === 'video' ? 'mdi:play-circle-outline' : 'mdi:file-document-outline'" size="14" />
           {{ lesson.type === 'video' ? 'Video' : 'Bài viết' }}
         </span>
-        <span v-if="lesson.durationMinutes" class="flex items-center gap-1">
+        <span v-if="lessonDuration" class="flex items-center gap-1">
           <Icon name="mdi:clock-outline" size="14" />
-          {{ formatDuration(lesson.durationMinutes) }}
+          {{ formatDuration(lessonDuration) }}
         </span>
       </div>
     </div>

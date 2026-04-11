@@ -1,4 +1,5 @@
 import type { Course } from '~/types/course'
+import { normalizeCourseDurationMetadata } from '~/types/course'
 
 /**
  * Course catalogue registry.
@@ -21,6 +22,6 @@ const allCourses: Course[] = [
   phatHocPhoThongQuyen1,
   phatHocPhoThongQuyen2,
   phatHocPhoThongQuyen3,
-]
+].map(normalizeCourseDurationMetadata)
 
 export default allCourses

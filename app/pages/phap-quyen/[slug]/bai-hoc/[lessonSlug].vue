@@ -5,7 +5,7 @@ const route = useRoute()
 const courseSlug = route.params.slug as string
 const lessonSlug = route.params.lessonSlug as string
 
-const { getCourseBySlug } = useCourses()
+const { getCourseBySlug, formatDuration, getLessonDuration } = useCourses()
 const course = getCourseBySlug(courseSlug)
 
 if (!course) {
@@ -59,6 +59,7 @@ useLessonSeo({
 const currentIndex = allLessons.findIndex(l => l.slug === lessonSlug)
 const prevLesson = currentIndex > 0 ? allLessons[currentIndex - 1] : null
 const nextLesson = currentIndex < allLessons.length - 1 ? allLessons[currentIndex + 1] : null
+const lessonDuration = computed(() => getLessonDuration(lesson))
 
 const isMobile = ref(false)
 const sidebarOpen = ref(false)
@@ -278,6 +279,10 @@ async function toggleComplete() {
             <span class="flex items-center gap-1">
               <Icon :name="lesson.type === 'video' ? 'mdi:play-circle-outline' : 'mdi:file-document-outline'" />
               {{ lesson.type === 'video' ? 'Video' : 'Bài viết' }}
+            </span>
+            <span v-if="lessonDuration" class="flex items-center gap-1">
+              <Icon name="mdi:clock-outline" />
+              {{ formatDuration(lessonDuration) }}
             </span>
             <span v-if="lesson.updatedAt || course.updatedAt" class="flex items-center gap-1 text-[0.82rem] text-text-light">
               <Icon name="mdi:update" />

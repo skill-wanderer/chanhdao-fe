@@ -103,3 +103,76 @@ export interface LearningPath {
   courses: Course[]
   difficulty: 'beginner' | 'intermediate' | 'advanced'
 }
+
+const ESTIMATED_STUDY_WORDS_PER_MINUTE = 90
+const ESTIMATED_QUIZ_MINUTES_PER_QUESTION = 1
+const ESTIMATED_SUPPLEMENTARY_METHOD_MINUTES = 3
+const ESTIMATED_STANDALONE_VIDEO_MINUTES = 10
+const MINIMUM_ESTIMATED_DURATION_MINUTES = 5
+
+function decodeHtmlEntities(content: string): string {
+  return content
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&amp;/gi, '&')
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;|&#x27;/gi, "'")
+    .replace(/&lt;/gi, '<')
+    .replace(/&gt;/gi, '>')
+}
+
+function stripHtmlContent(content?: string): string {
+  return decodeHtmlEntities(content || '')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function getReadingContent(lesson: Lesson): string {
+  const readingMethod = lesson.learningMethods?.find(method => method.type === 'reading' && method.readingContent)
+  return readingMethod?.readingContent || lesson.content || ''
+}
+
+export function getLessonDuration(lesson: Lesson): number {
+  if (typeof lesson.durationMinutes === 'number' && lesson.durationMinutes > 0) {
+    return lesson.durationMinutes
+  }
+
+  const readingText = stripHtmlContent(getReadingContent(lesson))
+  const wordCount = readingText ? readingText.split(/\s+/).filter(Boolean).length : 0
+  const readingMinutes = wordCount ? Math.ceil(wordCount / ESTIMATED_STUDY_WORDS_PER_MINUTE) : 0
+  const quizMinutes = lesson.quiz?.questions?.length
+    ? lesson.quiz.questions.length * ESTIMATED_QUIZ_MINUTES_PER_QUESTION
+    : 0
+  const supplementaryMinutes = (lesson.learningMethods ?? [])
+    .filter(method => method.type !== 'reading')
+    .length * ESTIMATED_SUPPLEMENTARY_METHOD_MINUTES
+  const standaloneVideoMinutes = (!lesson.learningMethods?.length && lesson.videoUrl)
+    ? ESTIMATED_STANDALONE_VIDEO_MINUTES
+    : 0
+
+  const estimatedDuration = readingMinutes + quizMinutes + supplementaryMinutes + standaloneVideoMinutes
+  return estimatedDuration > 0 ? Math.max(estimatedDuration, MINIMUM_ESTIMATED_DURATION_MINUTES) : 0
+}
+
+export function getModuleDuration(module: Module): number {
+  return (module.lessons ?? []).reduce((sum, lesson) => sum + getLessonDuration(lesson), 0)
+}
+
+export function getCourseDuration(course: Course): number {
+  return getAllLessons(course).reduce((sum, lesson) => sum + getLessonDuration(lesson), 0)
+}
+
+export function normalizeCourseDurationMetadata(course: Course): Course {
+  return {
+    ...course,
+    modules: (course.modules ?? []).map(module => ({
+      ...module,
+      lessons: (module.lessons ?? []).map(lesson => ({
+        ...lesson,
+        durationMinutes: getLessonDuration(lesson),
+      })),
+    })),
+  }
+}

@@ -4,7 +4,7 @@ import { getAllLessons, isPublishedLesson } from '~/types/course'
 const route = useRoute()
 const slug = route.params.slug as string
 
-const { getCourseBySlug, formatDuration, getCourseDuration } = useCourses()
+const { getCourseBySlug, formatDuration, getCourseDuration, getModuleDuration } = useCourses()
 const course = getCourseBySlug(slug)
 
 if (!course) {
@@ -199,8 +199,8 @@ useSchemaOrg([{
             <h3 class="text-[1.1rem] font-bold font-serif text-text-primary">{{ mod.title }}</h3>
             <span class="text-[0.8rem] text-text-muted">
               {{ mod.lessons.length }} bài học
-              <template v-if="mod.lessons.some(l => l.durationMinutes)">
-                · {{ formatDuration(mod.lessons.reduce((s, l) => s + (l.durationMinutes || 0), 0)) }}
+              <template v-if="getModuleDuration(mod)">
+                · {{ formatDuration(getModuleDuration(mod)) }}
               </template>
             </span>
           </div>
