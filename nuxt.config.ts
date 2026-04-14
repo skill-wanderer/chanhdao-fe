@@ -144,7 +144,11 @@ export default defineNuxtConfig({
 
   nitro: {
     compressPublicAssets: true,
-    preset: process.env.CF_PAGES || process.env.CLOUDFLARE_PAGES ? 'cloudflare_pages_static' : undefined,
+    preset: 'cloudflare_module',
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true,
+    },
     prerender: {
       autoSubfolderIndex: false,
       crawlLinks: false,

@@ -8,12 +8,13 @@
     "url": "https://github.com/skill-wanderer/chanhdao-fe"
   },
   "scripts": {
-    "build": "nuxt generate",
-    "build:cloudflare": "nuxt generate",
+    "build": "nuxt build",
+    "build:cloudflare": "nuxt build",
     "build:ssr": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
+    "preview": "wrangler dev",
+    "deploy": "nuxt build && wrangler deploy",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
