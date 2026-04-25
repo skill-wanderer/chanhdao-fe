@@ -1,27 +1,6 @@
 import type { Lesson } from '~/types/course'
 
 const readingContent = `
-<section id="dan-bai">
-<h2>DÀN BÀI</h2>
-<ol type="A">
-<li><strong>MỞ ĐỀ:</strong> Hành giả muốn đi xa cần phải có hướng tiến nhất định, và phải quyết tâm thực hiện theo đúng hướng tiến ấy.</li>
-<li><strong>CHÁNH ĐỀ:</strong>
-<ol type="I">
-<li>Định nghĩa Tứ như ý túc.</li>
-<li>Thành phần và nội dung của Tứ như ý túc.
-<ol>
-<li>Dục như ý túc.</li>
-<li>Tinh tấn như ý túc.</li>
-<li>Nhất tâm như ý túc.</li>
-<li>Quán như ý túc.</li>
-</ol>
-</li>
-</ol>
-</li>
-<li><strong>KẾT LUẬN:</strong> Ý nghĩa và diệu dụng của Tứ như ý túc.</li>
-</ol>
-</section>
-
 <section id="mo-de">
 <p><strong>BÀI THỨ 8B</strong></p>
 <p><em>(Tiếp theo)</em></p>

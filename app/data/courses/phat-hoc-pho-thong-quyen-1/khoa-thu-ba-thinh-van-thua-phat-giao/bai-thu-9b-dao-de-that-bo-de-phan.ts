@@ -1,30 +1,6 @@
 import type { Lesson } from '~/types/course'
 
 const readingContent = `
-<section id="dan-bai">
-<h2>DÀN BÀI</h2>
-<ol type="A">
-<li><strong>MỞ ĐỀ:</strong> Thất Bồ đề phần cũng là một pháp môn quan trọng không kém gì ngũ căn và ngũ lực.</li>
-<li><strong>CHÁNH ĐỀ:</strong>
-<ol type="I">
-<li>Định nghĩa Thất Bồ đề phần.</li>
-<li>Thành phần và nội dung của Thất Bồ đề phần.
-<ol>
-<li>Trạch pháp.</li>
-<li>Tinh tấn.</li>
-<li>Hỷ.</li>
-<li>Khinh an.</li>
-<li>Niệm.</li>
-<li>Định.</li>
-<li>Xả.</li>
-</ol>
-</li>
-</ol>
-</li>
-<li><strong>KẾT LUẬN:</strong> Kết quả quý báu của Thất Bồ đề phần.</li>
-</ol>
-</section>
-
 <section id="mo-de">
 <p><strong>BÀI THỨ 9B</strong></p>
 <p><em>(Tiếp theo)</em></p>
