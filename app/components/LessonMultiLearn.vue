@@ -47,6 +47,10 @@ function getMethod(type: LearningMethodType): LearningMethod | undefined {
   return props.learningMethods.find(m => m.type === type)
 }
 
+const readingTableOfContents = computed(() =>
+  (getMethod('reading')?.tableOfContents ?? []).filter(item => item.id !== 'dan-bai'),
+)
+
 const completedTabs = ref<Set<TabType>>(new Set())
 
 function markTabVisited(tab: TabType) {
@@ -204,7 +208,7 @@ function scrollToSection(id: string) {
           </div>
 
           <!-- Table of Contents -->
-          <nav v-if="getMethod('reading')!.tableOfContents?.length" class="reading-toc glass-card p-4 mb-6">
+          <nav v-if="readingTableOfContents.length" class="reading-toc glass-card p-4 mb-6">
             <button class="flex items-center gap-2 w-full text-left font-bold text-text-primary" @click="tocOpen = !tocOpen">
               <Icon name="mdi:format-list-bulleted" class="text-brand-accent" />
               <span>Dàn bài</span>
@@ -213,7 +217,7 @@ function scrollToSection(id: string) {
             <Transition name="toc-expand">
               <ul v-show="tocOpen" class="mt-3 flex flex-col gap-1 list-none p-0 m-0">
                 <li
-                  v-for="item in getMethod('reading')!.tableOfContents"
+                  v-for="item in readingTableOfContents"
                   :key="item.id"
                 >
                   <button
