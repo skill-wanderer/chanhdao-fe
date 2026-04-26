@@ -1,6 +1,38 @@
 import type { Lesson } from '~/types/course'
 
 const readingContent = `
+<section id="dan-bai">
+<h2>DÀN BÀI</h2>
+<ol type="A">
+<li><strong>MỞ ĐỀ:</strong> Bát Chánh đạo là một pháp môn thông dụng nhất, thịnh hành nhất trong Đạo đế.</li>
+<li><strong>CHÁNH ĐỀ:</strong>
+<ol type="I">
+<li>Định nghĩa: Bát Chánh đạo.</li>
+<li>Nội dung của Bát Chánh đạo.
+<ol>
+<li>Chánh kiến.</li>
+<li>Chánh tư duy.</li>
+<li>Chánh ngữ.</li>
+<li>Chánh nghiệp.</li>
+<li>Chánh mạng.</li>
+<li>Chánh tinh tấn.</li>
+<li>Chánh niệm.</li>
+<li>Chánh định.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><strong>KẾT LUẬN:</strong> Ba công năng lớn của Bát Chánh đạo.
+<ol>
+<li>Cải thiện tự thân.</li>
+<li>Cải thiện hoàn cảnh.</li>
+<li>Chứng quả Bồ đề.</li>
+</ol>
+</li>
+<li><strong>TỔNG KẾT VỀ ĐẠO ĐẾ.</strong></li>
+</ol>
+</section>
+
 <section id="mo-de">
 <p><strong>BÀI THỨ 10</strong></p>
 <p><strong>ĐẠO ĐẾ (Nirodha Gamadukkha)</strong></p>
@@ -319,6 +351,7 @@ const lesson: Lesson = {
       infographicUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-1/bai-thu-10-dao-de-bat-chanh-dao/infographic.png',
       readingContent,
       tableOfContents: [
+        { id: 'dan-bai', label: 'Dàn bài' },
         { id: 'mo-de', label: 'A. Mở đề' },
         { id: 'chanh-de', label: 'B. Chánh đề' },
         { id: 'dinh-nghia-bat-chanh-dao', label: 'I. Định nghĩa Bát Chánh đạo', indent: 1 },
