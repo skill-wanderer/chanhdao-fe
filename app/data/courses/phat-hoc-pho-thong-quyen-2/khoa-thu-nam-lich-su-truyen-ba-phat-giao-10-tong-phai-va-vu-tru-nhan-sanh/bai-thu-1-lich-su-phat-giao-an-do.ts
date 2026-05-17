@@ -437,7 +437,7 @@ const lesson: Lesson = {
       type: 'video',
       label: 'Video',
       icon: 'mdi:play-circle-outline',
-      videoUrl: 'https://youtu.be/5EVXTmS0nRo',
+      videoUrl: 'https://www.youtube.com/embed/5EVXTmS0nRo',
     },
     {
       type: 'audio',
