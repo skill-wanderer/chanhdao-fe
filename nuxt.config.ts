@@ -81,7 +81,7 @@ export default defineNuxtConfig({
 
   sitemap: {
     sources: ['/__sitemap__/urls'],
-    exclude: ['/auth/**', '/search'],
+    exclude: ['/auth/**', '/search', '/admin/**'],
     defaults: {
       changefreq: 'weekly',
       priority: 0.5,

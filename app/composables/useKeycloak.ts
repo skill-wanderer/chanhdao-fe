@@ -6,6 +6,47 @@
  * user to the Keycloak hosted pages.  When they are absent, the LMS works as a
  * fully anonymous, open-access platform — no auth UI is shown.
  */
+interface KeycloakUser {
+  name: string
+  email: string
+  preferred_username: string
+}
+
+interface KeycloakTokenPayload {
+  realm_access?: { roles?: string[] }
+  resource_access?: Record<string, { roles?: string[] }>
+  roles?: string[]
+}
+
+function decodeBase64Url(value: string): string {
+  const base64 = value.replace(/-/g, '+').replace(/_/g, '/')
+  const padded = base64.padEnd(Math.ceil(base64.length / 4) * 4, '=')
+
+  if (typeof atob === 'function') {
+    return atob(padded)
+  }
+
+  return Buffer.from(padded, 'base64').toString('utf8')
+}
+
+function decodeTokenPayload(token: string | null): KeycloakTokenPayload | null {
+  if (!token) return null
+
+  try {
+    const payload = token.split('.')[1]
+    if (!payload) return null
+
+    return JSON.parse(decodeBase64Url(payload)) as KeycloakTokenPayload
+  }
+  catch {
+    return null
+  }
+}
+
+function uniqueRoles(roles: Array<string | undefined>): string[] {
+  return Array.from(new Set(roles.filter((role): role is string => Boolean(role))))
+}
+
 export function useKeycloak() {
   const config = useRuntimeConfig()
   const { keycloakRealm, keycloakClientId } = config.public
@@ -18,7 +59,7 @@ export function useKeycloak() {
   )
 
   /** Currently authenticated user (persisted via cookie so SSR can read it) */
-  const user = useCookie<{ name: string; email: string; preferred_username: string } | null>(
+  const user = useCookie<KeycloakUser | null>(
     'kc_user',
     { default: () => null, maxAge: 60 * 60 * 8, sameSite: 'lax' },
   )
@@ -42,6 +83,25 @@ export function useKeycloak() {
   )
 
   const isAuthenticated = computed(() => Boolean(accessToken.value && user.value))
+  const tokenPayload = computed(() => decodeTokenPayload(accessToken.value))
+  const tokenRoles = computed(() => {
+    const payload = tokenPayload.value
+    if (!payload) return []
+
+    const clientRoles = Object.values(payload.resource_access || {})
+      .flatMap(resource => resource.roles || [])
+
+    return uniqueRoles([
+      ...(payload.roles || []),
+      ...(payload.realm_access?.roles || []),
+      ...(payload.resource_access?.[keycloakClientId as string]?.roles || []),
+      ...clientRoles,
+    ])
+  })
+
+  function hasRole(role: string): boolean {
+    return tokenRoles.value.includes(role)
+  }
 
   // ---- URL builders ----------------------------------------------------------
 
@@ -156,6 +216,8 @@ export function useKeycloak() {
     accessToken,
     refreshToken,
     tokenExpiresAt,
+    tokenRoles,
+    hasRole,
     loginUrl,
     registerUrl,
     accountUrl,

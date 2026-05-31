@@ -3,7 +3,8 @@ const isScrolled = ref(false)
 const isMobileOpen = ref(false)
 const isUserMenuOpen = ref(false)
 
-const { isAuthEnabled, isAuthenticated, user, loginUrl, registerUrl, logout } = useKeycloak()
+const { isAuthEnabled, isAuthenticated, user, loginUrl, registerUrl, logout, hasRole } = useKeycloak()
+const isAdmin = computed(() => hasRole('admin'))
 
 if (import.meta.client) {
   useEventListener(window, 'scroll', () => {
@@ -21,6 +22,7 @@ const navLinks = [
   { label: 'Pháp Lộ', to: '/phap-lo' },
   { label: 'Thiện Thư', to: '/thien-thu' },
   { label: 'Giới thiệu', to: '/gioi-thieu' },
+  { label: 'Góp ý', to: '/feedback' },
   { label: 'Liên hệ', to: '/lien-he' },
 ]
 </script>
@@ -99,6 +101,15 @@ const navLinks = [
                   <span class="text-[0.8rem] text-text-muted">{{ user?.email }}</span>
                 </div>
                 <hr class="border-none border-t border-brand-primary/10 my-1" />
+                <NuxtLink
+                  v-if="isAdmin"
+                  to="/admin/submissions"
+                  class="flex items-center gap-2.5 px-[18px] py-2.5 w-full bg-transparent border-none cursor-pointer text-text-primary text-[0.92rem] font-medium font-[inherit] transition-all duration-200 hover:text-brand-accent hover:bg-brand-primary/[0.08]"
+                  @click="isUserMenuOpen = false"
+                >
+                  <Icon name="mdi:shield-account-outline" size="18" />
+                  Quản trị
+                </NuxtLink>
                 <button class="flex items-center gap-2.5 px-[18px] py-2.5 w-full bg-transparent border-none cursor-pointer text-text-primary text-[0.92rem] font-medium font-[inherit] transition-all duration-200 hover:text-brand-accent hover:bg-brand-primary/[0.08]" @click="logout">
                   <Icon name="mdi:logout" size="18" />
                   Đăng xuất
@@ -155,6 +166,9 @@ const navLinks = [
               </span>
               <span>{{ user?.name || 'Người dùng' }}</span>
             </div>
+            <NuxtLink v-if="isAdmin" to="/admin/submissions" class="mobile-link">
+              <Icon name="mdi:shield-account-outline" class="mr-2" /> Quản trị
+            </NuxtLink>
             <button class="mobile-link" @click="logout">
               <Icon name="mdi:logout" class="mr-2" /> Đăng xuất
             </button>

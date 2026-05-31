@@ -101,6 +101,7 @@ const publishedCourseCount = allCourses.filter(isPublishedCourse).length
       description="Nền tảng mở dành cho người Việt học Phật giáo, kết hợp công nghệ AI mới để soạn nội dung, hỗ trợ truy cứu giáo lý và tìm tòi chủ đề."
       :cta-primary="{ label: 'Xem pháp quyển', to: '/phap-quyen' }"
       :cta-tertiary="{ label: 'Xem Pháp Lộ', to: '/phap-lo' }"
+      :cta-secondary="{ label: 'Góp ý cải thiện', to: '/feedback' }"
       :stats="[
         { value: String(allPaths.length), label: 'Pháp Lộ' },
         { value: String(publishedCourseCount), label: 'Pháp quyển' },
@@ -123,6 +124,26 @@ const publishedCourseCount = allCourses.filter(isPublishedCourse).length
               Mục tiêu của nền tảng không chỉ là đọc văn bản, mà còn từng bước phát triển các hình thức học như video, slide, podcast, quiz và các trải nghiệm hỗ trợ tu tập tối đa.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-narrow pt-0">
+      <div class="glass-card p-6 md:p-8 border border-brand-primary/20">
+        <div class="flex flex-col md:flex-row md:items-center gap-5 md:gap-8">
+          <div class="flex items-center justify-center w-14 h-14 rounded-full bg-brand-primary/10 text-brand-primary shrink-0">
+            <Icon name="mdi:message-draw" class="text-3xl" />
+          </div>
+          <div class="flex-1">
+            <h2 class="text-2xl md:text-3xl font-bold font-serif gradient-text mb-3">Chúng tôi đang thu thập góp ý</h2>
+            <p class="text-text-secondary leading-relaxed">
+              Chánh Đạo đang được cải thiện liên tục từ phản hồi của người học. Hãy chia sẻ điều đang hữu ích, điểm còn khó dùng hoặc nội dung bạn muốn ưu tiên tiếp theo.
+            </p>
+          </div>
+          <NuxtLink to="/feedback" class="btn btn-primary shrink-0">
+            Gửi góp ý
+            <Icon name="mdi:arrow-right" />
+          </NuxtLink>
         </div>
       </div>
     </section>

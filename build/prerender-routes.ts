@@ -9,6 +9,7 @@ const coursesRoot = join(process.cwd(), 'app', 'data', 'courses')
 const staticRoutes = [
   '/',
   '/auth/callback',
+  '/feedback',
   '/gioi-thieu',
   '/lien-he',
   '/phap-lo',
