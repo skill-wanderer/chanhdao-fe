@@ -349,7 +349,7 @@ const lesson: Lesson = {
   slug: 'bai-thu-8-chuong-bien-am',
   title: 'Bài Thứ 8 - Chương Biện Âm',
   type: 'article',
-  status: 'draft',
+  status: 'published',
   order: 11,
   createdAt: '2026-03-20',
   updatedAt: '2026-06-15',

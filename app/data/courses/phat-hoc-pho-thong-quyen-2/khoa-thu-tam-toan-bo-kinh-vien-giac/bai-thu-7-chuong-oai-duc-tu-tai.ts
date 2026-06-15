@@ -270,7 +270,7 @@ const lesson: Lesson = {
   slug: 'bai-thu-7-chuong-oai-duc-tu-tai',
   title: 'Bài Thứ 7 - Chương Oai Đức Tự Tại',
   type: 'article',
-  status: 'draft',
+  status: 'published',
   order: 10,
   createdAt: '2026-03-20',
   updatedAt: '2026-06-15',
