@@ -6,10 +6,10 @@ const lesson: Lesson = {
   title: 'Bài Thứ 12 - Chương Hiền Thiện Thủ',
   type: 'article',
   status: 'draft',
-  order: 14,
+  order: 15,
   content: '<p>Nội dung bài học đang được biên soạn.</p>',
   createdAt: '2026-03-20',
-  updatedAt: '2026-03-20',
+  updatedAt: '2026-06-20',
 }
 
 export default lesson

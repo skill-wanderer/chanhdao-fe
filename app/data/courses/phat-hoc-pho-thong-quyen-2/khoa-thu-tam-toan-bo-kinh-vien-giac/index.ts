@@ -12,7 +12,8 @@ import baiThu6ChuongThanhTinhHue from './bai-thu-6-chuong-thanh-tinh-hue'
 import baiThu7ChuongOaiDucTuTai from './bai-thu-7-chuong-oai-duc-tu-tai'
 import baiThu8ChuongBienAm from './bai-thu-8-chuong-bien-am'
 import baiThu9ChuongTinhChuNghiepChuong from './bai-thu-9-chuong-tinh-chu-nghiep-chuong'
-import baiThu1011ChuongPhoGiacVaChuongVienGiac from './bai-thu-10-11-chuong-pho-giac-va-chuong-vien-giac'
+import baiThu10ChuongPhoGiac from './bai-thu-10-chuong-pho-giac'
+import baiThu11ChuongVienGiac from './bai-thu-11-chuong-vien-giac'
 import baiThu12ChuongHienThienThu from './bai-thu-12-chuong-hien-thien-thu'
 
 const moduleData: Module = {
@@ -33,7 +34,8 @@ const moduleData: Module = {
     baiThu7ChuongOaiDucTuTai,
     baiThu8ChuongBienAm,
     baiThu9ChuongTinhChuNghiepChuong,
-    baiThu1011ChuongPhoGiacVaChuongVienGiac,
+    baiThu10ChuongPhoGiac,
+    baiThu11ChuongVienGiac,
     baiThu12ChuongHienThienThu
   ],
 }
