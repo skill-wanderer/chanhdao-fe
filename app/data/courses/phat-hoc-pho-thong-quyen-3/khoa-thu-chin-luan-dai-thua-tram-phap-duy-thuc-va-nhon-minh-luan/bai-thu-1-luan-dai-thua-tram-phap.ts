@@ -293,7 +293,7 @@ const lesson: Lesson = {
   slug: 'bai-thu-1-luan-dai-thua-tram-phap',
   title: 'Bài Thứ 1 - Luận Đại Thừa Trăm Pháp',
   type: 'article',
-  status: 'draft',
+  status: 'published',
   order: 3,
   createdAt: '2026-03-20',
   updatedAt: '2026-06-29',

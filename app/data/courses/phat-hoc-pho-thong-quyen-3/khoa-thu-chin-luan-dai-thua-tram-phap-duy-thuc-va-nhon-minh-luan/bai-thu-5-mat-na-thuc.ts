@@ -346,7 +346,7 @@ const lesson: Lesson = {
   slug: 'bai-thu-5-mat-na-thuc',
   title: 'Bài Thứ 5 - Mạt na thức',
   type: 'article',
-  status: 'draft',
+  status: 'published',
   order: 7,
   createdAt: '2026-03-20',
   updatedAt: '2026-06-29',

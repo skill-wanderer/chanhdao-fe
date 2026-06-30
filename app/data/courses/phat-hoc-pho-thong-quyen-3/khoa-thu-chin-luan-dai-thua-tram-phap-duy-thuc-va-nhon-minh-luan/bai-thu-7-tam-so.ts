@@ -256,7 +256,7 @@ const lesson: Lesson = {
   slug: 'bai-thu-7-tam-so',
   title: 'Bài Thứ 7 - II. Tâm sở',
   type: 'article',
-  status: 'draft',
+  status: 'published',
   order: 9,
   createdAt: '2026-03-20',
   updatedAt: '2026-06-30',

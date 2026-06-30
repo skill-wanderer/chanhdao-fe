@@ -245,7 +245,7 @@ const lesson: Lesson = {
   slug: 'bai-thu-8-tuy-phien-nao',
   title: 'Bài Thứ 8 - Tùy phiền não',
   type: 'article',
-  status: 'draft',
+  status: 'published',
   order: 10,
   createdAt: '2026-03-20',
   updatedAt: '2026-06-30',

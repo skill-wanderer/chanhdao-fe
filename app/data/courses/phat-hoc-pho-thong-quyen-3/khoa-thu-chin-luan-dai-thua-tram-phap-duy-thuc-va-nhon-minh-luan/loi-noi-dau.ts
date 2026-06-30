@@ -37,7 +37,7 @@ const lesson: Lesson = {
   slug: 'loi-noi-dau',
   title: 'Lời Nói Đầu',
   type: 'article',
-  status: 'draft',
+  status: 'published',
   order: 1,
   content,
   createdAt: '2026-03-20',
