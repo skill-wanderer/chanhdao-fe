@@ -349,7 +349,7 @@ const lesson: Lesson = {
   slug: 'bai-thu-6-a-lai-da-thuc',
   title: 'Bài Thứ 6 - A-lại-da thức',
   type: 'article',
-  status: 'draft',
+  status: 'published',
   order: 8,
   createdAt: '2026-03-20',
   updatedAt: '2026-06-30',

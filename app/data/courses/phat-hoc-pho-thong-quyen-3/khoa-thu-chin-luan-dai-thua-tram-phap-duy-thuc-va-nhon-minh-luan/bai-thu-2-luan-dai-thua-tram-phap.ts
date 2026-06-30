@@ -376,7 +376,7 @@ const lesson: Lesson = {
   slug: 'bai-thu-2-luan-dai-thua-tram-phap',
   title: 'Bài Thứ 2 - Luận Đại Thừa Trăm Pháp',
   type: 'article',
-  status: 'draft',
+  status: 'published',
   order: 4,
   createdAt: '2026-03-20',
   updatedAt: '2026-06-29',

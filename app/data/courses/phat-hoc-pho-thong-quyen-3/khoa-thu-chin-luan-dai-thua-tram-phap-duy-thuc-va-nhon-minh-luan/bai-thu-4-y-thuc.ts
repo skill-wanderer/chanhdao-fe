@@ -310,7 +310,7 @@ const lesson: Lesson = {
   slug: 'bai-thu-4-y-thuc',
   title: 'Bài Thứ 4 - Ý thức',
   type: 'article',
-  status: 'draft',
+  status: 'published',
   order: 6,
   createdAt: '2026-03-20',
   updatedAt: '2026-06-29',

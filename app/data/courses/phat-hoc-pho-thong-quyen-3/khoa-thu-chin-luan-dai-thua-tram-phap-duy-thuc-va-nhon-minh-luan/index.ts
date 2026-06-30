@@ -1,7 +1,6 @@
 import type { Module } from '~/types/course'
 
 import loiNoiDau from './loi-noi-dau'
-import tapNhutLuanDaiThuaTramPhapVaBatThucQuiCuTung from './tap-nhut-luan-dai-thua-tram-phap-va-bat-thuc-qui-cu-tung'
 import baiThu1LuanDaiThuaTramPhap from './bai-thu-1-luan-dai-thua-tram-phap'
 import baiThu2LuanDaiThuaTramPhap from './bai-thu-2-luan-dai-thua-tram-phap'
 import baiThu3TamVuong from './bai-thu-3-tam-vuong'
@@ -19,7 +18,6 @@ import tapBaDuyThucTamThapTung from './tap-ba-duy-thuc-tam-thap-tung'
 import loiCuaDichGia from './loi-cua-dich-gia'
 import loiTua from './loi-tua'
 import baiThu2DuyThucTamThapTung from './bai-thu-2-duy-thuc-tam-thap-tung'
-import baiThu3DuyThucTamThapTung from './bai-thu-3-duy-thuc-tam-thap-tung'
 import baiThu4DuyThucTamThapTung from './bai-thu-4-duy-thuc-tam-thap-tung'
 import baiThu5DuyThucTamThapTung from './bai-thu-5-duy-thuc-tam-thap-tung'
 import baiThu6GiaiThichCacDieuNghi from './bai-thu-6-giai-thich-cac-dieu-nghi'
@@ -38,7 +36,6 @@ const moduleData: Module = {
   order: 1,
   lessons: [
     loiNoiDau,
-    tapNhutLuanDaiThuaTramPhapVaBatThucQuiCuTung,
     baiThu1LuanDaiThuaTramPhap,
     baiThu2LuanDaiThuaTramPhap,
     baiThu3TamVuong,
@@ -56,7 +53,6 @@ const moduleData: Module = {
     loiCuaDichGia,
     loiTua,
     baiThu2DuyThucTamThapTung,
-    baiThu3DuyThucTamThapTung,
     baiThu4DuyThucTamThapTung,
     baiThu5DuyThucTamThapTung,
     baiThu6GiaiThichCacDieuNghi,
