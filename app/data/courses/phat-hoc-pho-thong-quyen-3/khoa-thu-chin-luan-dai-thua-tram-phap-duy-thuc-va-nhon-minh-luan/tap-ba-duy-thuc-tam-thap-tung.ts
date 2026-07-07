@@ -19,11 +19,11 @@ const lesson: Lesson = {
   slug: 'tap-ba-duy-thuc-tam-thap-tung',
   title: 'Tập Ba: Duy Thức Tam Thập Tụng',
   type: 'article',
-  status: 'draft',
+  status: 'published',
   order: 16,
   content,
   createdAt: '2026-03-20',
-  updatedAt: '2026-07-06',
+  updatedAt: '2026-07-07',
 }
 
 export default lesson

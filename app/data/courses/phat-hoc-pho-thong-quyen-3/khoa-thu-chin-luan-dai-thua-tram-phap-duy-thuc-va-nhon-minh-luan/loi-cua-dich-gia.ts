@@ -35,11 +35,11 @@ const lesson: Lesson = {
   slug: 'loi-cua-dich-gia',
   title: 'Lời của dịch giả',
   type: 'article',
-  status: 'draft',
+  status: 'published',
   order: 17,
   content,
   createdAt: '2026-03-20',
-  updatedAt: '2026-07-06',
+  updatedAt: '2026-07-07',
 }
 
 export default lesson

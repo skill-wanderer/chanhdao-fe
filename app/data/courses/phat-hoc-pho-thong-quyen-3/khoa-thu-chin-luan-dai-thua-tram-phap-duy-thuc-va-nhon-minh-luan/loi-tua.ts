@@ -26,11 +26,11 @@ const lesson: Lesson = {
   slug: 'loi-tua',
   title: 'Lời tựa',
   type: 'article',
-  status: 'draft',
+  status: 'published',
   order: 18,
   content,
   createdAt: '2026-03-20',
-  updatedAt: '2026-07-06',
+  updatedAt: '2026-07-07',
 }
 
 export default lesson
