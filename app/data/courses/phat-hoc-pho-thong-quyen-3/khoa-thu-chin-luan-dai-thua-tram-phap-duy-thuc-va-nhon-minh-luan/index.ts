@@ -17,7 +17,9 @@ import tapNhiLuanADaNaThuc from './tap-nhi-luan-a-da-na-thuc'
 import tapBaDuyThucTamThapTung from './tap-ba-duy-thuc-tam-thap-tung'
 import loiCuaDichGia from './loi-cua-dich-gia'
 import loiTua from './loi-tua'
+import baiThu1DuyThucTamThapTung from './bai-thu-1-duy-thuc-tam-thap-tung'
 import baiThu2DuyThucTamThapTung from './bai-thu-2-duy-thuc-tam-thap-tung'
+import baiThu3DuyThucTamThapTung from './bai-thu-3-duy-thuc-tam-thap-tung'
 import baiThu4DuyThucTamThapTung from './bai-thu-4-duy-thuc-tam-thap-tung'
 import baiThu5DuyThucTamThapTung from './bai-thu-5-duy-thuc-tam-thap-tung'
 import baiThu6GiaiThichCacDieuNghi from './bai-thu-6-giai-thich-cac-dieu-nghi'
@@ -52,7 +54,9 @@ const moduleData: Module = {
     tapBaDuyThucTamThapTung,
     loiCuaDichGia,
     loiTua,
+    baiThu1DuyThucTamThapTung,
     baiThu2DuyThucTamThapTung,
+    baiThu3DuyThucTamThapTung,
     baiThu4DuyThucTamThapTung,
     baiThu5DuyThucTamThapTung,
     baiThu6GiaiThichCacDieuNghi,
