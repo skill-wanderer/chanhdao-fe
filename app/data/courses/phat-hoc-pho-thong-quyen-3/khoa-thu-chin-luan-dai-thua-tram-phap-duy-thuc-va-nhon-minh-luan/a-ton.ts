@@ -333,7 +333,7 @@ const lesson: Lesson = {
   title: 'A. Tôn',
   type: 'article',
   status: 'published',
-  order: 30,
+  order: 29,
   createdAt: '2026-03-20',
   updatedAt: '2026-07-15',
   learningMethods: [

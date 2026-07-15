@@ -522,7 +522,7 @@ const lesson: Lesson = {
   title: 'B. Nhơn',
   type: 'article',
   status: 'published',
-  order: 31,
+  order: 30,
   createdAt: '2026-03-20',
   updatedAt: '2026-07-15',
   learningMethods: [

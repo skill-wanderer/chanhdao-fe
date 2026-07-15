@@ -45,7 +45,7 @@ const lesson: Lesson = {
   title: 'Nhơn Minh Luận cương yếu',
   type: 'article',
   status: 'published',
-  order: 29,
+  order: 28,
   content,
   createdAt: '2026-03-20',
   updatedAt: '2026-07-15',

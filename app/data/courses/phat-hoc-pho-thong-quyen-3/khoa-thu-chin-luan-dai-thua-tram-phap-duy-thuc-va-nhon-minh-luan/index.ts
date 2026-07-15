@@ -26,7 +26,6 @@ import baiThu6GiaiThichCacDieuNghi from './bai-thu-6-giai-thich-cac-dieu-nghi'
 import baiThu7DuyThucTamThapTung from './bai-thu-7-duy-thuc-tam-thap-tung'
 import duyThucTamThapTungChanhVan from './duy-thuc-tam-thap-tung-chanh-van'
 import nhonMinhLuan from './nhon-minh-luan'
-import baiHocThuocLong from './bai-hoc-thuoc-long'
 import nhonMinhLuanCuongYeu from './nhon-minh-luan-cuong-yeu'
 import aTon from './a-ton'
 import bNhon from './b-nhon'
@@ -64,7 +63,6 @@ const moduleData: Module = {
     baiThu7DuyThucTamThapTung,
     duyThucTamThapTungChanhVan,
     nhonMinhLuan,
-    baiHocThuocLong,
     nhonMinhLuanCuongYeu,
     aTon,
     bNhon,
