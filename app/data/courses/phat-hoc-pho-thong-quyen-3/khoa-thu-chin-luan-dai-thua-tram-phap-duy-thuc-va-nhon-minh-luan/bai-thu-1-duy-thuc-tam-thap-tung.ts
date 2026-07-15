@@ -279,7 +279,7 @@ const lesson: Lesson = {
   slug: 'bai-thu-1-duy-thuc-tam-thap-tung',
   title: 'Bài Thứ 1 - Duy Thức Tam Thập Tụng Dị Giải',
   type: 'article',
-  status: 'draft',
+  status: 'published',
   order: 19,
   createdAt: '2026-03-20',
   updatedAt: '2026-07-07',
