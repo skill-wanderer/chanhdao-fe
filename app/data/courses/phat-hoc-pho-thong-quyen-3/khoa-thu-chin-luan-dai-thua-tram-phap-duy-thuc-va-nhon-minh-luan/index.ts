@@ -24,6 +24,7 @@ import baiThu4DuyThucTamThapTung from './bai-thu-4-duy-thuc-tam-thap-tung'
 import baiThu5DuyThucTamThapTung from './bai-thu-5-duy-thuc-tam-thap-tung'
 import baiThu6GiaiThichCacDieuNghi from './bai-thu-6-giai-thich-cac-dieu-nghi'
 import baiThu7DuyThucTamThapTung from './bai-thu-7-duy-thuc-tam-thap-tung'
+import duyThucTamThapTungChanhVan from './duy-thuc-tam-thap-tung-chanh-van'
 import nhonMinhLuan from './nhon-minh-luan'
 import baiHocThuocLong from './bai-hoc-thuoc-long'
 import nhonMinhLuanCuongYeu from './nhon-minh-luan-cuong-yeu'
@@ -61,6 +62,7 @@ const moduleData: Module = {
     baiThu5DuyThucTamThapTung,
     baiThu6GiaiThichCacDieuNghi,
     baiThu7DuyThucTamThapTung,
+    duyThucTamThapTungChanhVan,
     nhonMinhLuan,
     baiHocThuocLong,
     nhonMinhLuanCuongYeu,

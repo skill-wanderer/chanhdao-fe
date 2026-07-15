@@ -6,7 +6,7 @@ const lesson: Lesson = {
   title: 'B. Nhơn',
   type: 'article',
   status: 'draft',
-  order: 30,
+  order: 31,
   content: '<p>Nội dung bài học đang được biên soạn.</p>',
   createdAt: '2026-03-20',
   updatedAt: '2026-03-20',
