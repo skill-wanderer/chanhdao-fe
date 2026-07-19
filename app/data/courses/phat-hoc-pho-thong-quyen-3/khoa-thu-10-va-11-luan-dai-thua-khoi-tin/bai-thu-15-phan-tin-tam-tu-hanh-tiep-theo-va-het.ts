@@ -6,7 +6,7 @@ const lesson: Lesson = {
   title: 'Bài Thứ 15 - Phân tín tâm, tu hành (tiếp theo và hết)',
   type: 'article',
   status: 'draft',
-  order: 16,
+  order: 17,
   content: '<p>Nội dung bài học đang được biên soạn.</p>',
   createdAt: '2026-03-20',
   updatedAt: '2026-03-20',

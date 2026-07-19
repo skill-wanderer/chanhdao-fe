@@ -1,6 +1,7 @@
 import type { Module } from '~/types/course'
 
 import loiDichGia from './loi-dich-gia'
+import mucLucChiTiet from './muc-luc-chi-tiet'
 import baiThu1PhanNhanDuyenPhanDinhDanhNghia from './bai-thu-1-phan-nhan-duyen-phan-dinh-danh-nghia'
 import baiThu2PhanGiaiThich from './bai-thu-2-phan-giai-thich'
 import baiThu3PhanGiaiThichTiepTheo from './bai-thu-3-phan-giai-thich-tiep-theo'
@@ -25,6 +26,7 @@ const moduleData: Module = {
   order: 2,
   lessons: [
     loiDichGia,
+    mucLucChiTiet,
     baiThu1PhanNhanDuyenPhanDinhDanhNghia,
     baiThu2PhanGiaiThich,
     baiThu3PhanGiaiThichTiepTheo,

@@ -6,7 +6,7 @@ const lesson: Lesson = {
   title: 'Bài Thứ 16 - Phân tín tâm, tu hành (tiếp theo và hết); Lợi ích và khuyến tu',
   type: 'article',
   status: 'draft',
-  order: 17,
+  order: 18,
   content: '<p>Nội dung bài học đang được biên soạn.</p>',
   createdAt: '2026-03-20',
   updatedAt: '2026-03-20',

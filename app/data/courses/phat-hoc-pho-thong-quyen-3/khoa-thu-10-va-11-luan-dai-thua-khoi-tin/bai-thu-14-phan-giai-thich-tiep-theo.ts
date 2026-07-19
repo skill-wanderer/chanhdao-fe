@@ -6,7 +6,7 @@ const lesson: Lesson = {
   title: 'Bài Thứ 14 - Phần giải thích (tiếp theo)',
   type: 'article',
   status: 'draft',
-  order: 15,
+  order: 16,
   content: '<p>Nội dung bài học đang được biên soạn.</p>',
   createdAt: '2026-03-20',
   updatedAt: '2026-03-20',
