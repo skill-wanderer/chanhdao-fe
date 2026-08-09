@@ -278,7 +278,7 @@ const lesson: Lesson = {
   slug: 'bai-thu-15-phan-tin-tam-tu-hanh-tiep-theo-va-het',
   title: 'Bài Thứ 15 - Phần tín tâm, tu hành (tiếp theo và hết)',
   type: 'article',
-  status: 'draft',
+  status: 'published',
   order: 17,
   createdAt: '2026-03-20',
   updatedAt: '2026-03-20',
