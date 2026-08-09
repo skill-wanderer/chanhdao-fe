@@ -273,6 +273,7 @@ const lesson: Lesson = {
       type: 'reading',
       label: 'Bản đọc',
       icon: 'mdi:book-open-page-variant',
+      infographicUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-3/bai-thu-12-phan-giai-thich-tiep-theo/Con_%C4%90%C6%B0%E1%BB%9Dng_Tr%E1%BB%9F_V%E1%BB%81_Ch%C3%A2n_Nh%C6%B0.png',
       readingContent,
       tableOfContents: [
         { id: 'doi-tri-cac-chap-sai-lam', label: 'B. Đối trị các chấp sai lầm' },
@@ -286,6 +287,12 @@ const lesson: Lesson = {
         { id: 'chap-phap', label: 'II. Chấp pháp:', indent: 2 },
         { id: 'chap-vu-tru-van-huu', label: 'Chấp thật có vũ trụ, vạn hữu', indent: 3 },
       ],
+    },
+    {
+      type: 'slide',
+      label: 'Slide',
+      icon: 'mdi:presentation',
+      slideUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-3/bai-thu-12-phan-giai-thich-tiep-theo/Awakening_to_True_Nature.pdf',
     },
     {
       type: 'video',
@@ -306,5 +313,6 @@ const lesson: Lesson = {
     questions,
   },
 }
+
 
 export default lesson

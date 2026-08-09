@@ -287,6 +287,7 @@ const lesson: Lesson = {
       type: 'reading',
       label: 'Bản đọc',
       icon: 'mdi:book-open-page-variant',
+      infographicUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-3/bai-thu-15-tinh-tam-tu-hanh/Gi%C3%A1c_ng%E1%BB%99_trong_%C4%90%E1%BA%A1i_Th%E1%BB%ABa.png',
       readingContent,
       tableOfContents: [
         { id: 'chuong-thu-tu-tin-tam-tu-hanh', label: 'Chương thứ tư: TÍN TÂM TU HÀNH (2 bài, bài này thứ nhất)' },
@@ -302,6 +303,12 @@ const lesson: Lesson = {
         { id: 'tinh-tan', label: 'Tinh tấn', indent: 2 },
         { id: 'chi-quan', label: 'Chỉ, quán (Định, Huệ)', indent: 2 },
       ],
+    },
+    {
+      type: 'slide',
+      label: 'Slide',
+      icon: 'mdi:presentation',
+      slideUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-3/bai-thu-15-tinh-tam-tu-hanh/The_Path_of_Awakening.pdf',
     },
     {
       type: 'video',

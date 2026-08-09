@@ -287,6 +287,7 @@ const lesson: Lesson = {
       type: 'reading',
       label: 'Bản đọc',
       icon: 'mdi:book-open-page-variant',
+      infographicUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-3/bai-thu-14-phan-giai-thich-tiep-theo/H%C3%A0nh_tr%C3%ACnh_ph%C3%A1t_t%C3%A2m_tu_t%E1%BA%ADp.png',
       readingContent,
       tableOfContents: [
         { id: 'phan-biet-hanh-tuong-phat-tam', label: 'C. Phân biệt hành tướng phát tâm đến Đạo (bài thứ 2)' },
@@ -304,6 +305,12 @@ const lesson: Lesson = {
         { id: 'phuong-tien-tam-quyen-tri', label: '"Phương tiện tâm" tức là Quyền trí', indent: 3 },
         { id: 'nghiep-thuc-tam-di-thuc-thuc', label: '"Nghiệp thức tâm" tức là Dị thục thức', indent: 3 },
       ],
+    },
+    {
+      type: 'slide',
+      label: 'Slide',
+      icon: 'mdi:presentation',
+      slideUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-3/bai-thu-14-phan-giai-thich-tiep-theo/Awakening_the_True_Mind.pdf',
     },
     {
       type: 'video',
