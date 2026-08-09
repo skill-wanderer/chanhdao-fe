@@ -333,6 +333,7 @@ const lesson: Lesson = {
       type: 'reading',
       label: 'Bản đọc',
       icon: 'mdi:book-open-page-variant',
+      infographicUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-3/bai-thu-16-tinh-tam-tu-hanh-tiep-theo/C%E1%BA%A9m_nang_tu_t%E1%BA%ADp_thi%E1%BB%81n.png',
       readingContent,
       tableOfContents: [
         { id: 'chuong-thu-tu-tin-tam-tu-hanh-tiep-theo', label: 'Chương thứ tư: TÍN TÂM TU HÀNH (Tiếp theo và hết)' },
@@ -355,6 +356,12 @@ const lesson: Lesson = {
       ],
     },
     {
+      type: 'slide',
+      label: 'Slide',
+      icon: 'mdi:presentation',
+      slideUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-3/bai-thu-16-tinh-tam-tu-hanh-tiep-theo/The_Lotus_Awakening.pdf',
+    },
+    {
       type: 'video',
       label: 'Video',
       icon: 'mdi:play-circle-outline',
@@ -373,5 +380,4 @@ const lesson: Lesson = {
     questions,
   },
 }
-
 export default lesson

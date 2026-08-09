@@ -342,6 +342,7 @@ const lesson: Lesson = {
       type: 'reading',
       label: 'Bản đọc',
       icon: 'mdi:book-open-page-variant',
+      infographicUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-3/bai-thu-13-phan-giai-thich-tiep-theo/H%C3%A0nh_tr%C3%ACnh_T%C3%ADn_t%C3%A2m_%C4%90%E1%BA%A1i_Th%E1%BB%ABa.png',
       readingContent,
       tableOfContents: [
         { id: 'phan-biet-hanh-tuong-phat-tam', label: 'C. Phân biệt hành tướng phát tâm đến đạo (bài thứ nhất)' },
@@ -358,6 +359,12 @@ const lesson: Lesson = {
         { id: 'pt-dai-nguyen', label: 'Phương tiện Đại nguyện và Bình đẳng', indent: 3 },
         { id: 'tam-tuong-thanh-dao', label: 'c. Tám tướng thành đạo', indent: 2 },
       ],
+    },
+    {
+      type: 'slide',
+      label: 'Slide',
+      icon: 'mdi:presentation',
+      slideUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-3/bai-thu-13-phan-giai-thich-tiep-theo/H%C3%A0nh_Tr%C3%ACnh_T%E1%BB%89nh_Th%E1%BB%A9c_%C4%90%E1%BA%A1i_Th%E1%BB%ABa.pdf',
     },
     {
       type: 'video',
@@ -378,5 +385,6 @@ const lesson: Lesson = {
     questions,
   },
 }
+
 
 export default lesson
