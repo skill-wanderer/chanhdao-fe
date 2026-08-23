@@ -207,9 +207,9 @@ const questions: QuizQuestion[] = [
 ]
 
 const lesson: Lesson = {
-  id: 'lesson-khoa-12-gioi-thieu-bat-nha-tam-kinh',
-  slug: 'gioi-thieu-bat-nha-tam-kinh',
-  title: 'Giới thiệu Bát Nhã Tâm Kinh',
+  id: 'lesson-khoa-12-kinh-dai-bat-nha-toat-yeu',
+  slug: 'kinh-dai-bat-nha-toat-yeu',
+  title: 'Kinh Đại Bát Nhã toát yếu',
   type: 'article',
   status: 'published',
   order: 17,
