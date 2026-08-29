@@ -16,14 +16,14 @@ const searchTitle = computed(() => {
   const normalizedQuery = query.value.trim()
   return normalizedQuery
     ? `Kết quả tìm kiếm "${normalizedQuery}" | Chánh Đạo`
-    : 'Tìm kiếm pháp quyển và pháp lộ | Chánh Đạo'
+    : 'Tìm kiếm pháp tập và pháp lộ | Chánh Đạo'
 })
 
 const searchDescription = computed(() => {
   const normalizedQuery = query.value.trim()
   return normalizedQuery
-    ? `Xem kết quả tìm kiếm cho "${normalizedQuery}" trên Chánh Đạo để tìm pháp quyển, pháp lộ và nội dung Phật học liên quan.`
-    : 'Tìm pháp quyển, pháp lộ và chủ đề Phật học trên Chánh Đạo theo tên bài học, nội dung hoặc định hướng học tập.'
+    ? `Xem kết quả tìm kiếm cho "${normalizedQuery}" trên Chánh Đạo để tìm pháp tập, pháp lộ và nội dung Phật học liên quan.`
+    : 'Tìm pháp tập, pháp lộ và chủ đề Phật học trên Chánh Đạo theo tên bài học, nội dung hoặc định hướng học tập.'
 })
 
 const searchUrl = computed(() => {
@@ -44,14 +44,14 @@ useSeo({
   keywords: computed(() => {
     const normalizedQuery = query.value.trim()
     return normalizedQuery
-      ? [normalizedQuery, 'tìm kiếm Phật học', 'tìm pháp quyển', 'tìm pháp lộ', 'Chánh Đạo']
-      : ['tìm kiếm Phật học', 'tìm pháp quyển', 'tìm pháp lộ', 'Chánh Đạo']
+      ? [normalizedQuery, 'tìm kiếm Phật học', 'tìm pháp tập', 'tìm pháp lộ', 'Chánh Đạo']
+      : ['tìm kiếm Phật học', 'tìm pháp tập', 'tìm pháp lộ', 'Chánh Đạo']
   }),
   about: computed(() => {
     const normalizedQuery = query.value.trim()
     return normalizedQuery
-      ? ['tìm kiếm nội dung Phật học', normalizedQuery, 'pháp quyển', 'pháp lộ']
-      : ['tìm kiếm nội dung Phật học', 'pháp quyển', 'pháp lộ']
+      ? ['tìm kiếm nội dung Phật học', normalizedQuery, 'pháp tập', 'pháp lộ']
+      : ['tìm kiếm nội dung Phật học', 'pháp tập', 'pháp lộ']
   }),
   audience: 'Người Việt đang tìm nội dung Phật học phù hợp',
   schemas: computed(() => [{
@@ -132,7 +132,7 @@ watch(() => route.query.q, (newQ) => {
   <div>
     <section class="pt-[170px] px-5 pb-10 text-center max-md:pt-[150px] max-md:px-4 max-md:pb-8 max-sm:pt-[140px] max-sm:px-3 max-sm:pb-6">
       <div class="max-w-[600px] mx-auto">
-        <h1 class="gradient-text text-3xl md:text-4xl font-bold mb-6">Tìm kiếm pháp quyển & pháp lộ</h1>
+        <h1 class="gradient-text text-3xl md:text-4xl font-bold mb-6">Tìm kiếm pháp tập & pháp lộ</h1>
         <SearchBar @search="handleSearch" />
       </div>
     </section>
@@ -149,7 +149,7 @@ watch(() => route.query.q, (newQ) => {
           <button
             v-for="tab in [
               { key: 'all', label: `Tất cả (${totalResults})` },
-              { key: 'courses', label: `Pháp quyển (${courseResults.length})` },
+              { key: 'courses', label: `Pháp tập (${courseResults.length})` },
               { key: 'paths', label: `Pháp lộ (${pathResults.length})` },
             ]"
             :key="tab.key"
@@ -168,7 +168,7 @@ watch(() => route.query.q, (newQ) => {
         <!-- Courses section -->
         <div v-if="(activeTab === 'all' || activeTab === 'courses') && courseResults.length" class="mb-12">
           <h2 v-if="activeTab === 'all'" class="flex items-center gap-2 text-xl font-bold font-serif mb-5 text-text-primary">
-            <Icon name="mdi:school-outline" class="text-brand-accent" /> Pháp quyển
+            <Icon name="mdi:school-outline" class="text-brand-accent" /> Pháp tập
           </h2>
           <div class="card-grid">
             <CourseCard v-for="course in courseResults" :key="course.id" :course="course" />
@@ -192,7 +192,7 @@ watch(() => route.query.q, (newQ) => {
                   <p class="text-text-secondary text-sm">{{ path.description }}</p>
                   <div class="flex items-center gap-4 mt-2">
                     <span class="text-xs text-text-muted">
-                      <Icon name="mdi:book-open-outline" class="inline" /> {{ path.courseCount }} pháp quyển
+                      <Icon name="mdi:book-open-outline" class="inline" /> {{ path.courseCount }} pháp tập
                     </span>
                     <span v-if="getPathDuration(path)" class="text-xs text-text-muted">
                       <Icon name="mdi:clock-outline" class="inline" /> {{ formatDuration(getPathDuration(path)) }}
@@ -237,7 +237,7 @@ watch(() => route.query.q, (newQ) => {
           <Icon name="mdi:magnify-close" class="text-text-light text-5xl mb-4" />
           <h3 class="text-xl font-semibold mb-2">Không tìm thấy kết quả</h3>
           <p class="text-text-muted mb-4">Thử tìm với từ khóa khác.</p>
-          <NuxtLink to="/phap-quyen" class="btn btn-outline btn-sm">Xem tất cả pháp quyển</NuxtLink>
+          <NuxtLink to="/phap-quyen" class="btn btn-outline btn-sm">Xem tất cả pháp tập</NuxtLink>
         </div>
       </template>
 
@@ -245,7 +245,7 @@ watch(() => route.query.q, (newQ) => {
         <div class="text-center py-[60px] px-5 max-sm:py-10 max-sm:px-3">
           <Icon name="mdi:magnify" class="text-text-light text-5xl mb-4" />
           <h3 class="text-xl font-semibold mb-2">Bạn muốn học gì hôm nay?</h3>
-          <p class="text-text-muted">Hãy tìm pháp quyển và pháp lộ theo tên, chủ đề hoặc kỹ năng.</p>
+          <p class="text-text-muted">Hãy tìm pháp tập và pháp lộ theo tên, chủ đề hoặc kỹ năng.</p>
         </div>
       </template>
     </section>

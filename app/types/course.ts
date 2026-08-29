@@ -55,6 +55,8 @@ export interface Lesson {
   title: string
   type: 'video' | 'article'
   status?: PublishStatus
+  /** Cover image shown on the lesson page and in the lesson list. */
+  coverImage?: string
   content?: string
   videoUrl?: string
   completed?: boolean

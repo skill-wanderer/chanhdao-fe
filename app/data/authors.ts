@@ -40,3 +40,22 @@ export const phatHocPhoThongAuthor: AuthorInfo = {
   linkedinUrl: '',
   websiteUrl: '',
 }
+/**
+ * Pháp môn Tịnh độ is a compilation rather than a single book, so its
+ * introduction is written for the collection and each contributing teacher
+ * gets their own AuthorInfo below.
+ */
+export const phapMonTinhDoIntroduction = `Tịnh độ là pháp môn lấy Tín — Nguyện — Hạnh làm nền tảng, nương nơi bản nguyện của Đức Phật A Di Đà mà cầu sanh về thế giới Cực Lạc. Vì "dễ hành mà khó tin", pháp môn này thường bị hiểu lầm là chỗ nương tựa của người kém căn cơ, trong khi kinh luận lại xếp vào hàng phương tiện rốt ráo, gồm thâu cả ba căn thượng — trung — hạ.
+
+Đây không phải là nội dung rút ra từ một cuốn sách duy nhất. Pháp tập này tuyển chọn và sắp xếp lại các bài giảng, bài khai thị và vấn đáp về Tịnh độ từ nhiều nguồn khác nhau, theo trình tự từ nhận thức căn bản đến những điểm thiết yếu trong việc hành trì.
+
+Phần mở đầu gồm các bài giảng của cố Hòa thượng Thích Giác Khang. Các phần tiếp theo sẽ lần lượt bổ sung thêm những vị giảng sư khác, để người học có thể đối chiếu nhiều cách trình bày trên cùng một pháp môn.`
+
+export const thichGiacKhangAuthor: AuthorInfo = {
+  name: 'Cố Hòa thượng Thích Giác Khang',
+  title: 'Giảng sư loạt bài giảng về pháp môn Tịnh độ',
+  bio: 'Hòa thượng thế danh Tô Văn Vinh, sinh năm 1941 tại tỉnh Bạc Liêu, là người con thứ tám trong gia đình. Thân phụ là ông Tô Khanh, thân mẫu là bà Trần Thị Vén.\n\nĐầu năm 1966, Ngài xuất gia tu học với Bổn sư là Đức Thầy Tri sự Giác Như tại Tịnh xá Ngọc Vân, tỉnh Trà Vinh. Năm 1971, Ngài thọ giới cụ túc Tỳ-kheo tại Tịnh xá Ngọc Viên, tỉnh Vĩnh Long, được ban pháp danh Thích Giác Khang. Sau khi Bổn sư viên tịch năm 1983, Ngài kế thừa và trụ trì Tịnh xá Ngọc Vân, hướng dẫn chư Tăng cùng Phật tử tu học. Ngoài trú xứ của mình, Ngài còn thường xuyên giảng pháp tại Tịnh xá Ngọc Trường, chùa Phước An, chùa Phước Thành và chùa Thanh Quang.\n\nĐặc điểm trong cách giảng của Ngài là đi thẳng vào những nghi vấn mà người tu Tịnh độ thường vướng mắc: vì sao phải cầu vãng sanh, vãng sanh cần đủ những điều kiện gì, và khác biệt giữa chứng ngộ với vãng sanh nằm ở đâu. Ngài thường đối chiếu Tịnh độ với Thiền và Duy thức để người nghe thấy pháp môn niệm Phật không tách rời khỏi toàn bộ hệ thống giáo lý.\n\nNgài viên tịch lúc 15 giờ ngày 30 tháng 3 năm Quý Tỵ (2013), trụ thế 73 năm, gần 47 năm hành đạo. Các bài trong phần này được kết tập lại từ những buổi giảng của Ngài, sắp xếp theo thứ tự từ nhận thức căn bản đến việc hành trì hằng ngày.',
+  avatarUrl: '/images/authors/thich-giac-khang.jpg',
+  linkedinUrl: '',
+  websiteUrl: '',
+}

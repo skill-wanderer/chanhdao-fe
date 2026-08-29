@@ -9,7 +9,7 @@ const { getCourseBySlug, formatDuration, getLessonDuration } = useCourses()
 const course = getCourseBySlug(courseSlug)
 
 if (!course) {
-  throw createError({ statusCode: 404, statusMessage: 'Không tìm thấy pháp quyển' })
+  throw createError({ statusCode: 404, statusMessage: 'Không tìm thấy pháp tập' })
 }
 
 const allLessons = getAllLessons(course)
@@ -36,7 +36,7 @@ function stripHtmlContent(content?: string): string {
 const lessonPlainText = stripHtmlContent(lesson.content)
 const lessonDescription = lessonPlainText
   ? `${lessonPlainText.slice(0, 180)}${lessonPlainText.length > 180 ? '…' : ''}`
-  : `Bài học ${lesson.title} thuộc pháp quyển ${course.title} trên Chánh Đạo, giúp người học tiếp cận giáo lý rõ ràng và có dẫn chiếu.`
+  : `Bài học ${lesson.title} thuộc pháp tập ${course.title} trên Chánh Đạo, giúp người học tiếp cận giáo lý rõ ràng và có dẫn chiếu.`
 const lessonKeywords = [lesson.title, course.title, 'bài học Phật học', ...(course.tags || [])]
 
 // Extract first YouTube video URL from lesson content for VideoObject schema
@@ -186,7 +186,7 @@ async function toggleComplete() {
     <div class="section" style="padding-bottom: 0;">
       <BreadcrumbNav :items="[
         { label: 'Trang chủ', to: '/' },
-        { label: 'Pháp quyển', to: '/phap-quyen' },
+        { label: 'Pháp tập', to: '/phap-quyen' },
         { label: course.title, to: `/phap-quyen/${course.slug}` },
         { label: lesson.title },
       ]" />
@@ -290,6 +290,17 @@ async function toggleComplete() {
             </span>
           </div>
         </div>
+
+        <!-- Lesson Cover -->
+        <NuxtImg
+          v-if="lesson.coverImage"
+          :src="lesson.coverImage"
+          :alt="`Ảnh bìa bài học: ${lesson.title}`"
+          width="1200"
+          height="675"
+          loading="lazy"
+          class="w-full rounded-2xl border border-brand-primary/15 object-cover mb-8"
+        />
 
         <!-- Video Placeholder -->
         <div v-if="lesson.type === 'video' && !lesson.learningMethods?.length" class="aspect-video bg-brand-primary/[0.03] border border-brand-primary/15 rounded-2xl flex flex-col items-center justify-center mb-8">

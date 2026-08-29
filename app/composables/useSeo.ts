@@ -190,21 +190,21 @@ export function useCourseSeo(course: CourseSeoOptions) {
   const siteUrl = (config.public.siteUrl as string) || 'https://chanhdao.vn'
 
   useSeo({
-    title: `${course.title} | Pháp quyển học Phật miễn phí | Chánh Đạo`,
+    title: `${course.title} | Pháp tập học Phật miễn phí | Chánh Đạo`,
     description: course.description,
     image: course.thumbnail || '/og-image.png',
     url: `${siteUrl}/phap-quyen/${course.slug}`,
     type: 'article',
     pageType: 'CollectionPage',
-    section: 'Pháp quyển',
+    section: 'Pháp tập',
     audience: 'Người Việt học Phật giáo',
-    keywords: [course.title, 'pháp quyển', 'học Phật online', 'Phật học miễn phí', ...(course.tags || [])],
+    keywords: [course.title, 'pháp tập', 'học Phật online', 'Phật học miễn phí', ...(course.tags || [])],
     about: [course.title, 'Phật học', 'Giáo lý Phật giáo', ...(course.tags || [])],
     datePublished: course.datePublished,
     dateModified: course.dateModified,
     breadcrumbs: [
       { name: 'Trang chủ', url: siteUrl },
-      { name: 'Pháp quyển', url: `${siteUrl}/phap-quyen` },
+      { name: 'Pháp tập', url: `${siteUrl}/phap-quyen` },
       { name: course.title },
     ],
   })
@@ -273,7 +273,7 @@ export function useLessonSeo(lesson: LessonSeoOptions) {
     dateModified: lesson.dateModified,
     breadcrumbs: [
       { name: 'Trang chủ', url: siteUrl },
-      { name: 'Pháp quyển', url: `${siteUrl}/phap-quyen` },
+      { name: 'Pháp tập', url: `${siteUrl}/phap-quyen` },
       { name: lesson.courseTitle, url: `${siteUrl}/phap-quyen/${lesson.courseSlug}` },
       { name: lesson.title },
     ],

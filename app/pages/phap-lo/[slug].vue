@@ -23,7 +23,7 @@ const availableCourseCount = path.courses?.filter(course => getCourseBySlug(cour
 
 useSeo({
   title: `${path.title} | Pháp lộ học Phật ${difficultyLabelForSeo} | Chánh Đạo`,
-  description: `${path.title} là pháp lộ học Phật ${difficultyLabelForSeo} tại Chánh Đạo, gồm ${path.courseCount} pháp quyển dự kiến và ${availableCourseCount} pháp quyển đang mở. ${path.description}`,
+  description: `${path.title} là pháp lộ học Phật ${difficultyLabelForSeo} tại Chánh Đạo, gồm ${path.courseCount} pháp tập dự kiến và ${availableCourseCount} pháp tập đang mở. ${path.description}`,
   url: `${siteUrl}/phap-lo/${path.slug}`,
   pageType: 'CollectionPage',
   keywords: [
@@ -43,7 +43,7 @@ useSeo({
   schemas: [
     {
       '@type': 'ItemList',
-      name: `Danh sách pháp quyển trong pháp lộ ${path.title}`,
+      name: `Danh sách pháp tập trong pháp lộ ${path.title}`,
       itemListElement: (path.courses || []).map((course, index) => ({
         '@type': 'ListItem',
         position: index + 1,
@@ -114,10 +114,10 @@ function difficultyLabel(d: string): string {
 
               <div class="flex items-center gap-5 mt-4 flex-wrap">
                 <span class="text-sm text-text-muted">
-                  <Icon name="mdi:book-open-outline" class="inline" /> {{ path.courseCount }} pháp quyển dự kiến
+                  <Icon name="mdi:book-open-outline" class="inline" /> {{ path.courseCount }} pháp tập dự kiến
                 </span>
                 <span class="text-sm text-text-muted">
-                  <Icon name="mdi:check-circle-outline" class="inline" /> {{ availableCourses }} pháp quyển đang mở
+                  <Icon name="mdi:check-circle-outline" class="inline" /> {{ availableCourses }} pháp tập đang mở
                 </span>
                 <span v-if="totalDuration" class="text-sm text-text-muted">
                   <Icon name="mdi:clock-outline" class="inline" /> {{ formatDuration(totalDuration) }} nội dung đang mở
@@ -180,7 +180,7 @@ function difficultyLabel(d: string): string {
 
         <div class="mt-6 pt-5 border-t border-brand-primary/10 flex flex-wrap gap-3">
           <NuxtLink to="/phap-quyen" class="btn btn-primary btn-sm">
-            <Icon name="mdi:school-outline" /> Xem pháp quyển đang mở
+            <Icon name="mdi:school-outline" /> Xem pháp tập đang mở
           </NuxtLink>
           <NuxtLink to="/phap-lo" class="btn btn-outline btn-sm">
             <Icon name="mdi:arrow-left" /> Quay lại pháp lộ

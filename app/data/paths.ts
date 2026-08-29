@@ -52,6 +52,24 @@ THÍCH THIỆN HOA`,
       { title: 'Phật học phổ thông quyển 3', slug: 'phat-hoc-pho-thong-quyen-3' },
     ],
   },
+  {
+    title: 'Tịnh độ',
+    slug: 'tinh-do',
+    description: 'Pháp lộ chuyên sâu về pháp môn Tịnh độ, kết tập từ nhiều nguồn giảng giải, mở đầu với loạt bài của cố Hòa thượng Thích Giác Khang.',
+    content: `Tịnh độ là pháp môn nương nơi bản nguyện của Đức Phật A Di Đà mà cầu sanh về thế giới Cực Lạc, lấy ba yếu tố Tín — Nguyện — Hạnh làm nền tảng. Cổ đức gọi đây là pháp môn "dị hành đạo" — con đường dễ đi — nhưng cũng là pháp "nan tín" — khó tin, bởi người học phải đặt trọn niềm tin vào một cảnh giới ngoài tầm suy lường của phàm tình.
+
+Khác với pháp lộ Phật học Phổ thông vốn đi theo một bộ sách đã được biên soạn hoàn chỉnh, pháp lộ này là một tổ hợp. Nội dung được tuyển chọn từ các bài giảng, bài khai thị và những buổi vấn đáp của nhiều vị giảng sư, rồi sắp xếp lại theo trình tự học tập: từ chỗ giải nghi về pháp môn, đến nhận thức đúng về tái sanh và vãng sanh, rồi sau cùng là những điểm thiết yếu trong việc hành trì hằng ngày.
+
+Phần đầu tiên gồm các bài giảng của cố Hòa thượng Thích Giác Khang. Những phần tiếp theo sẽ lần lượt bổ sung thêm các vị giảng sư khác, để người học được nghe cùng một pháp môn qua nhiều cách trình bày, từ đó tự mình đối chiếu và chọn lấy cách hành trì phù hợp.
+
+Pháp lộ này không đòi hỏi phải học xong Phật học Phổ thông mới bắt đầu được. Tuy nhiên, người đã nắm căn bản về nhân quả, luân hồi và Ngũ thừa Phật giáo sẽ tiếp nhận các bài giảng ở đây một cách vững vàng hơn.`,
+    difficulty: 'beginner',
+    icon: 'mdi:hands-pray',
+    courseCount: 1,
+    courses: [
+      { title: 'Pháp môn Tịnh độ', slug: 'phap-mon-tinh-do' },
+    ],
+  },
 ]
 
 export default paths

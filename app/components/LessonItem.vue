@@ -27,6 +27,16 @@ const lessonDuration = computed(() => getLessonDuration(props.lesson))
       <span v-else class="text-sm font-bold text-brand-accent">{{ String(index + 1).padStart(2, '0') }}</span>
     </div>
 
+    <NuxtImg
+      v-if="lesson.coverImage"
+      :src="lesson.coverImage"
+      :alt="`Ảnh bìa bài học: ${lesson.title}`"
+      width="128"
+      height="72"
+      loading="lazy"
+      class="shrink-0 w-16 h-9 rounded-lg object-cover border border-brand-primary/15 max-sm:hidden"
+    />
+
     <div class="flex-1">
       <h4 class="text-base font-semibold mb-1">{{ lesson.title }}</h4>
       <div class="flex items-center gap-3 text-[0.8rem] text-text-muted">
@@ -52,6 +62,16 @@ const lessonDuration = computed(() => getLessonDuration(props.lesson))
     <div class="shrink-0 w-11 h-11 rounded-xl flex items-center justify-center bg-brand-primary/10">
       <span class="text-sm font-bold text-brand-accent">{{ String(index + 1).padStart(2, '0') }}</span>
     </div>
+
+    <NuxtImg
+      v-if="lesson.coverImage"
+      :src="lesson.coverImage"
+      :alt="`Ảnh bìa bài học: ${lesson.title}`"
+      width="128"
+      height="72"
+      loading="lazy"
+      class="shrink-0 w-16 h-9 rounded-lg object-cover border border-brand-primary/15 max-sm:hidden"
+    />
 
     <div class="flex-1">
       <div class="flex items-center gap-2 mb-1 flex-wrap">

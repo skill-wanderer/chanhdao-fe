@@ -4,28 +4,28 @@ const config = useRuntimeConfig()
 const siteUrl = ((config.public.siteUrl as string) || 'https://chanhdao.vn').replace(/\/+$/, '')
 
 useSeo({
-  title: 'Pháp quyển học Phật | Khóa học Phật học miễn phí | Chánh Đạo',
-  description: 'Xem toàn bộ pháp quyển học Phật tại Chánh Đạo, từ nhập môn đến chuyên sâu, với nội dung miễn phí, dễ theo dõi và phù hợp cho người Việt tự học.',
+  title: 'Pháp tập học Phật | Khóa học Phật học miễn phí | Chánh Đạo',
+  description: 'Xem toàn bộ pháp tập học Phật tại Chánh Đạo, từ nhập môn đến chuyên sâu, với nội dung miễn phí, dễ theo dõi và phù hợp cho người Việt tự học.',
   url: '/phap-quyen',
   pageType: 'CollectionPage',
   keywords: [
-    'pháp quyển học Phật',
+    'pháp tập học Phật',
     'khóa học Phật học miễn phí',
     'Phật học online',
     'nội dung Phật học cho người Việt',
-    'Chánh Đạo pháp quyển',
+    'Chánh Đạo pháp tập',
   ],
   about: [
-    'pháp quyển',
+    'pháp tập',
     'khóa học Phật học',
     'học Phật miễn phí',
     'giáo lý Phật giáo',
   ],
-  audience: 'Người Việt tự học Phật qua pháp quyển',
+  audience: 'Người Việt tự học Phật qua pháp tập',
   schemas: [
     {
       '@type': 'ItemList',
-      name: 'Danh sách pháp quyển học Phật',
+      name: 'Danh sách pháp tập học Phật',
       itemListElement: courses.value.map((course, index) => ({
         '@type': 'ListItem',
         position: index + 1,
@@ -67,9 +67,9 @@ const difficultyLabels: Record<string, string> = {
     <!-- Hero -->
     <section class="pt-[170px] pb-[60px] px-5 text-center">
       <div class="max-w-[700px] mx-auto">
-        <h1 class="gradient-text text-[clamp(2rem,5vw,3.5rem)] font-black font-serif mb-3">Pháp quyển</h1>
+        <h1 class="gradient-text text-[clamp(2rem,5vw,3.5rem)] font-black font-serif mb-3">Pháp tập</h1>
         <p class="text-text-secondary text-[1.1rem] leading-relaxed mb-7">
-          Pháp quyển mở và miễn phí với nội dung đa dạng, để bạn học theo nhu cầu.
+          Pháp tập mở và miễn phí với nội dung đa dạng, để bạn học theo nhu cầu.
         </p>
 
         <!-- Search -->
@@ -98,7 +98,7 @@ const difficultyLabels: Record<string, string> = {
 
       <!-- Results Count -->
       <p class="text-sm text-text-muted mb-6">
-        Tìm thấy {{ filteredCourses.length }} pháp quyển
+        Tìm thấy {{ filteredCourses.length }} pháp tập
       </p>
 
       <!-- Course Grid -->
@@ -109,7 +109,7 @@ const difficultyLabels: Record<string, string> = {
       <!-- Empty State -->
       <div v-else class="text-center py-[60px] px-5">
         <Icon name="mdi:magnify-close" class="text-text-light text-5xl mb-4" />
-          <h3 class="text-xl font-semibold mb-2">Không tìm thấy pháp quyển</h3>
+          <h3 class="text-xl font-semibold mb-2">Không tìm thấy pháp tập</h3>
           <p class="text-text-muted">Thử từ khóa khác hoặc điều chỉnh bộ lọc.</p>
       </div>
     </section>

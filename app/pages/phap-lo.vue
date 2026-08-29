@@ -94,7 +94,7 @@ function isCourseAvailable(slug: string): boolean {
       title="Pháp Lộ"
       subtitle="Học theo từng bước"
       description="Chọn pháp lộ phù hợp và học theo trình tự để đạt kết quả bền vững."
-      :cta-primary="{ label: 'Xem pháp quyển', to: '/phap-quyen' }"
+      :cta-primary="{ label: 'Xem pháp tập', to: '/phap-quyen' }"
     />
 
     <section class="section">
@@ -155,7 +155,7 @@ function isCourseAvailable(slug: string): boolean {
               <p class="text-text-secondary text-sm">{{ path.description }}</p>
               <div class="flex items-center gap-4 mt-2">
                 <span class="text-xs text-text-muted">
-                  <Icon name="mdi:book-open-outline" class="inline" /> {{ path.courseCount }} pháp quyển
+                  <Icon name="mdi:book-open-outline" class="inline" /> {{ path.courseCount }} pháp tập
                 </span>
                 <span v-if="getPathDuration(path)" class="text-xs text-text-muted">
                   <Icon name="mdi:clock-outline" class="inline" /> {{ formatDuration(getPathDuration(path)) }}

@@ -295,7 +295,7 @@ const projectRepositories: ProjectRepository[] = [
             Xem toàn bộ tổ chức <Icon name="mdi:open-in-new" />
           </a>
           <NuxtLink to="/phap-quyen" class="btn btn-outline">
-            Xem pháp quyển <Icon name="mdi:arrow-right" />
+            Xem pháp tập <Icon name="mdi:arrow-right" />
           </NuxtLink>
         </div>
       </div>

@@ -17,11 +17,13 @@ import { normalizeCourseDurationMetadata } from '~/types/course'
 import phatHocPhoThongQuyen1 from './phat-hoc-pho-thong-quyen-1'
 import phatHocPhoThongQuyen2 from './phat-hoc-pho-thong-quyen-2'
 import phatHocPhoThongQuyen3 from './phat-hoc-pho-thong-quyen-3'
+import phapMonTinhDo from './phap-mon-tinh-do'
 
 const allCourses: Course[] = [
   phatHocPhoThongQuyen1,
   phatHocPhoThongQuyen2,
   phatHocPhoThongQuyen3,
+  phapMonTinhDo,
 ].map(normalizeCourseDurationMetadata)
 
 export default allCourses

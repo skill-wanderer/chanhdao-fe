@@ -40,7 +40,7 @@ const ratingOptions = [
 
 const roleOptions = [
   'Người mới học Phật',
-  'Đang học theo pháp quyển',
+  'Đang học theo pháp tập',
   'Nghiên cứu / giảng dạy',
   'Cộng tác viên',
   'Khác',
@@ -145,7 +145,7 @@ async function handleSubmit() {
         <div class="glass-card p-6">
           <Icon name="mdi:book-edit-outline" class="text-brand-primary text-3xl mb-4" />
           <h2 class="text-lg font-bold font-serif mb-2">Nội dung</h2>
-          <p class="text-sm text-text-secondary leading-relaxed">Bài học, pháp quyển, slide, quiz và cách trình bày giáo lý.</p>
+          <p class="text-sm text-text-secondary leading-relaxed">Bài học, pháp tập, slide, quiz và cách trình bày giáo lý.</p>
         </div>
 
         <div class="glass-card p-6">
