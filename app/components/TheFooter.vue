@@ -3,7 +3,7 @@ const currentYear = new Date().getFullYear()
 
 const footerLinks = {
   learn: [
-    { label: 'Tất cả pháp quyển', to: '/phap-quyen' },
+    { label: 'Tất cả pháp tập', to: '/phap-quyen' },
     { label: 'Pháp Lộ', to: '/phap-lo' },
     { label: 'Tìm kiếm', to: '/search' },
   ],

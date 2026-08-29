@@ -8,7 +8,7 @@ const { getCourseBySlug, formatDuration, getCourseDuration, getModuleDuration } 
 const course = getCourseBySlug(slug)
 
 if (!course) {
-  throw createError({ statusCode: 404, statusMessage: 'Không tìm thấy pháp quyển' })
+  throw createError({ statusCode: 404, statusMessage: 'Không tìm thấy pháp tập' })
 }
 
 useCourseSeo({
@@ -66,7 +66,7 @@ const authorBioParagraphs = computed(() =>
 
 useSchemaOrg([{
   '@type': 'ItemList',
-  name: `Danh sách bài học trong pháp quyển ${course.title}`,
+  name: `Danh sách bài học trong pháp tập ${course.title}`,
   itemListElement: availableLessons.value.map((lesson, index) => ({
     '@type': 'ListItem',
     position: index + 1,
@@ -82,7 +82,7 @@ useSchemaOrg([{
     <div class="section" style="padding-bottom: 0;">
       <BreadcrumbNav :items="[
         { label: 'Trang chủ', to: '/' },
-        { label: 'Pháp quyển', to: '/phap-quyen' },
+        { label: 'Pháp tập', to: '/phap-quyen' },
         { label: course.title },
       ]" />
     </div>
@@ -126,7 +126,7 @@ useSchemaOrg([{
           </NuxtLink>
 
           <div v-else class="mt-6 rounded-xl border border-dashed border-brand-primary/20 bg-brand-primary/5 py-3 px-4 text-sm text-text-secondary">
-            Nội dung bài học đang được cập nhật. Cấu trúc pháp quyển đã sẵn sàng và bài học sẽ mở dần.
+            Nội dung bài học đang được cập nhật. Cấu trúc pháp tập đã sẵn sàng và bài học sẽ mở dần.
           </div>
         </div>
 
@@ -150,7 +150,7 @@ useSchemaOrg([{
       <div class="glass-card flex gap-5 p-6 items-start max-sm:flex-col max-sm:items-center max-sm:text-center">
         <img
           :src="course.author.avatarUrl"
-          :alt="`${course.author.name} — Tác giả pháp quyển`"
+          :alt="`${course.author.name} — Tác giả pháp tập`"
           class="w-20 h-20 rounded-full object-cover border-2 border-brand-primary/30 shrink-0"
           width="80"
           height="80"
@@ -190,7 +190,7 @@ useSchemaOrg([{
 
     <!-- Lessons List -->
     <section class="section">
-      <h2 class="text-2xl font-bold mb-6">Nội dung pháp quyển</h2>
+      <h2 class="text-2xl font-bold mb-6">Nội dung pháp tập</h2>
 
       <div v-for="mod in course.modules" :key="mod.id" class="mb-8 last:mb-0">
         <div class="flex items-center gap-3 mb-4 p-3 px-4 rounded-xl bg-brand-primary/[0.06] border border-brand-primary/[0.12]">

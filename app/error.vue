@@ -32,7 +32,7 @@ useSeo({
           <Icon name="mdi:home" /> Về trang chủ
         </NuxtLink>
         <NuxtLink to="/phap-quyen" class="btn btn-secondary">
-          Xem pháp quyển
+          Xem pháp tập
         </NuxtLink>
       </div>
     </div>

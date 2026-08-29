@@ -52,7 +52,7 @@ export default defineNuxtConfig({
       title: 'Chánh Đạo | Số hóa kinh điển | Mở đường tuệ giác.',
       htmlAttrs: { lang: 'vi' },
       meta: [
-        { name: 'description', content: 'Chánh Đạo là nền tảng học Phật học mở giúp người Việt tìm pháp lộ, học pháp quyển miễn phí và tra cứu giáo lý với trợ lực AI.' },
+        { name: 'description', content: 'Chánh Đạo là nền tảng học Phật học mở giúp người Việt tìm pháp lộ, học pháp tập miễn phí và tra cứu giáo lý với trợ lực AI.' },
         { name: 'theme-color', content: '#D4AF37' },
         { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
         { name: 'googlebot', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
@@ -60,12 +60,12 @@ export default defineNuxtConfig({
         { property: 'og:locale', content: 'vi_VN' },
         { property: 'og:type', content: 'website' },
         { property: 'og:title', content: 'Chánh Đạo | Số hóa kinh điển | Mở đường tuệ giác.' },
-        { property: 'og:description', content: 'Tìm pháp lộ, học pháp quyển miễn phí và khám phá nội dung Phật học rõ ràng hơn với trợ lực AI trên Chánh Đạo.' },
+        { property: 'og:description', content: 'Tìm pháp lộ, học pháp tập miễn phí và khám phá nội dung Phật học rõ ràng hơn với trợ lực AI trên Chánh Đạo.' },
         { property: 'og:image', content: 'https://chanhdao.vn/og-image.png' },
         { property: 'og:url', content: 'https://chanhdao.vn' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'Chánh Đạo | Số hóa kinh điển | Mở đường tuệ giác.' },
-        { name: 'twitter:description', content: 'Nền tảng học Phật học mở cho người Việt với pháp lộ, pháp quyển miễn phí và trợ lực AI để tra cứu giáo lý.' },
+        { name: 'twitter:description', content: 'Nền tảng học Phật học mở cho người Việt với pháp lộ, pháp tập miễn phí và trợ lực AI để tra cứu giáo lý.' },
         { name: 'twitter:image', content: 'https://chanhdao.vn/og-image.png' },
       ],
       link: [
@@ -122,6 +122,11 @@ export default defineNuxtConfig({
 
   tailwindcss: {
     configPath: 'tailwind.config.ts',
+  },
+
+  image: {
+    // Lesson/course artwork is hosted in the companion chanhdao-material repo.
+    domains: ['raw.githubusercontent.com'],
   },
 
   css: ['~/assets/css/main.css'],

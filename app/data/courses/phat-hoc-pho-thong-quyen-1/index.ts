@@ -17,7 +17,7 @@ const course: Course = {
   id: 'course-phat-hoc-pho-thong-quyen-1',
   slug: 'phat-hoc-pho-thong-quyen-1',
   title: 'Phật học phổ thông quyển 1',
-  excerpt: 'Pháp quyển mở đầu đặt nền tảng giáo lý cho người học Phật theo chương trình Phật học phổ thông.',
+  excerpt: 'Pháp tập mở đầu đặt nền tảng giáo lý cho người học Phật theo chương trình Phật học phổ thông.',
   description: phatHocPhoThongIntroduction,
   thumbnail: '/images/courses/phat-hoc-pho-thong.jpg',
   difficulty: 'beginner',

@@ -15,7 +15,7 @@ const course: Course = {
   id: 'course-phat-hoc-pho-thong-quyen-3',
   slug: 'phat-hoc-pho-thong-quyen-3',
   title: 'Phật học phổ thông quyển 3',
-  excerpt: 'Pháp quyển tiếp tục lộ trình Phật học phổ thông, cùng tác giả và cùng phần giới thiệu nền tảng như các quyển trước.',
+  excerpt: 'Pháp tập tiếp tục lộ trình Phật học phổ thông, cùng tác giả và cùng phần giới thiệu nền tảng như các quyển trước.',
   description: phatHocPhoThongIntroduction,
   thumbnail: '/images/courses/phat-hoc-pho-thong.jpg',
   difficulty: 'beginner',

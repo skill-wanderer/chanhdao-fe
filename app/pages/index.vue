@@ -8,14 +8,14 @@ const siteUrl = ((config.public.siteUrl as string) || 'https://chanhdao.vn').rep
 
 useSeo({
   title: 'Chánh Đạo | Số hóa kinh điển | Mở đường tuệ giác.',
-  description: 'Chánh Đạo là nền tảng học Phật học mở giúp người Việt tìm pháp lộ, học pháp quyển miễn phí và tra cứu giáo lý rõ ràng hơn với trợ lực AI.',
+  description: 'Chánh Đạo là nền tảng học Phật học mở giúp người Việt tìm pháp lộ, học pháp tập miễn phí và tra cứu giáo lý rõ ràng hơn với trợ lực AI.',
   url: '/',
   keywords: [
     'Chánh Đạo',
     'học Phật online',
     'Phật học cho người Việt',
     'pháp lộ học Phật',
-    'pháp quyển miễn phí',
+    'pháp tập miễn phí',
     'AI hỗ trợ học Phật',
   ],
   about: [
@@ -23,7 +23,7 @@ useSeo({
     'giáo lý Phật giáo',
     'học Phật cho người Việt',
     'pháp lộ',
-    'pháp quyển',
+    'pháp tập',
   ],
   audience: 'Người Việt học Phật giáo',
   schemas: [
@@ -50,7 +50,7 @@ const features = [
   {
     icon: 'mdi:lock-open-variant-outline',
     title: 'Miễn phí và mở',
-    description: 'Mọi pháp quyển đều có thể truy cập miễn phí, không có paywall.',
+    description: 'Mọi pháp tập đều có thể truy cập miễn phí, không có paywall.',
   },
   {
     icon: 'mdi:school-outline',
@@ -60,7 +60,7 @@ const features = [
   {
     icon: 'mdi:chart-timeline-variant-shimmer',
     title: 'Theo dõi tiến độ',
-    description: 'Đánh dấu bài học đã xong và theo dõi tiến độ trên từng pháp quyển.',
+    description: 'Đánh dấu bài học đã xong và theo dõi tiến độ trên từng pháp tập.',
   },
   {
     icon: 'mdi:brain',
@@ -99,12 +99,12 @@ const publishedCourseCount = allCourses.filter(isPublishedCourse).length
       title="Học Phật học vững vàng với trợ lực AI"
       subtitle="Chào mừng đến với Chánh Đạo"
       description="Nền tảng mở dành cho người Việt học Phật giáo, kết hợp công nghệ AI mới để soạn nội dung, hỗ trợ truy cứu giáo lý và tìm tòi chủ đề."
-      :cta-primary="{ label: 'Xem pháp quyển', to: '/phap-quyen' }"
+      :cta-primary="{ label: 'Xem pháp tập', to: '/phap-quyen' }"
       :cta-tertiary="{ label: 'Xem Pháp Lộ', to: '/phap-lo' }"
       :cta-secondary="{ label: 'Góp ý cải thiện', to: '/feedback' }"
       :stats="[
         { value: String(allPaths.length), label: 'Pháp Lộ' },
-        { value: String(publishedCourseCount), label: 'Pháp quyển' },
+        { value: String(publishedCourseCount), label: 'Pháp tập' },
         { value: '100%', label: 'Miễn phí' },
         { value: 'Mở', label: 'Cộng đồng' },
       ]"
@@ -198,11 +198,11 @@ const publishedCourseCount = allCourses.filter(isPublishedCourse).length
         <Icon name="mdi:rocket-launch-outline" class="text-brand-primary text-4xl mb-4" />
         <h2 class="text-2xl md:text-3xl font-bold font-serif gradient-text mb-4">Sẵn sàng bắt đầu học?</h2>
         <p class="text-text-secondary mb-6 leading-relaxed">
-          Bạn có thể bắt đầu học ngay với các pháp quyển mở hôm nay, và đón nhận thêm nhiều hình thức học tập mới khi nền tảng tiếp tục được hoàn thiện.
+          Bạn có thể bắt đầu học ngay với các pháp tập mở hôm nay, và đón nhận thêm nhiều hình thức học tập mới khi nền tảng tiếp tục được hoàn thiện.
         </p>
         <div class="flex gap-4 justify-center flex-wrap">
           <NuxtLink to="/phap-quyen" class="btn btn-primary">
-            Khám phá pháp quyển <Icon name="mdi:arrow-right" />
+            Khám phá pháp tập <Icon name="mdi:arrow-right" />
           </NuxtLink>
         </div>
       </div>

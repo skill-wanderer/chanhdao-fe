@@ -28,7 +28,7 @@ useSeo({
       title="Gặp Thiện Thư"
       subtitle="Người cầm đèn trong kho tàng pháp bảo"
       description="Một người bạn đồng tu khiêm cung, hiện diện để giúp bạn lần mở kinh điển, kết nối bài học và khơi gợi sự tự quán chiếu trong hành trình trở về bản tâm."
-      :cta-primary="{ label: 'Xem pháp quyển', to: '/phap-quyen' }"
+      :cta-primary="{ label: 'Xem pháp tập', to: '/phap-quyen' }"
       :cta-secondary="{ label: 'Xem pháp lộ', to: '/phap-lo' }"
     />
 
@@ -116,7 +116,7 @@ useSeo({
           <Icon name="mdi:link-variant" class="text-brand-primary text-2xl mb-3" />
           <h3 class="text-lg font-bold mb-2">Mắt xích kết nối</h3>
           <p class="text-text-secondary text-sm leading-relaxed">
-            Từ một cuộc trò chuyện nhỏ, bạn có thể được dẫn sâu hơn đến pháp quyển, cộng đồng thảo luận
+            Từ một cuộc trò chuyện nhỏ, bạn có thể được dẫn sâu hơn đến pháp tập, cộng đồng thảo luận
             và nguồn tư liệu gốc trong toàn bộ hệ thống tu học.
           </p>
         </div>
@@ -125,7 +125,7 @@ useSeo({
           <Icon name="mdi:book-search-outline" class="text-brand-primary text-2xl mb-3" />
           <h3 class="text-lg font-bold mb-2">Tra cứu có dẫn chiếu</h3>
           <p class="text-text-secondary text-sm leading-relaxed">
-            Mỗi phản hồi đều hướng bạn quay lại bài học, pháp quyển hay nguồn tham chiếu liên quan,
+            Mỗi phản hồi đều hướng bạn quay lại bài học, pháp tập hay nguồn tham chiếu liên quan,
             để việc học không dừng ở câu trả lời mà tiếp tục mở ra chiều sâu thực hành.
           </p>
         </div>
@@ -193,7 +193,7 @@ useSeo({
         </p>
         <div class="flex gap-4 justify-center flex-wrap">
           <NuxtLink to="/phap-quyen" class="btn btn-primary">
-            Xem pháp quyển <Icon name="mdi:arrow-right" />
+            Xem pháp tập <Icon name="mdi:arrow-right" />
           </NuxtLink>
           <NuxtLink to="/phap-lo" class="btn btn-outline">
             Pháp lộ <Icon name="mdi:arrow-right" />
