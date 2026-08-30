@@ -8,7 +8,7 @@ const readingContent = `
 
     <div class="rounded-2xl border border-primary-200 bg-primary-50/70 p-5 dark:border-primary-900 dark:bg-primary-950/30 mb-8">
       <h2 class="mt-0 mb-2 text-3xl font-bold text-primary-700 dark:text-primary-300">7 CÂU HỎI VỀ PHÁP MÔN TỊNH ĐỘ</h2>
-      <p class="mb-0 italic opacity-80 font-medium">Giảng sư: Cố Cư sĩ Thích Giác Khang</p>
+      <p class="mb-0 italic opacity-80 font-medium">Giảng sư: Cố HT Thích Giác Khang</p>
     </div>
 
     <!-- Câu 1 -->
