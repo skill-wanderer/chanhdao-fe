@@ -5,6 +5,7 @@ import bai2KhaiThiVaPhatNguyenVangSanh from './bai-2-khai-thi-va-phat-nguyen-van
 import bai3DieuKienVangSanhVeCoiCucLac from './bai-3-dieu-kien-vang-sanh-ve-coi-cuc-lac'
 import bai4NhanThucVeTaiSanhChungNgoVangSanh from './bai-4-nhan-thuc-ve-tai-sanh-chung-ngo-vang-sanh'
 import bai5NhungDiemThietYeuCuaNguoiTuTinhDo from './bai-5-nhung-diem-thiet-yeu-cua-nguoi-tu-tinh-do'
+import bai6NhanThucVeNhanQuaVaNghiep from './bai-6-nhan-thuc-ve-nhan-qua-va-nghiep'
 
 /**
  * Modules in this course are grouped by teacher rather than by book, because
@@ -22,6 +23,7 @@ const moduleData: Module = {
     bai3DieuKienVangSanhVeCoiCucLac,
     bai4NhanThucVeTaiSanhChungNgoVangSanh,
     bai5NhungDiemThietYeuCuaNguoiTuTinhDo,
+    bai6NhanThucVeNhanQuaVaNghiep
   ],
 }
 
