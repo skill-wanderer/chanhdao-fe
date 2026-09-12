@@ -45,11 +45,12 @@ Chúng tôi chấm dứt trong sự tin tưởng ở lòng nhiệt thành vì đ
 THÍCH THIỆN HOA`,
     difficulty: 'beginner',
     icon: 'mdi:book-open-variant',
-    courseCount: 3,
+    courseCount: 4,
     courses: [
       { title: 'Phật học phổ thông quyển 1', slug: 'phat-hoc-pho-thong-quyen-1' },
       { title: 'Phật học phổ thông quyển 2', slug: 'phat-hoc-pho-thong-quyen-2' },
       { title: 'Phật học phổ thông quyển 3', slug: 'phat-hoc-pho-thong-quyen-3' },
+      { title: 'Bản đồ tu Phật', slug: 'phat-hoc-pho-thong-quyen-4' },
     ],
   },
   {

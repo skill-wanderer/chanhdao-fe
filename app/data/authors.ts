@@ -59,3 +59,34 @@ export const thichGiacKhangAuthor: AuthorInfo = {
   linkedinUrl: '',
   websiteUrl: '',
 }
+
+/**
+ * "Bản đồ tu Phật" is published as quyển 4 of the Phật học phổ thông
+ * collection. It has its own preface, so it does not reuse
+ * phatHocPhoThongIntroduction — but it is the same author.
+ */
+export const banDoTuPhatIntroduction = `Từ lâu không biết bao nhiêu người, ở ngoài đời cũng như trong đạo, rất bỡ ngỡ về vấn đề tu hành. Như một kẻ bộ hành ngơ ngác, lạc lõng giữa ngã ba đường, họ băn khoăn tự hỏi: Tu làm sao đây? Tu phương pháp gì? Và phải hạ thủ công phu làm sao mới đúng?
+
+Họ có cảm tưởng như lạc vào rừng rậm, tìm không được lối ra, mặc dù trong số ấy có nhiều người đã quy y lâu ngày hay đã ở chùa nhiều năm. Lại có người lại đơn giản hóa sự tu hành: họ chỉ thực hành qua loa một vài việc cho có lệ, và cho như thế là tu rồi. Có người chấp nhặt ở một phương pháp tu hành này, rồi bài xích tất cả phương pháp khác mà họ cho là quấy. Thậm chí có người hiểu nghĩa chữ “tu” một cách mơ hồ hay sai lạc, rồi dựa vào đó mà thực hành một cách mù quáng, sai đường, và đôi khi lại còn trở lại công kích những kẻ đi đường khác!
+
+Đứng trước tình trạng buồn thảm ấy, ai lại chẳng đau lòng! Vì thế chúng tôi bạo dạn soạn loạt bài này, để cống hiến cho quý vị nào còn bỡ ngỡ trên bước đường tu hành, một “bản đồ” chỉ đường tu về cõi Phật.
+
+Trong loạt bài này chúng tôi in thành từng tập sách nhỏ, chúng tôi sẽ tuần tự đề cập đến những điểm quan trọng sau đây:
+
+1/ Thanh toán những quan niệm chật hẹp sai lầm, những sự bài xích lẫn nhau của các tông phái về chữ “tu”.
+
+2/ Giải thích và phân tích rành rõ về nghĩa chữ “tu”.
+
+3/ Nhấn mạnh vào sự cần yếu của sự tu hành, đối với hết thảy mọi người, mọi giai cấp trong xã hội, và chỉ rõ về cách “tu” của quảng đại quần chúng.
+
+4/ Trình bày về lối tu thông thường, nhưng cần yếu của giới Phật tử, xuất gia và tại gia từ xưa đến nay.
+
+5/ Trình bày về lối tu chuyên môn riêng biệt của các tông phái Phật giáo (mười tông). Các lối tu này nhằm mục đích đi sâu vào đạo, nên các tu sĩ xuất gia rất cần biết rõ.
+
+6/ Trình bày cách tu rộng lớn của Đại thừa Bồ tát trong mọi ý nghĩ, lời nói, cử chỉ và hành động, v.v…
+
+7/ Cuối cùng, giải rõ về lối tu của năm thừa, phân biệt so sánh lối tu của Đại thừa và Tiểu thừa để quy về Nhất thừa.
+
+Chúng tôi trông mong, sau khi đọc xong loạt bài này, quý vị độc giả sẽ có một ý niệm rõ ràng về ý nghĩa của sự tu hành, một quan niệm tổng quát, chính xác về các lối tu, và sẽ lựa một đường lối tu hành thích hợp với hoàn cảnh, khả năng, hoài bảo của mình, và sẽ vui vẻ tự bảo: “Từ đây về sau chắc chắn không còn sợ lạc đường nữa, vì ta đã có trên tay một bản đồ chỉ rành rẽ đường tu về cõi Phật”.
+
+Sa-môn THÍCH THIỆN HOA`
