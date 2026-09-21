@@ -20,7 +20,7 @@ const readingContent = `
   <h3 id="dai-thua-thien">IV. ĐẠI THỪA THIỀN</h3>
   <p>Trong Thiền tông tập I, chúng ta đã biết qua các loại thiền: Ngoại đạo thiền, Phàm phu thiền, Tiểu thừa thiền và phương pháp tu luyện của họ. Trong tập này, chúng tôi sẽ dành riêng toàn tập để nói về Đại thừa thiền. Nội dung của tập này sẽ gồm những mục chính sau đây:</p>
 
-  <ol type="I">
+  <ol type="I" style="padding-left: 2.5rem;">
     <li>Các pháp môn của Đại thừa thiền</li>
     <li>Sự truyền thừa của các Tổ trong phái Thiền tông, ở Ấn Độ, Trung Hoa và Việt Nam.</li>
     <li>Các ma chướng trong lúc tu thiền</li>
@@ -34,16 +34,16 @@ const readingContent = `
   <hr>
 
   <h3 id="cac-phap-mon">I. CÁC PHÁP THIỀN ĐỊNH CỦA ĐẠI THỪA</h3>
-  <p>Các pháp thiền định của Đại thừa rất nhiều như: Pháp hoa tam muội, Niệm Phật tam muội, Bát châu tam muội, Giác ý tam muội, Thủ lăng nghiêm tam muội, Tự tánh thiền, Nhất thiết thiền, Nhất thiết môn thiền, Thiện nhân thiền, Nhất thiết hạnh thiền, Trừ phiền não thiền, Thử thế tha thế thiền, Thanh tịnh tịnh thiền, Tự tánh thanh tịnh thiền, Như Lai tối thượng thừa thiền, Đạt Ma tổ sư thiền v.v…</p>
-  <p>Dưới đây chúng ta hãy nghiên cứu qua một số pháp thiền định thông thường của Đại thừa.</p>
+  <p>Các pháp thiền định của Đại thừa rất nhiều như: Pháp hoa tam muội, Niệm Phật tam muội, Bát châu tam muội, Giác ý tam muội, Thủ lăng nghiêm tam muội, Tự tánh thiền, Nhất thiết thiền, Nhất thiết môn thiền, Thiện nhân thiền, Nhất thiết hạnh thiền, Trừ phiền não thiền, Thử thế tha thế thiền, Thanh tịnh tịnh thiền, Tự tánh thanh tịnh thiền, Như Lai tối thượng thừa thiền, Đạt Ma tổ sư thiền v.v…<br>
+  Dưới đây chúng ta hãy nghiên cứu qua một số pháp thiền định thông thường của Đại thừa.</p>
 
-  <ol>
+  <ol style="padding-left: 2.5rem;">
     <li>
       <strong>Sao gọi là Pháp hoa tam muội?</strong>
       <p>Tam muội hay “Tam ma đề” là do chữ Phạn Samadhi phiên âm ra. Người Trung Hoa dịch là “Điều trực định”, nghĩa là khiến tâm điều hòa chánh trực, như như chẳng động, cũng có chỗ dịch là “chánh định” hay “chánh thọ”.</p>
       <p>Sở dĩ gọi là “Pháp hoa tam muội”, vì phép thiền này căn cứ theo kinh Pháp Hoa mà thành lập. Kinh chép: “Người muốn đặng Pháp hoa tam muội, phải tu tập theo kinh Pháp Hoa, đọc tụng Đại thừa…”</p>
       <p>Ngài Trí Giả Đại sư trong khi chép quyển “Pháp hoa tam muội” có dạy phương pháp tu pháp tam muội, gồm có mười điều như sau:</p>
-      <ol>
+      <ol style="padding-left: 2.5rem;">
         <li>Nghiêm tịnh đạo tràng;</li>
         <li>Tịnh thân;</li>
         <li>Tịnh nghiệp;</li>
@@ -100,13 +100,13 @@ const readingContent = `
   </ol>
 
   <p>Các phép thiền của Đại thừa, như quý độc giả đã thấy ở phần trên, tuy nhiều không kể xiết, tựu trung có thể chia làm hai loại lớn:</p>
-  <ol>
+  <ol style="padding-left: 2.5rem;">
     <li>Một loại thường gọi là tam muội, căn cứ theo kinh sách của Phật tổ truyền dạy mà tu tập, có tu, có quán, có phương pháp nhất định, như Pháp hoa tam muội, Niệm Phật tam muội, Bát châu tam muội, Giác ý tam muội, Thủ lăng nghiêm tam muội v.v… Các loại tam muội này vì có quy củ, có phương pháp nhất định và được phổ biến bằng văn tự, tương đối ít khó khăn và bí hiểm hơn loại thứ hai mà chúng tôi sắp nói dưới đây, nên được nhiều người tu luyện và số người thành tựu cũng nhiều.</li>
     <li>Một loại thứ hai, được truyền dạy không căn cứ theo kinh giáo, không có văn tự, tức là loại thiền “giáo ngoại biệt truyền, bất lập văn tự”, như các pháp “Trực chỉ thiền, Như Lai thanh tịnh thiền, Tự tánh thanh tịnh thiền, Như Lai tối thượng thừa thiền, Đạt Ma Tổ sư thiền v.v… Với loại thiền này người ngộ trước dùng tâm giác ngộ của mình để ấn chứng cho người sau giác ngộ. Đó tức là loại thiền “Dĩ tâm ấn tâm, trực chỉ nhân tâm kiến tánh thành Phật”: Vị minh sư dùng tâm mình để tiếp xúc với tâm của đệ tử, truyền thẳng sự giác ngộ của mình qua tâm của đệ tử; như dùng ngọn đèn sáng chói mà tâm mình đã bừng phát ra để chiếu vào tâm đệ tử; và tâm này cũng lại nhờ ảnh hưởng trực tiếp của sự giác ngộ của thầy mà bừng sáng lên và truyền nối từ thầy đến trò, từ đời này sang đời khác. Loại thiền này tức là loại thiền đã được truyền từ Đức Phật Thích Ca xuống cho đến ngài Lục Tổ. Đây là một lối “truyền đạo” hay “truyền đăng” trực tiếp, linh động chính thống, nhưng không phổ biến như lối trên, vì mỗi đời chỉ truyền cho một người, chứ không thể truyền cho nhiều người trong một lúc được. Và người được ấn chứng phải là một vị có trí huệ xuất chúng, siêu phàm không ai sánh kịp.</li>
   </ol>
 
   <p>Cách truyền đạt pháp thiền này lại có hai lối:</p>
-  <ol type="a">
+  <ol type="a" style="padding-left: 2.5rem;">
     <li>Tham cứu một câu thoại đầu. Thoại đầu là một câu nói thiền hay “công án”, nghĩa là một đề án hay luận án gồm một câu rất ngắn, nhưng ý nghĩa sâu xa, đối với người thường không hiểu được.<br>
     Khi một vị Tổ của phái Thiền tông này nhận thấy trong hàng đệ tử của mình có một vị xuất chúng, có thể giữ giềng mối đạo, tiếp nối sự nghiệp của Thiền tông và tỏ ngộ đạo mầu được, thì vị Tổ trao cho vị đệ tử ấy một câu thoại đầu (một luận án, như bây giờ các vị bác sĩ hay tiến sĩ, trước khi ra trường, phải nạp cho ban giám khảo). Vị đệ tử này, đêm ngày tham cứu câu thoại đầu ấy, có nhiều khi trải qua một thời gian mười năm hoặc mười lăm năm mới tỏ ngộ được. Sau khi xét thấy đệ tử của mình đã tỏ ngộ đạo mầu rồi, vị Tổ sư mới ấn chứng cho.</li>
     <li>Nhưng nhiều vị Tổ sư lại không trao cho đệ tử mình một câu thoại đầu để tham cứu, mà lại dùng những hình thức rất lạ lùng, người thường khó có thể hiểu được như: đánh, hét, ra dấu, mời ăn cơm, uống nước trà v.v… chẳng hạn như có một vị đệ tử đến cầu đạo với Tổ sư, vị này không nói gì cả, chỉ dùng thiền trượng (roi thiền) đánh đập vị đệ tử kia, để xem sự phản ứng của vị đệ tử ấy như thế nào. Do sự phản ứng ấy mà vị Tổ sư biết được vị đệ tử kia đã giác ngộ hay chưa.</li>
@@ -152,13 +152,13 @@ const readingContent = `
 
   <p><strong>NGÀI A NAN NHỊ TỔ THIỀN TÔNG TẠI ẤN ĐỘ</strong></p>
   <p>Một hôm ngài A Nan hỏi tổ Ca Diếp:<br>
-  - Ngoài việc truyền y bát, Đức Thế Tôn còn truyền Pháp gì riêng cho Ngài nữa không?<br>
+  * Ngoài việc truyền y bát, Đức Thế Tôn còn truyền Pháp gì riêng cho Ngài nữa không?<br>
   Tổ Ca Diếp gọi to:<br>
-  - A Nan!<br>
+  * A Nan!<br>
   Ngài A Nan đáp:<br>
-  - Dạ!<br>
+  * Dạ!<br>
   Tổ dạy tiếp:<br>
-  - Cây sào phướn trước cửa chùa ngã! Ngài A Nan liền tỏ ngộ thiền cơ, nên được tổ Ca Diếp truyền y bát và ấn chứng cho làm vị Tổ thứ hai.</p>
+  * Cây sào phướn trước cửa chùa ngã! Ngài A Nan liền tỏ ngộ thiền cơ, nên được tổ Ca Diếp truyền y bát và ấn chứng cho làm vị Tổ thứ hai.</p>
 
   <p>Từ ngài A Nan trở về sau, có thêm 26 vị tổ về Thiền tông nữa. Cộng cả ngài Ca Diếp và ngài A Nan, ở Ấn Độ có cả thảy là 28 vị tổ, thứ lớp tuần tự như sau:</p>
 
@@ -192,6 +192,7 @@ const readingContent = `
     <li>Tổ Bát Nhã Đa La</li>
     <li>Tổ Bồ Đề Đạt Ma</li>
   </ol>
+
   <p>(Theo truyện Phú Pháp Tạng nhân duyên). Hai mươi tám vị Tổ này đã làm rực rỡ cho Phật giáo ở Ấn Độ, chứ không riêng gì cho Thiền tông. Phật giáo sau này được lan rộng trên toàn cầu, một phần lớn do công đức của 28 vị tổ này. Ngày nay nhắc đến những tên như Ma Ha Ca Diếp, A Nan, Hiếp Tôn Giả, Mã Minh, Long Thọ, không một Phật tử nào là không biết đến. Và sự kiện này cũng chứng tỏ rằng phần lớn các vị tổ có tiếng tăm đều ở trong phái Thiền tông. Sự nhận xét này không những được chứng minh ở Ấn Độ, mà cả đến ở Trung Hoa, Nhật Bản và Việt Nam nữa.</p>
 
   <h4>TẠI TRUNG HOA</h4>
@@ -202,15 +203,15 @@ const readingContent = `
 
   <p><strong>2. NGÀI HUỆ KHẢ (THẦN QUANG) VỊ TỔ THIỀN TÔNG THỨ HAI Ở TRUNG HOA.</strong></p>
   <p>Ngài Thần Quang, nghe danh Tổ Đạt Ma đến cầu đạo, nhưng Tổ không tiếp. Ngài Thần Quang quỳ đợi luôn mấy năm ở ngoài hiên chùa; nhưng Tổ cũng không đoái hoài đến. Cuối cùng, để tỏ lòng chí thành tột mức của mình, dám xả thân cầu đạo, Ngài Thần Quang đã chặt đứt cánh tay của mình. Lúc bấy giờ Tổ Đạt Ma mới xoay lại hỏi:</p>
-  <p>- Ông đến đây để cầu gì?<br>
+  <p>* Ông đến đây để cầu gì?<br>
   Ngài đáp:<br>
-  - Con cầu pháp an tâm.<br>
+  * Con cầu pháp an tâm.<br>
   Tổ bảo:<br>
-  - Ông đem tâm đến đây ta an cho.<br>
+  * Ông đem tâm đến đây ta an cho.<br>
   Ngài thưa:<br>
-  - Con tìm tâm không được.<br>
+  * Con tìm tâm không được.<br>
   Tổ dạy:<br>
-  - Ta đã an tâm cho ông rồi đó!<br>
+  * Ta đã an tâm cho ông rồi đó!<br>
   Ngài liền ngộ đạo. Tổ Đạt Ma nói bài kệ sau đây, trong khi truyền pháp cho ngài Huệ Khả:</p>
   
   <blockquote>
@@ -237,51 +238,51 @@ const readingContent = `
   <p><strong>5. NGÀI HOẰNG NHẪN VỊ TỔ THỨ NĂM CỦA THIỀN TÔNG Ở TRUNG HOA.</strong></p>
   <p>Chữ Hoằng Nhẫn có nghĩa là kiên nhẫn tột độ, chịu đựng lâu dài. Hai chữ này có thể tóm tắt cho cả một câu chuyện truyền pháp bao hàm nhiều tính chất nhẫn nhục sau đây:<br>
   Một hôm Ngài Đạo Tín, vị tổ thứ tư Thiền tông, thấy một ông già đến cầu đạo, căn tính thông lợi, có thể được truyền thụ đạo pháp. Nhưng vì tuổi ông đã già, chẳng còn sống được bao lâu, nên Tứ tổ dạy:</p>
-  <p>- Ta đã già, ông cũng già! Nếu truyền pháp cho ông, ít ngày ta chết, rồi ông cũng chết, thì ai ở lại mà truyền đạo? Vậy, nếu ông có thể đi đổi xác, ta sẽ truyền đạo cho!<br>
+  <p>* Ta đã già, ông cũng già! Nếu truyền pháp cho ông, ít ngày ta chết, rồi ông cũng chết, thì ai ở lại mà truyền đạo? Vậy, nếu ông có thể đi đổi xác, ta sẽ truyền đạo cho!<br>
   Ông già thưa:<br>
-  - Nếu con đi đổi xác chưa xong, mà lỡ Tổ đã tịch trước, thì làm sao truyền đạo cho con được?<br>
+  * Nếu con đi đổi xác chưa xong, mà lỡ Tổ đã tịch trước, thì làm sao truyền đạo cho con được?<br>
   Đức Tứ tổ dạy:<br>
-  - Ta sẽ ở nán lại cõi đời chờ ông.<br>
+  * Ta sẽ ở nán lại cõi đời chờ ông.<br>
   Vâng lời Tổ dạy, ông già đi vòng theo dòng suối, thấy có một cô gái ngồi giặt bên bờ. Ông già hỏi:<br>
-  - Cô cho tôi ngủ nhờ một đêm, có được không?<br>
+  * Cô cho tôi ngủ nhờ một đêm, có được không?<br>
   Cô gái thưa:<br>
-  - Ông hãy hỏi cha mẹ cháu.<br>
+  * Ông hãy hỏi cha mẹ cháu.<br>
   Ông già nói tiếp:<br>
-  - Nếu có bằng lòng, tôi sẽ hỏi sau.<br>
+  * Nếu có bằng lòng, tôi sẽ hỏi sau.<br>
   Cô gái trả lời:<br>
-  - Dạ bằng lòng!<br>
+  * Dạ bằng lòng!<br>
   Được rồi, ông già đi khuất vào rừng rồi bỏ xác. Còn cô gái kia, không có chồng mà bỗng nhiên có mang. Bị cha mẹ đuổi đánh, cô phải bỏ nhà đi xin ăn vất vả, nhẫn chịu không biết bao nhiêu điều khổ nhục. Sau khi sanh đứa bé được vài tuổi, cô bồng nó vào chùa. Đứa bé trông thấy Tứ tổ, mừng rỡ mở miệng cười.<br>
   Tổ nói:<br>
-  - Ta đang trông đợi người đây!<br>
+  * Ta đang trông đợi người đây!<br>
   Tổ xin đứa bé để nuôi và đặt tên là Hoằng Nhẫn. Ngài đặt tên ấy là có ý nói rằng: Tổ đã nhẫn nhục chưa chết để chờ truyền đạo, và bà mẹ đã nhẫn chịu bao sự nhục nhã, oan ức, khổ sở để sanh đứa bé.<br>
   Tổ Đạo Tín nuôi đứa bé cho đến khi khôn lớn rồi truyền pháp cho. Ngài Hoằng Nhẫn tức là vị tổ thứ năm của Thiền tông. Sau khi truyền đạo xong, Tứ tổ Đạo Tín mới viên tịch. (Theo Quy Nguyên Trực Chỉ âm nghĩa).</p>
 
   <p><strong>6. NGÀI HUỆ NĂNG VỊ TỔ THỨ SÁU CỦA THIỀN TÔNG Ở TRUNG HOA.</strong></p>
   <p>Ngài Huệ Năng lúc nhỏ nhà nghèo, không biết chữ, chuyên nghề đốn củi đem bán lấy tiền về nuôi mẹ già. Một hôm, gánh củi đến bán cho nhà một phú ông, trong khi chờ đợi, Ngài lắng nghe chủ nhà tụng kinh Kim Cang. Đến câu “ưng vô sở trụ nhi sanh kỳ tâm”, ngài liền ngộ đạo.<br>
   Đợi cho chủ nhà tụng kinh xong, Ngài trầm trồ khen ngợi và hỏi rằng:</p>
-  <p>- Chẳng hay ông tụng kinh gì mà hay quá vậy? Tôi cũng muốn thọ trì tụng đọc như ông.<br>
+  <p>* Chẳng hay ông tụng kinh gì mà hay quá vậy? Tôi cũng muốn thọ trì tụng đọc như ông.<br>
   Phú ông mách cho ngài:<br>
-  - Tại núi Đông Sơn, huyện Huỳnh Mai có đức Ngũ tổ, thường truyền pháp độ người. Ông nên đến đó mà cầu đạo.<br>
+  * Tại núi Đông Sơn, huyện Huỳnh Mai có đức Ngũ tổ, thường truyền pháp độ người. Ông nên đến đó mà cầu đạo.<br>
   Ngài trả lời:<br>
-  - Tôi cũng muốn như thế lắm; ngặt vì còn mẹ già không ai nuôi dưỡng nên không biết liệu làm sao!<br>
+  * Tôi cũng muốn như thế lắm; ngặt vì còn mẹ già không ai nuôi dưỡng nên không biết liệu làm sao!<br>
   Phú ông bảo:<br>
-  - Nếu ông thật quyết chí xuất gia cầu đạo thì hãy về cố gắng đốn củi cho thật nhiều, đem đến đây tôi sẽ đổi vàng cho. Ông lấy vàng ấy để lại nuôi mẹ, rồi đi xuất gia.<br>
+  * Nếu ông thật quyết chí xuất gia cầu đạo thì hãy về cố gắng đốn củi cho thật nhiều, đem đến đây tôi sẽ đổi vàng cho. Ông lấy vàng ấy để lại nuôi mẹ, rồi đi xuất gia.<br>
   Ngài Huệ Năng mừng rỡ trở về, ngày đêm cố gắng đốn thật nhiều củi đem đến bán cho phú ông, và sau khi thu xếp việc nhà xong xuôi, Ngài đến huyện Huỳnh Mai bái yết đức Ngũ tổ Hoằng Nhẫn.<br>
   Ngũ tổ thấy Ngài hỏi:<br>
-  - Ông ở đâu đến và đến đây để cầu về việc gì?<br>
+  * Ông ở đâu đến và đến đây để cầu về việc gì?<br>
   Ngài đáp:<br>
-  - Con từ phương Nam đến đây, để cầu làm Phật.<br>
+  * Con từ phương Nam đến đây, để cầu làm Phật.<br>
   Ngũ tổ thấy Ngài hình thù tuy kỳ dị, nhưng căn tính lại thông lợi phi thường, có thể nối Tổ vị sau này. Ngài không muốn cho trong chúng biết, nên giả quở to rằng:<br>
-  - Ông là người mọi rợ ở phương Nam, mà cầu thành Phật cái gì?<br>
+  * Ông là người mọi rợ ở phương Nam, mà cầu thành Phật cái gì?<br>
   Ngài Huệ Năng trả lời:<br>
-  - Bạch Tổ sư, thân người tuy có phân chia kẻ Nam người Bắc, chứ Phật tính vẫn bình đẳng, không phân biệt Nam, Bắc.<br>
+  * Bạch Tổ sư, thân người tuy có phân chia kẻ Nam người Bắc, chứ Phật tính vẫn bình đẳng, không phân biệt Nam, Bắc.<br>
   Ngũ tổ sợ trong chúng để ý, lộ bí mật, nên chẳng hỏi han gì thêm nữa, mà truyền cho xuống nhà trù công quả giã gạo.<br>
   Từ đấy, Ngũ tổ không nhắc nhở gì đến Ngài nữa, và ngài Huệ Năng, ngày ngày cũng cứ siêng năng cặm cụi giã gạo.<br>
   Trải qua một thời gian lâu, một hôm Ngũ tổ thấy mình đã già, muốn tìm người truyền Tổ vị, nên tuyên bố rằng:<br>
-  - Nếu ai làm kệ dâng lên, được tỏ ngộ thiền cơ, thì ta sẽ ấn chứng và truyền pháp cho làm Tổ thứ Sáu.<br>
+  * Nếu ai làm kệ dâng lên, được tỏ ngộ thiền cơ, thì ta sẽ ấn chứng và truyền pháp cho làm Tổ thứ Sáu.<br>
   Tin này được truyền ra rất mau chóng.<br>
   Trong chúng, mọi người đều nô nức, xôn xao bàn tán:<br>
-  - Trong chúng, chỉ có Thượng tọa Thần Tú là thông minh, học nhiều và tài giỏi hơn hết, chắc thế nào Thượng tọa cũng sẽ được truyền Tổ vị.<br>
+  * Trong chúng, chỉ có Thượng tọa Thần Tú là thông minh, học nhiều và tài giỏi hơn hết, chắc thế nào Thượng tọa cũng sẽ được truyền Tổ vị.<br>
   Nhưng Thượng tọa Thần Tú lại không dám tin chắc mình sẽ được cái may mắn ấy, nên không dám trực tiếp đem dâng bài kệ của mình cho Ngũ tổ. Thượng tọa đợi đêm khuya thanh vắng, trong chúng đều ngủ cả, mới cầm đèn hồi hộp đến viết một bài kệ trên vách phía đông lang và không dám ký tên. Thượng tọa Thần Tú nghĩ thầm: “Nếu nhờ công phu tu hành bấy lâu mà bài kệ này được trúng ý Tổ, thì đây là một diễm phúc lớn lao vô cùng cho ta. Lúc bấy giờ ta sẽ ra bái nhận, bằng không thì ta sẽ làm thinh như không biết.”</p>
 
   <blockquote>
@@ -298,13 +299,13 @@ const readingContent = `
   </blockquote>
 
   <p>Sáng ngày, tăng chúng qua lại thấy bài kệ xuất hiện trên vách đông lang, ai nấy đều trầm trồ kính phục:<br>
-  - Đây rồi! Kế tổ vị đây rồi! Nếu không phải Thượng tọa Thần Tú thì còn ai nữa!<br>
+  * Đây rồi! Kế tổ vị đây rồi! Nếu không phải Thượng tọa Thần Tú thì còn ai nữa!<br>
   Nghe tăng chúng trầm trồ khen ngợi, nô nức kéo nhau đến xem bài kệ, ngài Huệ Năng cũng từ nhà trù theo chúng lên xem. Sau khi xem xong bài kệ, ngài Huệ Năng nói:<br>
-  - Còn đứng ngoài cửa rào.<br>
+  * Còn đứng ngoài cửa rào.<br>
   Kẻ qua người lại nghe Ngài nói thế, bĩu môi khinh bỉ:<br>
-  - Đã dốt nát không biết một chữ thế kia, mà dám chê là còn đứng ngoài cửa rào!<br>
+  * Đã dốt nát không biết một chữ thế kia, mà dám chê là còn đứng ngoài cửa rào!<br>
   Ngài Huệ Năng ôn tồn bảo:<br>
-  - Tôi cũng có một bài kệ, xin các ngài viết lên vách giùm tôi, vì tôi không biết chữ.<br>
+  * Tôi cũng có một bài kệ, xin các ngài viết lên vách giùm tôi, vì tôi không biết chữ.<br>
   Một người liền hoan hỉ viết hộ.<br>
   Ngài Huệ Năng đọc bài kệ sau đây:</p>
 
@@ -324,15 +325,15 @@ const readingContent = `
   <p>Nghe xong bài kệ, mọi người trong chúng đều kinh kinh ngạc: Không ngờ một người dốt nát như thế mà lại làm được bài kệ xuất sắc, thâm diệu như thế!<br>
   Ngũ tổ thấy trong chúng xôn xao bàn tán, muốn đánh tan dư luận có thể nguy hại cho ngài Huệ Năng, nên bảo trong chúng truyền đọc bài kệ của Thượng tọa Thần Tú, mà bôi bỏ bài kệ của ngài Huệ Năng.<br>
   Một buổi chiều, Ngũ tổ một mình đi xuống nhà trù, đến chỗ ngài Huệ Năng giã gạo và hỏi rằng:<br>
-  - Gạo đã trắng chưa?<br>
+  * Gạo đã trắng chưa?<br>
   Ngài Huệ Năng đáp:<br>
-  - Bạch, gạo con giã đã trắng rồi mà còn thiếu người sàng.<br>
+  * Bạch, gạo con giã đã trắng rồi mà còn thiếu người sàng.<br>
   Mật ý Ngài muốn nói: “Đạo con đã ngộ rồi mà còn thiếu người truyền”.<br>
   Ngũ tổ nghe xong, lấy cây gậy gõ lên đầu chày ba cái rồi đi lên (Ngũ tổ muốn bảo ngài Huệ Năng canh ba vào phòng). Đúng canh ba, ngài Huệ Năng vào phòng Ngũ tổ. Ngài được Ngũ tổ ấn chứng và truyền y bát cho Ngài làm tổ thứ sáu, và dạy Ngài phải đi về phương Nam ngay đêm hôm ấy, để truyền đạo (xem quyển Lục Tổ Huệ Năng).<br>
   Từ đó, Ngài Lục Tổ Huệ Năng truyền pháp ở phương Nam, còn ngài Thần Tú thì truyền pháp ở phương Bắc. Phương Nam chủ trương về đốn ngộ; phương Bắc chủ trương về tiệm tu, nên gọi là “Nam đốn, Bắc tiệm”.</p>
 
   <p>Sau đây là bản lược đồ về sáu vị tổ Thiền tông ở Trung Hoa:</p>
-  <ul>
+  <ul style="padding-left: 2.5rem;">
     <li>Sơ tổ: Ngài Bồ Đề Đạt Ma</li>
     <li>Nhị tổ: Ngài Huệ Khả (Thần Quang)</li>
     <li>Tam tổ: Ngài Tăng Xán</li>
@@ -343,24 +344,26 @@ const readingContent = `
 
   <p>Từ Ngài Lục Tổ Huệ Năng về sau, không còn cái lệ truyền y bát nữa, và các tổ cũng không còn ấn chứng riêng cho một vị nào. Do đó trong Thiền tông không còn truyền thống nhất nữa, mà lại chia ra làm hai phái và năm dòng sau đây:</p>
 
-  <p><strong>Hai phái và Năm dòng</strong></p>
-  <p>Ngài Huệ Năng từ khi lên làm Lục tổ đã truyền pháp cho rất nhiều đệ tử. Trong số các đệ tử, nổi tiếng hơn hết là ngài Hoài Nhượng ở Nam Nhạc, và ngài Hành Tư ở Thanh Nguyên (xem Pháp Bảo Đàn Kinh). Hai ngài này mở đầu cho hai phái Thiền tông là phái Nam Nhạc và phái Thanh Nguyên.<br>
+  <p><strong>Hai phái và Năm dòng</strong><br>
+  Ngài Huệ Năng từ khi lên làm Lục tổ đã truyền pháp cho rất nhiều đệ tử. Trong số các đệ tử, nổi tiếng hơn hết là ngài Hoài Nhượng ở Nam Nhạc, và ngài Hành Tư ở Thanh Nguyên (xem Pháp Bảo Đàn Kinh). Hai ngài này mở đầu cho hai phái Thiền tông là phái Nam Nhạc và phái Thanh Nguyên.<br>
   Phái Nam Nhạc về sau lại chia làm hai dòng là: Lâm Tế và Quy Ngưỡng.<br>
   Phái Thanh Nguyên lại chia làm ba dòng là: Tào Động, Vân Môn và Pháp Nhãn.</p>
 
-  <ol>
+  <ol style="padding-left: 2.5rem;">
     <li>
       <strong>Dòng Lâm Tế:</strong><br>
       a/ Sự truyền thừa của dòng Lâm Tế tuần tự như sau:<br>
-      * Hoài Nhượng Thiền sư<br>
-      * Đạo Nhất Thiền sư (họ Mã, tục gọi là Mã Tổ)<br>
-      * Bách Trượng Thiền sư (Hoài Hải)<br>
-      * Hoàng Nghiệt Thiền sư (Hy Vận)<br>
-      * Lâm Tế Nghĩa Huyền<br><br>
+      <ul style="padding-left: 2.5rem;">
+        <li>Hoài Nhượng Thiền sư</li>
+        <li>Đạo Nhất Thiền sư (họ Mã, tục gọi là Mã Tổ)</li>
+        <li>Bách Trượng Thiền sư (Hoài Hải)</li>
+        <li>Hoàng Nghiệt Thiền sư (Hy Vận)</li>
+        <li>Lâm Tế Nghĩa Huyền</li>
+      </ul>
       b/ Sự truyền pháp (thiền cơ) của tông Lâm Tế:<br>
       Như chúng tôi đã nói ở phần đầu của tập sách này, sự truyền pháp của phái Thiền tông thật khó mà hiểu được, đối với người thường. Chẳng hạn như trong phái Lâm Tế, sự truyền pháp chỉ dùng thiền trượng đánh và hét to lên, mà làm cho thiền giả được ngộ đạo. Cái lối khai ngộ này khởi đầu từ ngài Hoàng Nghiệt Thiền sư:<br>
       Để cầu giác ngộ, một hôm ngài Lâm Tế hỏi ngài Hoàng Nghiệt:<br>
-      - Sao gọi là đại ý Phật pháp?<br>
+      * Sao gọi là đại ý Phật pháp?<br>
       Ngài Hoàng Nghiệt liền lấy thiền trượng đánh ngài Lâm Tế một cái. Ba lần ngài Lâm Tế hỏi, ba lần đều bị đánh như thế.<br>
       Ngài Lâm Tế lấy làm bối rối, không hiểu ý nghĩa làm sao, nên đến tham học với ngài Đại Ngu Thiền sư, nhờ thế ngài Lâm Tế mới ngộ được tôn chỉ của ngài Hoàng Nghiệt.<br>
       Từ đó về sau, dòng Lâm Tế mỗi khi khai ngộ cho đệ tử, đều dùng phương pháp đánh và hét ấy.<br>
@@ -376,39 +379,47 @@ const readingContent = `
     <li>
       <strong>Dòng Tào Động:</strong><br>
       Sự truyền thừa của tông này, thứ tự như sau:<br>
-      a/ Ngài Thanh Nguyên Thiền sư<br>
-      b/ Ngài Hy Thiên Thiền sư, tức ngài Thạch Đầu Hòa thượng.<br>
-      c/ Ngài Dược Sơn Thiền sư<br>
-      d/ Ngài Vân Nham Thiền sư<br>
-      đ/ Ngài Lương Giới Thiền sư ở núi Động Sơn<br>
-      e/ Ngài Bản Tịch Thiền sư ở núi Tào Sơn<br>
+      <ul style="padding-left: 2.5rem;">
+        <li>a/ Ngài Thanh Nguyên Thiền sư</li>
+        <li>b/ Ngài Hy Thiên Thiền sư, tức ngài Thạch Đầu Hòa thượng.</li>
+        <li>c/ Ngài Dược Sơn Thiền sư</li>
+        <li>d/ Ngài Vân Nham Thiền sư</li>
+        <li>đ/ Ngài Lương Giới Thiền sư ở núi Động Sơn</li>
+        <li>e/ Ngài Bản Tịch Thiền sư ở núi Tào Sơn</li>
+      </ul>
       Ngài Vân Nham Thiền sư đã dùng pháp Bửu cảnh tam muội, truyền cho ngài Lương Giới (Động Sơn); ngài Lương Giới cũng dùng pháp này để truyền cho ngài Bản Tịch (Tào Sơn).
     </li>
     <li>
       <strong>Dòng Vân Môn:</strong><br>
       Sự truyền thừa của tông này, thứ tự như sau:<br>
-      a/ Ngài Thạch Đầu Thiền sư<br>
-      b/ Ngài Thiên Hoàng<br>
-      c/ Ngài Long Đàm<br>
-      d/ Ngài Đức Sơn<br>
-      đ/ Ngài Tuyết Phong<br>
-      e/ Ngài Văn Yển Thiền sư ở đất Thiều Châu, Vân Môn.<br>
+      <ul style="padding-left: 2.5rem;">
+        <li>a/ Ngài Thạch Đầu Thiền sư</li>
+        <li>b/ Ngài Thiên Hoàng</li>
+        <li>c/ Ngài Long Đàm</li>
+        <li>d/ Ngài Đức Sơn</li>
+        <li>đ/ Ngài Tuyết Phong</li>
+        <li>e/ Ngài Văn Yển Thiền sư ở đất Thiều Châu, Vân Môn.</li>
+      </ul>
       Cách truyền pháp của ngài Văn Yển (Vân Môn) cũng rất kỳ lạ, ít ai hiểu được nghĩa lý: ai đến hỏi đạo, thì Ngài chỉ nói một chữ “Dám”. Nếu người cầu đạo còn ngần ngại không hiểu, thì Ngài nói thêm: “Di”. Vì Ngài chỉ đáp có một chữ như thế cho người cầu đạo, nên người đời gọi phép quán của Ngài là “nhất tự quán” (quán sát cái lý trong một chữ Dám hay chữ Di).
     </li>
     <li>
       <strong>Dòng Pháp Nhãn:</strong><br>
       Sự truyền thừa của tông này, thứ tự như sau:<br>
-      a/ Ngài Tuyết Phong Thiền sư<br>
-      b/ Ngài Huyền Sa Thiền sư<br>
-      c/ Ngài La Hán Thiền sư<br>
-      d/ Ngài Văn Ích Thiền sư<br>
+      <ul style="padding-left: 2.5rem;">
+        <li>a/ Ngài Tuyết Phong Thiền sư</li>
+        <li>b/ Ngài Huyền Sa Thiền sư</li>
+        <li>c/ Ngài La Hán Thiền sư</li>
+        <li>d/ Ngài Văn Ích Thiền sư</li>
+      </ul>
       Phương pháp khai thị cho người đến cầu đạo của ngài Văn Ích Thiền sư là dùng sáu tướng trong kinh Hoa Nghiêm sau đây:<br>
-      * Tổng tướng: tức là muốn nói đến chơn như nhất tâm.<br>
-      * Biệt tướng: tức là các duyên sanh khởi từ chơn như nhất tâm.<br>
-      * Đồng tướng: các pháp đều đồng như nhau.<br>
-      * Dị tướng: tùy theo mỗi tướng không bình đẳng.<br>
-      * Thành tướng: dựng lập ra cảnh giới.<br>
-      * Hoại tướng: vị trí không đồng tức là hoại tướng.
+      <ul style="padding-left: 2.5rem;">
+        <li>Tổng tướng: tức là muốn nói đến chơn như nhất tâm.</li>
+        <li>Biệt tướng: tức là các duyên sanh khởi từ chơn như nhất tâm.</li>
+        <li>Đồng tướng: các pháp đều đồng như nhau.</li>
+        <li>Dị tướng: tùy theo mỗi tướng không bình đẳng.</li>
+        <li>Thành tướng: dựng lập ra cảnh giới.</li>
+        <li>Hoại tướng: vị trí không đồng tức là hoại tướng.</li>
+      </ul>
     </li>
   </ol>
 
@@ -419,7 +430,7 @@ const readingContent = `
 
   <p>Dưới đây, chúng ta hãy tuần tự nói về các môn phái Thiền tông ấy:</p>
 
-  <ol>
+  <ol style="padding-left: 2.5rem;">
     <li>
       <strong>Phái Tỳ Ni Đa Lưu Chi:</strong><br>
       a) Vị Sơ tổ Thiền tông ở Việt Nam.<br>
@@ -444,8 +455,7 @@ const readingContent = `
         Hạo hạn Lăng già nguyệt<br>
         Phân phân bát nhã liên<br>
         Hà thời hạnh tương kiến<br>
-        Tương dữ thoại tùng huyền
-        <br><br>
+        Tương dữ thoại tùng huyền<br><br>
         Dịch nghĩa:<br>
         Mở lối qua nước Việt<br>
         Nghe ngài thông đạo Thiền<br>
@@ -458,15 +468,15 @@ const readingContent = `
       </blockquote>
       b) Ngài Pháp Hiển Thiền sư, vị Tổ thứ hai của Thiền tông Việt Nam.<br>
       Sau khi Tổ Tỳ Ni Đa Lưu Chi tịch, ngài Pháp Hiển là vị Tổ thứ hai của phái Thiền tông Tỳ Ni Đa Lưu Chi. Ngài họ Đỗ, quê ở quận Chu Diên (Sơn Tây bây giờ). Khi tới chùa Pháp Vân, Tổ Tỳ Ni Đa Lưu Chi thấy Ngài, thì nhìn kỹ vào mặt mà hỏi:<br>
-      - Chú họ gì?<br>
+      * Chú họ gì?<br>
       Ngài Pháp Hiển hỏi lại:<br>
-      - Hòa thượng họ gì?<br>
+      * Hòa thượng họ gì?<br>
       Tổ lại hỏi:<br>
-      - Chú không có họ à?<br>
+      * Chú không có họ à?<br>
       Ngài trả lời:<br>
-      - Sao lại không có! Nhưng đố Hòa thượng biết?<br>
+      * Sao lại không có! Nhưng đố Hòa thượng biết?<br>
       Tổ quát lên:<br>
-      - Biết để làm gì?<br>
+      * Biết để làm gì?<br>
       Ngài Pháp Hiển chợt hiểu ý Tổ Tỳ Ni Đa Lưu Chi (thiền cơ) liền sụp xuống lạy, xin theo làm đệ tử và sau được truyền tâm ấn.<br>
       Được ít lâu sau khi Tổ tịch, Ngài vào núi Từ Sơn tu thiền định, những loài cầm thú thường quấn quít chung quanh. Người đời thấy thế càng lấy làm lạ và kính mộ. Đệ tử tìm đến học đạo rất đông. Thiền tông ở trong thời kỳ này có thể nói là thịnh nhất. Đó cũng nhờ công đức hoằng hóa của ngài Tỳ Ni Đa Lưu Chi và ngài Pháp Hiển. Về sau phái này cũng có nhiều vị thiền sư xuất sắc như ngài Pháp Thuận, Vạn Hạnh v.v…
     </li>
@@ -475,12 +485,12 @@ const readingContent = `
       a) Vị Sơ tổ của phái Thiền tông thứ hai ở Việt Nam.<br>
       Ngài họ Trịnh, quê ở Quảng Châu, xuất gia ở chùa Song Lâm (Chiết Giang bây giờ). Tính ngài điềm đạm ít nói, nhưng sự lý gì cũng thông hiểu, nên người đời đặt danh hiệu cho ngài là Vô Ngôn Thông. Ngài là đệ tử của Bách Trượng Thiền sư (đệ tử của Mã Tổ).<br>
       Khi Ngài mới đến yết kiến Bách Trượng Thiền sư, gặp lúc Thiền sư đang dạy chúng tăng học. Một vị tăng hỏi Bách Trượng Thiền sư rằng:<br>
-      - Thế nào là pháp môn đốn ngộ của phái Đại thừa?<br>
+      * Thế nào là pháp môn đốn ngộ của phái Đại thừa?<br>
       Bách Trượng Thiền sư dạy rằng:<br>
-      - Tâm địa nhược thông, huệ nhật tự chiếu (nếu tâm địa được thông thì mặt trời huệ tự nhiên chiếu sáng).<br>
+      * Tâm địa nhược thông, huệ nhật tự chiếu (nếu tâm địa được thông thì mặt trời huệ tự nhiên chiếu sáng).<br>
       Nghe được câu ấy, ngài Vô Ngôn Thông tự nhiên ngộ đạo. Năm 820, Ngài qua Việt Nam tu tại chùa Kiến Sơ, làng Phù Đổng (Bắc Ninh). Ngài ngồi xoay mặt vào vách, trọn ngày tham thiền nhập định. Ngài tu như thế mấy năm không ai biết, chỉ trừ vị sư ở chùa ấy là Cảm Thành Thiền sư, biết Ngài là bậc Cao tăng đắc đạo trong phái Thiền tông, nên tôn thờ Ngài làm thầy.<br>
       Trước khi tịch, Ngài gọi Cảm Thành Thiền sư mà bảo:<br>
-      - Ngày xưa Tổ sư Nam Nhạc, khi sắp tịch có dặn lại bài kệ rằng:<br>
+      * Ngày xưa Tổ sư Nam Nhạc, khi sắp tịch có dặn lại bài kệ rằng:<br>
       “Nhất thiết chư pháp, giai tùng tâm sanh,<br>
       Tâm vô sở sanh, pháp vô sở trú<br>
       Nhược đạt tâm địa, sở trú vô ngại<br>
@@ -492,31 +502,31 @@ const readingContent = `
       Cảm Thành Thiền sư: Thiền sư quê ở huyện Tiên Du (Bắc Ninh) trụ trì tại chùa Kiến Sơ (Bắc Ninh).<br>
       Khi ngài Vô Ngôn Thông vân du qua đấy, thấy Ngài có đủ tư cách để truyền nối đạo, nên ở lại. Và ngài Cảm Thành cũng nhận thấy ở ngài Vô Ngôn Thông một vị thiền sư đắc đạo, nên tôn làm thầy, sớm tối hầu hạ không hề trễ nại. Hai thầy trò rất mến nhau, do đó ngài Vô Ngôn Thông mới đặt cho Ngài đạo hiệu là Cảm Thành.<br>
       Ngài Cảm Thành thật xứng đáng là người nối chí của ngài Vô Ngôn Thông. Một hôm có vị đệ tử hỏi Ngài:<br>
-      - Thế nào là Phật?<br>
+      * Thế nào là Phật?<br>
       Ngài trả lời:<br>
-      - Chỗ nào cũng là Phật cả.<br>
+      * Chỗ nào cũng là Phật cả.<br>
       Vị đệ tử lại hỏi:<br>
-      - Thế nào là tâm của Phật?<br>
+      * Thế nào là tâm của Phật?<br>
       Ngài trả lời:<br>
-      - Không hề che đậy chỗ nào.<br>
+      * Không hề che đậy chỗ nào.<br>
       Đây cũng là một câu chuyện nhỏ, nhưng nói lên được cái lối truyền thụ tâm pháp đặc biệt, tuy giản ước mà bao hàm nhiều ý nghĩa cao thâm vô cùng.<br>
       Ngài Cảm Thành không bệnh mà tịch, và truyền tâm pháp cho Thiện Hội Thiền sư.<br><br>
       c) Vị Tam tổ của phái Vô Ngôn Thông.<br>
       Ngài Thiện Hội Thiền sư: Ngài Thiện Hội quê ở Siêu Loại (Bắc Ninh). Ngài là đệ tử của Cảm Thành Thiền sư, hầu thầy đã hơn 10 năm. Một hôm Ngài vào phòng hỏi thầy:<br>
-      - Trong kinh Phật có dạy: “Đức Thích Ca Như Lai từng tu hành trải vô số kiếp mới thành Phật, thế mà nay thầy cứ dạy rằng “tâm tức là Phật, Phật tức là tâm” là nghĩa làm sao? Thật đệ tử không hiểu, xin thầy dạy rõ cho.<br>
+      * Trong kinh Phật có dạy: “Đức Thích Ca Như Lai từng tu hành trải vô số kiếp mới thành Phật, thế mà nay thầy cứ dạy rằng “tâm tức là Phật, Phật tức là tâm” là nghĩa làm sao? Thật đệ tử không hiểu, xin thầy dạy rõ cho.<br>
       Cảm Thành Thiền sư nói:<br>
-      - Ngươi bảo trong kinh Phật nói thế là ai nói đó?<br>
-      - Vậy lời ấy không phải Phật thuyết sao?<br>
-      - Lời ấy phải đâu là Phật thuyết. Kinh Văn Thù Phật có dạy: “Ta trú ở thế gian dạy chúng sinh 49 năm, chưa từng đặt ra một câu bằng văn tự để nói với ai bao giờ”. Vì theo chánh đạo, nếu lấy văn tự làm bằng chứng để cầu đạo, ấy là nệ; lấy sự khổ hạnh để cầu Phật, ấy là mê; lìa tâm ra mà cầu Phật, ấy là ngoại đạo; mà cố chấp cái tâm ấy là Phật, cũng lại là ma vậy.<br>
-      - Nếu bảo tâm ấy tức là Phật, thì trong tâm ấy, cái gì là Phật, cái gì là không phải Phật?<br>
-      - Ngày xưa có người hỏi Mã Tổ rằng: “Nếu bảo tâm ấy là Phật, thì trong tâm ấy cái gì là Phật?” Mã Tổ trả lời: “Thế ông ngờ trong tâm ấy, cái gì không phải là Phật, hãy chỉ vào đấy cho tôi xem?” Người ấy không chỉ được. Mã Tổ lại tiếp: “Đạt được thì khắp mọi nơi chỗ nào cũng là Phật, mà không đạt được thì cứ sai lầm đi mãi mãi”. Thế là chỉ vì một lời nói nó che đi mà thành ra sai lầm đó thôi. Ngươi đã hiểu chưa?<br>
+      * Ngươi bảo trong kinh Phật nói thế là ai nói đó?<br>
+      * Vậy lời ấy không phải Phật thuyết sao?<br>
+      * Lời ấy phải đâu là Phật thuyết. Kinh Văn Thù Phật có dạy: “Ta trú ở thế gian dạy chúng sinh 49 năm, chưa từng đặt ra một câu bằng văn tự để nói với ai bao giờ”. Vì theo chánh đạo, nếu lấy văn tự làm bằng chứng để cầu đạo, ấy là nệ; lấy sự khổ hạnh để cầu Phật, ấy là mê; lìa tâm ra mà cầu Phật, ấy là ngoại đạo; mà cố chấp cái tâm ấy là Phật, cũng lại là ma vậy.<br>
+      * Nếu bảo tâm ấy tức là Phật, thì trong tâm ấy, cái gì là Phật, cái gì là không phải Phật?<br>
+      * Ngày xưa có người hỏi Mã Tổ rằng: “Nếu bảo tâm ấy là Phật, thì trong tâm ấy cái gì là Phật?” Mã Tổ trả lời: “Thế ông ngờ trong tâm ấy, cái gì không phải là Phật, hãy chỉ vào đấy cho tôi xem?” Người ấy không chỉ được. Mã Tổ lại tiếp: “Đạt được thì khắp mọi nơi chỗ nào cũng là Phật, mà không đạt được thì cứ sai lầm đi mãi mãi”. Thế là chỉ vì một lời nói nó che đi mà thành ra sai lầm đó thôi. Ngươi đã hiểu chưa?<br>
       Ngài Thiện Hội trả lời:<br>
-      - Nếu vậy, đệ tử hiểu rồi.<br>
-      - Ngươi hiểu thế nào?<br>
-      - Đệ tử hiểu rằng khắp các mọi nơi chỗ nào cũng là tâm Phật cả.<br>
+      * Nếu vậy, đệ tử hiểu rồi.<br>
+      * Ngươi hiểu thế nào?<br>
+      * Đệ tử hiểu rằng khắp các mọi nơi chỗ nào cũng là tâm Phật cả.<br>
       Nói xong Thiện Hội Thiền sư sụp xuống lạy.<br>
       Ngài Cảm Thành nói:<br>
-      - Thế là ngươi hiểu tới nơi rồi đó.<br>
+      * Thế là ngươi hiểu tới nơi rồi đó.<br>
       Do sự lãnh hội mau chóng đó mà ngài Cảm Thành mới đặt cho đệ tử mình đạo hiệu Thiện Hội, nghĩa là “khéo hiểu”.<br>
       Trên đây là một vài câu chuyện về đốn ngộ mà chúng ta thường thấy trong các vị thuộc phái Thiền tông.<br>
       Sự truyền pháp từ thầy đến trò trong phái Vô Ngôn Thông diễn ra như thế được 15 đời. Đến đời cư sĩ Ứng Thuận (1221) là cuối cùng.
@@ -535,7 +545,7 @@ const readingContent = `
       <strong>Phái Lâm Tế:</strong><br>
       Phái Lâm Tế do ngài Nguyên Thiều khai sáng tại Trung Việt. Ngài họ Tạ, quê ở Quảng Châu (Trung Hoa). Ngài đi theo tàu buôn qua An Nam, trú ở phủ Quy Ninh (Bình Định) lập chùa Thập Tháp Di Đà, mở trường truyền dạy. Sau Ngài ra Thuận Hóa lập chùa Hà Trung, rồi lên Xuân Kinh (Huế) lập chùa Quốc Ân và dựng tháp Phổ Đồng.<br>
       Sau một thời gian truyền đạo ở Việt Nam Ngài phụng mệnh vua Anh Tông trở về Trung Hoa tìm mời danh tăng và cung thỉnh pháp tượng pháp khí. Ngài thỉnh được Hòa thượng Thạch Liêm và các danh tăng khác trở về Việt Nam mở đàn truyền giới rất long trọng tại chùa Thiên Mụ. Sau đó, chúa Nguyễn sắc ban Ngài giữ chức Trụ trì chùa Hà Trung.<br>
-      Năm Bảo Thái thứ 10 nhà Lê, Ngài tịch tại chùa Hà Trung, sau khi dặn dò đệ tử và truyền lại bài kệ sau đây:
+      Năm Bảo Thái thứ 10 nhà Lê, Ngài tịch tại chùa Hà Trung, sau khi dặn dò đệ tử và truyền lại bài kệ sau đây:<br>
       <blockquote>
         Tịch tịch kính vô ảnh<br>
         Minh minh châu bất dung<br>
@@ -550,7 +560,7 @@ const readingContent = `
       Phái Liễu Quán xuất phát từ Liễu Quán Hòa thượng. Ngài Liễu Quán quê ở Phú Yên (Sông Cầu). Ngài ra Thuận Hóa thọ giới Sa di với ngài Thạch Liêm Hòa thượng. Năm 1702, Ngài đến Long Sơn cầu học pháp tham thiền với ngài Tử Dung Hòa thượng (Tổ khai sơn chùa Từ Đàm Huế, người Trung Hoa).<br>
       Tổ Tử Dung dạy Ngài tham cứu câu: “Vạn pháp quy nhất, nhất quy hà xứ”, (muôn pháp về một, một về đâu?). Ngài tham cứu mấy năm, đến khi xem bộ Truyền Đăng Lục, thấy có câu: “Chỉ vật truyền tâm, nhân bất hội xứ”. Ngài liền tỏ ngộ, năm 1742, cuối mùa thu, Ngài thọ bệnh. Trước khi lâm chung, Ngài gọi môn đồ đến dạy rằng: “Nhân duyên đã hết, ta sắp chết đây”.<br>
       Thấy môn đồ khóc, Ngài dạy rằng: “Các người khóc làm gì? Các Đức Phật ra đời còn nhập Niết Bàn. Ta nay đi đến rõ ràng, về có chỗ. Các người không nên khóc và đừng buồn thảm”.<br>
-      Rồi Ngài viết bài kệ từ biệt sau đây:
+      Rồi Ngài viết bài kệ từ biệt sau đây:<br>
       <blockquote>
         Thất thập dư niên thế giới trung,<br>
         Không không, sắc sắc diệu dung thông<br>
@@ -563,7 +573,7 @@ const readingContent = `
         Nào phải ân cần hỏi tổ tông.
       </blockquote>
       Viết xong, Ngài bảo môn đồ:<br>
-      - Sau khi ta đi, các người phải nghĩ cơn vô thường nhanh chóng, cần phải siêng năng tu học. Các người hãy cố gắng tới chớ bỏ qua lời ta.<br>
+      * Sau khi ta đi, các người phải nghĩ cơn vô thường nhanh chóng, cần phải siêng năng tu học. Các người hãy cố gắng tới chớ bỏ qua lời ta.<br>
       Ngài tịch vào ngày 22 tháng 11 năm Nhâm Tuất (1742), vào giờ Mùi, sau khi dùng nước trà xong và từ biệt môn đồ.<br>
       Đến đây chúng ta cũng nên nhận định cho rõ ràng điểm này: Như chúng tôi đã nói ở đoạn trước, Thiền tông do người Việt sáng lập chỉ có một phái độc nhất do vua Trần Nhân Tông làm Sơ tổ là phái Trúc Lâm Yên Tử. Nhưng đến đây, chúng ta lại thấy phát xuất một phái nữa là phái Liễu Quán, do ngài Liễu Quán một danh tăng Việt Nam chủ xướng. Như vậy có mâu thuẫn với sự nhận xét ở trên không? Thật ra, so với các phái Thiền tông khác ở Việt Nam, thì phái Liễu Quán chỉ là một phái nhỏ, chỉ nằm trong phạm vi mấy tỉnh ở miền Trung Việt.<br>
       Vả lại, ngài Liễu Quán cũng là đệ tử của ngài Tử Dung, một vị sư Trung Hoa thuộc phái Lâm Tế. Do đó, phái Liễu Quán, nếu chúng ta đi tìm nguồn gốc xa hơn một chút nữa, thì cũng chỉ là một chi nhánh của phái Lâm Tế mà thôi.
@@ -584,7 +594,7 @@ const readingContent = `
   <p>Ma Đăng Già là thứ ma yếu hèn, nó chỉ làm cho ông phá một giới trong tám vạn giới mà thôi, nhờ tâm ông thanh tịnh nên chẳng bị trầm luân. Còn các chúng ma này rất là nguy hiểm, nó phá tan giới thân huệ mạng làm cho ông nhiều kiếp luân hồi. Chẳng khác nào như ông quan lớn bị cách chức, gia tài sự sản bị tịch thu, trở thành một người dân trắng, không thể cầu cứu với ai được.</p>
 
   <h4>MƯỜI MÓN MA VỀ SẮC ẤM</h4>
-  <ol>
+  <ol style="padding-left: 2.5rem;">
     <li>
       <strong>Thân thể không bị chướng ngại</strong><br>
       Này A Nan, người trong khi tu thiền do sức dụng công, nên tâm tính được nhiệm màu sáng suốt, tự thấy thân thể mình trong giây phút qua lại tự tại, không bị cái gì làm chướng ngại. Vì dụng công tu luyện nên vọng tâm tạm hiện ra các việc như vậy, không phải là chứng Thánh; nếu sinh tâm nghĩ mình chứng Thánh, thì bị ma cám dỗ.
@@ -630,7 +640,7 @@ const readingContent = `
   Này A Nan! Mười cảnh ma này, đều do trong lúc tu thiền, hành giả dụng tâm phá trừ sắc ấm, nên biến hiện ra các cảnh như vậy. Nếu khi gặp những cảnh ấy, hành giả mê lầm không biết, cho mình đã chứng Thánh, thì bị ma ám ảnh, rồi sinh ra đại vọng ngữ, cho mình thành đạo chứng quả v.v… Sau khi chết rồi đọa vào địa ngục vô gián. Vậy khi ta nhập diệt rồi các ông nên y lời ta dạy, đem những việc ma này, giảng dạy cho người tu hành đời sau, bảo hộ người tu hành được đạo quả, chớ để cho họ bị thiên ma nhiễu hại.</p>
 
   <h4>MƯỜI MÓN MA VỀ THỌ ẤM</h4>
-  <ol>
+  <ol style="padding-left: 2.5rem;">
     <li>
       <strong>Thấy loài vật thương khóc</strong><br>
       Này A Nan, người tu thiền định khi phá trừ sắc ấm rồi, tâm trí sáng suốt; do hành giả dụng công dằn ép các vọng tưởng thái quá, nên phát sinh lòng thương xót các loài vật vô cùng, cho đến thấy loài mòng, muỗi cũng thương như con ruột, thương cho đến nỗi sa nước mắt khóc ròng. Nếu hành giả giác ngộ thì cảnh ấy lần lần tiêu hết, không có hại chi; còn mê lầm không biết, thì bị ma sầu bi ám ảnh vào tâm, rồi thấy người tự khóc ròng, tâm mất chánh định, sau khi chết rồi đọa vào cảnh ma.
@@ -677,7 +687,7 @@ const readingContent = `
   Sau khi ta nhập diệt, các ông nên đem những lời chỉ bảo của ta đây mà truyền dạy cho chúng sinh đời sau, bảo hộ người tu hành được thành đạo Bồ đề, chớ để cho họ gặp các loài ma chướng làm hại, mà phải bị đọa vào đường ác.</p>
 
   <h4>MƯỜI MÓN MA VỀ TƯỞNG ẤM</h4>
-  <ol>
+  <ol style="padding-left: 2.5rem;">
     <li>
       <strong>Tham cầu diệu dụng</strong><br>
       A Nan, người tu thiền định, khi phát minh được diệu dụng rồi, lại khởi tâm tham cầu những việc diệu dụng và linh nghiệm. Khi đó thiên ma được biết, gặp dịp thuận tiện, nên xuất hồn nhập vào người, mà người bị nhập kia lại không biết, tự cho mình được đạo vô thượng Niết bàn, cũng thường nói ra kinh pháp. Trong giây phút, thân hình người bị nhập kia, biến hiện ra ông thầy, cô ni, vị Đế Thích hay người phụ nữ v.v… hoặc ở trong nhà tối, từ nơi thân họ chiếu ra hào quang sáng ánh. Người đời lầm cho là Bồ tát thật, rồi tin nghe theo lời ma giáo hóa, sinh tâm buông lung, phá giới luật của Phật, lén làm việc tham dục. Người này ưa nói những điềm tai biến lạ lùng, hoặc nói chỗ kia có Phật ra đời, năm nào nổi đao binh giặc giã, năm nào có hỏa hoạn v.v… khủng bố tinh thần dân chúng, khiến cho người hao tài tốn của. Đến khi ma kia nhàm chán bỏ đi, thì thầy trò người bị ma nhập kia đều bị giam cầm. Các ông nếu biết trước thời khỏi vào luân hồi; còn mê lầm không biết thì đọa vào ác đạo.
@@ -726,11 +736,11 @@ const readingContent = `
   Các ông tuân theo lời ta dạy đây, mới gọi là đền đáp ơn Phật. Các ông cố gắng bảo hộ người tu hành, nên đem lời nói của ta đây truyền dạy cho chúng sinh đời sau, khiến cho họ hiểu rõ các việc ma, để khỏi bị thiên ma nhiễu hại và mau được thành đạo vô thượng.</p>
 
   <h4>MƯỜI MÓN MA VỀ HÀNH ẤM</h4>
-  <ol>
+  <ol style="padding-left: 2.5rem;">
     <li>
       <strong>Chấp không nguyên nhân sanh.</strong><br>
       A Nan, người tu thiền định khi tưởng ấm hết rồi, thì tâm được minh chánh, không còn khởi các vọng tưởng tham muốn như trên, nên các Thiên ma không gặp dịp thuận tiện để nhiễu hại nữa. Lúc bấy giờ hành giả tự nghiên cứu nguồn gốc của muôn loài, rồi sanh ra hai lối chấp:<br>
-      <ul type="a">
+      <ul type="a" style="padding-left: 2.5rem;">
         <li>a/ Vì chỉ thấy biết được chúng sanh từ tám vạn kiếp trở lại, ngoài tám vạn kiếp thì mù mịt không thấy biết, nên sanh ra chấp: “chúng sanh từ tám vạn kiếp trở lại tự nhiên có, không có nguyên nhân sanh”.</li>
         <li>b/ Hành giả nghiên cứu chỉ thấy người sanh ra người, chim sanh ra chim, quạ từ hồi nào đến giờ vẫn đen, không phải do nhuộm mà đen, cò từ hồi nào đến giờ vẫn trắng, không phải do rửa mới trắng v.v… từ tám vạn kiếp đến nay đã vậy, thì từ đây về sau cũng thế. Hành giả tự nghĩ: “ta từ hồi nào đến giờ không thành Bồ-đề, thì về sau đâu lại có thành Phật”; rồi khởi ra tà chấp: “Các vật tượng ngày nay đều không có nguyên nhân”. Bởi họ mê mờ tánh Bồ-đề, mất chánh tri kiến, sanh ra hai lối chấp trên, nên đều đọa về ngoại đạo.</li>
       </ul>
@@ -738,9 +748,9 @@ const readingContent = `
     <li>
       <strong>Bốn món chấp thường.</strong><br>
       A Nan, người tu thiền định, khi tưởng ấm hết rồi, tâm được minh chánh, nên ngoại ma không còn thuận tiện để nhiễu hại được. Khi đó hành giả tham cứu cùng tột cội gốc của muôn loài, khởi ra bốn món chấp thường:<br>
-      <ul type="a">
+      <ul type="a" style="padding-left: 2.5rem;">
         <li>a/ Chấp hai vạn kiếp thường. – Vì hành giả nghiên cứu cùng tột cả tâm và cảnh đều vô nhân, vì sức tu chỉ biết được chúng sanh sanh diệt xoay vần từ hai vạn kiếp trở lại không mất, nên chấp cho là thường.</li>
-        <li>b/ Chấp bốn vạn kiếp thường. – Hành giả tham cứu cùng tột tánh của tứ đại thường còn, do sức tu chỉ biết được chúng sanh từ bốn vạn kiếp trở lại, tuy có sanh diệt, mà bản thể nó vẫn thường còn không mất nên chấp là thường.</li>
+        <li>b/ Chấp bốn vạn kiếp thường. – Hành giả tham cứu cùng tột tánh của tứ đại thường còn, do sức tu tập chỉ biết được chúng sanh từ bốn vạn kiếp trở lại, tuy có sanh diệt, mà bản thể nó vẫn thường còn không mất nên chấp là thường.</li>
         <li>c/ Chấp tám vạn kiếp là thường. – Hành giả tham cứu cùng tận tám thức, thấy nó thường hằng. Vì thấy từ tám vạn kiếp trở lại chúng sanh xoay vần không mất nên chấp là thường.</li>
         <li>d/ Chấp cái không sanh diệt là thường. – Người tu thiền định khi các tưởng ấm sanh diệt đã hết, nhân đó khởi tâm chấp cái không sanh diệt là thường.</li>
       </ul>
@@ -749,7 +759,7 @@ const readingContent = `
     <li>
       <strong>Chấp một phần thường, một phần vô thường.</strong><br>
       Người tu thiền định, khi tưởng ấm hết, nghiên cứu cùng tột cội gốc của sanh loại, rồi khởi ra bốn lối chấp điên đảo:<br>
-      <ul type="a">
+      <ul type="a" style="padding-left: 2.5rem;">
         <li>a/ Chấp tâm là thường, chúng sanh vô thường. – Hành giả khi quán tâm mình yên lặng khắp cả mười phương, các chúng sanh từ trong tâm mình tự sanh và tự chết, rồi chấp tâm ta là thường, chúng sanh vô thường.</li>
         <li>b/ Chấp thế giới, những chỗ bị hoại là vô thường những chỗ không hoại là thường. – Người tu thiền định quán sát cả mười phương thế giới, chỗ kiếp hoại (như từ Tam thiền trở xuống bị tam tai làm hoại) thì chấp là vô thường; những chỗ không hoại thì chấp là thường (từ Tứ thiền trở lên, tam tai không làm hoại được, chấp cho là cứu cánh Niết-bàn).</li>
         <li>c/ Chấp cái tâm là thường, còn sanh tử vô thường. – Người tu thiền định, quán sát tâm mình không biến đổi, nó nhỏ nhiệm tinh vi như hạt bụi và lưu chuyển cả mười phương, lại khiến cho thân này sanh và diệt mà nó không biến đổi; nên chấp cho: “Tâm là thường; tất cả các vật đều từ tâm sanh ra, có sanh tử nên vô thường”.</li>
@@ -760,7 +770,7 @@ const readingContent = `
     <li>
       <strong>Chấp có bốn món biên giới.</strong><br>
       Người tu thiền định, khi tưởng ấm hết rồi, thấy được cùng tột cội gốc của sanh loại, lúc bấy giờ khởi ra bốn lối chấp có biên giới:<br>
-      <ul type="a">
+      <ul type="a" style="padding-left: 2.5rem;">
         <li>a/ Chấp ba đời. – Người tu thiền định, lúc bấy giờ chấp tâm niệm hiện tại tương tục (hành ấm) là vô biên, còn quá khứ và vị lai là hữu biên.</li>
         <li>b/ Chấp chúng sanh. – Người tu thiền định vì chỉ thấy được chúng sanh trong tám vạn kiếp, nên chấp là hữu biên; còn trước tám vạn kiếp thì tịch mịch không thấy và cũng không nghe, nên chấp là vô biên.</li>
         <li>c/ Chấp tâm tánh. – Người tu thiền định khi thấy tâm mình biến khắp và biến ra tất cả người, nên khởi lên chấp tâm ta vô biên; còn tất cả người đều ở trong tâm ta, là hữu biên.</li>
@@ -771,7 +781,7 @@ const readingContent = `
     <li>
       <strong>Bốn món luận nghị rối loạn không có nhứt định.</strong><br>
       Người tu thiền định, khi tưởng ấm hết, liền khởi ra bốn lối chấp điên đảo không nhất định.<br>
-      <ul type="a">
+      <ul type="a" style="padding-left: 2.5rem;">
         <li>a/ Chấp bốn món “cũng”. – Người tu thiền định, khi quan sát nguồn gốc biến hóa của muôn vật, thấy có chỗ thì biến đổi, có chỗ lại thường còn; có cái sanh, có cái diệt, có pháp tăng, có vật giảm, có cái có, có cái không. Bởi thế, khi có ai đến hỏi đạo thì họ đáp rằng: “Cũng biến, cũng hằng, cũng sanh, cũng diệt, cũng tăng, cũng giảm, cũng có, cũng không”. Lúc nào họ cũng nói rối loạn như vậy, làm cho người không hiểu chi cả.</li>
         <li>b/ Chấp chỉ có cái “không”. – Người tu thiền định, vì quán cả tâm và pháp đều không; rồi cứ chấp ở nơi cái “không”. Có ai đến hỏi đạo thì họ chỉ đáp một chữ “không”; ngoài cái “không” ra thì không còn nói chi nữa cả.</li>
         <li>c/ Chấp chỉ có cái “có”. – Người tu thiền định, do quán sát tâm mình biến khắp tất cả, chỗ nào cũng có, rồi cứ chấp ở cái “có”. Có ai đến hỏi đạo, họ chỉ nói một chữ “có”; ngoài cái “có” ra thì không còn nói gì nữa cả.</li>
@@ -783,7 +793,7 @@ const readingContent = `
       <strong>Chấp mười sáu tướng có.</strong><br>
       Người tu thiền định khi tưởng ấm hết, chỉ còn hành ấm diêu động, thấy một nguồn sống vô tận, nên sanh tâm chấp “chết rồi còn có tướng”.<br>
       Chấp về sắc uẩn có bốn:<br>
-      <ul type="a">
+      <ul type="a" style="padding-left: 2.5rem;">
         <li>a/ Chấp sắc uẩn là “ta”.</li>
         <li>b/ Chấp “ta” có sắc uẩn.</li>
         <li>c/ Chấp sắc uẩn thuộc nơi “ta”.</li>
@@ -810,7 +820,7 @@ const readingContent = `
     <li>
       <strong>Chấp năm món Niết bàn hiện tại.</strong><br>
       Người tu thiền định, khi thọ ấm hết, xét cùng cội gốc của sanh loại, khởi ra chấp năm chỗ Niết-bàn:<br>
-      <ul type="a">
+      <ul type="a" style="padding-left: 2.5rem;">
         <li>a/ Chấp Dục giới là cảnh Niết-bàn.</li>
         <li>b/ Chấp cõi Sơ thiền là Niết-bàn.</li>
         <li>c/ Chấp cõi Nhị thiền là Niết-bàn.</li>
@@ -824,7 +834,7 @@ const readingContent = `
   A Nan, mười cảnh ma về hành ấm này, là do hành giả dụng tâm sai lầm nên mới sanh ra như vậy. Vì hành giả mê mờ không biết, tự cho là chứng Thánh, sanh đại vọng ngữ, nên đọa vào ngục Vô Gián. Vậy ông nên đem những việc ma này, truyền dạy cho chúng sanh đời sau, chớ để cho người tu thiền bị tâm ma khởi lên làm hại đến họ. Các ông phải bảo hộ người tu hành đi thẳng đến đạo Bồ-đề, chớ để cho họ gặp con đường chia rẽ.</p>
 
   <h4>MƯỜI MÓN MA VỀ THỨC ẤM</h4>
-  <ol>
+  <ol style="padding-left: 2.5rem;">
     <li>
       <strong>Chấp minh đế.</strong><br>
       Người tu thiền định khi hành ấm hết, chỉ còn thức ấm, các tướng sanh diệt đã hết, mà tâm thanh tịnh tịch diệt chưa hiện bày. Lúc bấy giờ nếu hành giả móng tâm chấp là chơn thường, thì mất chánh kiến, mê mờ tánh Bồ-đề, thành bè bạn với phái ngoại đạo Ca-tỳ-la (Tăng-khư), chấp minh đế (sơ tưởng A-lại-da) là cái chỗ trở về của vạn vật, trái với thành Niết-bàn, đọa vào ngoại đạo.
@@ -878,7 +888,7 @@ const readingContent = `
   <h3 id="kinh-sach">IV. CÁC KINH SÁCH NÓI VỀ THIỀN</h3>
   <p>Kinh sách nói về thiền không thể kể xiết được. Tuy thế, để quý độc giả khỏi bỡ ngỡ trong khi nghiên cứu để học hỏi, chúng tôi xin dẫn một số kinh sách thiết yếu sau đây:</p>
 
-  <ol>
+  <ol style="padding-left: 2.5rem;">
     <li>Kinh Lăng Già</li>
     <li>Kinh Lăng Nghiêm</li>
     <li>Kinh Viên Giác</li>
@@ -926,11 +936,11 @@ const readingContent = `
   “Người ngộ được lý ngã, pháp đều không mà tu thiền là Đại-thừa thiền. Người đốn ngộ tự tâm xưa nay vốn thanh tịnh, không có phiền não, đầy đủ trí huệ vô lậu, tâm ấy tức là Phật, rốt ráo không khác. Y theo tâm này mà tu thiền là Tối thượng thừa thiền, cũng gọi là Chơn như tam muội”.</p>
 
   <p>Về phương pháp tu chứng và truyền thọ của Đại-thừa thiền có ba cách:</p>
-  <ul>
-    <li>Cách thứ nhất: Đây là các loại tam muội, mà hành giả căn cứ theo các kinh sách Đại-thừa tu luyện, như Pháp hoa tam muội, Niệm Phật tam muội, Giác ý tam muội, Thủ lăng nghiêm tam muội, v.v…</li>
-    <li>Cách thứ hai: Lối thiền này không căn cứ theo kinh điển, văn tự, mà chỉ dùng một câu nói ngắn ngủi để chỉ giáo. Trong Phật giáo gọi lối thiền này là “Bất lập văn tự, giáo ngoại biệt truyền” (không dùng văn tự, truyền ngoài kinh giáo). Thiền giả chỉ căn cứ theo một câu nói ấy mà nghiên cứu mãi cho đến khi tỏ ngộ. Công việc tham cứu này Thiền giả có nhiều khi kéo dài hàng chục năm.</li>
-    <li>Cách thứ ba: Với cách này, chúng ta khó có thể suy nghĩ luận bàn gì được. Các vị Tổ sư, khi có người đến cầu pháp, không dùng lời nói mà chỉ dùng một cử chỉ gì đó, hay một tiếng la hét mà thôi.
-      <ul>
+  <ul style="padding-left: 2.5rem;">
+    <li><strong>Cách thứ nhất:</strong> Đây là các loại tam muội, mà hành giả căn cứ theo các kinh sách Đại-thừa tu luyện, như Pháp hoa tam muội, Niệm Phật tam muội, Giác ý tam muội, Thủ lăng nghiêm tam muội, v.v…</li>
+    <li><strong>Cách thứ hai:</strong> Lối thiền này không căn cứ theo kinh điển, văn tự, mà chỉ dùng một câu nói ngắn ngủi để chỉ giáo. Trong Phật giáo gọi lối thiền này là “Bất lập văn tự, giáo ngoại biệt truyền” (không dùng văn tự, truyền ngoài kinh giáo). Thiền giả chỉ căn cứ theo một câu nói ấy mà nghiên cứu mãi cho đến khi tỏ ngộ. Công việc tham cứu này Thiền giả có nhiều khi kéo dài hàng chục năm.</li>
+    <li><strong>Cách thứ ba:</strong> Với cách này, chúng ta khó có thể suy nghĩ luận bàn gì được. Các vị Tổ sư, khi có người đến cầu pháp, không dùng lời nói mà chỉ dùng một cử chỉ gì đó, hay một tiếng la hét mà thôi.
+      <ul style="padding-left: 2.5rem;">
         <li>Như dòng Lâm Tế, khi có người đến cầu đạo, Thiền sư chỉ dùng gậy đánh và tiếng hét.</li>
         <li>Như dòng Quy Ngưỡng, các vị Tổ sư chỉ vẽ hình thú, hình người, hình chữ Vạn mà khai ngộ cho đệ tử.</li>
         <li>Như dòng Vân Môn, có vị Tổ chỉ nói một chữ mà làm cho người cầu đạo tỏ ngộ.</li>
@@ -942,7 +952,7 @@ const readingContent = `
   <p>Thật là thiền cơ mầu nhiệm, người ngoài không thể suy nghĩ, luận bàn được.</p>
 
   <p>Muốn cho người cầu đạo được kết quả các vị truyền pháp phải hội đủ ba điều kiện sau đây:</p>
-  <ul>
+  <ul style="padding-left: 2.5rem;">
     <li>Biết căn cơ người cầu đạo.</li>
     <li>Biết thời tiết đúng lúc truyền đạo.</li>
     <li>Biết phương pháp nào thích hợp.</li>

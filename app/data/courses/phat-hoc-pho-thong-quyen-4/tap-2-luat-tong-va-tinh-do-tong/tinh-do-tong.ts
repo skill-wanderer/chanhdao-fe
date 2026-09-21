@@ -2,6 +2,16 @@ import type { Lesson, QuizQuestion } from '~/types/course'
 
 const readingContent = `
 <div class="prose-content">
+  <span class="badge badge-free">Bản Đồ Tu Phật - Tập 2.2</span>
+
+  <div class="format-notice">
+    <span class="format-notice-icon">📌</span>
+    <div>
+      <strong>Lưu ý:</strong>
+      <p>Nội dung này được dựa trên bài giảng của Cố HT Thích Thiện Hoa, nhằm giúp người đọc dễ dàng nắm bắt các ý chính và thuận tiện trong việc học tập, tham khảo; không phải là bản chép nguyên văn toàn bộ bài giảng.</p>
+    </div>
+  </div>
+
   <h2>TẬP 2.2: TỊNH ĐỘ TÔNG</h2>
   <p><strong>CON ĐƯỜNG TU THỨ HAI TRONG 10 TÔNG</strong></p>
 
@@ -36,9 +46,9 @@ const readingContent = `
     <li><strong>Thật báo trang nghiêm Tịnh độ:</strong> Hành giả trải qua ba vô số kiếp tích công lũy đức, do phước báo tu hành nhiều đời dồn chứa lại, làm trang nghiêm cảnh giới chân thật nên gọi là “Thật báo trang nghiêm Tịnh độ”. Cảnh giới Tịnh độ này, là chỗ ở của Báo thân Phật. Kinh Quán vô lượng thọ về lời sớ có chép: “tu tập chơn thật, cảm đặng quả báo tốt đẹp, cho nên gọi là Thật báo trang nghiêm”. Bên Đại thừa Viên giáo thì cõi này là của các bậc Tam hiền (Trụ, Hạnh, Hướng), còn bên Đại thừa Biệt giáo, thì đây là cõi của các bậc từ Thập địa cho đến Đẳng giác Bồ-tát.</li>
     <li><strong>Phương tiện hữu dư Tịnh độ:</strong> Cảnh Tịnh độ này không phải là cứu cánh rốt ráo, mà chỉ là phương tiện. Đây là cõi Tịnh độ của hàng Nhị thừa. Các vị này, tuy đã dứt được kiến hoặc và tư hoặc trong ba cõi (Dục giới, Sắc giới và Vô sắc giới), nhưng còn dư lại hai hoặc là vô minh hoặc và trần sa hoặc chưa trừ được, nên gọi là “hữu dư”. Đã là “hữu dư” tức là chưa phải hoàn toàn cứu cánh, nên gọi cõi Tịnh độ này là “Phương tiện hữu dư Tịnh độ”.</li>
     <li><strong>Phàm thánh đồng cư Tịnh độ:</strong> Đây tức là cõi Tịnh độ của Đức Phật A Di Đà ở Tây phương. Đã gọi là Tịnh độ, hay Cực lạc tất nhiên có đủ các đức thanh tịnh, trang nghiêm, không có bốn ác thú. Nhưng đây vì Phật, Bồ-tát và các vị thượng thiện nhơn (thánh) cùng sống chung với các chúng sinh mới vãng sanh, chưa chứng được quả thánh (phàm) nên gọi là “Phàm thánh đồng cư Tịnh độ”.<br>
-    Vì phần đông tín đồ Phật giáo Việt Nam và Trung Hoa trong khi tu về pháp môn Tịnh độ, đều nguyện sanh về cõi Tịnh độ này, tức là cõi Cực lạc của Phật A Di Đà, nên ở đây, chúng tôi xin căn cứ theo kinh “Tiểu bổn A Di Đà” thuật lại lời Đức Phật Thích Ca đã tả về cảnh giới của cõi Tịnh độ này:<br>
-    “Từ cõi Ta-bà này, cứ về hướng Tây, cách đây hơn mười muôn ức cõi Phật, có thế giới tên là Cực lạc. Vị Giáo chủ ở thế giới ấy là Phật A Di Đà, thường hay nói pháp. Cõi ấy có 7 lớp câu-lưu (tường hoa), bảy lớp lưới giăng, bảy hàng cây xinh đẹp, có “hồ thất bảo” đầy “nước tám công đức”. Đáy hồ toàn là cát vàng. Bốn phía bờ hồ đều cẩn vàng ngọc, châu báu. Trong hồ có hoa sen bốn màu lớn bằng bánh xe, hương thơm ngào ngạt, màu nào cũng có hào quang chiếu sáng. Quanh hồ, vươn lên những tòa lâu đài nguy nga, xinh đẹp làm toàn bằng thất bảo.<br>
-    Trên không trung, hòa lẫn trong những bản nhạc thiêng, có những tiếng chim hót, do Phật hóa hiện ra, để thuyết pháp luôn trong sáu thời cho dân chúng nghe. Người nghe rồi liền phát tâm niệm Phật, niệm Pháp, niệm Tăng. Không những chỉ tiếng chim, mà cho đến tiếng nước chảy, gió thổi, cây reo, cũng đều phát ra tiếng pháp nhiệm mầu.<br>
+    Vì phần đông tín đồ Phật giáo Việt Nam và Trung Hoa trong khi tu về pháp môn Tịnh độ, đều nguyện sanh về cõi Tịnh độ này, tức là cõi Cực lạc của Phật A Di Đà, nên ở đây, chúng tôi xin căn cứ theo kinh “Tiểu bổn A Di Đà” thuật lại lời Đức Phật Thích Ca đã tả về cảnh giới của cõi Tịnh độ này:<br><br>
+    “Từ cõi Ta-bà này, cứ về hướng Tây, cách đây hơn mười muôn ức cõi Phật, có thế giới tên là Cực lạc. Vị Giáo chủ ở thế giới ấy là Phật A Di Đà, thường hay nói pháp. Cõi ấy có 7 lớp câu-lưu (tường hoa), bảy lớp lưới giăng, bảy hàng cây xinh đẹp, có “hồ thất bảo” đầy “nước tám công đức”. Đáy hồ toàn là cát vàng. Bốn phía bờ hồ đều cẩn vàng ngọc, châu báu. Trong hồ có hoa sen bốn màu lớn bằng bánh xe, hương thơm ngào ngạt, màu nào cũng có hào quang chiếu sáng. Quanh hồ, vươn lên những tòa lâu đài nguy nga, xinh đẹp làm toàn bằng thất bảo.<br><br>
+    Trên không trung, hòa lẫn trong những bản nhạc thiêng, có những tiếng chim hót, do Phật hóa hiện ra, để thuyết pháp luôn trong sáu thời cho dân chúng nghe. Người nghe rồi liền phát tâm niệm Phật, niệm Pháp, niệm Tăng. Không những chỉ tiếng chim, mà cho đến tiếng nước chảy, gió thổi, cây reo, cũng đều phát ra tiếng pháp nhiệm mầu.<br><br>
     Cảnh giới Cực lạc tốt đẹp, trang nghiêm như thế là do công đức của Phật A Di Đà là vị Giáo chủ của cõi ấy và các vị Bồ-tát, Thánh chúng chung nhau tạo thành.</li>
   </ol>
 
@@ -68,7 +78,7 @@ const readingContent = `
   Hành là thực hành, làm theo. Nếu tin (tín) mà không ước ao (nguyện) thì chỉ là tin suông, vô bổ. Nhưng nếu ước ao, mong muốn (nguyện) mà không làm (hành) thì chỉ là ước ao mong muốn ảo huyền, không đi đến kết quả gì. Bởi thế, tín, nguyện, hành ba yếu tố căn bản này bao giờ cũng phải có đủ, mới đủ điều kiện vãng sanh Tịnh độ. Cũng như cái đảnh, phải có đủ ba chân mới đứng vững được, thiếu một chân tất phải ngã.</p>
 
   <h3 id="phuong-phap-tu">IV. PHƯƠNG PHÁP TU VỀ TỊNH ĐỘ</h3>
-  <p>Sau khi đã chuẩn bị đủ ba yếu tố hay ba món tư lương Tịnh độ nói trên, chúng chúng ta phải hạ thủ công phu ngay. Nhưng muốn cho có hiệu quả, chúng ta cần hiểu rõ phương pháp tu hành. Vẫn biết rằng pháp môn niệm Phật là một pháp môn rất giản dị, chỉ cần niệm Phật là đủ. Nhưng niệm Phật cũng có nhiều cách, nhiều loại, mà chúng tôi xin dẫn một ít phương pháp ra sau đây:</p>
+  <p>Sau khi đã chuẩn bị đủ ba yếu tố hay ba món tư lương Tịnh độ nói trên, chúng ta phải hạ thủ công phu ngay. Nhưng muốn cho có hiệu quả, chúng ta cần hiểu rõ phương pháp tu hành. Vẫn biết rằng pháp môn niệm Phật là một pháp môn rất giản dị, chỉ cần niệm Phật là đủ. Nhưng niệm Phật cũng có nhiều cách, nhiều loại, mà chúng tôi xin dẫn một ít phương pháp ra sau đây:</p>
   <ol style="padding-left: 2.5rem;">
     <li><strong>Trì danh niệm Phật:</strong> Trong lối niệm Phật này, hành giả chỉ cần chuyên tâm trì niệm danh hiệu của Phật A Di Đà. Mỗi ngày từ khi mới thức dậy cho đến lúc đi ngủ, hành giả phải nhớ niệm luôn, không cho xen hở. Khi đi, khi đứng, khi ngồi, khi ăn, trước khi ngủ, hành giả đừng bao giờ quên niệm Phật. Ngoài ra, muốn cho có hiệu quả hơn hành giả cần phải theo phương pháp “kinh hành niệm Phật” hay “tọa thiền niệm Phật”. Mỗi khi niệm xong, hành giả đều hồi hướng cầu sanh về Tịnh độ.</li>
     <li><strong>Tham cứu niệm Phật:</strong> Trong lối tu này, hành giả phải tham khảo cứu xét, suy nghiệm câu niệm Phật. Như khi niệm “Nam mô A Di Đà Phật”, hành giả phải quán sát câu niệm Phật này, từ đâu mà đến, đến rồi sẽ đi về đâu? Niệm đây là ai niệm, v.v… Nhờ sự chuyên tâm chú ý tham khảo một câu niệm Phật như thế, sóng vọng tưởng dần dần chìm lặng, nước định tâm hiện bày, hành giả được “nhất tâm bất loạn”, đến khi lâm chung, sẽ được sanh về cảnh giới của Phật. Phép niệm Phật này giống như phép tham cứu câu “thoại đầu” bên Thiền tông, nên gọi là tham cứu niệm Phật.</li>
@@ -125,7 +135,8 @@ const readingContent = `
   <p>Sau nữa, các vị Đại sư danh tiếng ở Trung Hoa, như ngài Đàm Loan, ngài Đạo Xước, ngài Thiện Đạo, ngài Thừa Viễn, ngài Pháp Chiếu, ngài Thiếu Khương, ngài Tĩnh Am v.v… đều dùng pháp môn này để tự độ và độ tha, và mãi mãi lưu truyền cho đến ngày nay.</p>
 
   <h3 id="ket-luan">VII. KẾT LUẬN</h3>
-  <p>Chúng ta đã biết qua tông chỉ, đặc điểm, phương pháp tu hành và giá trị của Tịnh độ tông. Đến đây, chúng ta cần phải lắng tâm suy xét kỹ lưỡng, xem con đường tu về Tịnh độ tông này, có thiết thực lợi ích và có thích hợp với chúng ta không. Trong phút giây quan trọng này, chúng hãy hết sức thành thực, nếu chúng ta nhận thấy con đường này rõ ràng không thích hợp với chúng ta, thì chúng ta có quyền chờ đợi và lựa chọn một tông khác. Nhưng nếu chúng ta nhận thấy nó có một giá trị thiết thực, lợi ích chắc chắn cho đời chúng ta trong hiện tại và mai sau, thì chúng ta đừng chần chờ gì nữa, hãy hạ thủ công phu ngay. Thời gian vùn vụt trôi qua, chẳng chờ ai cả. Hãy chuẩn bị ngay ba món tư lương là Tín, Nguyện, Hành, và tinh tấn thực hành các phương pháp niệm Phật.</p>
+  <p>Chúng ta đã biết qua tông chỉ, đặc điểm, phương pháp tu hành và giá trị của Tịnh độ tông. Đến đây, chúng ta cần phải lắng tâm suy xét kỹ lưỡng, xem con đường tu về Tịnh độ tông này, có thiết thực lợi ích và có thích hợp với chúng ta không. Trong phút giây quan trọng này, chúng ta hãy hết sức thành thực, nếu chúng ta nhận thấy con đường này rõ ràng không thích hợp với chúng ta, thì chúng ta có quyền chờ đợi và lựa chọn một tông khác. Nhưng nếu chúng ta nhận thấy nó có một giá trị thiết thực, lợi ích chắc chắn cho đời chúng ta trong hiện tại và mai sau, thì chúng ta đừng chần chờ gì nữa, hãy hạ thủ công phu ngay. Thời gian vùn vụt trôi qua, chẳng chờ ai cả. Hãy chuẩn bị ngay ba món tư lương là Tín, Nguyện, Hành, và tinh tấn thực hành các phương pháp niệm Phật.</p>
+
   <p>Với một thái độ thiết tha chân thành, một quyết tâm không thối chuyển, chúng ta chắc chắn sẽ niệm Phật đến chỗ “Nhất tâm bất loạn”.</p>
 </div>
 `

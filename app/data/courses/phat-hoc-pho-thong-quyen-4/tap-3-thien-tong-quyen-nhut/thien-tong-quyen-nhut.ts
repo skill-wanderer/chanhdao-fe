@@ -2,9 +2,8 @@ import type { Lesson, QuizQuestion } from '~/types/course'
 
 const readingContent = `
 <div class="prose-content">
-  <span class="badge badge-free">Bản Đồ Tu Phật - Tập 3</span>
-
-  <h2>TẬP 3: THIỀN TÔNG (Quyển Nhất)</h2>
+  <h2>TẬP 3</h2>
+  <h3>THIỀN TÔNG (Quyển Nhất)</h3>
   <p><strong>CON ĐƯỜNG TU THỨ BA TRONG 10 TÔNG</strong></p>
 
   <hr>
@@ -33,12 +32,11 @@ const readingContent = `
   Vậy hành giả muốn rõ chân lý của vũ trụ, muốn được minh tâm kiến tính để thành Phật, thì phải phá trừ mây vô minh hắc ám. Muốn phá trừ vô minh hắc ám, hành giả phải làm sao cho đèn trí huệ của mình được sáng tỏ. Muốn thế, hành giả phải tu thiền định. Tâm có định, mới phát sinh trí huệ. Trí huệ có phát sinh mới phá trừ được vô minh hắc ám, và mới minh tâm kiến tính thành Phật.<br>
   Mới nghe qua chủ trương của Thiền tông thì thấy không có gì là mới lạ và tưởng là dễ dàng quá, nhưng khi thực hành thì lại không phải dễ dàng như thế. Trái lại, phép tu thiền định rất khó, phải thường có thiện hữu tri thức dắt dẫn, phải tốn rất nhiều công phu và kiên nhẫn, phải trải qua một thời gian lâu dài, thì mới thu được kết quả.</p>
 
-  <hr>
-
   <h3 id="cac-loai-thien-dinh">B. Các loại Thiền định</h3>
   <p>Thiền định có nhiều loại, nhiều thứ. Có thứ chánh, thứ tà, có thứ sâu, thứ cạn, có thứ thiền của ngoại đạo, có thứ thiền của phàm phu, có thứ thiền của Tiểu thừa, có thứ thiền của Đại thừa.<br>
   Hãy nghe Ngài Tông Mật Thiền sư dạy :<br>
   (…Người muốn cầu Thánh đạo, tất phải tu thiền. Chân tính không có dơ và sạch, thánh và phàm. Song thiền định có cạn và sâu, từng bậc không đồng :</p>
+
   <ul style="padding-left: 2.5rem;">
     <li>Người tà kiến, chấp trước sái lạc, ưa cõi trên, chán cõi dưới mà tu thiền là ngoại đạo thiền.</li>
     <li>Người chánh tín nhân quả, nhưng cũng dùng sự ưa cõi trên chán cõi dưới mà tu thiền, là phàm phu thiền.</li>
@@ -98,19 +96,24 @@ const readingContent = `
   <p>Phàm phu thiền cũng gọi là thế gian thiền. Sở dĩ gọi là phàm phu hay thế gian thiền là vì các pháp thiền này chưa có thể đưa hành giả ra ngoài tam giới, chưa chứng được thánh quả, mà vẫn còn quanh quẩn trong vòng phàm phu hay thế gian. Các pháp như Tứ thiền, Tứ không v.v… đều thuộc về phàm phu thiền.</p>
 
   <p><strong>1. Tứ thiền</strong><br>
-  Tức là bốn giai đoạn tham thiền của phàm phu, đi dần từ cái chỗ nhàm chán cái vui thô thiển đến cái vui vi tế thanh tịnh. Bốn giai đoạn tham thiền này tuần tự diễn tiến như sau :<br>
-  a) Sơ thiền, ly sinh hỷ lạc : Hành giả khởi đầu bằng tâm lý nhàm chán cái ô trược của cõi Dục, và mong cầu được xa lìa. Sau khi nhờ tham thiền mà xa lìa được cái ô trược của dục giới, hành giả sinh vui mừng (sinh hỷ lạc). Đó là kết quả của giai đoạn tham thiền đầu tiên (sơ thiền).<br>
-  b) Nhị thiền, định sinh hỷ lạc : Nhưng cái vui mừng nói trên, lại làm cho tâm chao động, cần phải dứt trừ, vì thế hành giả phải vào định. Khi định có kết quả, các vui mừng thô phù của Sơ thiền chấm dứt và cái vui mừng vi tế ở trong định lại nẩy sinh, vì thế cho nên gọi là “Định sinh hỷ lạc”.<br>
-  c) Tam thiền, ly hỷ diệu lạc : Cái vui mừng ở cõi Nhị thiền mặc dù vi tế, nhưng vẫn còn làm cho tâm rung động, vì thế hành giả lại cần bỏ cái vui mừng ở cõi Nhị thiền. Khi bỏ được cái vui mừng này, thì một nỗi vui mầu nhiệm khác lại phát sinh, vì thế cho nên gọi là “Ly hỷ diệu lạc”.<br>
-  Trong các kinh thường chép : cõi Tam thiền là vui hơn hết (diệu lạc), vì ở các cõi dưới thì chỉ có cái vui thô động, còn ở các cõi trên thì chỉ là tịch tịnh, không còn vui nữa.<br>
-  d) Tứ thiền, xả niệm thanh tịnh : Ở cõi Tam thiền, tuy đã hết cái vui thô động của Sơ thiền và Nhị thiền, nhưng vẫn còn cái vui mầu nhiệm. Nhưng hễ còn niềm vui, thì tâm chưa hoàn toàn thanh tịnh. Hành giả lại còn phải tiến lên một bậc nữa, đi vào cái thiền thứ tư xả luôn cả cái niệm vui, để tâm được hoàn toàn thanh tịnh, vì thế nên gọi là “Xả niệm thanh tịnh”.</p>
+  Tức là bốn giai đoạn tham thiền của phàm phu, đi dần từ cái chỗ nhàm chán cái vui thô thiển đến cái vui vi tế thanh tịnh. Bốn giai đoạn tham thiền này tuần tự diễn tiến như sau :</p>
+  <ul style="padding-left: 2.5rem;">
+    <li>a) Sơ thiền, ly sinh hỷ lạc : Hành giả khởi đầu bằng tâm lý nhàm chán cái ô trược của cõi Dục, và mong cầu được xa lìa. Sau khi nhờ tham thiền mà xa lìa được cái ô trược của dục giới, hành giả sinh vui mừng (sinh hỷ lạc). Đó là kết quả của giai đoạn tham thiền đầu tiên (sơ thiền).</li>
+    <li>b) Nhị thiền, định sinh hỷ lạc : Nhưng cái vui mừng nói trên, lại làm cho tâm chao động, cần phải dứt trừ, vì thế hành giả phải vào định. Khi định có kết quả, các vui mừng thô phù của Sơ thiền chấm dứt và cái vui mừng vi tế ở trong định lại nẩy sinh, vì thế cho nên gọi là “Định sinh hỷ lạc”.</li>
+    <li>c) Tam thiền, ly hỷ diệu lạc : Cái vui mừng ở cõi Nhị thiền mặc dù vi tế, nhưng vẫn còn làm cho tâm rung động, vì thế hành giả lại cần bỏ cái vui mừng ở cõi Nhị thiền. Khi bỏ được cái vui mừng này, thì một nỗi vui mầu nhiệm khác lại phát sinh, vì thế cho nên gọi là “Ly hỷ diệu lạc”.<br>
+    Trong các kinh thường chép : cõi Tam thiền là vui hơn hết (diệu lạc), vì ở các cõi dưới thì chỉ có cái vui thô động, còn ở các cõi trên thì chỉ là tịch tịnh, không còn vui nữa.</li>
+    <li>d) Tứ thiền, xả niệm thanh tịnh : Ở cõi Tam thiền, tuy đã hết cái vui thô động của Sơ thiền và Nhị thiền, nhưng vẫn còn cái vui mầu nhiệm. Nhưng hễ còn niềm vui, thì tâm chưa hoàn toàn thanh tịnh. Hành giả lại còn phải tiến lên một bậc nữa, đi vào cái thiền thứ tư xả luôn cả cái niệm vui, để tâm được hoàn toàn thanh tịnh, vì thế nên gọi là “Xả niệm thanh tịnh”.</li>
+  </ul>
 
   <p><strong>2. Tứ không định</strong><br>
-  Sau khi đã trải qua Tứ thiền và đã thành tựu viên mãn, hành giả tiếp tục tu thiền định và sẽ trải qua bốn giai đoạn gọi là Tứ không định sau đây. Sở dĩ gọi là Tứ không, vì khi vào bốn định này, thiền giả sẽ không còn thấy có cảnh và thức tâm nữa.<br>
-  a) Không vô biên xứ định : Thiền giả khi đã đạt được Tứ thiền, tâm đã được hoàn toàn thanh tịnh, nhưng vẫn còn thấy có sắc giới, còn thân còn cảnh và bị hình sắc trói buộc, nên sinh tâm nhàm chán. Để rời bỏ các hình sắc về thân và cảnh, thiền giả vào định thứ nhất của Tứ không, thể nhập với “hư không vô biên”, tức là không thấy có ngăn cách, có biên giới của cảnh.<br>
-  b) Thức vô biên xứ định : Thiền giả khi đã được định thứ nhất của Tứ không, rời bỏ được sắc tướng của thân và cảnh, thấy được cái vô biên của hư không, nhưng vẫn còn giữ cái bản ngã hẹp hòi, vẫn còn thấy biên giới của tâm thức. Vậy thiền giả phải vào định thứ hai của Tứ thiền, để xóa bỏ cái biên giới của thức, khi thành tựu, tức thể nhập được vào cõi “Thức vô biên”.<br>
-  c) Vô sở hữu xứ định : Thiền giả mặc dù không còn thấy biên giới, ngăn cách của thức, nhưng vẫn còn thấy có ngã, có tâm thức, có năng sở, mà hễ còn thấy có năng sở, tức còn thấy mình và người, còn thấy có sở hữu. Vậy thiền giả phải vượt lên một tầng nữa, xa lìa sự chao động, năng sở, tức nhập định “Vô sở hữu xứ” (cõi không sở hữu).<br>
-  d) Phi tưởng, phi phi tưởng xứ định : Thiền giả khi đã nhập định “Vô sở hữu”, không còn thấy nhân ngã, năng sở, nhưng vẫn còn “tưởng”. Mà còn tưởng thì còn vọng động. Vậy thiền giả phải tiến lên một tầng nữa, vào cõi “Định không tưởng”. Nhưng không tưởng đây, không có nghĩa là vô tri vô giác như đất đá, không tưởng, nhưng không phải không tưởng của đất đá, không tưởng mà vẫn sáng suốt như một tấm gương, chứ không phải là một tấm ván hay mặt đá. Đó là ý nghĩa của cõi định “Phi tưởng, phi phi tưởng”</p>
+  Sau khi đã trải qua Tứ thiền và đã thành tựu viên mãn, hành giả tiếp tục tu thiền định và sẽ trải qua bốn giai đoạn gọi là Tứ không định sau đây. Sở dĩ gọi là Tứ không, vì khi vào bốn định này, thiền giả sẽ không còn thấy có cảnh và thức tâm nữa.</p>
+  <ul style="padding-left: 2.5rem;">
+    <li>a) Không vô biên xứ định : Thiền giả khi đã đạt được Tứ thiền, tâm đã được hoàn toàn thanh tịnh, nhưng vẫn còn thấy có sắc giới, còn thân còn cảnh và bị hình sắc trói buộc, nên sinh tâm nhàm chán. Để rời bỏ các hình sắc về thân và cảnh, thiền giả vào định thứ nhất của Tứ không, thể nhập với “hư không vô biên”, tức là không thấy có ngăn cách, có biên giới của cảnh.</li>
+    <li>b) Thức vô biên xứ định : Thiền giả khi đã được định thứ nhất của Tứ không, rời bỏ được sắc tướng của thân và cảnh, thấy được cái vô biên của hư không, nhưng vẫn còn giữ cái bản ngã hẹp hòi, vẫn còn thấy biên giới của tâm thức. Vậy thiền giả phải vào định thứ hai của Tứ thiền, để xóa bỏ cái biên giới của thức, khi thành tựu, tức thể nhập được vào cõi “Thức vô biên”.</li>
+    <li>c) Vô sở hữu xứ định : Thiền giả mặc dù không còn thấy biên giới, ngăn cách của thức, nhưng vẫn còn thấy có ngã, có tâm thức, có năng sở, mà hễ còn thấy có năng sở, tức còn thấy mình và người, còn thấy có sở hữu. Vậy thiền giả phải vượt lên một tầng nữa, xa lìa sự chao động, năng sở, tức nhập định “Vô sở hữu xứ” (cõi không sở hữu).</li>
+    <li>d) Phi tưởng, phi phi tưởng xứ định : Thiền giả khi đã nhập định “Vô sở hữu”, không còn thấy nhân ngã, năng sở, nhưng vẫn còn “tưởng”. Mà còn tưởng thì còn vọng động. Vậy thiền giả phải tiến lên một tầng nữa, vào cõi “Định không tưởng”. Nhưng không tưởng đây, không có nghĩa là vô tri vô giác như đất đá, không tưởng, nhưng không phải không tưởng của đất đá, không tưởng mà vẫn sáng suốt như một tấm gương, chứ không phải là một tấm ván hay mặt đá. Đó là ý nghĩa của cõi định “Phi tưởng, phi phi tưởng”</li>
+  </ul>
+
   <p>Có thể nói định “Tứ không” thuộc về ngoại đạo. Những người tu thiền, bắt đầu từ Sơ thiền đến Tam thiền, lúc bấy giờ có hai con đường rẽ, một con đường đi về ngũ A-na-hàm (là năm cõi A-na-hàm : a) Vô phiền, b) Vô nhiệt, c) Thiện kiến, d) Thiện hiện, đ) Sắc cứu cánh) ở cõi Tứ thiền (Tứ thiền có chín cõi, ngoài năm cõi A-na-hàm, còn bốn cõi : Vô vân, Phước sinh, Quảng quả, Vô tưởng) thuộc về cảnh giới của thánh thứ ba (Tiểu thừa Thanh văn có bốn quả thánh, A-na-hàm thuộc quả thánh thứ ba), một con đường đi về Tứ không của cõi Vô sắc, thuộc về ngoại đạo.</p>
 
   <h4>III. NHỊ THỪA THIỀN</h4>
@@ -138,12 +141,14 @@ const readingContent = `
     <li>Tưởng thây bị đốt tiêu</li>
   </ol>
 
-  <p><strong>3. Tứ vô lượng tâm :</strong><br>
-  a) Tâm từ vô lượng : Thiền giả mở rộng lòng Từ vô lượng, bao bọc chúng sinh trong tình thương rộng lớn vô biên.<br>
-  b) Tâm bi vô lượng : Thiền giả mở rộng lòng Bi vô lượng, cứu khổ cho chúng sinh trong năm đường.<br>
-  c) Tâm hỷ vô lượng : Thiền giả mở rộng tâm Hỷ (hoan hỷ) vô lượng, làm cho chúng sinh đều được Hỷ.<br>
-  d) Tâm xả vô lượng : Thiền giả mở rộng lòng Xả vô lượng, không lưu luyến, cố chấp một việc gì.<br>
-  Tứ vô lượng tâm là một pháp môn rất linh nghiệm, Phàm phu tu Tứ vô lượng tâm, thì sau khi mạng chung sẽ sinh làm vua ở cõi Tứ thiền, Nhị thừa tu Tứ vô lượng tâm, thì phước đức được tăng trưởng, mau đặng Niết-bàn, Bồ-tát tu Tứ vô lượng tâm thì lòng từ bi mở rộng vô biên và làm lợi ích cho chúng sinh không xiết kể.</p>
+  <p><strong>3. Tứ vô lượng tâm :</strong></p>
+  <ul style="padding-left: 2.5rem;">
+    <li>a) Tâm từ vô lượng : Thiền giả mở rộng lòng Từ vô lượng, bao bọc chúng sinh trong tình thương rộng lớn vô biên.</li>
+    <li>b) Tâm bi vô lượng : Thiền giả mở rộng lòng Bi vô lượng, cứu khổ cho chúng sinh trong năm đường.</li>
+    <li>c) Tâm hỷ vô lượng : Thiền giả mở rộng tâm Hỷ (hoan hỷ) vô lượng, làm cho chúng sinh đều được Hỷ.</li>
+    <li>d) Tâm xả vô lượng : Thiền giả mở rộng lòng Xả vô lượng, không lưu luyến, cố chấp một việc gì.</li>
+  </ul>
+  <p>Tứ vô lượng tâm là một pháp môn rất linh nghiệm, Phàm phu tu Tứ vô lượng tâm, thì sau khi mạng chung sẽ sinh làm vua ở cõi Tứ thiền, Nhị thừa tu Tứ vô lượng tâm, thì phước đức được tăng trưởng, mau đặng Niết-bàn, Bồ-tát tu Tứ vô lượng tâm thì lòng từ bi mở rộng vô biên và làm lợi ích cho chúng sinh không xiết kể.</p>
 
   <p><strong>4. Thập lục đặc thắng :</strong><br>
   Thập lục đặc thắng tức là mười sáu phép rất đặc biệt thù thắng, có thiền có quán, đủ các thứ thiền và có thể phát sinh ra quả vô lậu, không phải như tứ thiền, tứ không, không ra khỏi sinh tử. Mười sáu phép đặc biệt thù thắng này là :</p>
@@ -214,7 +219,7 @@ const readingContent = `
 
   <p><strong>9. Lục diệu pháp môn</strong><br>
   Lục diệu pháp môn là sáu pháp môn mầu nhiệm sau đây :<br>
-  1) Sổ, 2) Tùy, 3) Chỉ, 4) Quán, 5) Hoàn, 6) Tịnh.</p>
+  1. Sổ, 2. Tùy, 3. Chỉ, 4. Quán, 5. Hoàn, 6. Tịnh.</p>
 
   <p><strong>10. Bát niệm quán :</strong><br>
   Với phép quán tám niệm sau này, thiền giả sẽ trừ được sự sợ hãi khi tu Cửu tưởng và sẽ được đạo quả :<br>
@@ -244,9 +249,11 @@ const readingContent = `
   Hôm nay chúng tôi xin đề cử một vài phương pháp trong Ngũ đình tâm quán, mà pháp quán đầu tiên là Sổ tức. Sở dĩ chúng tôi nói bài quán Sổ Tức trước là vì khi đi sâu vào các pháp quán, thiền giả trước tiên, phải biết quán là gì ? quán như thế nào ? và phải có một tâm trí định tĩnh không tán loạn. Muốn được thế, trước tiên phải tập quán Sổ tức. Khi quán sổ tức đã thuần thục rồi, thì các pháp quán sau mới có kết quả, nghĩa là mới có thể trừ diệt dần các tâm bệnh : tham, sân, si, mạn v.v…<br>
   Quán Sổ tức là đếm hơi thở. Quán là tập trung tư tưởng để quan sát, phân tích hay suy nghiệm đến một vấn đề. Sổ tức quán là tập trung tâm trí để đếm hơi thở ra vào của mình, mà mục đích là để đình chỉ tâm tán loạn.</p>
 
-  <p><strong>VÌ SAO PHẢI ĐÌNH CHỈ TÂM TÁN LOẠN ?</strong><br>
-  Tâm trí chúng ta bị muôn việc ở đời chi phối, khi vui khi buồn, khi lo việc này khi suy nghĩ chuyện khác, khi mừng khi giận, khi thương khi ghét, không bao giờ được định tĩnh. Dù cho ta có ngồi yên một chỗ, khoanh tay lại, tâm trí chúng ta cũng không ngừng nghỉ, mà vẫn sống với đời sống lăng xăng rộn ràng của nó. Bao nhiêu hình ảnh phức tạp, như một cuốn phim hiện lên trên màn ảnh của trí óc, và mỗi hình ảnh như thế lại mang theo nó một cảm tưởng vui buồn thương ghét, cho nên khi ta ngồi yên, chỉ là để cho thân xác được nghỉ ngơi, chứ còn tinh thần thì vẫn hoạt động, có nhiều khi lại hoạt động nhiều hơn cả lúc làm việc. Hầu hết chúng ta đều khổ tâm, bực tức về sự hoạt động lỗi thời ấy của tâm trí chúng ta : Không muốn nhớ nữa mà vẫn cứ nhớ, không muốn thương nữa mà vẫn cứ thương, không muốn giận nữa mà vẫn cứ giận. Làm chủ thể xác đã là khó, mà làm chủ tinh thần lại càng khó hơn. Nhất là trong thế giới máy móc, phức tạp ngày nay, một thế giới đầy màu sắc rộn ràng âm thanh chát chúa, hình ảnh kỳ dị, một thế giới cuồng loạn như thế, trí óc không mạnh mẽ vững vàng, thì rất dễ bị rối loạn. Vì thế, theo các bảng thống kê của các nhà bác học, số người mắc bệnh điên mỗi ngày mỗi nhiều trong thế giới ngày nay.<br>
-  Riêng trong phạm vi nhỏ hẹp, chúng ta cũng nhận thấy có nhiều người học hành chẳng nhớ, gặp việc hay quên, niệm Phật không thành công, tham thiền quán tưởng chẳng kết quả, đều do sự tán loạn tâm trí mà ra.<br>
+  <p><strong>VÌ SAO PHẢI ĐÌNH CHỈ TÂM TÁN LOẠN ?</strong></p>
+  <ul style="padding-left: 2.5rem;">
+    <li>Tâm trí chúng ta bị muôn việc ở đời chi phối, khi vui khi buồn, khi lo việc này khi suy nghĩ chuyện khác, khi mừng khi giận, khi thương khi ghét, không bao giờ được định tĩnh. Dù cho ta có ngồi yên một chỗ, khoanh tay lại, tâm trí chúng ta cũng không ngừng nghỉ, mà vẫn sống với đời sống lăng xăng rộn ràng của nó. Bao nhiêu hình ảnh phức tạp, như một cuốn phim hiện lên trên màn ảnh của trí óc, và mỗi hình ảnh như thế lại mang theo nó một cảm tưởng vui buồn thương ghét, cho nên khi ta ngồi yên, chỉ là để cho thân xác được nghỉ ngơi, chứ còn tinh thần thì vẫn hoạt động, có nhiều khi lại hoạt động nhiều hơn cả lúc làm việc. Hầu hết chúng ta đều khổ tâm, bực tức về sự hoạt động lỗi thời ấy của tâm trí chúng ta : Không muốn nhớ nữa mà vẫn cứ nhớ, không muốn thương nữa mà vẫn cứ thương, không muốn giận nữa mà vẫn cứ giận. Làm chủ thể xác đã là khó, mà làm chủ tinh thần lại càng khó hơn. Nhất là trong thế giới máy móc, phức tạp ngày nay, một thế giới đầy màu sắc rộn ràng âm thanh chát chúa, hình ảnh kỳ dị, một thế giới cuồng loạn như thế, trí óc không mạnh mẽ vững vàng, thì rất dễ bị rối loạn. Vì thế, theo các bảng thống kê của các nhà bác học, số người mắc bệnh điên mỗi ngày mỗi nhiều trong thế giới ngày nay.</li>
+  </ul>
+  <p>Riêng trong phạm vi nhỏ hẹp, chúng ta cũng nhận thấy có nhiều người học hành chẳng nhớ, gặp việc hay quên, niệm Phật không thành công, tham thiền quán tưởng chẳng kết quả, đều do sự tán loạn tâm trí mà ra.<br>
   Vậy muốn học hành mau nhớ, gặp việc không quên, niệm Phật được nhất tâm bất loạn, tham thiền quán tưởng được thành tựu, đều cốt yếu là phải làm sao cho tâm trí được yên tĩnh.</p>
 
   <p>Vì sao tâm trí được yên tĩnh, thì dễ đạt được những kết quả như trên ? Ta hãy lấy một thí dụ thông thường mà nhiều người đã kinh nghiệm : Khi ta học một bài thuộc lòng hay làm một bài toán vào lúc hoàng hôn hay giữa cảnh náo nhiệt, thì ta thấy vất vả khó khăn vô cùng, vì suốt ngày tâm ta đã mệt mỏi tính toán lăng xăng, phân tán theo trần cảnh. Trái lại, cũng bài học đó, hay bài toán đó, mà trong buổi khuya thanh vắng, một mình một bóng với ngọn đèn, thì ta học bài rất mau thuộc, làm bài rất mau xong, tâm tính ta hình như thông minh sáng suốt phi thường. Vì sao vậy ? Vì buổi khuya mới thức dậy, tâm trí ta yên định, chưa bị trần cảnh chi phối.<br>
@@ -307,6 +314,7 @@ const readingContent = `
 
   <p><strong>QUÁN BẤT TỊNH NHƯ THẾ NÀO ?</strong><br>
   Trong bài thứ bảy của tập Phật Học Phổ Thông khóa III, chúng ta đã biết sơ qua về pháp quán Bất tịnh như thế nào rồi. Nhưng trong bài đó, chúng ta chỉ mới biết một phần của pháp quán bất tịnh mà thôi, nghĩa là hành giả, muốn thấy thân xác là bất tịnh như thế nào, thì vào “thi lâm” (rừng bỏ xác người chết) để quán sát. Nhưng quán sát như thế, cũng chỉ mới biết một phần của cái thân bất tịnh này mà thôi. Hơn nữa, cái phần ấy cũng không phải là phần quan trọng, vì nó thuộc về giai đoạn sau khi chết. Nhất là đối với hạng người có quan niệm : “chết là hết”, thì “quán thây ma” như thế chưa phải là phương thuốc mầu nhiệm, để họ nhàm chán cái thể xác của mình và của người khác. Muốn cho họ nhàm chán, ghê tởm cái thể xác thì phải chỉ cho họ thấy tận mắt cái “bất tịnh” của nó, từ khi nó bắt đầu thành hình cho đến khi nó bị hủy hoại, từ trong cho đến ngoài, từ thể cho đến tướng. Để sự quán sát được rốt ráo, hành giả phải chia thành năm phần, tuần tự như sau :</p>
+
   <ul style="padding-left: 2.5rem;">
     <li>Quán chủng tử bất tịnh</li>
     <li>Quán trụ xứ bất tịnh</li>
@@ -333,15 +341,15 @@ const readingContent = `
     Những điều chúng tôi nói trên đây không phải là quá đáng. Nếu bình tâm mà xét, chúng ta sẽ thấy thân của mỗi chúng ta thật đáng ghê tởm. Nhưng ít khi chúng ta thừa nhận như thế, vì từ lâu đời lâu kiếp, với tính mê chấp, với tâm tham đắm, nhãn quan của chúng ta như có một bức màn nhung lụa phủ ngang, nên chúng ta trông cái gì cũng thấy đẹp. Và cho đến khi bức màn ấy đã bị xé toang rồi, sự thật xấu xa, dù có bày ra lộ liễu trước mắt, chúng ta cũng bàng hoàng, không cho là thật. Vì thế cho nên hành giả muốn thành công và nhàm chán cái thân này, phải quán tưởng nhiều lần, từ ngày này sang ngày khác, cho đến khi nào nhận thấy một cách rõ ràng thân này quả thật là bất tịnh mới thôi.</li>
     <li><strong>Quán tự thể bất tịnh :</strong> Như chúng ta đã thấy chín lỗ cống trong người, mỗi ngày bài tiết không biết bao là thứ nhơ nhớp. Vậy chắc chắn bên trong thân xác, những chất liệu cấu kết nên thể xác chúng ta, cũng không trong sạch được. Vậy quán tự thể bất tịnh là quán sát cái thể chất của thân người, để nhận thấy nó bất tịnh như thế nào.<br>
     Thể chất của con người đại khái gồm có ba chất : Chất cứng như xương, tóc, lông, móng tay v.v… Chất lỏng như máu, nước miếng, nước mắt v.v… Chất sệt (không cứng mà cũng không lỏng) như mỡ, óc, tủy v.v… Trong các chất ấy, dù cứng, mềm, hay lỏng cũng chẳng có thứ nào là trong sạch.
-    <ul style="padding-left: 2.5rem;">
-      <li>Về chất cứng, như tóc chẳng hạn, là một vật mỹ quan để chưng diện trên đầu. Thế thường ai cũng quý nó. Nhưng nếu không chăm sóc nó một cách chu đáo, không sửa soạn nó một cách công phu, nghĩa là không trâm cài, lược giắt, không chải chuốt, gội rửa, xức ướp nước hoa, mà để bê tha cho nó tự do quét bụi, tự do dầm sương dãi nắng, tự do rối nùi lại để làm ổ cho trứng chấy sinh nở, thì dù cho không xua đuổi, người ta cũng chạy dài, không dám lại gần. Đó là chưa nói khi nó bị đốt cháy hay rời da đầu, rơi vào thức ăn hay vào trong miệng, thì thật là nguy hiểm vô cùng. Tóc là thứ ở nơi cao quý của người mà còn bất tịnh như vậy, thì những thứ khác như ruột, gan v.v… lại còn bất tịnh biết chừng nào ?</li>
-      <li>Về chất lỏng, thì nước miếng là sạch nhất, vì nó được ở trong miệng là nơi hằng ngày được lau chùi súc rửa nhiều nhất. Thế mà lúc ra khỏi miệng, dù là của kẻ khác hay của chính mình, rủi bị dính vào mặt vào áo, thì ta liền có những cử chỉ tỏ rõ sự nhờm gớm ngay.</li>
-      <li>Về chất sệt, thì não là phần quan trọng và được ở trong đầu óc là nơi cao quý nhất. Nhưng thử tưởng tượng, khi chúng đi xe hơi chẳng hạn, rủi bị tai nạn, người ngồi bên cạnh ta bị bể đầu, não trắng như đậu hũ tung tóe vào mặt mày chúng ta, thì chắc chắn những người thiếu bình tĩnh sẽ chết giấc vì ghê tởm.</li>
-    </ul>
+      <ul style="padding-left: 2.5rem;">
+        <li>Về chất cứng, như tóc chẳng hạn, là một vật mỹ quan để chưng diện trên đầu. Thế thường ai cũng quý nó. Nhưng nếu không chăm sóc nó một cách chu đáo, không sửa soạn nó một cách công phu, nghĩa là không trâm cài, lược giắt, không chải chuốt, gội rửa, xức ướp nước hoa, mà để bê tha cho nó tự do quét bụi, tự do dầm sương dãi nắng, tự do rối nùi lại để làm ổ cho trứng chấy sinh nở, thì dù cho không xua đuổi, người ta cũng chạy dài, không dám lại gần. Đó là chưa nói khi nó bị đốt cháy hay rời da đầu, rơi vào thức ăn hay vào trong miệng, thì thật là nguy hiểm vô cùng. Tóc là thứ ở nơi cao quý của người mà còn bất tịnh như vậy, thì những thứ khác như ruột, gan v.v… lại còn bất tịnh biết chừng nào ?</li>
+        <li>Về chất lỏng, thì nước miếng là sạch nhất, vì nó được ở trong miệng là nơi hằng ngày được lau chùi súc rửa nhiều nhất. Thế mà lúc ra khỏi miệng, dù là của kẻ khác hay của chính mình, rủi bị dính vào mặt vào áo, thì ta liền có những cử chỉ tỏ rõ sự nhờm gớm ngay.</li>
+        <li>Về chất sệt, thì não là phần quan trọng và được ở trong đầu óc là nơi cao quý nhất. Nhưng thử tưởng tượng, khi chúng đi xe hơi chẳng hạn, rủi bị tai nạn, người ngồi bên cạnh ta bị bể đầu, não trắng như đậu hũ tung tóe vào mặt mày chúng ta, thì chắc chắn những người thiếu bình tĩnh sẽ chết giấc vì ghê tởm.</li>
+      </ul>
     Chỉ đơn cử một vài ví dụ trên, cũng đủ thấy rõ được cái bất tịnh của những chất cấu tạo thành thân thể chúng ta. Nếu nói nhiều hơn nữa lại càng thấy bất tịnh nhiều nữa, và chắc chắn một số quý độc giả sẽ nhờm gớm mà không đọc tiếp nữa.</li>
     <li><strong>Quán chung cánh bất tịnh :</strong> Chung cánh ở đây là muốn nói cái giai đoạn hư hoại của thân người sau khi trút hơi thở cuối cùng. Vậy quán chung cánh bất tịnh nghĩa là quán cái bất tịnh của thân người sau khi chết.<br>
     Đây là thời kỳ chung kết của mấy mươi năm sinh trưởng của thân thể. Trong kinh Đức Phật đã bảo : Thân người do tứ đại giả hợp mà thành, như thế dĩ nhiên khi chết, xác con người phải trả về cho tứ đại. Trước hết, là hơi thở về với phong đại. Kế là hơi ấm trở về với hỏa đại. Tiếp theo là chất lỏng trong người trở về với thủy đại, và cuối cùng chất cứng và sệt như thịt xương… hóa dần theo địa đại. Nhất là hai thứ sau này, trong thời kỳ mềm hư, tan rã, thì trên thế gian này không còn thứ gì nhơ nhớp, hôi hám, ghê tởm hơn nữa. Dù cho xác chết trước kia là người thân mến nhất đời, nhưng để năm bảy ngày chưa kịp tẩn niệm, chôn cất, thì ta vẫn ghê tởm, không thể đến gần bên cạnh mà không bịt mũi. Sự thật tàn nhẫn này được phơi bày nhản nhản khắp nơi trong những giai đoạn chiến tranh. Nói một cách tổng quát từ kẻ sang đến người hèn, từ kẻ giàu đến người nghèo, từ kẻ già đến người trẻ, từ kẻ đẹp đến người xấu, ai ai đến giai đoạn chung cánh này, cũng chỉ có một mùi giống nhau : mùi hôi, một chất như nhau : chất nhơ nhớp. Cái bất tịnh của con người trong giai đoạn kết thúc này đã rõ rành rành, tưởng không cần phải giải bày thêm nữa. Vả lại, trong bài thứ bảy của tập Phật học Phổ thông khóa thứ ba, cũng đã nói một cách tường tận đến cái bất tịnh của thân người trong giai đoạn này rồi. Nếu quý độc giả nào không nhớ, xin hãy đọc lại đoạn ấy.<br>
-    Tóm lại, qua năm giai đoạn quán bất tịnh này : chủng tử, trụ xứ, tự tướng, tự thể và chung cánh, chúng ta đã có một quan niệm rõ ràng, chân xác về cái bất tịnh của thân người. Cả một thời gian dài đằng đẵng, từ lúc đầu thai đến khi bị vùi xuống đất, quả thật thân người không tìm thấy một tí gì thơm sạch. Dù có tài hùng biện đến đâu, cũng không ai có thể ngụy biện cho cái thân bất tịnh trở thành thanh tịnh được.</li>
+    Tóm lại, qua năm giai đoạn quán bất tịnh này : chủng tử, trụ xứ, tự tướng, tự thể và chung cánh, chúng chúng ta đã có một quan niệm rõ ràng, chân xác về cái bất tịnh của thân người. Cả một thời gian dài đằng đẵng, từ lúc đầu thai đến khi bị vùi xuống đất, quả thật thân người không tìm thấy một tí gì thơm sạch. Dù có tài hùng biện đến đâu, cũng không ai có thể ngụy biện cho cái thân bất tịnh trở thành thanh tịnh được.</li>
   </ol>
 
   <p><strong>MỤC ĐÍCH CỦA QUÁN BẤT TỊNH</strong><br>
@@ -356,6 +364,7 @@ const readingContent = `
   Nhưng vì người đời bị phiền não tham, sân, si lôi cuốn, phỉnh gạt nên say mê quay cuồng đeo đuổi theo ngũ trần, lục dục, mà không thấy được bản tâm thanh tịnh.<br>
   Muốn chặn đứng sự tham đắm quay cuồng ấy, Đức Phật dạy phải quán bất tịnh.<br>
   Vậy quán bất tịnh có mục đích :</p>
+
   <ul style="padding-left: 2.5rem;">
     <li>Đối trị lòng tham dục, chứ không phải để chán đời, tự hủy diệt thân mình.</li>
     <li>Dứt trừ vọng niệm và giác ngộ Phật tính, để tiến mạnh trên đường giải thoát cho mình và cho người.</li>
@@ -367,8 +376,6 @@ const readingContent = `
       </ul>
     </li>
   </ul>
-
-  <hr>
 
   <h3 id="cau-chuyen">VÀI CÂU CHUYỆN ĐẶC BIỆT CỦA NHỊ THỪA THIỀN</h3>
   <p><strong>a) Một thiền giả ở đời Tùy :</strong> Đời nhà Tùy ở Trung Hoa, có một đệ tử của Ngài Huệ Viễn, tu pháp Diệt tận định, tọa thiền trong bọng cây đại thụ. Vì ngồi lâu năm chày tháng, thiền giả dần dần bị thân cây bọc lại, không còn vết tích gì nữa. Đến đời Đường, nhà vua sai người lên rừng đốn cây về tu bổ cung điện. Thợ rừng đốn nhằm cây ấy, đem về cưa đến khúc có thiền giả ngồi, thì cây chỉ nháy lửa ra, chứ không đứt. Thợ cưa lấy làm lạ, bổ ra xem, thì thấy một khối tròn, giống hình người ngồi. Nhà vua cho đăng bảng hỏi dân chúng, xem có ai biết cái khối ấy là gì không.<br>
@@ -394,8 +401,8 @@ const readingContent = `
   Vào những thế kỷ 13 và 14, ở Nhật các thiền sư sau nhiều năm tham thiền nhập định đã có kết quả, quyết tâm giữ lại cái thân cho được nguyên vẹn, mãi mãi như khi còn sống. Họ tập ăn rất ít và tránh ăn các món có chất dầu mỡ. Dần dần họ chỉ ăn một ít ngũ cốc và hoa quả. Mỡ thịt trong người họ tiêu dần, chỉ còn da và xương. Vào khoảng vài năm cuối cùng, họ chỉ uống nước, để rửa cho sạch ruột gan. Và họ ngồi tham thiền mãi như thế cho đến khi trút hơi thở cuối cùng. Các đệ tử của họ tắm rửa sạch sẽ thân thể của thiền giả, rồi đem đến một nơi chuyên về kỹ thuật ướp xác, để giữ cho thân thể của thiền giả được tồn tại mãi. Sau đó, các đệ tử đặt thiền giả lên bàn thờ.<br>
   Theo nhà bác học nói trên, thì lối ướp xác này hơn hẳn lối ướp xác của người Ai Cập, vì người Ai Cập khi ướp xác, phải mổ xác người chết, lấy ruột gan ra để khỏi sình thối, rồi mới tẩm thây vào các chất hóa học, để giữ cho thây đừng tan rã. Còn lối ướp của người Nhật thì không cần phải mổ bụng, lấy ruột gan ra, vì thiền giả trong lúc sinh thời đã tự làm cho các bộ phận trong người sạch sẽ và teo dần. Và vì không mổ bụng, toàn thân được nguyên vẹn như khi sống, cho nên linh khí trong người thiền giả không mất. Hơn nữa, thiền giả trước khi trút hơi thở cuối cùng, vẫn sáng suốt và làm chủ được thân xác mình, chứ không phải bị thân xác chi phối. Và do đó, có thể nói rằng thiền giả vẫn còn mãi mãi ở trong thiền định.</p>
 
-  <p><strong>KẾT LUẬN VỀ NHỊ THỪA THIỀN</strong><br>
-  Các pháp tu thiền của Nhị thừa hay Tiểu thừa nói trên, như quý độc giả đã thấy, nhiều không thể kể xiết. Tuy thế, hành giả muốn cho có kết quả, phải chọn lựa phương pháp nào thích hợp với trình độ của mình, chứ không phải gặp pháp môn nào tu pháp môn nấy được. Sự lựa chọn này cũng cần được những bậc thầy hướng dẫn. Vì thế, chúng ta thường nghe ngày xưa các vị chân tu đi “cầu pháp”, hết xứ này đến xứ nọ, không quản công lao khó nhọc, có nhiều khi hy sinh cả đến tính mạng nữa. Cầu pháp nghĩa là tìm cầu minh sư chỉ dạy phương pháp tu hành như ngài Thiện Tài đi tham cầu 53 vị Thiện tri thức, ngài Huyền Trang đi hết nước Trung Hoa rồi sang Ấn Độ để cầu Pháp. Hành giả sau khi được vị minh sư nhận lời, còn phải theo hầu hạ một thời gian rất lâu để vị minh sư ấy quan sát căn cơ trình độ của học trò như thế nào, rồi mới truyền cho phương pháp tu. Có như thế, sự tu hành của hành giả mới có kết quả. Trái lại, nếu vị minh sư truyền lầm pháp môn cho đệ tử, vì không quan sát, thăm dò căn cơ, trình độ một cách chu đáo, như ngài Xá-lợi-phất đem pháp Sổ tức dạy người giữ nghĩa địa, hay phép quán Bất tịnh dạy người thợ rèn tu, thì chỉ hoài công vô ích, chứ không kết quả gì hết.<br>
+  <h3 id="ket-luan-nhi-thua">KẾT LUẬN VỀ NHỊ THỪA THIỀN</h3>
+  <p>Các pháp tu thiền của Nhị thừa hay Tiểu thừa nói trên, như quý độc giả đã thấy, nhiều không thể kể xiết. Tuy thế, hành giả muốn cho có kết quả, phải chọn lựa phương pháp nào thích hợp với trình độ của mình, chứ không phải gặp pháp môn nào tu pháp môn nấy được. Sự lựa chọn này cũng cần được những bậc thầy hướng dẫn. Vì thế, chúng ta thường nghe ngày xưa các vị chân tu đi “cầu pháp”, hết xứ này đến xứ nọ, không quản công lao khó nhọc, có nhiều khi hy sinh cả đến tính mạng nữa. Cầu pháp nghĩa là tìm cầu minh sư chỉ dạy phương pháp tu hành như ngài Thiện Tài đi tham cầu 53 vị Thiện tri thức, ngài Huyền Trang đi hết nước Trung Hoa rồi sang Ấn Độ để cầu Pháp. Hành giả sau khi được vị minh sư nhận lời, còn phải theo hầu hạ một thời gian rất lâu để vị minh sư ấy quan sát căn cơ trình độ của học trò như thế nào, rồi mới truyền cho phương pháp tu. Có như thế, sự tu hành của hành giả mới có kết quả. Trái lại, nếu vị minh sư truyền lầm pháp môn cho đệ tử, vì không quan sát, thăm dò căn cơ, trình độ một cách chu đáo, như ngài Xá-lợi-phất đem pháp Sổ tức dạy người giữ nghĩa địa, hay phép quán Bất tịnh dạy người thợ rèn tu, thì chỉ hoài công vô ích, chứ không kết quả gì hết.<br>
   Hành giả cũng nên nhớ một điều nữa, là trên bước đường tu hành chớ nên bôn chồn, nóng nảy vô ích. Sự tu hành cũng như nghề trồng cây, không thể nóng nảy được, người trồng cây, hằng ngày lo vô phân tưới nước, làm đầy đủ bổn phận của mình, rồi kiên nhẫn chờ đợi, đến khi đủ sức, đúng thời tiết, cây sẽ tự đơm bông trổ trái một cách tự nhiên.<br>
   Người tu hành cũng vậy, cứ hằng ngày lo tu tập, tích trữ nhiều năm, đến khi công tròn quả mãn, thì được minh tâm kiến tính.<br>
   Hãy nhớ rằng tu hành phải trải qua nhiều đời nhiều kiếp, chứ không phải mới một hai đời mà thành Phật được.</p>
