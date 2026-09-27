@@ -289,7 +289,7 @@ const lesson: Lesson = {
       type: 'reading',
       label: 'Bản đọc',
       icon: 'mdi:book-open-page-variant',
-      infographicUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-4/tap-8.1-cau-xa-tong/KI%E1%BA%BEN_TR%C3%9AC_GI%E1%BA%A2I_THO%C3%81T_C%C3%82U_X%C3%81.pdf',
+      infographicUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-4/tap-8.1-cau-xa-tong/Tri%E1%BA%BFt_l%C3%BD_C%C3%A2u_X%C3%A1_T%C3%B4ng.png',
       readingContent,
       tableOfContents: [
         { id: 'duyen-khoi', label: 'I. Duyên Khởi Lập Tông' },
@@ -303,7 +303,7 @@ const lesson: Lesson = {
       type: 'slide',
       label: 'Slide',
       icon: 'mdi:presentation',
-      slideUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-4/tap-8.1-cau-xa-tong/Tri%E1%BA%BFt_l%C3%BD_C%C3%A2u_X%C3%A1_T%C3%B4ng.png',
+      slideUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-4/tap-8.1-cau-xa-tong/KI%E1%BA%BEN_TR%C3%9AC_GI%E1%BA%A2I_THO%C3%81T_C%C3%82U_X%C3%81.pdf',
     },
     {
       type: 'video',
