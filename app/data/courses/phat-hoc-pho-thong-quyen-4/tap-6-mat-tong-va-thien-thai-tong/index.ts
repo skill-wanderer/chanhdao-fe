@@ -3,7 +3,6 @@ import type { Module } from '~/types/course'
 import matTong from './mat-tong'
 import nghiThucTriNguBoChu from './nghi-thuc-tri-ngu-bo-chu'
 import thienThaiTong from './thien-thai-tong'
-import phuBaPhuongPhapTungKinh from './phu-ba-phuong-phap-tung-kinh'
 
 const moduleData: Module = {
   id: 'module-bdtp-tap-6-mat-tong-va-thien-thai-tong',
@@ -13,8 +12,7 @@ const moduleData: Module = {
   lessons: [
     matTong,
     nghiThucTriNguBoChu,
-    thienThaiTong,
-    phuBaPhuongPhapTungKinh,
+    thienThaiTong
   ],
 }
 

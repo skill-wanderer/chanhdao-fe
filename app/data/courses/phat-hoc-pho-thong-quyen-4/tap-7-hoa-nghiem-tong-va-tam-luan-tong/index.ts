@@ -1,8 +1,6 @@
 import type { Module } from '~/types/course'
 
 import hoaNghiemTong from './hoa-nghiem-tong'
-import phuNghiThucTungHoaNghiemTuMauGiongToVietNam from './phu-nghi-thuc-tung-hoa-nghiem-tu-mau-giong-to-viet-nam'
-import phuNghiThucTungHoaNghiemTuMauGiongQuangDong from './phu-nghi-thuc-tung-hoa-nghiem-tu-mau-giong-quang-dong'
 import tamLuanTong from './tam-luan-tong'
 
 const moduleData: Module = {
@@ -12,9 +10,7 @@ const moduleData: Module = {
   order: 7,
   lessons: [
     hoaNghiemTong,
-    phuNghiThucTungHoaNghiemTuMauGiongToVietNam,
-    phuNghiThucTungHoaNghiemTuMauGiongQuangDong,
-    tamLuanTong,
+    tamLuanTong
   ],
 }
 
