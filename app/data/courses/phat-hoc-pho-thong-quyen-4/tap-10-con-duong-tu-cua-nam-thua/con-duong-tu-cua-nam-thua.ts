@@ -1,4 +1,4 @@
-import type { Lesson } from '~/types/course'
+import type { Lesson, QuizQuestion } from '~/types/course'
 
 const readingContent = `
 <div class="prose-content">
@@ -318,6 +318,120 @@ const readingContent = `
 
 </div>
 `
+const questions: QuizQuestion[] = [
+  {
+    question: "Trong hệ thống Ngũ Thừa Phật giáo, tại sao việc tu hành theo 'Nhân thừa' được coi là nấc thang đầu tiên và cơ bản nhất?",
+    options: {
+      a: "Vì phương pháp tu hành của Nhân thừa phức tạp và đòi hỏi nhiều công phu hơn các thừa khác.",
+      b: "Vì nó thiết lập nền tảng đạo đức để hành giả tiếp tục làm người và không bị rơi vào các cõi thấp hơn.",
+      c: "Vì quả vị của Nhân thừa cao hơn quả vị của Thiên thừa trong hệ thống phân loại.",
+      d: "Vì đây là con đường duy nhất giúp hành giả đạt được sự giải thoát hoàn toàn khỏi vòng sinh tử.",
+    },
+    answer: "b",
+    explanation: {
+      a: "Sai.",
+      b: "Đúng. 'con đường thứ nhất, ngăn đón chúng ta khỏi rơi vào các thế giới đen tối (địa ngục, ngạ quỷ, súc sinh), đưa chúng ta trở lại cõi Người trong kiếp sau...'",
+      c: "Sai.",
+      d: "Sai.",
+    }
+  },
+  {
+    question: "Lý do quan trọng nhất mà Đức Phật đưa ra để cấm uống rượu trong Ngũ giới là gì?",
+    options: {
+      a: "Để tiết kiệm tài chính cho gia đình và tránh các rắc rối về kinh tế.",
+      b: "Vì uống rượu được coi là một tội lỗi nặng nề tương đương với việc sát sanh.",
+      c: "Để bảo vệ sức khỏe thể chất và tránh các bệnh hiểm nghèo cho hành giả.",
+      d: "Để ngăn chặn sự rối loạn lý trí, giúp hành giả luôn tỉnh táo để phát triển trí huệ.",
+    },
+    answer: "d",
+    explanation: {
+      a: "Sai.",
+      b: "Sai.",
+      c: "Sai.",
+      d: "Đúng. 'Rượu làm cho lý trí bị rối loạn... Người nghiện rượu không thể có được trí huệ sáng suốt... Đức Phật cấm uống rượu, để cho con người được tỉnh táo mà tu hành'.",
+    }
+  },
+  {
+    question: "Sự khác biệt căn bản giữa quan niệm về 'Cõi Trời' trong Thiên thừa của đạo Phật và quan niệm về Thượng Đế của một số tôn giáo khác là gì?",
+    options: {
+      a: "Cõi Trời là nơi hành giả đạt được sự giải thoát tự tại tuyệt đối.",
+      b: "Cõi Trời trong đạo Phật là nơi vĩnh hằng và không bao giờ bị thay đổi.",
+      c: "Chỉ có những người được Thượng Đế lựa chọn mới có thể sanh vào cõi Trời của đạo Phật.",
+      d: "Cõi Trời trong đạo Phật vẫn chịu sự chi phối của luật nhân quả luân hồi và vô thường.",
+    },
+    answer: "d",
+    explanation: {
+      a: "Sai.",
+      b: "Sai.",
+      c: "Sai.",
+      d: "Đúng. 'sống trong cõi này, cũng chưa phải là vĩnh viễn, tự tại giải thoát, mà còn bị luật nhân quả luân hồi và luật vô thường chi phối'.",
+    }
+  },
+  {
+    question: "Trong Tứ Diệu Đế, 'Kiết sử' được hiểu như thế nào trong mối quan hệ với sự đau khổ của chúng sanh?",
+    options: {
+      a: "Là các chân lý hiển nhiên về bản chất tốt đẹp của vũ trụ nhân sinh.",
+      b: "Là những xiềng xích cột chặt chúng sanh vào vòng sinh tử và sai khiến họ hành động sai lầm.",
+      c: "Là trạng thái thanh tịnh sau khi đã tiêu diệt hết mọi ham muốn ích kỷ.",
+      d: "Là những phương pháp tu hành giúp dứt trừ phiền não ngay lập tức.",
+    },
+    answer: "b",
+    explanation: {
+      a: "Sai.",
+      b: "Đúng. 'Kiết là cột chặt, Sử là sai khiến, điều khiển. Các thứ cột chặt chúng sanh vào vòng sanh tử, sai khiến chúng ta hành động...'",
+      c: "Sai.",
+      d: "Sai.",
+    }
+  },
+  {
+    question: "Trong vòng xích 12 nhân duyên, giai đoạn nào được coi là 'nhược điểm' mà hành giả cần tấn công để cắt đứt vòng sinh tử luân hồi?",
+    options: {
+      a: "Ái: vì khi kiểm soát được sự đắm mê, các giai đoạn sau như Thủ và Hữu sẽ không thể phát sinh.",
+      b: "Danh sắc: vì việc loại bỏ thân xác vật chất là cách nhanh nhất để giải thoát.",
+      c: "Vô minh: vì đây là điểm khởi đầu của mọi đau khổ trong quá khứ.",
+      d: "Lão tử: vì đây là nỗi sợ lớn nhất của con người cần được giải quyết.",
+    },
+    answer: "a",
+    explanation: {
+      a: "Đúng. 'Nhược điểm trong vòng dây ấy, là “Ái” (tham ái, đắm mê). Vậy hành giả phải nhắm đối tượng là “ái”... Một khi đã kiềm chế, tiêu diệt được “ái” rồi, thì nguyên nhân của “thủ” không có nữa. Thủ đã không có thì “hữu” cũng không thể do đâu mà phát sinh.'",
+      b: "Sai.",
+      c: "Sai.",
+      d: "Sai.",
+    }
+  },
+  {
+    question: "Trong pháp môn Lục độ, 'Nhẫn nhục' được phân loại như thế nào để đối phó với những lời chỉ trích hoặc hành vi ngược đãi từ người khác?",
+    options: {
+      a: "Thuận sanh nhẫn: giữ lòng bình thản trước sự khen ngợi và cung kính của mọi người.",
+      b: "Nghịch sanh nhẫn: không bực tức hay thù ghét trước sự chửi mắng, đánh đập của chúng sanh.",
+      c: "Ngoại pháp nhẫn: chịu đựng những cơn đói rét và khắc nghiệt của thời tiết.",
+      d: "Nội pháp nhẫn: kìm nén những cơn giận dữ trỗi dậy từ bên trong.",
+    },
+    answer: "b",
+    explanation: {
+      a: "Sai.",
+      b: "Đúng. 'Nghịch sanh nhẫn: là không bực tức, thù ghét trước sự chửi mắng, đánh đập của chúng sanh.'",
+      c: "Sai.",
+      d: "Sai.",
+    }
+  },
+  {
+    question: "Khái niệm 'Nhất Thừa' (hay Phật Thừa) mang ý nghĩa cốt lõi nào trong mục đích cuối cùng của sự tu hành?",
+    options: {
+      a: "Là một giáo phái riêng biệt tách rời khỏi năm thừa đã nêu.",
+      b: "Khẳng định rằng dù đi bằng phương tiện nào, mọi con đường tu Phật đều hội tụ về một đích duy nhất là thành Phật.",
+      c: "Là con đường ngắn nhất nhưng chỉ những người giàu có mới thực hiện được thông qua bố thí.",
+      d: "Chỉ dành riêng cho những người đã đạt đến quả vị A-la-hán.",
+    },
+    answer: "b",
+    explanation: {
+      a: "Sai.",
+      b: "Đúng. 'Đạo Phật dù có bao nhiêu pháp môn, bao nhiêu con đường, nhưng rút lại chỉ còn một con đường chung, dẫn đến một mục đích cuối cùng... mục đích cuối cùng cũng là hướng đến quả Phật.'",
+      c: "Sai.",
+      d: "Sai.",
+    }
+  }
+]
 
 const lesson: Lesson = {
   id: 'lesson-bdtp-tap-10-con-duong-tu-cua-nam-thua-con-duong-tu-cua-nam-thua',
@@ -333,6 +447,7 @@ const lesson: Lesson = {
       type: 'reading',
       label: 'Bản đọc',
       icon: 'mdi:book-open-page-variant',
+      infographicUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-4/tap-10-con-duong-tu-cua-5-thua/Ng%C5%A9_Th%E1%BB%ABa_Ph%E1%BA%ADt_Gi%C3%A1o.png',
       readingContent,
       tableOfContents: [
         { id: 'loi-noi-dau', label: 'Lời Nói Đầu' },
@@ -345,10 +460,32 @@ const lesson: Lesson = {
         { id: 'ba-thua', label: 'B. Ba Thừa Hay Ba Cỗ Xe' },
         { id: 'hai-thua', label: 'C. Hai Thừa Hay Hai Cỗ Xe' },
         { id: 'nhat-thua', label: 'D. Nhất Thừa Hay Tối Thượng Thừa' },
-        { id: 'tong-ket', label: 'Tổng Kết Bản Đồ Tu Phật' },
       ],
-    }
-  ]
+    },
+    {
+      type: 'slide',
+      label: 'Slide',
+      icon: 'mdi:presentation',
+      slideUrl: 'https://cdn.jsdelivr.net/gh/skill-wanderer/chanhdao-material@main/phat-hoc-pho-thong-4/tap-10-con-duong-tu-cua-5-thua/The_Buddhist_Roadmap.pdf',
+    },
+    {
+      type: 'video',
+      label: 'Video',
+      icon: 'mdi:play-circle-outline',
+      videoUrl: 'https://www.youtube.com/embed/v7TOqTXQOrw',
+    },
+    {
+      type: 'audio',
+      label: 'Audio',
+      icon: 'mdi:headphones',
+      audioEmbedUrl: 'https://open.spotify.com/embed/episode/5yYpCQPihFEkViMrHklqNf',
+    },
+  ],
+  quiz: {
+    title: 'Câu hỏi ôn tập - Con Đường Tu Của Năm Thừa',
+    passPercentage: 70,
+    questions,
+  }
 }
 
 export default lesson
