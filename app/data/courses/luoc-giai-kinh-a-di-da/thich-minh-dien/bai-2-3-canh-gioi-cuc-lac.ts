@@ -1,4 +1,5 @@
 import type { Lesson, QuizQuestion } from '~/types/course'
+import { materialUrl } from '../material'
 
 const readingContent = `
 <div class="prose-content">
@@ -378,6 +379,7 @@ const lesson: Lesson = {
   type: 'article',
   status: 'published',
   order: 4,
+  coverImage: materialUrl('2.3-canh-gioi-cuc-lac'),
   createdAt: '2026-10-04',
   updatedAt: '2026-10-04',
   learningMethods: [

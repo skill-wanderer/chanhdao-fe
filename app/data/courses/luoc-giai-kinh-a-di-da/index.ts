@@ -1,6 +1,7 @@
 import type { Course } from '~/types/course'
 
 import thichMinhDien from './thich-minh-dien'
+import { courseMaterialUrl } from './material'
 
 const modules = [
   thichMinhDien,
@@ -18,6 +19,7 @@ Thời đại Dao Tần, Pháp Sư ba tạng Cưu Ma La Thập dịch văn Phạ
 Lược giải: Tỳ kheo Thích Minh Điền
 
 Nội dung khóa học được sắp xếp theo mục lục gồm Lời tựa, phần chánh văn với các nội dung giải thích tiêu đề kinh, duyên khởi và đại chúng pháp hội, cảnh giới Cực Lạc, Đức Phật A DI ĐÀ, mười phương chư Phật tán thán và hộ niệm, cùng phần Kết Kinh.`,
+  thumbnail: courseMaterialUrl('Ảnh_bìa.jpg'),
   difficulty: 'beginner',
   lessonCount: modules.reduce((count, moduleData) => count + moduleData.lessons.length, 0),
   modules,
