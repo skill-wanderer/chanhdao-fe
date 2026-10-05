@@ -2,7 +2,8 @@
 import { getAllLessons, isPublishedLesson } from '~/types/course'
 
 const route = useRoute()
-const slug = route.params.slug as string
+// Courses with a custom path (e.g. /ban-do-tu-phat) pass their slug via route meta.
+const slug = (route.params.slug ?? route.meta.courseSlug) as string
 
 const { getCourseBySlug, formatDuration, getCourseDuration, getModuleDuration } = useCourses()
 const course = getCourseBySlug(slug)
@@ -71,7 +72,7 @@ useSchemaOrg([{
     '@type': 'ListItem',
     position: index + 1,
     name: lesson.title,
-    url: `${siteUrl}/phap-quyen/${course.slug}/bai-hoc/${lesson.slug}`,
+    url: `${siteUrl}${getLessonPath(course.slug, lesson.slug)}`,
   })),
 }])
 </script>
@@ -119,7 +120,7 @@ useSchemaOrg([{
 
           <NuxtLink
             v-if="availableLessons.length"
-            :to="`/phap-quyen/${course.slug}/bai-hoc/${availableLessons[0]?.slug}`"
+            :to="getLessonPath(course.slug, availableLessons[0]!.slug)"
             class="btn btn-primary mt-6"
           >
             <Icon name="mdi:play" /> Bắt đầu học

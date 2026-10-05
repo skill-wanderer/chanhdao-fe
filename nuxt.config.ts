@@ -1,6 +1,7 @@
 /// <reference types="node" />
 
 import { draftLessonRoutes, prerenderRoutes } from './build/prerender-routes'
+import { customCoursePaths } from './app/utils/course-paths'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const googleCrawlerUserAgents = [
@@ -26,6 +27,17 @@ const phapQuyenHeaders = {
   'Content-Security-Policy': "frame-src 'self' https://www.youtube.com https://open.spotify.com https://cdn.jsdelivr.net;",
   'Permissions-Policy': 'fullscreen=(self "https://www.youtube.com" "https://open.spotify.com")',
 }
+
+// Courses with a custom path get the same headers as /phap-quyen, and their
+// old /phap-quyen/<slug> URLs redirect permanently to the new path.
+const customCourseRouteRules = Object.fromEntries(
+  Object.entries(customCoursePaths).flatMap(([courseSlug, coursePath]) => [
+    [coursePath, { headers: phapQuyenHeaders }],
+    [`${coursePath}/**`, { headers: phapQuyenHeaders }],
+    [`/phap-quyen/${courseSlug}`, { redirect: { to: coursePath, statusCode: 301 } }],
+    [`/phap-quyen/${courseSlug}/**`, { redirect: { to: `${coursePath}/**`, statusCode: 301 } }],
+  ]),
+)
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -167,5 +179,24 @@ export default defineNuxtConfig({
     '/phap-quyen': { headers: phapQuyenHeaders },
     '/phap-quyen/**': { headers: phapQuyenHeaders },
     '/about': { redirect: '/gioi-thieu' },
+    ...customCourseRouteRules,
+  },
+
+  hooks: {
+    // Serve courses with a custom path on the same page components as /phap-quyen/:slug.
+    'pages:extend'(pages) {
+      const coursePage = pages.find(page => page.file?.endsWith('/phap-quyen/[slug]/index.vue'))
+      const lessonPage = pages.find(page => page.file?.endsWith('/phap-quyen/[slug]/bai-hoc/[lessonSlug].vue'))
+      if (!coursePage?.file || !lessonPage?.file) {
+        throw new Error('Course page components not found for custom course paths')
+      }
+
+      for (const [courseSlug, coursePath] of Object.entries(customCoursePaths)) {
+        pages.push(
+          { name: `course-${courseSlug}`, path: coursePath, file: coursePage.file, meta: { courseSlug } },
+          { name: `course-${courseSlug}-lesson`, path: `${coursePath}/bai-hoc/:lessonSlug`, file: lessonPage.file, meta: { courseSlug } },
+        )
+      }
+    },
   },
 })

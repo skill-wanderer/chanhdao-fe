@@ -174,7 +174,7 @@ function isCourseAvailable(slug: string): boolean {
               <span class="flex items-center justify-center w-7 h-7 rounded-full bg-brand-primary/[0.12] text-brand-accent text-[0.8rem] font-bold shrink-0">{{ index + 1 }}</span>
               <NuxtLink
                 v-if="isCourseAvailable(course.slug)"
-                :to="`/phap-quyen/${course.slug}`"
+                :to="getCoursePath(course.slug)"
                 class="text-text-primary no-underline text-[0.95rem] font-medium transition-colors duration-200 hover:text-brand-accent"
               >
                 {{ course.title }}
