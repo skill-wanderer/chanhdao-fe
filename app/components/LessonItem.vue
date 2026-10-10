@@ -16,7 +16,7 @@ const lessonDuration = computed(() => getLessonDuration(props.lesson))
 <template>
   <NuxtLink
     v-if="isAvailable"
-    :to="`/phap-quyen/${courseSlug}/bai-hoc/${lesson.slug}`"
+    :to="getLessonPath(courseSlug, lesson.slug)"
     class="lesson-item glass-card flex items-center gap-4 py-4 px-5 no-underline text-text-primary"
     :aria-label="`Bài học ${index + 1}: ${lesson.title}`"
   >

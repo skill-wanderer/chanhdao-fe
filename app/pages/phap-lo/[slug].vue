@@ -48,7 +48,7 @@ useSeo({
         '@type': 'ListItem',
         position: index + 1,
         name: course.title,
-        url: `${siteUrl}/phap-quyen/${course.slug}`,
+        url: `${siteUrl}${getCoursePath(course.slug)}`,
       })),
     },
   ],
@@ -158,7 +158,7 @@ function difficultyLabel(d: string): string {
 
             <NuxtLink
               v-if="isCourseAvailable(course.slug)"
-              :to="`/phap-quyen/${course.slug}`"
+              :to="getCoursePath(course.slug)"
               class="text-text-primary no-underline text-[0.98rem] font-medium transition-colors duration-200 hover:text-brand-primary"
             >
               {{ course.title }}

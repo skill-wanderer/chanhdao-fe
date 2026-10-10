@@ -30,7 +30,7 @@ useSeo({
         '@type': 'ListItem',
         position: index + 1,
         name: course.title,
-        url: `${siteUrl}/phap-quyen/${course.slug}`,
+        url: `${siteUrl}${getCoursePath(course.slug)}`,
       })),
     },
   ],

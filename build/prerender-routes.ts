@@ -4,6 +4,7 @@ import { type Dirent, readdirSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
 
 import allPaths from '../app/data/paths'
+import { getCoursePath, getLessonPath } from '../app/utils/course-paths'
 
 const coursesRoot = join(process.cwd(), 'app', 'data', 'courses')
 const staticRoutes = [
@@ -33,7 +34,7 @@ function getCourseLessonRouteGroups(): { publishedRoutes: string[]; draftRoutes:
 
   for (const courseDir of courseDirs) {
     const courseSlug = courseDir.name
-    publishedRoutes.push(`/phap-quyen/${courseSlug}`)
+    publishedRoutes.push(getCoursePath(courseSlug))
 
     const moduleRoot = join(coursesRoot, courseSlug)
     const moduleDirs = readdirSync(moduleRoot, { withFileTypes: true })
@@ -47,7 +48,7 @@ function getCourseLessonRouteGroups(): { publishedRoutes: string[]; draftRoutes:
       for (const lessonFile of lessonFiles) {
         const lessonFilePath = join(lessonRoot, lessonFile.name)
         const lessonSlug = lessonFile.name.replace(/\.ts$/, '')
-        const lessonRoute = `/phap-quyen/${courseSlug}/bai-hoc/${lessonSlug}`
+        const lessonRoute = getLessonPath(courseSlug, lessonSlug)
 
         if (isDraftLesson(lessonFilePath)) {
           draftRoutes.push(lessonRoute)

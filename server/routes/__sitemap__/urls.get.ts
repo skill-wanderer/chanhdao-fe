@@ -1,5 +1,6 @@
 import { defineSitemapEventHandler, asSitemapUrl } from '#imports'
 import allCourses from '~/data/courses'
+import { getCoursePath, getLessonPath } from '~/utils/course-paths'
 
 /**
  * Provides dynamic course and lesson URLs to the sitemap module.
@@ -28,7 +29,7 @@ export default defineSitemapEventHandler(() => {
   for (const course of allCourses) {
     urls.push(
       asSitemapUrl({
-        loc: `/phap-quyen/${course.slug}`,
+        loc: getCoursePath(course.slug),
         lastmod: course.updatedAt || course.createdAt,
         changefreq: 'weekly',
         priority: 0.8,
@@ -39,7 +40,7 @@ export default defineSitemapEventHandler(() => {
       for (const lesson of module.lessons) {
         urls.push(
           asSitemapUrl({
-            loc: `/phap-quyen/${course.slug}/bai-hoc/${lesson.slug}`,
+            loc: getLessonPath(course.slug, lesson.slug),
             lastmod: course.updatedAt || course.createdAt,
             changefreq: 'monthly',
             priority: 0.6,
