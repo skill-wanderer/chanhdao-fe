@@ -20,6 +20,7 @@ import phatHocPhoThongQuyen3 from './phat-hoc-pho-thong-quyen-3'
 import phatHocPhoThongQuyen4 from './phat-hoc-pho-thong-quyen-4'
 import phapMonTinhDo from './phap-mon-tinh-do'
 import luocGiaiKinhADiDa from './luoc-giai-kinh-a-di-da'
+import kinhVoLuongTho from './kinh-vo-luong-tho'
 
 const allCourses: Course[] = [
   phatHocPhoThongQuyen1,
@@ -28,6 +29,7 @@ const allCourses: Course[] = [
   phatHocPhoThongQuyen4,
   phapMonTinhDo,
   luocGiaiKinhADiDa,
+  kinhVoLuongTho,
 ].map(normalizeCourseDurationMetadata)
 
 export default allCourses
