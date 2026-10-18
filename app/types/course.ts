@@ -98,7 +98,7 @@ export function isSectionHeaderLesson(lesson: Lesson): boolean {
 export function hasLessonContent(lesson: Lesson): boolean {
   const hasLearningMethodContent = (lesson.learningMethods ?? []).some(method =>
     Boolean(
-      method.readingContent?.trim()
+      (method.readingContent && stripHtmlContent(method.readingContent).length > 0)
       || method.videoUrl
       || method.audioEmbedUrl
       || method.slideUrl
@@ -106,7 +106,11 @@ export function hasLessonContent(lesson: Lesson): boolean {
     ),
   )
 
-  return Boolean(lesson.content?.trim() || hasLearningMethodContent || lesson.quiz?.questions?.length)
+  return Boolean(
+    (lesson.content && stripHtmlContent(lesson.content).length > 0)
+    || hasLearningMethodContent
+    || lesson.quiz?.questions?.length,
+  )
 }
 
 export function isStandaloneSectionHeaderLesson(lesson: Lesson): boolean {
