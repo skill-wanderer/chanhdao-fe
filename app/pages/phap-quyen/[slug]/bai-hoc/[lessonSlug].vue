@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getAllLessons, isPublishedLesson } from '~/types/course'
+import { getAllLessons, isPublishedLesson, isSectionHeaderLesson, isStandaloneSectionHeaderLesson } from '~/types/course'
 
 const route = useRoute()
 // Courses with a custom path (e.g. /ban-do-tu-phat) pass their slug via route meta.
@@ -239,8 +239,14 @@ async function toggleComplete() {
           <template v-for="(mod, mi) in course.modules" :key="mod.id">
             <div class="text-xs font-bold uppercase tracking-wide text-text-light py-3 px-3 pb-1 mt-2 first:mt-0">{{ mod.title }}</div>
             <template v-for="(l, li) in mod.lessons" :key="l.id">
+              <div
+                v-if="isSectionHeaderLesson(l)"
+                class="py-2.5 px-3 mt-2 text-xs font-bold uppercase tracking-wide text-brand-accent"
+              >
+                {{ l.title }}
+              </div>
               <NuxtLink
-                v-if="isPublishedLesson(l)"
+                v-if="!isStandaloneSectionHeaderLesson(l) && isPublishedLesson(l)"
                 :to="getLessonPath(course.slug, l.slug)"
                 :class="[
                   'flex items-center gap-2.5 py-2.5 px-3 rounded-lg no-underline text-[0.85rem] transition-all duration-200',
@@ -250,14 +256,14 @@ async function toggleComplete() {
                 ]"
                 @click="closeSidebarOnMobile"
               >
-                <span :class="['shrink-0 text-xs w-6', l.slug === lessonSlug ? 'text-brand-primary' : 'text-text-light']">{{ String(course.modules.slice(0, mi).reduce((sum, m) => sum + m.lessons.length, 0) + li + 1).padStart(2, '0') }}</span>
+                <span :class="['shrink-0 text-xs w-6', l.slug === lessonSlug ? 'text-brand-primary' : 'text-text-light']">{{ String(allLessons.indexOf(l) + 1).padStart(2, '0') }}</span>
                 <span>{{ l.title }}</span>
               </NuxtLink>
               <div
-                v-else
+                v-else-if="!isStandaloneSectionHeaderLesson(l)"
                 class="flex items-center gap-2.5 py-2.5 px-3 rounded-lg text-[0.85rem] text-text-light"
               >
-                <span class="shrink-0 text-xs w-6 text-text-light">{{ String(course.modules.slice(0, mi).reduce((sum, m) => sum + m.lessons.length, 0) + li + 1).padStart(2, '0') }}</span>
+                <span class="shrink-0 text-xs w-6 text-text-light">{{ String(allLessons.indexOf(l) + 1).padStart(2, '0') }}</span>
                 <span>{{ l.title }}</span>
                 <span class="ml-auto text-[0.68rem] uppercase tracking-wider text-brand-accent/75">Sắp mở</span>
               </div>

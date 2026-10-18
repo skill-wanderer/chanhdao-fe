@@ -54,6 +54,8 @@ export interface Lesson {
   slug: string
   title: string
   type: 'video' | 'article'
+  /** Section title shown with heading styling inside a module. */
+  isSectionHeader?: boolean
   status?: PublishStatus
   /** Cover image shown on the lesson page and in the lesson list. */
   coverImage?: string
@@ -86,7 +88,29 @@ export interface AuthorInfo {
  * Get a flat array of all lessons across all modules in the course.
  */
 export function getAllLessons(course: Course): Lesson[] {
-  return (course.modules ?? []).flatMap(m => m.lessons)
+  return (course.modules ?? []).flatMap(m => m.lessons).filter(lesson => !isStandaloneSectionHeaderLesson(lesson))
+}
+
+export function isSectionHeaderLesson(lesson: Lesson): boolean {
+  return lesson.isSectionHeader === true
+}
+
+export function hasLessonContent(lesson: Lesson): boolean {
+  const hasLearningMethodContent = (lesson.learningMethods ?? []).some(method =>
+    Boolean(
+      method.readingContent?.trim()
+      || method.videoUrl
+      || method.audioEmbedUrl
+      || method.slideUrl
+      || method.infographicUrl,
+    ),
+  )
+
+  return Boolean(lesson.content?.trim() || hasLearningMethodContent || lesson.quiz?.questions?.length)
+}
+
+export function isStandaloneSectionHeaderLesson(lesson: Lesson): boolean {
+  return isSectionHeaderLesson(lesson) && !hasLessonContent(lesson)
 }
 
 export function isPublishedCourse(course: Course): boolean {

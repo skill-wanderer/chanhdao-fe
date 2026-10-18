@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Lesson } from '~/types/course'
-import { isPublishedLesson } from '~/types/course'
+import { isPublishedLesson, isSectionHeaderLesson, isStandaloneSectionHeaderLesson } from '~/types/course'
 
 const props = defineProps<{
   lesson: Lesson
@@ -10,12 +10,23 @@ const props = defineProps<{
 
 const { formatDuration, getLessonDuration } = useCourses()
 const isAvailable = computed(() => isPublishedLesson(props.lesson))
+const isSectionHeader = computed(() => isSectionHeaderLesson(props.lesson))
+const isStandaloneSectionHeader = computed(() => isStandaloneSectionHeaderLesson(props.lesson))
 const lessonDuration = computed(() => getLessonDuration(props.lesson))
 </script>
 
 <template>
+  <div
+    v-if="isSectionHeader"
+    class="lesson-section-heading flex items-center gap-3 mt-2 mb-1 py-3 px-4 rounded-xl bg-brand-primary/[0.06] border border-brand-primary/[0.12] text-text-primary"
+    :aria-label="lesson.title"
+  >
+    <Icon name="mdi:bookmark-outline" class="text-[1.25rem] text-brand-accent" />
+    <h4 class="text-lg font-bold font-serif">{{ lesson.title }}</h4>
+  </div>
+
   <NuxtLink
-    v-if="isAvailable"
+    v-if="!isStandaloneSectionHeader && isAvailable"
     :to="getLessonPath(courseSlug, lesson.slug)"
     class="lesson-item glass-card flex items-center gap-4 py-4 px-5 no-underline text-text-primary"
     :aria-label="`Bài học ${index + 1}: ${lesson.title}`"
@@ -55,7 +66,7 @@ const lessonDuration = computed(() => getLessonDuration(props.lesson))
   </NuxtLink>
 
   <div
-    v-else
+    v-else-if="!isStandaloneSectionHeader"
     class="lesson-item glass-card flex items-center gap-4 py-4 px-5 text-text-primary opacity-80"
     :aria-label="`Bài học ${index + 1}: ${lesson.title} (sắp mở)`"
   >

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { getAllLessons, isPublishedLesson } from '~/types/course'
+import type { Module } from '~/types/course'
+import { getAllLessons, isPublishedLesson, isStandaloneSectionHeaderLesson } from '~/types/course'
 
 const route = useRoute()
 // Courses with a custom path (e.g. /ban-do-tu-phat) pass their slug via route meta.
@@ -64,6 +65,9 @@ const authorBioParagraphs = computed(() =>
     .map(paragraph => paragraph.trim())
     .filter(Boolean)
 )
+
+const getVisibleModuleLessonCount = (module: Module) =>
+  module.lessons.filter(lesson => !isStandaloneSectionHeaderLesson(lesson)).length
 
 useSchemaOrg([{
   '@type': 'ItemList',
@@ -199,7 +203,7 @@ useSchemaOrg([{
           <div>
             <h3 class="text-[1.1rem] font-bold font-serif text-text-primary">{{ mod.title }}</h3>
             <span class="text-[0.8rem] text-text-muted">
-              {{ mod.lessons.length }} bài học
+              {{ getVisibleModuleLessonCount(mod) }} bài học
               <template v-if="getModuleDuration(mod)">
                 · {{ formatDuration(getModuleDuration(mod)) }}
               </template>
