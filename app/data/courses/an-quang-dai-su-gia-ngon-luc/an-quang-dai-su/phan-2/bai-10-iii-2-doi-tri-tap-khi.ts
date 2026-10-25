@@ -8,7 +8,10 @@ const lessonMaterialUrl = (file: string): string => {
 const readingContent = `
 <div class="prose-content">
   <section class="space-y-6">
-    <h2 class="mt-0 text-3xl font-bold text-primary-700 dark:text-primary-300">2. Ðối trị tập khí</h2>
+    <div>
+      <p class="mb-1 text-xs font-medium uppercase tracking-widest text-primary-500 dark:text-primary-400">III. CHỈ DẠY PHƯƠNG PHÁP TU TRÌ</p>
+      <h2 class="mt-0 text-3xl font-bold text-primary-700 dark:text-primary-300">2. Ðối trị tập khí</h2>
+    </div>
     <p class="font-semibold text-primary-700 dark:text-primary-300">* Niệm Phật muốn được nhất tâm thì trước hết phải phát tâm chân thật, thật sự vì liễu sanh tử, chẳng phải vì mong người đời gọi mình là người tu hành chân thật. Lúc niệm, từng câu, từng chữ phải từ tâm phát khởi, từ miệng thốt ra, lọt vào tai. Mỗi câu đều như thế, trăm ngàn vạn câu cũng đều như thế. Làm được như thế thì vọng niệm không do đâu khởi được, tâm và Phật tự có thể khế hợp nhau. Lại phải khéo dụng tâm, đừng đến nỗi quá chấp trước để rồi thân tâm bất an, đến nỗi ma sự có thể phát khởi. Nhiếp trọn sáu căn, tịnh niệm tiếp nối, hành đúng theo đây, nhất định sẽ chẳng lầm lạc.</p>
     <p class="font-semibold text-primary-700 dark:text-primary-300">* Lúc niệm Phật chẳng thể khẩn thiết là vì chưa biết Sa Bà là khổ, Cực Lạc là vui! Nếu nghĩ rằng thân người khó được, trung quốc khó sanh, Phật pháp khó nghe, pháp môn Tịnh Ðộ lại càng khó gặp. Nếu chẳng nhất tâm niệm Phật, một hơi thở ra chẳng trở lại, chắc chắn sẽ tùy theo nghiệp nặng nhất trong đời trước hay đời này đọa trong tam đồ ác đạo, chịu khổ bao kiếp dài lâu trọn chẳng có kỳ ra. Như thế là “do nghĩ khổ địa ngục, phát Bồ Ðề tâm”. Bồ Ðề tâm chính là tâm tự lợi, lợi tha. Tâm này vừa phát sẽ như bình được sét đánh xuống, như thuốc thêm lưu huỳnh, sức nó rất lớn lại rất nhanh chóng. [Do phát tâm Bồ Ðề] tiêu được nghiệp chướng, tăng phước huệ, chẳng thể lấy những thiện căn, phước đức bình thường sánh ví nổi.</p>
     <p class="font-semibold text-primary-700 dark:text-primary-300">* Niệm Phật nên thường tưởng như mình sắp chết, sắp đọa địa ngục, thì chẳng khẩn thiết cũng sẽ tự khẩn thiết, chẳng tương ứng cũng tự tương ứng. Dùng tâm sợ khổ niệm Phật chính là diệu pháp thoát khổ bậc nhất, cũng là diệu pháp tùy duyên tiêu nghiệp bậc nhất.</p>

@@ -8,7 +8,10 @@ const lessonMaterialUrl = (file: string): string => {
 const readingContent = `
 <div class="prose-content">
   <section class="space-y-6">
-    <h2 class="mt-0 text-3xl font-bold text-primary-700 dark:text-primary-300">3. Khuyên đầy đủ tín nguyện</h2>
+    <div>
+      <p class="mb-1 text-xs font-medium uppercase tracking-widest text-primary-500 dark:text-primary-400">II. KHUYÊN TÍN HẠNH NGUYỆN NÊN CHÂN THÀNH , THA THIẾT</p>
+      <h2 class="mt-0 text-3xl font-bold text-primary-700 dark:text-primary-300">3. Khuyên đầy đủ tín nguyện</h2>
+    </div>
     <p class="font-semibold text-primary-700 dark:text-primary-300">* Dù kính cẩn tu trì Ngũ Giới, Thập Thiện, được thân trời người, nhưng phước lạc nhân gian lại chính là cội rễ đọa lạc. Dù trên trời phiền hoặc chẳng mãnh liệt như trong nhân gian, nhưng một khi phước trời đã tận, nhất định sẽ đọa xuống. Do túc phước chưa tận, nên được hưởng phước. Do hưởng phước nên tạo nghiệp. Ðã tạo nghiệp rồi thì đọa lạc ác đạo chỉ trong khoảng nháy mắt, một hơi thở thôi! Huống hồ có kẻ khi mạng trời đã hết, vì sức ác nghiệp đời trước đã chín, liền đọa ngay vào ác đạo!</p>
     <p>Vì thế, cổ đức bảo người tu hành nhưng không có chánh niệm tu trì Tịnh nghiệp, chỉ được phước báo trời người thì gọi là oán thù đời thứ ba. Kinh Pháp Hoa nói: “Tam giới không yên, giống như nhà lửa. Thật đáng sợ hãi”. Người biết tốt xấu phải gấp cầu xuất ly để được yên ổn mới là kế sách bậc thượng vậy.</p>
     <p class="font-semibold text-primary-700 dark:text-primary-300">* Một pháp Niệm Phật là cậy vào Phật lực để thoát tam giới, sanh về Tịnh Ðộ. Nay đã chẳng phát nguyện thì có tín chăng? (Người tin thật sự ắt sẽ phát nguyện tha thiết). Tín nguyện đều không, chỉ niệm Phật danh thì thuộc về Tự Lực. Vì không tín nguyện nên chẳng thể cảm ứng đạo giao cùng hoằng thệ của đức Di Ðà. Nếu đã hết Kiến Tư Hoặc, có lẽ được vãng sanh. Còn nếu hoàn toàn chưa đoạn hay chưa đoạn hết sạch thì nghiệp căn vẫn còn, làm sao thoát ngay khỏi luân hồi cho được? Ngũ Tổ Giới Diễn, Thảo Ðường Thanh v.v... chính là những chứng cớ xác thực.</p>

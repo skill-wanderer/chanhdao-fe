@@ -8,7 +8,10 @@ const lessonMaterialUrl = (file: string): string => {
 const readingContent = `
 <div class="prose-content">
   <section class="space-y-6">
-    <h2 class="mt-0 text-3xl font-bold text-primary-700 dark:text-primary-300">2. Khuyên trừ nghi sanh tín</h2>
+    <div>
+      <p class="mb-1 text-xs font-medium uppercase tracking-widest text-primary-500 dark:text-primary-400">II. KHUYÊN TÍN HẠNH NGUYỆN NÊN CHÂN THÀNH , THA THIẾT</p>
+      <h2 class="mt-0 text-3xl font-bold text-primary-700 dark:text-primary-300">2. Khuyên trừ nghi sanh tín</h2>
+    </div>
     <p class="font-semibold text-primary-700 dark:text-primary-300">* Pháp môn Tịnh Ðộ nếu tin cho tới, còn gì tốt lành hơn! Nếu trí mình chưa quyết thì phải nên tin tưởng lời chân thành của chư Phật, chư Tổ, trọn chẳng được một niệm nghi tâm. Nghi sẽ chẳng tương ứng chư Phật, lâm chung nhất định khó thể cảm thông. Cổ nhân bảo: “Pháp môn Tịnh Ðộ chỉ có Phật với Phật mới có thể hiểu trọn vẹn. Hàng Ðăng Ðịa Bồ Tát13 chẳng biết được ít phần”. Hàng Ðăng Ðịa Ðại Sĩ còn chẳng thể biết hết, huống hồ là hạng phàm phu lè tè sát đất lại vọng sanh ức đoán ư?</p>
     <p class="font-semibold text-primary-700 dark:text-primary-300">* Nếu tâm sanh tử thật sự thiết tha, tin tới nơi, tâm chẳng sanh một niệm ngờ vực thì dù chưa ra khỏi Sa Bà, đã chẳng còn là khách trọ lâu ngày trong chốn Sa Bà; chưa sanh Cực Lạc, nhưng đã là khách quý cõi Cực Lạc. Thấy người hiền mong mình được bằng, gặp điều nhân đừng để lỡ. Há có nên do dự, lười nhác, sao nhãng, để đến nỗi một phen lầm lỡ khiến mình bị lỡ làng mãi mãi ư? Là trang nam nhi có huyết tánh, dứt khoát chẳng chịu sống làm thây đi, thịt chạy, chết mục nát như cỏ cây. Hãy gắng lên, cố lên!</p>
     <p class="font-semibold text-primary-700 dark:text-primary-300">* Trong các pháp môn khác, tiểu pháp thì đại căn chẳng cần tu, đại pháp thì tiểu căn chẳng tu nổi. Chỉ có một pháp Tịnh Ðộ này thích ứng khắp ba căn, gồm thâu lợi độn. Trên thì Quán Âm, Thế Chí, Văn Thù, Phổ Hiền, không vị nào vượt ra ngoài pháp này; dưới thì ngũ nghịch, thập ác, chủng tánh A Tỳ cũng được dự vào. Nếu Như Lai chẳng mở ra pháp này thì chúng sanh đời mạt muốn liễu sanh thoát tử ngay trong đời này tuyệt chẳng có chút hy vọng gì!</p>
