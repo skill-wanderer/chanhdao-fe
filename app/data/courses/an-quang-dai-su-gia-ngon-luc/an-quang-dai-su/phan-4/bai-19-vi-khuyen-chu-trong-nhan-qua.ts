@@ -9,7 +9,7 @@ const readingContent = `
 const lesson: Lesson = {
   id: 'lesson-an-quang-dai-su-gia-ngon-luc-bai-19-vi-khuyen-chu-trong-nhan-qua',
   slug: 'bai-19-vi-khuyen-chu-trong-nhan-qua',
-  title: 'VI. KHUYÊN CHÚ TRỌNG NHÂN QUẢ',
+  title: 'V. KHUYÊN CHÚ TRỌNG NHÂN QUẢ',
   type: 'article',
   isSectionHeader: true,
   status: 'published',

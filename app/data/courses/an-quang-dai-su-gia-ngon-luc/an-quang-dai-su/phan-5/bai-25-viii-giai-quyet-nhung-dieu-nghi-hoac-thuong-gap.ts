@@ -9,7 +9,7 @@ const readingContent = `
 const lesson: Lesson = {
   id: 'lesson-an-quang-dai-su-gia-ngon-luc-bai-25-viii-giai-quyet-nhung-dieu-nghi-hoac-thuong-gap',
   slug: 'bai-25-viii-giai-quyet-nhung-dieu-nghi-hoac-thuong-gap',
-  title: 'VIII. GIẢI QUYẾT NHỮNG ĐIỀU NGHI HOẶC THƯỜNG GẶP',
+  title: 'VII. GIẢI QUYẾT NHỮNG ĐIỀU NGHI HOẶC THƯỜNG GẶP',
   type: 'article',
   isSectionHeader: true,
   status: 'published',
